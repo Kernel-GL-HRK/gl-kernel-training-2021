@@ -1,0 +1,9 @@
+
+/tmp # echo Anton > /proc/task/buffer 
+[  835.185904] procfs_mod written 6 chars
+/tmp # cat /proc/task/buffer 
+[  846.735522] procfs_mod read 6 chars
+ANTON
+[  846.736885] procfs_mod read 0 chars
+[  846.737526] procfs_mod read 0 chars
+
