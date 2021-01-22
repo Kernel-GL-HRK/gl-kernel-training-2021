@@ -1,0 +1,19 @@
+/tmp # insmod task05_sys.ko
+[ 2664.197351] 'xxx' module initialized
+/tmp # echo ANTON > /sys/class/x-class/xxx 
+[ 2677.439505] write 6
+/tmp # cat /sys/class/x-class/xxx 
+[ 2682.027989] read 6
+anton
+/tmp # cat /sys/class/x-class/
+characters_converted        total_characters_processed
+total_calls                 xxx
+/tmp # cat /sys/class/x-class/total_c
+total_calls                 total_characters_processed
+/tmp # cat /sys/class/x-class/total_characters_processed 
+6
+/tmp # cat /sys/class/x-class/total_calls 
+1
+/tmp # cat /sys/class/x-class/characters_converted 
+5
+
