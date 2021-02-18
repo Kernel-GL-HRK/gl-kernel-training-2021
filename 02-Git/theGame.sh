@@ -7,13 +7,13 @@
 
 # This function reads the input from the keyboard for the go of player 2
 function player1 {
-  echo -p "Player 1. please enter your guess: "
+  echo -p "Player 1. please enter your guess: (r)ock, (p)aper or (s)cisors "
   read -s player1
 }
 
 # This function reads the input from the keyboard for the go of player 2
 function player2 {
-  echo -p "Player 2, please enter your guess: "
+  echo -p "Player 2, please enter your guess: (r)ock, (p)aper or (s)cisors "
   read -s player2
 }
 
@@ -33,6 +33,18 @@ function compare {
   elif [[ $player1 == "paper" && $player2 == "rock" ]]; then
     echo "Player 1 Wins"
   elif [[ $player1 = "rock" && $player2 == "paper" ]]; then
+    echo "Player 2 Wins"
+  elif [[ $player1 ==  "r" && $player2 == "s" ]]; then
+    echo "Player 1 Wins"
+  elif [[ $player1 == "s" && $player2 == "r" ]]; then
+    echo "Player 2 Wins"
+  elif [[ $player1 == "s" && $player2 == "p" ]]; then
+    echo "Player 1 Wins"
+  elif [[ $player1 == "p" && $player2 == "s" ]]; then
+    echo "Player 2 Wins"
+  elif [[ $player1 == "p" && $player2 == "r" ]]; then
+    echo "Player 1 Wins"
+  elif [[ $player1 = "r" && $player2 == "p" ]]; then
     echo "Player 2 Wins"
   else
     echo "There was an error please try again"
