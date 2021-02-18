@@ -19,8 +19,7 @@ int play(void) {
         return -1;
     }
     printf("You chose %c, I chose %d\n", usr_optn, mchn_optn);
-    switch(mchn_optn)
-    {
+    switch (mchn_optn) {
         case 0:
             if (usr_optn == 'r')
                 return 0;
@@ -58,8 +57,7 @@ int invite_to_play(void) {
     char usr_key = 'y';
     printf("Do you want to play the game? y or n \n");
     scanf(" %c", &usr_key);
-    switch(usr_key)
-    {
+    switch (usr_key) {
         case 'n': case 'N':
             return 0;
             break;
@@ -80,20 +78,17 @@ int main(void) {
         int result = play();
         if (result == -1)
             return result;
-        else if (result == 0) {
+        else if (result == 0)
             printf("It's a tie\n");
-        }
-        else if (result == 1) {
+        else if (result == 1)
             printf("You lost =( \n");
-        }
         else
             printf("You won! \n");
     }
-    else if (dcsn == -1) {
+    else if (dcsn == -1)
         printf("Unknown option. Error \n");
-    }
-    else {
+    else
         printf("Game over \n");
-    }
+
     return 0;
 }
