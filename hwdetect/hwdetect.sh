@@ -6,6 +6,26 @@ now=$(ls /dev*)
 prev_lsusb=$(lsusb)
 now_lsusb=$(lsusb)
 
+#**************runtime check**************************
+
+function check_plugged_unplugged() 
+{
+		count_prev=$(echo "$prev" | wc -w)
+		count_now=$(echo "$now" | wc -w)
+		
+		if [ $count_prev -gt $count_now ]; then
+			printf "\n"
+			echo -n "**** UNPLUGGED ****"
+			printf "\n"
+			return 0
+		else
+			printf "\n"    		
+    		echo -n "**** PLUGGED ****"
+    		printf "\n"
+    		return 1
+		fi
+}
+
 function check_diff_lsusb() 
 {
 	now_lsusb=$(lsusb)
@@ -26,6 +46,9 @@ function check_diff_dev()
 	
 	if [ -n "$differ" ]
 	then
+		check_plugged_unplugged
+		check_pl_un=$?
+		
      	differ_with_dev=$(printf "/dev/%s " $differ)
      	echo $differ_with_dev
      	check_diff_lsusb
