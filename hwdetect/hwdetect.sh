@@ -97,7 +97,110 @@ function check_flash_driver()
 	fi
 }
 
-#*****************************************************
+
+#**************plugged devices check on start**************************
+
+function check_plugged_usb_to_uart() 
+{
+	devices=$(echo "$(ls /dev/*)" | grep -oE "/dev/ttyUSB.*")
+	
+	if [ -n "$devices" ]
+	then
+	
+	echo
+	echo "******** USB TO UART *********"
+	
+	for d in $devices
+	do
+		tput setaf 1
+	 	echo -n "Detected USB TO UART controler on "
+		echo $d
+		tput sgr0
+		tput setaf 2
+		echo $(udevadm info $d | grep -oE "MODEL=.*")
+		echo $(udevadm info $d | grep -oE "DRIVER=.*")
+		tput sgr0
+		echo
+	done
+	
+	echo "*****************"
+	echo
+	
+	fi
+}
+
+function check_plugged_flash_drivers() 
+{
+	devices=$(echo "$(ls /dev/*)" | grep -oE "\/dev\/sd[a-z]" | awk '! a[$0]++')
+	
+	if [ -n "$devices" ]
+	then
+	
+	echo
+	echo "******** FLASH DRIVERS *********"
+	
+	for d in $devices 
+	do
+		tput setaf 1
+	 	echo -n "Detected FLASH DRIVER controler on "
+		echo $d
+		tput sgr0
+		tput setaf 2
+		echo $(udevadm info $d | grep -oE "MODEL=.*")
+		echo $(udevadm info $d | grep -oE "VENDOR=.*")
+		echo -n $(udevadm info $d | grep -oE "BUS=.*")
+		tput sgr0
+		echo
+	done
+	
+	echo "*****************"
+	echo
+	
+	fi
+}
+
+
+function check_plugged_sd_cards() 
+{
+	devices=$(echo "$(ls /dev/*)" | grep -oE "\/dev\/mmcblk[0-9]" | awk '! a[$0]++')
+	
+	if [ -n "$devices" ]
+	then
+	
+	echo
+	echo "******** SD CARDS *********"
+	
+	for d in $devices 
+	do
+		tput setaf 2
+	 	echo -n "Detected SD CARD on "
+		echo $d
+		tput sgr0
+		echo
+	done
+	
+	echo "*****************"
+	echo
+	
+	fi
+}
+
+check_plugged_i2c_devices() 
+{
+	echo "******** I2C devices *********"
+	for ((i=0; i < $(ls /dev/i2c-* | wc -l); i++));
+	do
+		tput setaf 2
+		echo "I2C-$i"
+		tput sgr0
+		i2ctable=$(sudo i2cdetect -y $i) 
+		echo $i2ctable | grep -oE "[0-f][0-f] "
+		echo
+	done
+	echo "*****************"
+}
+
+#************************************
 
 function check_diff_lsusb() 
 {
@@ -133,7 +236,15 @@ function check_diff_dev()
 	prev=$now
 }
 
-echo "Script will show plugged and unplugged devices. Press CTRL+C for exit."
+echo "List of connected devices:"
+echo
+
+check_plugged_i2c_devices
+check_plugged_usb_to_uart
+check_plugged_flash_drivers
+check_plugged_sd_cards
+
+echo "Next script will show plugged and unplugged devices. Press CTRL+C for exit."
 
 while true
 do
