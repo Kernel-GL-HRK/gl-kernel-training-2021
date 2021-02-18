@@ -10,7 +10,7 @@
 
 enum errors {
 	NO_ARGS = 1,
-	TO_MUCH_ARGS,	/* 2 */
+	TOO_MUCH_ARGS,	/* 2 */
 	WRONG_ARG,		/* 3 */
 };
 
@@ -24,18 +24,18 @@ int main(int argc, char const *argv[]) {
 	}
 
 	if (argc > 2) {
-		fprintf(stderr, "To match arguments\n");
-		ret = TO_MUCH_ARGS;
+		fprintf(stderr, "Too much arguments\n");
+		ret = TOO_MUCH_ARGS;
 		goto end;
 	}
 
-	char user_choise[2];
+	char user_choice[2];
 
 	if ((strcmp(argv[1], "r") == 0) ||
 		(strcmp(argv[1], "p") == 0) ||
 		(strcmp(argv[1], "s") == 0)) {
 
-		strcpy(user_choise, argv[1]);
+		strcpy(user_choice, argv[1]);
 	} else {
 		fprintf(stderr, "Argument can be only 'r' 'p' 's'\n");
 		ret = WRONG_ARG;
@@ -44,16 +44,16 @@ int main(int argc, char const *argv[]) {
 
 	char game_elements[3][2] = {"r", "p", "s"};
 	srand(time(NULL));
-	unsigned short pc_choise = rand() % 3; 
+	unsigned short pc_choice = rand() % 3; 
 
-	if (!strcmp(game_elements[pc_choise], user_choise)) {
-		END_GAME_MESSAGE(user_choise, game_elements[pc_choise], "DRAW!");
-	} else if ((!strcmp(game_elements[pc_choise], "r") && !strcmp(user_choise, "p")) ||
-				(!strcmp(game_elements[pc_choise], "p") && !strcmp(user_choise, "s")) ||
-				(!strcmp(game_elements[pc_choise], "s") && !strcmp(user_choise, "r"))) {
-		END_GAME_MESSAGE(user_choise, game_elements[pc_choise], "YOU WIN!");
+	if (!strcmp(game_elements[pc_choice], user_choice)) {
+		END_GAME_MESSAGE(user_choice, game_elements[pc_choice], "DRAW!");
+	} else if ((!strcmp(game_elements[pc_choice], "r") && !strcmp(user_choice, "p")) ||
+				(!strcmp(game_elements[pc_choice], "p") && !strcmp(user_choice, "s")) ||
+				(!strcmp(game_elements[pc_choice], "s") && !strcmp(user_choice, "r"))) {
+		END_GAME_MESSAGE(user_choice, game_elements[pc_choice], "YOU WINS!");
 	} else {
-		END_GAME_MESSAGE(user_choise, game_elements[pc_choise], "PC WIN!");
+		END_GAME_MESSAGE(user_choice, game_elements[pc_choice], "PC WINS!");
 	}
 
 end:
