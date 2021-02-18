@@ -28,7 +28,6 @@ int main(void)
                 do {
                         printf("Please choose: rock (r) - paper (p) - scissors (s)\n");
                         num_of_arg = scanf("\n%c", &tmp);
-
                 } while (tmp != PAPER_S && tmp != ROCK_S && tmp != SCISSORS_S);
 
                 int bot = rand()%3;
@@ -55,13 +54,11 @@ int main(void)
                         else
                                 printf("Bot won)\n");
                 } else {
-                        if(2 == player)
+                        if (2 == player)
                                 printf("Player won)\n");
                         else
                                 printf("Bot won)\n");
                 }
-
         }
-
 	return 0;
 }
