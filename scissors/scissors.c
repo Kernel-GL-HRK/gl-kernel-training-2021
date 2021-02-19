@@ -29,6 +29,12 @@ int main(int argc, char const *argv[]) {
 		goto end;
 	}
 
+	if (strlen(argv[1]) > 1) {
+		fprintf(stderr, "Wrong argument\n");
+		ret = WRONG_ARG;
+		goto end;
+	}
+
 	char user_choice = *argv[1];
 	if (!(user_choice == 'r' || user_choice == 'p' || user_choice == 's')) {
 		fprintf(stderr, "Argument can be only 'r' 'p' 's'\n");
