@@ -5,20 +5,20 @@
 # An array from which random values will be selected 
 options=(rock paper scissors)
 
+# Game greeting  
 echo "Rock-paper-scissors"
 echo "Please choose: rock (r) - paper (p) - scissors (s)"
 echo "Enter 'q' or 'quit' for exit"
 
-while :
-do
+game () {
 	echo ""
 	read enemy_choise
-
+	
 	# Generate random value from 0 to 3 and get option
 	rand=$((RANDOM%3))
 	choise=${options[rand]}
-
-	case $enemy_choise in
+	
+		case $enemy_choise in
 		r)
 			echo You choose rock, I choose $choise
 			if [[ $choise = rock ]]
@@ -59,13 +59,18 @@ do
 			fi
 		;;
 		q)
-			break;
+			exit
 		;;
 		quit)
-			break;
+			exit
 		;;
 		*)
 			echo You can choose only between 'r', 'p' and 's'!
 		;;
 	esac
+}
+
+while :
+do
+	game
 done
