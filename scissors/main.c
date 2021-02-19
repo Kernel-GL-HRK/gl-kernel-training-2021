@@ -27,7 +27,7 @@ static int get_index(void)
 
 
 	player_index = getchar();
-	for (i = 0; i < INDEX_MAX; i++) {
+	for (i = 0; i < sizeof(game_symbols) / sizeof(game_symbols[0]); i++) {
 		if (player_index == game_symbols[i]) {
 			flag = 1;
 			break;
