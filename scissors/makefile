@@ -3,8 +3,6 @@ SOURCES=main.c
 EXECUTABLE=scissors
 OBJECTS=$(SOURCES:.c=.o)
 
-all: $(SOURCES) $(EXECUTABLE)
-
 $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(OBJECTS) -o $@
 
