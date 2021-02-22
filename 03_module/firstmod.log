@@ -1,0 +1,13 @@
+/ # insmod firstmod.ko status=4 name=Vasya
+[  378.003371] firstmod: Hello, Vasya!
+[  378.003371]  Status 4
+[  378.009543] firstmod: Successful start
+/ # rmmod firstmod.ko 
+[  383.186706] firstmod: See you soon, Vasya!
+
+/ # insmod firstmod.ko status=-4 name=Everyone
+[  423.182729] firstmod: Hello, Everyone!
+[  423.182729]  Status -4
+[  423.189264] firstmod: Starting failed. Module has not installed.
+insmod: can't insert 'firstmod.ko': Operation not permitted
+
