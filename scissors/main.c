@@ -4,10 +4,10 @@
 #include <stdio.h>
 
 enum {
-	NONE	= -1,
-	ROCK	= 0,
-	SCISSORS= 1,
-	PAPER	= 2,
+	NONE	 = -1,
+	ROCK	 = 0,
+	SCISSORS = 1,
+	PAPER	 = 2,
 	OPTS_MAX
 };
 
@@ -17,7 +17,7 @@ static const int rules_martix[OPTS_MAX][OPTS_MAX] = {
 	{PAPER, SCISSORS, NONE}
 };
 
-static const char* uman_choise_name[OPTS_MAX] = {
+static const char *uman_choise_name[OPTS_MAX] = {
 	[ROCK] = "rock",
 	[SCISSORS] = "scissors",
 	[PAPER]	= "paper"
@@ -28,15 +28,15 @@ static int choise2id(char choise_char)
 	int indx = 0;
 
 	while (indx < OPTS_MAX)	{
-		if (uman_choise_name[indx][0] == choise_char)
-			return indx;
-		else
+		if (uman_choise_name[indx][0] != choise_char)
 			indx++;
+		else
+			return indx;
 	}
 	return NONE;
 }
 
-int main()
+int main(void)
 {
 	int pc_choise = NONE;
 	int human_choise = NONE;
@@ -47,23 +47,23 @@ int main()
 	pc_choise = rand() % OPTS_MAX;
 
 	char temp;
-	scanf("%c",&temp);
+
+	scanf("%c", &temp);
 	human_choise = choise2id(temp);
 
-	if ((PAPER < human_choise) || (NONE >= human_choise)) {
+	if ((human_choise > PAPER) || (human_choise <= NONE)) {
 		printf("Bad input!\n");
-		return (1);
+		return 1;
 	}
 
-	printf("You choose %s, I choose %s\n", uman_choise_name[human_choise], uman_choise_name[pc_choise]);
+	printf("You choose %s, I choose %s.\n", uman_choise_name[human_choise], uman_choise_name[pc_choise]);
 
-	if (NONE == rules_martix[pc_choise][human_choise]) {
-		printf("Draw. \n");
-	} else if (pc_choise == rules_martix[pc_choise][human_choise]) {
-		printf("I win: %s beats %s \n", uman_choise_name[pc_choise],  uman_choise_name[human_choise]);
-	} else if (human_choise == rules_martix[pc_choise][human_choise]) {
-		printf("You win: %s beats %s \n", uman_choise_name[human_choise], uman_choise_name[pc_choise]);
-	}
-	return (0);
+	if (rules_martix[pc_choise][human_choise] == NONE)
+		printf("Draw.\n");
+	else if (pc_choise == rules_martix[pc_choise][human_choise])
+		printf("I win: %s beats %s.\n", uman_choise_name[pc_choise], uman_choise_name[human_choise]);
+	else if (human_choise == rules_martix[pc_choise][human_choise])
+		printf("You win: %s beats %s.\n", uman_choise_name[human_choise], uman_choise_name[pc_choise]);
+
+	return 0;
 }
-
