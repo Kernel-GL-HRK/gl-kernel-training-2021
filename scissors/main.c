@@ -56,14 +56,20 @@ int main(void)
 		return 1;
 	}
 
-	printf("You choose %s, I choose %s.\n", uman_choise_name[human_choise], uman_choise_name[pc_choise]);
+	printf("You choose %s, I choose %s.\n",
+			uman_choise_name[human_choise],
+			uman_choise_name[pc_choise]);
 
 	if (rules_martix[pc_choise][human_choise] == NONE)
 		printf("Draw.\n");
 	else if (pc_choise == rules_martix[pc_choise][human_choise])
-		printf("I win: %s beats %s.\n", uman_choise_name[pc_choise], uman_choise_name[human_choise]);
+		printf("I win: %s beats %s.\n",
+				uman_choise_name[pc_choise],
+				uman_choise_name[human_choise]);
 	else if (human_choise == rules_martix[pc_choise][human_choise])
-		printf("You win: %s beats %s.\n", uman_choise_name[human_choise], uman_choise_name[pc_choise]);
+		printf("You win: %s beats %s.\n",
+				uman_choise_name[human_choise],
+				uman_choise_name[pc_choise]);
 
 	return 0;
 }
