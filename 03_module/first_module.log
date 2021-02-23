@@ -1,0 +1,19 @@
+/ # 
+/ # insmod home/first_module.ko user_name=Andrii ansver=24
+[  459.517974] Hello, Andrii!
+/ # rmmod first_module.ko
+[  459.520816] Andrii, you are incorrect!
+[  462.060567] Live long and prosper, Andrii!
+/ # 
+/ # insmod home/first_module.ko ansver=22
+[  468.565106] Unknown user!
+/ # rmmod first_module.ko
+[  468.567860] Unknown user, you are incorrect!
+[  470.517065] Live long and prosper, Unknown user!
+/ # 
+/ # insmod home/first_module.ko user_name=Andrii ansver=24
+[  484.782519] Hello, Andrii!
+/ # rmmod first_module.ko
+[  484.785502] Andrii, you are incorrect!
+[  486.579733] Live long and prosper, Andrii!
+/ # 
