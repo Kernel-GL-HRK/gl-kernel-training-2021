@@ -1,64 +1,68 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <stdbool.h>
 
 enum figure_num_t {
-        PAPER_N = 0,
-        ROCK_N,
-        SCISSORS_N
+        PAPER = 0,
+        ROCK,
+        SCISSORS,
+        MAX_FIGURE_NUM
 };
 
-enum figure_sym_t {
-        PAPER_S =       'p',
-        ROCK_S =        'r',
-        SCISSORS_S =    's'
-};
+static const char FIGURE_SYM[3] = { 'p', 'r', 's' };
+
+static const char *FIGURE_FULL_NAME[] = { "paper", "rock", "scissors" };
 
 int main(void)
 {
-        char tmp = 0;
-        uint8_t player;
-        char bot_let = 0;
-        int num_of_arg = 0;
+        enum figure_num_t player_num;
+        enum figure_num_t bot_num;
+        char bot_fig;
+        char player_fig;
+        bool player_step_flag;
 
         printf("Press \"Ctrl + C\" for exit\n");
 
         while(1) {
 
+                bot_num = rand()%3;
+
+                switch (bot_num) {
+                        case PAPER:     bot_fig = FIGURE_SYM[PAPER];    break;
+                        case ROCK:      bot_fig = FIGURE_SYM[ROCK];     break;
+                        case SCISSORS:  bot_fig = FIGURE_SYM[SCISSORS]; break;
+                }
+
                 do {
+                        player_step_flag = false;
+
                         printf("Please choose: rock (r) - paper (p) - scissors (s)\n");
-                        num_of_arg = scanf("\n%c", &tmp);
-                } while (tmp != PAPER_S && tmp != ROCK_S && tmp != SCISSORS_S);
+                        scanf("\n%c", &player_fig);
 
-                int bot = rand()%3;
+                        if (player_fig == FIGURE_SYM[PAPER])
+                                player_num = PAPER;
+                        else if (player_fig == FIGURE_SYM[ROCK])
+                                player_num = ROCK;
+                        else if (player_fig == FIGURE_SYM[SCISSORS])
+                                player_num = SCISSORS;
+                        else
+                                player_step_flag = true;
 
-                switch (tmp) {
-                        case PAPER_S: player = PAPER_N; break;
-                        case ROCK_S: player = ROCK_N; break;
-                        case SCISSORS_S: player = SCISSORS_N; break;
-                }
+                } while (player_step_flag);
 
-                switch (bot) {
-                        case PAPER_N: bot_let = PAPER_S; break;
-                        case ROCK_N: bot_let = ROCK_S; break;
-                        case SCISSORS_N: bot_let = SCISSORS_S; break;
-                }
+                printf("Player: %s\tBot: %s\n", FIGURE_FULL_NAME[player_num], FIGURE_FULL_NAME[bot_num]);
 
-                printf("Player: %c\tBot: %c\n", tmp, bot_let);
 
-                if (player == bot) {
+                if (player_num == bot_num)
                         printf("NO ONE|\n");
-                } else if (abs(player - bot) < 2) {
-                        if (player < bot)
-                                printf("Player won)\n");
-                        else
-                                printf("Bot won)\n");
-                } else {
-                        if (2 == player)
-                                printf("Player won)\n");
-                        else
-                                printf("Bot won)\n");
-                }
+                else if ((abs(player_num - bot_num) < (MAX_FIGURE_NUM - 1) && player_num < bot_num) 
+                        || (SCISSORS == player_num && !(abs(player_num - bot_num) < (MAX_FIGURE_NUM - 1))))
+
+                        printf("Player won)\n");
+                else
+                        printf("Bot won(\n");    
         }
+
 	return 0;
 }
