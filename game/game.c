@@ -28,11 +28,7 @@ int main(void)
 
                 bot_num = rand()%3;
 
-                switch (bot_num) {
-                        case PAPER:     bot_fig = FIGURE_SYM[PAPER];    break;
-                        case ROCK:      bot_fig = FIGURE_SYM[ROCK];     break;
-                        case SCISSORS:  bot_fig = FIGURE_SYM[SCISSORS]; break;
-                }
+                bot_fig = FIGURE_SYM[bot_num];
 
                 do {
                         player_step_flag = false;
@@ -55,13 +51,13 @@ int main(void)
 
 
                 if (player_num == bot_num)
-                        printf("NO ONE|\n");
+                        printf("Draw:|\n");
                 else if ((abs(player_num - bot_num) < (MAX_FIGURE_NUM - 1) && player_num < bot_num) 
-                        || (SCISSORS == player_num && !(abs(player_num - bot_num) < (MAX_FIGURE_NUM - 1))))
+                        || (SCISSORS == player_num && abs(player_num - bot_num) >= (MAX_FIGURE_NUM - 1)))
 
-                        printf("Player won)\n");
+                        printf("Player won:)\n");
                 else
-                        printf("Bot won(\n");    
+                        printf("Bot won:(\n");    
         }
 
 	return 0;
