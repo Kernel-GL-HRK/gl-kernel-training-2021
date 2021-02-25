@@ -1,0 +1,4 @@
+# Run    ~/repos/linux-stable/scripts/checkpatch.pl -f ./trouble_module.c
+total: 0 errors, 0 warnings, 52 lines checked
+
+./trouble_module.c has no obvious style problems and is ready for submission.
