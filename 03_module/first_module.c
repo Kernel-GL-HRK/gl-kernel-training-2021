@@ -9,27 +9,28 @@ MODULE_AUTHOR("Andrii Synenko");
 MODULE_DESCRIPTION("First module for Linux Kernel ProCamp");
 MODULE_LICENSE("Dual BSD/GPL");
 
-#define GREAT_ANSVER 42
+#define GREAT_ANSWER 42
 
 static char *user_name;
 module_param(user_name, charp, 0);
+MODULE_PARM_DESC(user_name, "User nane");
 
-static int ansver;
-module_param(ansver, int, 0);
+static int answer;
+module_param(answer, int, 0);
+MODULE_PARM_DESC(answer, "User answer to the Ultimate Question");
 
 static int __init first_module_init(void)
 {
 	if (user_name != NULL)
 		pr_warn("Hello, %s!\n", user_name);
-	else {
-		user_name = "Unknown user";
-		pr_warn("Unknown user!\n");
-	}
+	else
+		return -EINVAL;
 
-	if (ansver == GREAT_ANSVER)
-		pr_warn("%s, you are correct! ansver is: %d",
+
+	if (answer == GREAT_ANSWER)
+		pr_warn("%s, you are correct! answer is: %d",
 				user_name,
-				ansver);
+				answer);
 	else
 		pr_warn("%s, you are incorrect!", user_name);
 
