@@ -1,0 +1,16 @@
+/ # 
+/ # insmod home/first_module.ko user_name=Andrii answer=42
+[ 3400.751933] Hello, Andrii!
+/ # rmmod first_module.ko
+[ 3400.754905] Andrii, you are correct! answer is: 42
+[ 3404.962765] Live long and prosper, Andrii!
+/ # 
+/ # insmod home/first_module.ko answer=42
+insmod: can't insert 'home/first_module.ko': invalid parameter
+/ # 
+/ # insmod home/first_module.ko user_name=Andrii answer=43
+[ 3421.983390] Hello, Andrii!
+/ # rmmod first_module.ko
+[ 3421.986374] Andrii, you are incorrect!
+[ 3424.615730] Live long and prosper, Andrii!
+/ # 
