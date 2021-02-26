@@ -1,0 +1,15 @@
+/home # insmod khmod.ko user=Vadym
+[  941.577190] Hello, Vadym!
+/home # rmmod khmod.ko 
+[  945.804351] See u, Vadym!
+/home # 
+/home # 
+/home # dmesg
+[  545.767473] Username needed
+[  588.639523] nfs: server 192.168.0.1 not responding, still trying
+[  711.870410] cpsw 4a100000.ethernet eth0: Link is Down
+[  717.280195] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control off
+[  717.920650] nfs: server 192.168.0.1 OK
+[  821.567421] Username needed
+[  941.577190] Hello, Vadym!
+[  945.804351] See u, Vadym!
