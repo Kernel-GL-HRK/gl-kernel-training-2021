@@ -21,7 +21,7 @@ void print_weapon(int weapon)
 		printf("SCISSOR\n");
 }
 
-int weapon_selection()
+int weapon_selection(void)
 {
 	int choice;
 

@@ -9,7 +9,7 @@
 #define __GAME_LOGIC_H__
 
 #define USER_WIN		1
-#define COMPUTER_WIN	2
+#define COMPUTER_WIN		2
 #define DRAW			0
 #define ROCK			1
 #define SCISSOR			2
