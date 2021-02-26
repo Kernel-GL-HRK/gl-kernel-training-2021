@@ -1,9 +1,8 @@
 /**
- * @file       weapon_selection.c
- * @brief      weapon_selection
- * 
- * @author     Leonid Chebenko
- * @version    1.0
+ * @file		weapon_selection.c
+ * @brief		weapon_selection
+ * @author		Leonid Chebenko
+ * @version		1.0
  */
 
 #include "weapon_selection.h"
@@ -12,33 +11,28 @@
 
 void print_weapon(int weapon)
 {
-        if (weapon == ROCK)
-                printf("ROCK\n");
+	if (weapon == ROCK)
+		printf("ROCK\n");
 
-        else if (weapon == PAPER)
-                printf("PAPER\n");
+	else if (weapon == PAPER)
+		printf("PAPER\n");
 
-        else if (weapon == SCISSOR)
-                printf("SCISSOR\n");
+	else if (weapon == SCISSOR)
+		printf("SCISSOR\n");
 }
 
 int weapon_selection()
 {
-        int choice;
+	int choice;
 
-        do {
-                printf("Choose your weapon\n");
+	do {
+		printf("Choose your weapon\n");
+		printf(" [1] rock\n [2] scissors\n [3] Paper\n");
+		scanf("%d", &choice);
 
-                printf(" [1] rock\n [2] scissors\n [3] Paper\n");
+		if (!(choice >= 1 && choice <= 3))
+			printf("ERROR: Invalid input");
+	} while (!(choice >= 1 && choice <= 3));
 
-                scanf("%d", &choice); 
-
-                if (!(choice >=1 && choice <=3 )) {
-                        printf("ERROR: Invalid input");
-                }
-        }
-
-        while ( !(choice >=1 && choice <=3 ));
-
-        return choice;
+	return choice;
 }

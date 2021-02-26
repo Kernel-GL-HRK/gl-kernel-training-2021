@@ -1,7 +1,6 @@
 /**
  * @file       main.c
  * @brief      game rock scissors paper
- * 
  * @author     Leonid Chebenko
  * @version    1.0
  */
@@ -12,41 +11,41 @@
 #include "game_logic.h"
 #include "weapon_selection.h"
 
-int main()
+int main(void)
 {
-        int quit = 0;
-        int result;
-        srand(time(NULL));
+	int quit = 0;
+	int result;
+	int response;
 
-        while (!quit)
-        {
-                int user_input = weapon_selection();
+	srand(time(NULL));
 
-                int comp_choice = (rand() % 3) + 1;
+	while (!quit) {
+		int user_input = weapon_selection();
 
-                printf("Computer choice: ");
-                print_weapon(comp_choice);
+		int comp_choice = (rand() % 3) + 1;
 
-                printf("User choice: ");
-                print_weapon(user_input);
+		printf("Computer choice: ");
+		print_weapon(comp_choice);
 
-                result = game_logic(user_input, comp_choice);
-                if (result == DRAW)
-                        printf("It's a DRAW\n");
+		printf("User choice: ");
+		print_weapon(user_input);
 
-                else if (result == USER_WIN)
-                        printf("User Win\n");
+		result = game_logic(user_input, comp_choice);
+		if (result == DRAW)
+			printf("It's a DRAW\n");
 
-                else if (result == COMPUTER_WIN)
-                        printf("Computer Win\n");
+		else if (result == USER_WIN)
+			printf("User Win\n");
 
-                printf("If you wanna to continue type any integer, 0 to terminate\n");
-                int response;
+		else if (result == COMPUTER_WIN)
+			printf("Computer Win\n");
 
-                scanf("%d", &response);
-                if (response == 0)
-                        quit = 1;
-        }
+		printf("If you wanna to continue type any integer, 0 to terminate\n");
 
-        return 0;
+		scanf("%d", &response);
+		if (response == 0)
+			quit = 1;
+	}
+
+	return 0;
 }
