@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: GPL-2.0+ */
 /**
  * @file		game_logic.h
  * @brief		game_logic
