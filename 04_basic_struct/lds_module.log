@@ -1,0 +1,28 @@
+/ # 
+/ # insmod /home/lds_module.ko 
+[  213.509435] lds_module: loading out-of-tree module taints kernel.
+[  213.516577] lds_module: module starting
+/ # ls sys/kernel/
+cgroup              kexec_crash_size    slab
+config              kexec_loaded        tracing
+debug               listed_data         uevent_helper
+fscaps              mm                  uevent_seqnum
+iommu_groups        notes               vmcoreinfo
+irq                 rcu_expedited
+kexec_crash_loaded  rcu_normal
+/ # ls sys/kernel/listed_data/
+list
+/ # cd sys/kernel/
+/sys/kernel # cat listed_data/list 
+[head] => [head], size = 0 node(s)
+/sys/kernel # echo 10 > listed_data/list 
+/sys/kernel # echo 11 > listed_data/list 
+/sys/kernel # echo 12 > listed_data/list 
+/sys/kernel # cat listed_data/list 
+[head] => [12] => [11] => [10] => [head], size = 3 node(s)
+/sys/kernel # 
+/sys/kernel # rmmod lds_module
+[  342.507869] lds_module: module exited
+/sys/kernel # cd
+/ # 
+
