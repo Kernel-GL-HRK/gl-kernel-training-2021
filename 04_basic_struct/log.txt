@@ -1,0 +1,31 @@
+/ # insmod hello.ko 
+[10960.331739] module loaded
+
+/ # cat /sys/kernel/hello_dir/hello_list
+List empty!
+USAGE:
+at_<string> - add to tail
+ah_<string> - add to head
+rt - remove from tail
+rh - remove from head
+
+/ # echo 'at_a' > /sys/kernel/hello_dir/hello_list
+/ # echo 'at_b' > /sys/kernel/hello_dir/hello_list
+/ # echo 'atb' > /sys/kernel/hello_dir/hello_list
+[11033.318206] Wrong cmd!
+/ # echo 'ah_0' > /sys/kernel/hello_dir/hello_list
+/ # cat /sys/kernel/hello_dir/hello_list
+List: 0 -> a -> b -> 
+
+/ # echo 'rt' > /sys/kernel/hello_dir/hello_list
+/ # cat /sys/kernel/hello_dir/hello_list
+List: 0 -> a -> 
+
+/ # echo 'rh' > /sys/kernel/hello_dir/hello_list
+/ # cat /sys/kernel/hello_dir/hello_list
+List: a -> 
+
+/ # rmmod hello.ko 
+[11077.360226] module exited
+/ # 
+
