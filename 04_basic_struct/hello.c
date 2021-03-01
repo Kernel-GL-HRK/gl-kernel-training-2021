@@ -27,7 +27,7 @@ struct hello_node *list_create_node(const char *s, size_t count)
 					GFP_KERNEL);
 
 	if (node == NULL)
-		pr_err("Element hasn`t created. Not enaugh memory for list entry\n");
+		pr_err("Element hasn`t created. Not enough memory for list entry\n");
 
 	node->data = kmalloc_array(count, sizeof(char), GFP_KERNEL);
 
@@ -41,51 +41,55 @@ void list_delete_node(struct hello_node *a_node)
 	if (a_node == NULL)
 		return;
 
-	if (a_node->data != NULL)
-		kfree(a_node->data);
-
+	kfree(a_node->data);
 	kfree(a_node);
 }
 
 int list_print(struct list_head *print_list, char *buf)
 {
 	const char *arrow = " -> ";
-	const int arrow_size = strlen(arrow);
 	int buf_offset = 0;
+	int current_offset = 0;
 	struct hello_node *current_node = NULL;
 
 	if (print_list == NULL) {
-		pr_err("Cant print NULL list\n");
+		pr_err("Can't print NULL list\n");
 		return 0;
 	}
 
 	if (list_empty(print_list) == 1) {
-
-		sprintf(buf+buf_offset, "%s\n",
+		return sprintf(buf+buf_offset, "%s\n",
 			"List empty!\n"
 			"USAGE:\n"
 			"at_<string> - add to tail\n"
 			"ah_<string> - add to head\n"
 			"rt - remove from tail\n"
 			"rh - remove from head");
-		return strlen(buf);
 	}
 
-	sprintf(buf, "%s", "List: ");
-	buf_offset += strlen("List: ");
+	current_offset = sprintf(buf, "%s", "List: ");
+	if (current_offset < 0)
+		return buf_offset;
+
+	buf_offset += current_offset;
 
 	list_for_each_entry(current_node, &hello_list, list) {
-		if (buf_offset + arrow_size + 1 > PAGE_SIZE)
-			break;
 
-		sprintf(buf+buf_offset, "%s", current_node->data);
-		buf_offset += strlen(current_node->data)-1;
-		sprintf(buf+buf_offset, "%s", arrow);
-		buf_offset += arrow_size;
+		current_offset = sprintf(buf+buf_offset,
+		"%s", current_node->data)-1;
+		if (current_offset < 0)
+			return buf_offset;
+
+		buf_offset += current_offset;
+
+		current_offset = sprintf(buf+buf_offset, "%s", arrow);
+		if (current_offset < 0)
+			return buf_offset;
+
+		buf_offset += current_offset;
 	}
 
-	sprintf(buf+buf_offset, "%s", "\n");
-	return buf_offset+1;
+	return buf_offset+sprintf(buf+buf_offset, "%s", "\n");
 }
 
 void list_erase(struct list_head *erase_list)
