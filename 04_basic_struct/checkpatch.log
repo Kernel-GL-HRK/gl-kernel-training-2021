@@ -1,0 +1,3 @@
+# Run ~/repos/linux-stable/scripts/checkpatch.pl -f ./task4_module.c
+
+total: 0 errors, 0 warnings, 112 lines checked
