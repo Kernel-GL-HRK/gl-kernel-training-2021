@@ -1,0 +1,14 @@
+Insert Module
+[ 2889.151402] khmod: loaded!
+Show value
+
+Try write
+Show value
+Hello-3
+Hello-2
+Hello-1
+
+Remove Module
+[ 2889.651349] khmod: removed!
+/home #
+
