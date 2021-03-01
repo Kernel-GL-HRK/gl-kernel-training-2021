@@ -29,6 +29,16 @@ struct accum_data {
 	size_t accum_size;
 } gl_accum;
 
+static int entry_del(struct data_node *entry)
+{
+	int res = entry->data_size;
+
+	list_del(&entry->data_list);
+	kfree(entry->data_ptr);
+	kfree(entry);
+	return res;
+}
+
 static int accum_entry_add(struct accum_data *accum, const char *new_data_prt,
 						  size_t new_data_size)
 {
@@ -39,20 +49,23 @@ static int accum_entry_add(struct accum_data *accum, const char *new_data_prt,
 		return -EINVAL;
 	}
 
-	entry = kmalloc(sizeof(*entry), GFP_KERNEL);
+	entry = kzalloc(sizeof(*entry), GFP_KERNEL);
 	if (entry == NULL)
-		return -ENOMEM;
+		goto exit;
 
 	entry->data_ptr = kstrdup(new_data_prt, GFP_KERNEL);
-
 	if (entry->data_ptr == NULL)
-		return -ENOMEM;
+		goto exit;
 
 	entry->data_size = new_data_size;
 	accum->accum_size += entry->data_size;
 	list_add_tail(&entry->data_list, &accum->accum_list);
 
 	return 0;
+
+exit:
+	kzfree(entry);
+	return -ENOMEM;
 }
 
 static int accum_free_from_head(struct accum_data *aaccum, size_t req_space)
@@ -66,16 +79,12 @@ static int accum_free_from_head(struct accum_data *aaccum, size_t req_space)
 
 	while ((aaccum->accum_size + req_space) > PAGE_SIZE) {
 
-		if (list_empty(&aaccum->accum_list) == 1)
+		if (list_empty(&aaccum->accum_list))
 			return -EINVAL;
 
 		entry = list_first_entry(&aaccum->accum_list, struct data_node,
 								 data_list);
-
-		list_del(&entry->data_list);
-		kfree(entry->data_ptr);
-		aaccum->accum_size -= entry->data_size;
-		kfree(entry);
+		aaccum->accum_size -= entry_del(entry);
 	}
 
 	return 0;
@@ -83,7 +92,6 @@ static int accum_free_from_head(struct accum_data *aaccum, size_t req_space)
 
 static int accum_print(struct accum_data *aaccum, char *buf)
 {
-	size_t list_size = 0;
 	int res = 0;
 	int cursor = 0;
 
@@ -102,8 +110,6 @@ static int accum_print(struct accum_data *aaccum, char *buf)
 			pr_err("Failed to write output.\n");
 			return -EIO;
 		}
-
-		list_size++;
 	}
 
 	return cursor;
@@ -120,11 +126,7 @@ static int accum_free(struct accum_data *aaccum)
 	}
 
 	list_for_each_entry_safe(entry, tmp, &aaccum->accum_list, data_list) {
-
-		list_del(&entry->data_list);
-		kfree(entry->data_ptr);
-		aaccum->accum_size -= entry->data_size;
-		kfree(entry);
+		aaccum->accum_size -= entry_del(entry);
 	}
 	return 0;
 }
