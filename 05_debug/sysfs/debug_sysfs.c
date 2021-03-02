@@ -49,8 +49,8 @@ ssize_t store_lowercase(struct device *dev, struct device_attribute *attr,
 	pr_info("Before convertion = %s\n", s);
 
 	for (; s[s_offset] != '\0'; s_offset++) {
-		if (s[s_offset] >= 'A' && s[s_offset] <= 'Z') {
-			s[s_offset] = s[s_offset] + ('a' - 'A');
+		if (s[s_offset] > 'A' && s[s_offset] < 'Z') {
+			s[s_offset] += ('a' - 'A');
 			total_char_converted++;
 		}
 	}
@@ -65,23 +65,13 @@ ssize_t store_lowercase(struct device *dev, struct device_attribute *attr,
 ssize_t show_statistics(struct device *dev, struct device_attribute *attr,
 			char *buf)
 {
-	int buf_offset = 0;
-
-	buf_offset += sprintf(buf + buf_offset, "%s",
-			      "Debug_sysfs statistics:\n");
-	buf_offset += sprintf(buf + buf_offset, "%s",
-			      "Total calls show string = ");
-	buf_offset += sprintf(buf + buf_offset, "%d\n", total_calls_show);
-	buf_offset += sprintf(buf + buf_offset, "%s",
-			      "Total calls write string = ");
-	buf_offset += sprintf(buf + buf_offset, "%d\n", total_calls_write);
-	buf_offset += sprintf(buf + buf_offset, "%s",
-			      "Total characters processed = ");
-	buf_offset += sprintf(buf + buf_offset, "%d\n", total_char_processed);
-	buf_offset += sprintf(buf + buf_offset, "%s",
-			      "Total characters converted = ");
-	buf_offset += sprintf(buf + buf_offset, "%d\n", total_char_converted);
-	return buf_offset;
+	return sprintf(buf, "Debug_sysfs statistics:\n"
+				"Total calls show string = %i\n"
+				"Total calls write string =  %i\n"
+				"Total characters processed = %i\n"
+				"Total characters converted = %i\n",
+				total_calls_show, total_calls_write,
+				total_char_processed, total_char_converted);
 }
 
 
