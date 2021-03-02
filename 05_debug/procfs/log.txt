@@ -1,0 +1,47 @@
+/ # insmod debug_procfs.ko 
+[   12.883711] debug_procfs: loading out-of-tree module taints kernel.
+[   12.891048] debug_procfs: mymodule: module loaded
+
+/ # cat /proc/dprocfs_dir/dprocfs_statistics
+Debug_procfs statistics:
+Total calls show string = 0
+Total calls write string = 0
+Total characters processed = 0
+Total characters converted = 0
+
+/ # cat /proc/dprocfs_dir/dprocfs_uppercase
+string empty!
+
+/ # cat /proc/dprocfs_dir/dprocfs_statistics
+Debug_procfs statistics:
+Total calls show string = 3
+Total calls write string = 0
+Total characters processed = 0
+Total characters converted = 0
+
+/ # echo 'VlaDik' > /proc/dprocfs_dir/dprocfs_uppercase
+[   56.101138] debug_procfs: Before convertion = VlaDik
+[   56.106362] debug_procfs: After convertion = VLADIK
+
+/ # echo 'OleH' > /proc/dprocfs_dir/dprocfs_uppercase
+[   69.251281] debug_procfs: Before convertion = OleH
+[   69.256324] debug_procfs: After convertion = OLEH
+
+/ # cat /proc/dprocfs_dir/dprocfs_statistics
+Debug_procfs statistics:
+Total calls show string = 3
+Total calls write string = 2
+Total characters processed = 10
+Total characters converted = 6
+
+/ # cat /proc/dprocfs_dir/dprocfs_uppercase 
+OLEH
+
+/ # cat /proc/dprocfs_dir/dprocfs_statistics
+Debug_procfs statistics:
+Total calls show string = 6
+Total calls write string = 2
+Total characters processed = 10
+Total characters converted = 6
+/ # 
+
