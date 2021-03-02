@@ -13,6 +13,6 @@ clean:
 check:
 	$(KDIR)/scripts/checkpatch.pl -f simple_module.c
 send:
-	sudo cp simple_module.ko /srv/nfs/busybox/
+	sudo cp simple_module.ko /srv/nfs/busybox/tmp
 
 endif
