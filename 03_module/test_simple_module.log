@@ -1,0 +1,14 @@
+/ # ./test_simple_module.sh
+.
+Test step 1: Insert Module without parameter
+[12861.629868] Simple module init success!
+[12861.649689] Simple module release!
+.
+Test step 2: Insert Moudle with good parameter
+[12861.784075] Simple module init success!
+[12861.803140] Simple module release!
+.
+Test step 3: Insert Moudle with bad parameter
+[12861.938495] Simple module init error - 5
+insmod: can't insert 'simple_module.ko': Operation not permitted
+rmmod: remove 'simple_module': No such file or directory
