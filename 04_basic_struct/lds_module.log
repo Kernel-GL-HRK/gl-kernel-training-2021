@@ -1,0 +1,30 @@
+/ # 
+/ # insmod /home/lds_module.ko 
+[ 3505.676503] lds_module: module starting
+/ # cd sys/kernel/
+/sys/kernel # cat listed_data/list 
+/sys/kernel # cat listed_data/list 
+/sys/kernel # echo -n abc > listed_data/list 
+/sys/kernel # echo -n def > listed_data/list 
+/sys/kernel # echo -n ghi > listed_data/list 
+/sys/kernel # cat listed_data/list 
+abc
+def
+ghi
+/sys/kernel # echo -n jklm > listed_data/list 
+/sys/kernel # cat listed_data/list 
+def
+ghi
+jklm
+/sys/kernel # echo -n nopq > listed_data/list 
+/sys/kernel # cat listed_data/list 
+jklm
+nopq
+/sys/kernel # echo -n abcdefgh > listed_data/list 
+/sys/kernel # cat listed_data/list 
+abcdefgh
+/sys/kernel # rmmod lds_module
+[ 3680.175469] lds_module: module exited
+/sys/kernel # cd 
+/ # 
+
