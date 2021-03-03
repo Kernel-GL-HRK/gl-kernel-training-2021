@@ -68,7 +68,7 @@ static int conv_write(struct file *file, const char __user *pbuf, size_t count,
 	while (size != count) {
 		part_size = get_part_size(count - size, wr_ptr);
 
-		ret = copy_from_user(buf + wr_ptr, pbuf, part_size);
+		ret = copy_from_user(buf + wr_ptr, pbuf + size, part_size);
 
 		conv_to_upper(buf + wr_ptr, part_size);
 
@@ -78,7 +78,7 @@ static int conv_write(struct file *file, const char __user *pbuf, size_t count,
 			buf_len += part_size;
 		}
 
-		/* Check and of the buffer for cicling */
+		/* Check the and of the buffer for cicling */
 		if (wr_ptr == BUF_SIZE)
 			wr_ptr = 0;
 	}
@@ -100,7 +100,7 @@ static int conv_read(struct file *file, char __user *pbuf, size_t count,
 	while (size != count) {
 		part_size = get_part_size(count - size, rd_ptr);
 
-		ret = copy_to_user(pbuf, buf + rd_ptr, part_size);
+		ret = copy_to_user(pbuf + size, buf + rd_ptr, part_size);
 
 		if (!ret) {
 			rd_ptr += part_size;
@@ -108,7 +108,7 @@ static int conv_read(struct file *file, char __user *pbuf, size_t count,
 			buf_len -= part_size;
 		}
 
-		/* Check and of the buffer for cicling */
+		/* Check the and of the buffer for cicling */
 		if (rd_ptr == BUF_SIZE)
 			rd_ptr = 0;
 	}
@@ -121,8 +121,8 @@ static int stat_read(struct file *file, char __user *pbuf, size_t count,
 {
 	int ret;
 
-	ret = snprintf(buf_stat, 4096, STAT_STRING, stat_calls, stat_processed,
-			stat_converted);
+	ret = snprintf(buf_stat, STAT_BUF_SIZE, STAT_STRING, stat_calls,
+			stat_processed, stat_converted);
 	return simple_read_from_buffer(pbuf, count, ppos, buf_stat, ret);
 }
 
