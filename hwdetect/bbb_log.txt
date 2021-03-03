@@ -1,0 +1,10 @@
+Found device: mmcblk1
+Found device: mmcblk1boot0
+Found device: mmcblk1boot1
+Found device: mmcblk1p1
+Found device: mmcblk1p2
+Found device: mmcblk1rpmb
+Found device: ptysd
+Found device: ttysd
+Found device: i2c-0
+Found device: i2c-2
