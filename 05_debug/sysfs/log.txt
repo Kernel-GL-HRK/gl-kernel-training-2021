@@ -1,0 +1,27 @@
+/ # insmod debug_sysfs.ko 
+[ 4090.659905] debug_sysfs: module loaded
+
+/ # cat /sys/devices/virtual/dsysfs_dir/dsysfs_device/dsysfs_statistics 
+Debug_sysfs statistics:
+Total calls show string = 0
+Total calls write string = 0
+Total characters processed = 0
+Total characters converted = 0
+
+/ # cat /sys/devices/virtual/dsysfs_dir/dsysfs_device/dsysfs_lowercase
+string empty!
+
+/ # echo 'OleH' > /sys/devices/virtual/dsysfs_dir/dsysfs_device/dsysfs_lowercase
+[ 4110.302046] debug_sysfs: Before convertion = OleH
+[ 4110.307000] debug_sysfs: After convertion = oleh
+
+/ # cat /sys/devices/virtual/dsysfs_dir/dsysfs_device/dsysfs_lowercase
+oleh
+
+/ # cat /sys/devices/virtual/dsysfs_dir/dsysfs_device/dsysfs_statistics 
+Debug_sysfs statistics:
+Total calls show string = 2
+Total calls write string = 1
+Total characters processed = 4
+Total characters converted = 2
+
