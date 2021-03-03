@@ -1,0 +1,20 @@
+/workdir # insmod time.ko 
+[17131.423427] module loaded
+/workdir # cat ../sys/kernel/time_dir/tdiff
+First reading!
+
+/workdir # cat ../sys/kernel/time_dir/tdiff
+Since previous read passed: 2.291691041 seconds
+/workdir # cat ../sys/kernel/time_dir/tdiff
+Since previous read passed: 1.870804042 seconds
+
+/workdir # cat ../sys/kernel/time_dir/tlast 
+First reading!
+
+/workdir # cat ../sys/kernel/time_dir/tlast 
+Previous reading was at: 17165.390758046 seconds
+/workdir # cat ../sys/kernel/time_dir/tlast 
+Previous reading was at: 17167.777696629 seconds
+/workdir # cat ../sys/kernel/time_dir/tlast 
+Previous reading was at: 17170.131579338 seconds 
+
