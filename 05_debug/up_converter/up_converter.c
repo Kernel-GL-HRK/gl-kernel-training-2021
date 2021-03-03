@@ -10,7 +10,7 @@ MODULE_AUTHOR("Oleksiy Lyubochko <oleksiy.m.lyubochko@globallogic.com>");
 MODULE_DESCRIPTION("A simple example Linux module.");
 MODULE_VERSION("0.01");
 
-#define BUF_SIZE 4096
+#define BUF_SIZE 32
 #define STAT_BUF_SIZE 256
 #define CONV_DIR_NAME "up_conv"
 #define CONV_NAME "converter"
