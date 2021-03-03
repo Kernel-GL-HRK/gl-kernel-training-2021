@@ -1,0 +1,3269 @@
+
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+ethernet@4a100000 Waiting for PHY auto negotiation to complete... done
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 4.1 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000014] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000033] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000044] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003783] timer_probe: no matching timers found
+[    0.003981] Console: colour dummy device 80x30
+[    0.004040] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089194] pid_max: default: 32768 minimum: 301
+[    0.089356] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089371] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090016] CPU: Testing write buffer coherency: ok
+[    0.090079] CPU0: Spectre v2: using BPIALL workaround
+[    0.090432] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091027] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092421] rcu: Hierarchical SRCU implementation.
+[    0.095236] EFI services will not be available.
+[    0.095423] smp: Bringing up secondary CPUs ...
+[    0.095437] smp: Brought up 1 node, 1 CPU
+[    0.095447] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095455] CPU: All CPU(s) started in SVC mode.
+[    0.096830] devtmpfs: initialized
+[    0.104175] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104672] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104702] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108617] pinctrl core: initialized pinctrl subsystem
+[    0.110626] DMI not present or invalid.
+[    0.111076] NET: Registered protocol family 16
+[    0.113487] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140042] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193800] cpuidle: using governor menu
+[    0.201288] OMAP GPIO hardware version 0.1
+[    0.213440] No ATAGs?
+[    0.213451] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218769] Serial: AMBA PL011 UART driver
+[    0.237493] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241246] vgaarb: loaded
+[    0.242084] SCSI subsystem initialized
+[    0.242667] usbcore: registered new interface driver usbfs
+[    0.242723] usbcore: registered new interface driver hub
+[    0.242768] usbcore: registered new device driver usb
+[    0.244354] pps_core: LinuxPPS API ver. 1 registered
+[    0.244367] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244389] PTP clock support registered
+[    0.244561] EDAC MC: Ver: 3.0.0
+[    0.247387] clocksource: Switched to clocksource timer1
+[    0.312102] NET: Registered protocol family 2
+[    0.312723] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312752] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312794] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312854] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.312958] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.312984] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313118] NET: Registered protocol family 1
+[    0.313772] RPC: Registered named UNIX socket transport module.
+[    0.313786] RPC: Registered udp transport module.
+[    0.313793] RPC: Registered tcp transport module.
+[    0.313800] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.314952] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317229] Initialise system trusted keyrings
+[    0.317716] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324485] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325345] NFS: Registering the id_resolver key type
+[    0.325389] Key type id_resolver registered
+[    0.325398] Key type id_legacy registered
+[    0.325440] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327637] Key type asymmetric registered
+[    0.327656] Asymmetric key parser 'x509' registered
+[    0.327728] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327743] io scheduler noop registered
+[    0.327751] io scheduler deadline registered
+[    0.327946] io scheduler cfq registered (default)
+[    0.327956] io scheduler mq-deadline registered
+[    0.327964] io scheduler kyber registered
+[    0.333763] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399630] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.403073] SuperH (H)SCI(F) driver initialized
+[    0.403962] msm_serial: driver initialized
+[    0.404275] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404369] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.091193] console [ttyO0] enabled
+[    1.095469] STMicroelectronics ASC driver initialized
+[    1.101838] STM32 USART driver initialized
+[    1.107581] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.119929] random: fast init done
+[    1.123616] random: crng init done
+[    1.136954] brd: module loaded
+[    1.147838] loop: module loaded
+[    1.159904] libphy: Fixed MDIO Bus: probed
+[    1.165296] CAN device driver interface
+[    1.170367] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.177243] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.183414] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.189709] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.197001] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277401] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285443] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293096] libphy: 4a101000.mdio: probed
+[    1.297314] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309423] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316504] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323283] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330536] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338479] usbcore: registered new interface driver pegasus
+[    1.344469] usbcore: registered new interface driver asix
+[    1.350198] usbcore: registered new interface driver ax88179_178a
+[    1.356611] usbcore: registered new interface driver cdc_ether
+[    1.362786] usbcore: registered new interface driver smsc75xx
+[    1.368867] usbcore: registered new interface driver smsc95xx
+[    1.374915] usbcore: registered new interface driver net1080
+[    1.380896] usbcore: registered new interface driver cdc_subset
+[    1.387125] usbcore: registered new interface driver zaurus
+[    1.393039] usbcore: registered new interface driver cdc_ncm
+[    1.401396] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408314] ehci-pci: EHCI PCI platform driver
+[    1.413026] ehci-platform: EHCI generic platform driver
+[    1.418763] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424382] ehci-orion: EHCI orion driver
+[    1.428786] SPEAr-ehci: EHCI SPEAr driver
+[    1.433116] ehci-st: EHCI STMicroelectronics driver
+[    1.438403] ehci-exynos: EHCI EXYNOS driver
+[    1.442905] ehci-atmel: EHCI Atmel driver
+[    1.447218] tegra-ehci: Tegra EHCI driver
+[    1.451617] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458162] ohci-pci: OHCI PCI platform driver
+[    1.462889] ohci-platform: OHCI generic platform driver
+[    1.468609] SPEAr-ohci: OHCI SPEAr driver
+[    1.472949] ohci-st: OHCI STMicroelectronics driver
+[    1.478238] ohci-atmel: OHCI Atmel driver
+[    1.483133] usbcore: registered new interface driver usb-storage
+[    1.489601] usbcore: registered new interface driver usbserial_generic
+[    1.496465] usbserial: USB Serial support registered for generic
+[    1.502819] usbcore: registered new interface driver ftdi_sio
+[    1.508882] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516565] usbcore: registered new interface driver pl2303
+[    1.522440] usbserial: USB Serial support registered for pl2303
+[    1.528690] usbcore: registered new interface driver usb_serial_simple
+[    1.535547] usbserial: USB Serial support registered for carelink
+[    1.541969] usbserial: USB Serial support registered for zio
+[    1.547938] usbserial: USB Serial support registered for funsoft
+[    1.554248] usbserial: USB Serial support registered for flashloader
+[    1.560940] usbserial: USB Serial support registered for google
+[    1.567166] usbserial: USB Serial support registered for libtransistor
+[    1.574041] usbserial: USB Serial support registered for vivopay
+[    1.580369] usbserial: USB Serial support registered for moto_modem
+[    1.586951] usbserial: USB Serial support registered for motorola_tetra
+[    1.593920] usbserial: USB Serial support registered for novatel_gps
+[    1.600614] usbserial: USB Serial support registered for hp4x
+[    1.606650] usbserial: USB Serial support registered for suunto
+[    1.612887] usbserial: USB Serial support registered for siemens_mpi
+[    1.625266] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635822] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649455] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.659990] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685798] i2c /dev entries driver
+[    1.702682] sdhci: Secure Digital Host Controller Interface driver
+[    1.709260] sdhci: Copyright(c) Pierre Ossman
+[    1.715047] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724247] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729626] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761298] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.793931] Synopsys Designware Multimedia Card Interface Driver
+[    1.801771] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811600] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819492] usbcore: registered new interface driver usbhid
+[    1.825339] usbhid: USB HID core driver
+[    1.834242] NET: Registered protocol family 10
+[    1.840593] Segment Routing with IPv6
+[    1.844510] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851519] NET: Registered protocol family 17
+[    1.856236] can: controller area network core (rev 20170425 abi 9)
+[    1.862846] NET: Registered protocol family 29
+[    1.867530] can: raw protocol (rev 20170425)
+[    1.872002] can: broadcast manager protocol (rev 20170425 t)
+[    1.877951] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884367] Key type dns_resolver registered
+[    1.889112] ThumbEE CPU extension supported.
+[    1.893600] Registering SWP/SWPB emulation handler
+[    1.898664] omap_voltage_late_init: Voltage driver support not added
+[    1.907258] Loading compiled-in X.509 certificates
+[    1.929769] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940220] mmc0: new high speed SDHC card at address 1234
+[    1.947054] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954847]  mmcblk0: p1 p2
+[    1.973763] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980367] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.988083] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999728] mmc1: new high speed MMC card at address 0001
+[    2.006446] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011812] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018590] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025187] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038427]  mmcblk1: p1 p2
+[    2.120785] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.140110] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.145718] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.153909] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.162632] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.170220] usb usb1: Product: MUSB HDRC host driver
+[    2.175419] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.181272] usb usb1: SerialNumber: musb-hdrc.1
+[    2.186706] hub 1-0:1.0: USB hub found
+[    2.190772] hub 1-0:1.0: 1 port detected
+[    2.196360] hctosys: unable to open rtc device (rtc0)
+[    2.215447] net eth0: initializing cpsw version 1.12 (0)
+[    2.318481] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337305] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    4.418288] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    4.437409] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.467505] IP-Config: Guessing netmask 255.255.255.0
+[    4.472804] IP-Config: Complete:
+[    4.476185]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    4.487231]      host=192.168.0.100, domain=, nis-domain=(none)
+[    4.493450]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    4.511817] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.518572] devtmpfs: mounted
+[    4.524190] Freeing unused kernel memory: 2048K
+[    4.538048] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # ls
+bin                        root
+boot                       sbin
+dev                        sys
+etc                        sysfs_lowercase_module.ko
+init                       task4_module.ko
+lib                        tmp
+linuxrc                    trouble_module.ko
+proc                       usr
+/ # insmod sys/ # insmod sysf/ # insmod sysfs_lowercase_module.ko 
+[   37.825066] sysfs_lowercase_module: loading out-of-tree module taints kernel.
+[   37.833255] sysfs_lowercase_module says: Hello!
+[   37.838131] sysfs: cannot create duplicate filename '/kernel/lc_converter/"result"'
+[   37.846164] CPU: 0 PID: 81 Comm: insmod Tainted: G           O      4.19.176 #2
+[   37.853819] Hardware name: Generic AM33XX (Flattened Device Tree)
+[   37.860243] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[   37.868372] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[   37.875954] [<c0e8de18>] (dump_stack) from [<c04f0288>] (sysfs_warn_dup+0x5c/0x68)
+[   37.883892] [<c04f0288>] (sysfs_warn_dup) from [<c04efe70>] (sysfs_add_file_mode_ns+0xe4/0x1a0)
+[   37.893011] [<c04efe70>] (sysfs_add_file_mode_ns) from [<c04f0a38>] (internal_create_group+0x148/0x3bc)
+[   37.902860] [<c04f0a38>] (internal_create_group) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[   37.911985] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[   37.920465] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[   37.928853] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[   37.937149] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[   37.945624] Exception stack(0xda30bfa8 to 0xda30bff0)
+[   37.950917] bfa0:                   b6f1238c b6f31950 0011d1d8 00001820 0010ad3d 00000000
+[   37.959487] bfc0: b6f1238c b6f31950 00001820 00000080 00000001 be9dfe8c 0010ad3d 000f629b
+[   37.968053] bfe0: be9dfb48 be9dfb38 0003ba90 b6deb1b0
+insmod: can't insert 'sysfs_lowercase_module.ko': File exists
+/ # 
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 3.9 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000014] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000034] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000045] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003777] timer_probe: no matching timers found
+[    0.003970] Console: colour dummy device 80x30
+[    0.004028] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089200] pid_max: default: 32768 minimum: 301
+[    0.089357] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089371] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090014] CPU: Testing write buffer coherency: ok
+[    0.090077] CPU0: Spectre v2: using BPIALL workaround
+[    0.090435] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091022] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092435] rcu: Hierarchical SRCU implementation.
+[    0.095251] EFI services will not be available.
+[    0.095438] smp: Bringing up secondary CPUs ...
+[    0.095452] smp: Brought up 1 node, 1 CPU
+[    0.095461] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095470] CPU: All CPU(s) started in SVC mode.
+[    0.096838] devtmpfs: initialized
+[    0.104195] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104692] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104723] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108575] pinctrl core: initialized pinctrl subsystem
+[    0.110609] DMI not present or invalid.
+[    0.111055] NET: Registered protocol family 16
+[    0.113459] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140035] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193864] cpuidle: using governor menu
+[    0.201348] OMAP GPIO hardware version 0.1
+[    0.213472] No ATAGs?
+[    0.213484] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218804] Serial: AMBA PL011 UART driver
+[    0.237502] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241257] vgaarb: loaded
+[    0.242092] SCSI subsystem initialized
+[    0.242670] usbcore: registered new interface driver usbfs
+[    0.242727] usbcore: registered new interface driver hub
+[    0.242775] usbcore: registered new device driver usb
+[    0.244363] pps_core: LinuxPPS API ver. 1 registered
+[    0.244378] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244401] PTP clock support registered
+[    0.244572] EDAC MC: Ver: 3.0.0
+[    0.247388] clocksource: Switched to clocksource timer1
+[    0.312082] NET: Registered protocol family 2
+[    0.312708] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312737] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312780] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312840] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.312944] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.312968] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313099] NET: Registered protocol family 1
+[    0.313751] RPC: Registered named UNIX socket transport module.
+[    0.313765] RPC: Registered udp transport module.
+[    0.313772] RPC: Registered tcp transport module.
+[    0.313779] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.314936] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317213] Initialise system trusted keyrings
+[    0.317705] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324445] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325304] NFS: Registering the id_resolver key type
+[    0.325346] Key type id_resolver registered
+[    0.325354] Key type id_legacy registered
+[    0.325396] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327596] Key type asymmetric registered
+[    0.327614] Asymmetric key parser 'x509' registered
+[    0.327690] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327705] io scheduler noop registered
+[    0.327713] io scheduler deadline registered
+[    0.327911] io scheduler cfq registered (default)
+[    0.327922] io scheduler mq-deadline registered
+[    0.327930] io scheduler kyber registered
+[    0.333728] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399583] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.402982] SuperH (H)SCI(F) driver initialized
+[    0.403864] msm_serial: driver initialized
+[    0.404173] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404265] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.088656] console [ttyO0] enabled
+[    1.092915] STMicroelectronics ASC driver initialized
+[    1.099276] STM32 USART driver initialized
+[    1.104953] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.117203] random: fast init done
+[    1.120963] random: crng init done
+[    1.134497] brd: module loaded
+[    1.145244] loop: module loaded
+[    1.157272] libphy: Fixed MDIO Bus: probed
+[    1.162801] CAN device driver interface
+[    1.167891] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.174791] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.180923] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.187169] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.194487] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277405] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285414] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293045] libphy: 4a101000.mdio: probed
+[    1.297264] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309371] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316451] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323231] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330507] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338451] usbcore: registered new interface driver pegasus
+[    1.344437] usbcore: registered new interface driver asix
+[    1.350170] usbcore: registered new interface driver ax88179_178a
+[    1.356583] usbcore: registered new interface driver cdc_ether
+[    1.362760] usbcore: registered new interface driver smsc75xx
+[    1.368841] usbcore: registered new interface driver smsc95xx
+[    1.374890] usbcore: registered new interface driver net1080
+[    1.380884] usbcore: registered new interface driver cdc_subset
+[    1.387113] usbcore: registered new interface driver zaurus
+[    1.393022] usbcore: registered new interface driver cdc_ncm
+[    1.401380] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408301] ehci-pci: EHCI PCI platform driver
+[    1.413011] ehci-platform: EHCI generic platform driver
+[    1.418740] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424358] ehci-orion: EHCI orion driver
+[    1.428765] SPEAr-ehci: EHCI SPEAr driver
+[    1.433094] ehci-st: EHCI STMicroelectronics driver
+[    1.438374] ehci-exynos: EHCI EXYNOS driver
+[    1.442881] ehci-atmel: EHCI Atmel driver
+[    1.447193] tegra-ehci: Tegra EHCI driver
+[    1.451587] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458134] ohci-pci: OHCI PCI platform driver
+[    1.462858] ohci-platform: OHCI generic platform driver
+[    1.468571] SPEAr-ohci: OHCI SPEAr driver
+[    1.472911] ohci-st: OHCI STMicroelectronics driver
+[    1.478195] ohci-atmel: OHCI Atmel driver
+[    1.483088] usbcore: registered new interface driver usb-storage
+[    1.489555] usbcore: registered new interface driver usbserial_generic
+[    1.496419] usbserial: USB Serial support registered for generic
+[    1.502774] usbcore: registered new interface driver ftdi_sio
+[    1.508838] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516522] usbcore: registered new interface driver pl2303
+[    1.522398] usbserial: USB Serial support registered for pl2303
+[    1.528647] usbcore: registered new interface driver usb_serial_simple
+[    1.535503] usbserial: USB Serial support registered for carelink
+[    1.541924] usbserial: USB Serial support registered for zio
+[    1.547893] usbserial: USB Serial support registered for funsoft
+[    1.554203] usbserial: USB Serial support registered for flashloader
+[    1.560896] usbserial: USB Serial support registered for google
+[    1.567122] usbserial: USB Serial support registered for libtransistor
+[    1.573999] usbserial: USB Serial support registered for vivopay
+[    1.580327] usbserial: USB Serial support registered for moto_modem
+[    1.586910] usbserial: USB Serial support registered for motorola_tetra
+[    1.593878] usbserial: USB Serial support registered for novatel_gps
+[    1.600572] usbserial: USB Serial support registered for hp4x
+[    1.606607] usbserial: USB Serial support registered for suunto
+[    1.612844] usbserial: USB Serial support registered for siemens_mpi
+[    1.625225] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635782] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649345] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.659887] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685708] i2c /dev entries driver
+[    1.702611] sdhci: Secure Digital Host Controller Interface driver
+[    1.709189] sdhci: Copyright(c) Pierre Ossman
+[    1.714962] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724164] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729540] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761278] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.793895] Synopsys Designware Multimedia Card Interface Driver
+[    1.801739] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811521] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819428] usbcore: registered new interface driver usbhid
+[    1.825275] usbhid: USB HID core driver
+[    1.834129] NET: Registered protocol family 10
+[    1.840494] Segment Routing with IPv6
+[    1.844414] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851415] NET: Registered protocol family 17
+[    1.856115] can: controller area network core (rev 20170425 abi 9)
+[    1.862727] NET: Registered protocol family 29
+[    1.867415] can: raw protocol (rev 20170425)
+[    1.871888] can: broadcast manager protocol (rev 20170425 t)
+[    1.877836] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884235] Key type dns_resolver registered
+[    1.888980] ThumbEE CPU extension supported.
+[    1.893446] Registering SWP/SWPB emulation handler
+[    1.898509] omap_voltage_late_init: Voltage driver support not added
+[    1.907133] Loading compiled-in X.509 certificates
+[    1.929606] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940051] mmc0: new high speed SDHC card at address 1234
+[    1.946900] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954686]  mmcblk0: p1 p2
+[    1.973595] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980206] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.987922] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999534] mmc1: new high speed MMC card at address 0001
+[    2.006243] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011610] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018367] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.024951] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038121]  mmcblk1: p1 p2
+[    2.120809] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.140128] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.145736] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.153912] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.162634] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.170223] usb usb1: Product: MUSB HDRC host driver
+[    2.175423] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.181274] usb usb1: SerialNumber: musb-hdrc.1
+[    2.186714] hub 1-0:1.0: USB hub found
+[    2.190784] hub 1-0:1.0: 1 port detected
+[    2.196362] hctosys: unable to open rtc device (rtc0)
+[    2.215441] net eth0: initializing cpsw version 1.12 (0)
+[    2.318482] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337304] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    4.418291] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    4.437411] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.467514] IP-Config: Guessing netmask 255.255.255.0
+[    4.472812] IP-Config: Complete:
+[    4.476195]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    4.487245]      host=192.168.0.100, domain=, nis-domain=(none)
+[    4.493461]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    4.509402] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.515969] devtmpfs: mounted
+[    4.521795] Freeing unused kernel memory: 2048K
+[    4.528336] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # ls
+bin                        root
+boot                       sbin
+dev                        sys
+etc                        sysfs_lowercase_module.ko
+init                       task4_module.ko
+lib                        tmp
+linuxrc                    trouble_module.ko
+proc                       usr
+/ # insmod sysf/ # insmod sysfs_lowercase_module.ko 
+[   12.176861] sysfs_lowercase_module: loading out-of-tree module taints kernel.
+[   12.185056] sysfs_lowercase_module says: Hello!
+/ # ls /sys/kernel/
+cgroup              kexec_crash_size    slab
+config              kexec_loaded        tracing
+debug               lc_converter        uevent_helper
+fscaps              mm                  uevent_seqnum
+iommu_groups        notes               vmcoreinfo
+irq                 rcu_expedited
+kexec_crash_loaded  rcu_normal
+/ # cd /sys/ker/ # cd /sys/kernel/lc/ # cd /sys/kernel/lc_converter/
+/sys/kernel/lc_converter # ls
+"result"     "statistic"
+/sys/kernel/lc_converter # cat statistic" "statistic"statistic"
+cat: can't open 'statistic': No such file or directory
+/sys/kernel/lc_converter # cat "sta
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 4 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000012] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000032] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000043] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003781] timer_probe: no matching timers found
+[    0.003978] Console: colour dummy device 80x30
+[    0.004035] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089183] pid_max: default: 32768 minimum: 301
+[    0.089343] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089357] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089993] CPU: Testing write buffer coherency: ok
+[    0.090056] CPU0: Spectre v2: using BPIALL workaround
+[    0.090406] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.090995] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092397] rcu: Hierarchical SRCU implementation.
+[    0.095210] EFI services will not be available.
+[    0.095396] smp: Bringing up secondary CPUs ...
+[    0.095409] smp: Brought up 1 node, 1 CPU
+[    0.095420] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095428] CPU: All CPU(s) started in SVC mode.
+[    0.096795] devtmpfs: initialized
+[    0.104159] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104653] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104686] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108583] pinctrl core: initialized pinctrl subsystem
+[    0.110615] DMI not present or invalid.
+[    0.111055] NET: Registered protocol family 16
+[    0.113454] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.139993] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193751] cpuidle: using governor menu
+[    0.201285] OMAP GPIO hardware version 0.1
+[    0.213496] No ATAGs?
+[    0.213507] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218823] Serial: AMBA PL011 UART driver
+[    0.237556] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241288] vgaarb: loaded
+[    0.242120] SCSI subsystem initialized
+[    0.242706] usbcore: registered new interface driver usbfs
+[    0.242762] usbcore: registered new interface driver hub
+[    0.242808] usbcore: registered new device driver usb
+[    0.244389] pps_core: LinuxPPS API ver. 1 registered
+[    0.244403] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244427] PTP clock support registered
+[    0.244602] EDAC MC: Ver: 3.0.0
+[    0.247430] clocksource: Switched to clocksource timer1
+[    0.312111] NET: Registered protocol family 2
+[    0.312730] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312758] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312800] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312860] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.312965] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.312989] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313124] NET: Registered protocol family 1
+[    0.313781] RPC: Registered named UNIX socket transport module.
+[    0.313798] RPC: Registered udp transport module.
+[    0.313804] RPC: Registered tcp transport module.
+[    0.313811] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.314966] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317226] Initialise system trusted keyrings
+[    0.317712] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324462] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325321] NFS: Registering the id_resolver key type
+[    0.325363] Key type id_resolver registered
+[    0.325371] Key type id_legacy registered
+[    0.325411] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327590] Key type asymmetric registered
+[    0.327609] Asymmetric key parser 'x509' registered
+[    0.327687] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327700] io scheduler noop registered
+[    0.327708] io scheduler deadline registered
+[    0.327909] io scheduler cfq registered (default)
+[    0.327920] io scheduler mq-deadline registered
+[    0.327928] io scheduler kyber registered
+[    0.333737] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399562] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.402981] SuperH (H)SCI(F) driver initialized
+[    0.403861] msm_serial: driver initialized
+[    0.404171] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404263] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.091597] console [ttyO0] enabled
+[    1.095859] STMicroelectronics ASC driver initialized
+[    1.102250] STM32 USART driver initialized
+[    1.107997] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.120291] random: fast init done
+[    1.123977] random: crng init done
+[    1.137370] brd: module loaded
+[    1.148357] loop: module loaded
+[    1.160502] libphy: Fixed MDIO Bus: probed
+[    1.165898] CAN device driver interface
+[    1.170964] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.177968] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.184083] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.190385] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.197701] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277518] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285557] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293231] libphy: 4a101000.mdio: probed
+[    1.297533] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309545] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316629] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323409] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330669] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338614] usbcore: registered new interface driver pegasus
+[    1.344605] usbcore: registered new interface driver asix
+[    1.350336] usbcore: registered new interface driver ax88179_178a
+[    1.356747] usbcore: registered new interface driver cdc_ether
+[    1.362922] usbcore: registered new interface driver smsc75xx
+[    1.369004] usbcore: registered new interface driver smsc95xx
+[    1.375051] usbcore: registered new interface driver net1080
+[    1.381032] usbcore: registered new interface driver cdc_subset
+[    1.387261] usbcore: registered new interface driver zaurus
+[    1.393168] usbcore: registered new interface driver cdc_ncm
+[    1.401542] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408464] ehci-pci: EHCI PCI platform driver
+[    1.413173] ehci-platform: EHCI generic platform driver
+[    1.418914] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424533] ehci-orion: EHCI orion driver
+[    1.428933] SPEAr-ehci: EHCI SPEAr driver
+[    1.433262] ehci-st: EHCI STMicroelectronics driver
+[    1.438541] ehci-exynos: EHCI EXYNOS driver
+[    1.443048] ehci-atmel: EHCI Atmel driver
+[    1.447364] tegra-ehci: Tegra EHCI driver
+[    1.451760] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458305] ohci-pci: OHCI PCI platform driver
+[    1.463026] ohci-platform: OHCI generic platform driver
+[    1.468738] SPEAr-ohci: OHCI SPEAr driver
+[    1.473079] ohci-st: OHCI STMicroelectronics driver
+[    1.478368] ohci-atmel: OHCI Atmel driver
+[    1.483262] usbcore: registered new interface driver usb-storage
+[    1.489727] usbcore: registered new interface driver usbserial_generic
+[    1.496590] usbserial: USB Serial support registered for generic
+[    1.502944] usbcore: registered new interface driver ftdi_sio
+[    1.509005] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516688] usbcore: registered new interface driver pl2303
+[    1.522565] usbserial: USB Serial support registered for pl2303
+[    1.528815] usbcore: registered new interface driver usb_serial_simple
+[    1.535671] usbserial: USB Serial support registered for carelink
+[    1.542092] usbserial: USB Serial support registered for zio
+[    1.548061] usbserial: USB Serial support registered for funsoft
+[    1.554370] usbserial: USB Serial support registered for flashloader
+[    1.561062] usbserial: USB Serial support registered for google
+[    1.567289] usbserial: USB Serial support registered for libtransistor
+[    1.574165] usbserial: USB Serial support registered for vivopay
+[    1.580493] usbserial: USB Serial support registered for moto_modem
+[    1.587076] usbserial: USB Serial support registered for motorola_tetra
+[    1.594045] usbserial: USB Serial support registered for novatel_gps
+[    1.600738] usbserial: USB Serial support registered for hp4x
+[    1.606774] usbserial: USB Serial support registered for suunto
+[    1.613011] usbserial: USB Serial support registered for siemens_mpi
+[    1.625391] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635945] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649549] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.660087] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685955] i2c /dev entries driver
+[    1.702855] sdhci: Secure Digital Host Controller Interface driver
+[    1.709435] sdhci: Copyright(c) Pierre Ossman
+[    1.715222] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724421] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729799] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761337] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.793964] Synopsys Designware Multimedia Card Interface Driver
+[    1.801815] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811597] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819529] usbcore: registered new interface driver usbhid
+[    1.825377] usbhid: USB HID core driver
+[    1.834260] NET: Registered protocol family 10
+[    1.840612] Segment Routing with IPv6
+[    1.844530] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851528] NET: Registered protocol family 17
+[    1.856245] can: controller area network core (rev 20170425 abi 9)
+[    1.862851] NET: Registered protocol family 29
+[    1.867535] can: raw protocol (rev 20170425)
+[    1.872008] can: broadcast manager protocol (rev 20170425 t)
+[    1.877957] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884363] Key type dns_resolver registered
+[    1.889111] ThumbEE CPU extension supported.
+[    1.893597] Registering SWP/SWPB emulation handler
+[    1.898660] omap_voltage_late_init: Voltage driver support not added
+[    1.907267] Loading compiled-in X.509 certificates
+[    1.929710] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940161] mmc0: new high speed SDHC card at address 1234
+[    1.946996] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954766]  mmcblk0: p1 p2
+[    1.973677] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980280] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.987998] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999653] mmc1: new high speed MMC card at address 0001
+[    2.006364] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011733] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018509] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025112] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038286]  mmcblk1: p1 p2
+[    2.120851] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.140169] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.145776] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.153947] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.162675] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.170264] usb usb1: Product: MUSB HDRC host driver
+[    2.175464] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.181316] usb usb1: SerialNumber: musb-hdrc.1
+[    2.186755] hub 1-0:1.0: USB hub found
+[    2.190823] hub 1-0:1.0: 1 port detected
+[    2.196406] hctosys: unable to open rtc device (rtc0)
+[    2.215484] net eth0: initializing cpsw version 1.12 (0)
+[    2.318527] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337350] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    4.418330] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    4.437453] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.467551] IP-Config: Guessing netmask 255.255.255.0
+[    4.472850] IP-Config: Complete:
+[    4.476232]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    4.487281]      host=192.168.0.100, domain=, nis-domain=(none)
+[    4.493502]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    4.509465] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.516028] devtmpfs: mounted
+[    4.521857] Freeing unused kernel memory: 2048K
+[    4.528269] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # insmod sysf/ # insmod sysfs_lowercase_module.ko 
+[   10.055599] sysfs_lowercase_module: loading out-of-tree module taints kernel.
+[   10.063783] sysfs_lowercase_module says: Hello!
+/ # cd /sys/kernel/lsc/ # cd /sys/kernel/lc_converter/
+/sys/kernel/lc_converter # ls
+input      statistic
+/sys/kernel/lc_converter # cat st/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	0 - symbols entered during last operation
+	0 - symbols converted during last operation
+	0 - symbols entered since module insertion
+	0 - symbols converted since module insertion
+/sys/kernel/lc_converter # echo 3AbOpPmY"mY sTrInG" > input
+[  106.945888] You entered: mY sTrInG
+/sys/kernel/lc_converter # cat ipnput
+
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # cat input/sys/kernel/lc_converter # echo "mY sTrInG" > input/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	0 - symbols entered during last operation
+	-1 - symbols converted during last operation
+	0 - symbols entered since module insertion
+	0 - symbols converted since module insertion
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # cat statistic /sys/kernel/lc_converter # cat input/sys/kernel/lc_converter # echo "mY sTrInG" > input > input' > inputmY sTrInG' > input'mY sTrInG' > inputmY sTrInG' > input
+[  106.949573] To get converted result print: cat result
+[  187.566871] You entered: mY sTrInG
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # echo 'mY sTrInG' > input/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	0 - symbols entered during last operation
+	-2 - symbols converted during last operation
+	0 - symbols entered since module insertion
+	0 - symbols converted since module insertion
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # cat statistic /sys/kernel/lc_converter # echo 'mY sTrInG' > input/sys/kernel/lc_converter # cat statistic /sys/kernel/lc_converter # cat input
+
+/sys/kernel/lc_converter # [  187
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 3.9 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000015] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000034] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000045] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003783] timer_probe: no matching timers found
+[    0.003981] Console: colour dummy device 80x30
+[    0.004038] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089187] pid_max: default: 32768 minimum: 301
+[    0.089346] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089360] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090002] CPU: Testing write buffer coherency: ok
+[    0.090065] CPU0: Spectre v2: using BPIALL workaround
+[    0.090416] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091001] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092411] rcu: Hierarchical SRCU implementation.
+[    0.095218] EFI services will not be available.
+[    0.095398] smp: Bringing up secondary CPUs ...
+[    0.095411] smp: Brought up 1 node, 1 CPU
+[    0.095420] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095428] CPU: All CPU(s) started in SVC mode.
+[    0.096798] devtmpfs: initialized
+[    0.104145] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104637] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104667] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108572] pinctrl core: initialized pinctrl subsystem
+[    0.110604] DMI not present or invalid.
+[    0.111049] NET: Registered protocol family 16
+[    0.113460] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140023] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193783] cpuidle: using governor menu
+[    0.201269] OMAP GPIO hardware version 0.1
+[    0.213455] No ATAGs?
+[    0.213466] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218776] Serial: AMBA PL011 UART driver
+[    0.237494] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241221] vgaarb: loaded
+[    0.242042] SCSI subsystem initialized
+[    0.242634] usbcore: registered new interface driver usbfs
+[    0.242689] usbcore: registered new interface driver hub
+[    0.242738] usbcore: registered new device driver usb
+[    0.244312] pps_core: LinuxPPS API ver. 1 registered
+[    0.244327] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244349] PTP clock support registered
+[    0.244523] EDAC MC: Ver: 3.0.0
+[    0.247365] clocksource: Switched to clocksource timer1
+[    0.312071] NET: Registered protocol family 2
+[    0.312694] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312721] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312764] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312824] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.312932] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.312955] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313094] NET: Registered protocol family 1
+[    0.313743] RPC: Registered named UNIX socket transport module.
+[    0.313759] RPC: Registered udp transport module.
+[    0.313766] RPC: Registered tcp transport module.
+[    0.313772] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.314916] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317191] Initialise system trusted keyrings
+[    0.317682] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324425] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325277] NFS: Registering the id_resolver key type
+[    0.325323] Key type id_resolver registered
+[    0.325331] Key type id_legacy registered
+[    0.325372] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327566] Key type asymmetric registered
+[    0.327585] Asymmetric key parser 'x509' registered
+[    0.327660] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327674] io scheduler noop registered
+[    0.327682] io scheduler deadline registered
+[    0.327876] io scheduler cfq registered (default)
+[    0.327888] io scheduler mq-deadline registered
+[    0.327896] io scheduler kyber registered
+[    0.333692] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399525] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.402971] SuperH (H)SCI(F) driver initialized
+[    0.403860] msm_serial: driver initialized
+[    0.404169] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404262] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.091600] console [ttyO0] enabled
+[    1.095867] STMicroelectronics ASC driver initialized
+[    1.102229] STM32 USART driver initialized
+[    1.107979] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.120260] random: fast init done
+[    1.123945] random: crng init done
+[    1.137505] brd: module loaded
+[    1.148326] loop: module loaded
+[    1.160447] libphy: Fixed MDIO Bus: probed
+[    1.165842] CAN device driver interface
+[    1.170904] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.177897] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.184013] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.190319] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.197633] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277451] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285495] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293161] libphy: 4a101000.mdio: probed
+[    1.297469] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309481] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316567] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323349] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330607] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338555] usbcore: registered new interface driver pegasus
+[    1.344542] usbcore: registered new interface driver asix
+[    1.350273] usbcore: registered new interface driver ax88179_178a
+[    1.356687] usbcore: registered new interface driver cdc_ether
+[    1.362863] usbcore: registered new interface driver smsc75xx
+[    1.368946] usbcore: registered new interface driver smsc95xx
+[    1.374993] usbcore: registered new interface driver net1080
+[    1.380976] usbcore: registered new interface driver cdc_subset
+[    1.387205] usbcore: registered new interface driver zaurus
+[    1.393113] usbcore: registered new interface driver cdc_ncm
+[    1.401479] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408402] ehci-pci: EHCI PCI platform driver
+[    1.413114] ehci-platform: EHCI generic platform driver
+[    1.418846] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424461] ehci-orion: EHCI orion driver
+[    1.428866] SPEAr-ehci: EHCI SPEAr driver
+[    1.433194] ehci-st: EHCI STMicroelectronics driver
+[    1.438474] ehci-exynos: EHCI EXYNOS driver
+[    1.442985] ehci-atmel: EHCI Atmel driver
+[    1.447301] tegra-ehci: Tegra EHCI driver
+[    1.451700] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458246] ohci-pci: OHCI PCI platform driver
+[    1.462972] ohci-platform: OHCI generic platform driver
+[    1.468692] SPEAr-ohci: OHCI SPEAr driver
+[    1.473033] ohci-st: OHCI STMicroelectronics driver
+[    1.478328] ohci-atmel: OHCI Atmel driver
+[    1.483239] usbcore: registered new interface driver usb-storage
+[    1.489701] usbcore: registered new interface driver usbserial_generic
+[    1.496564] usbserial: USB Serial support registered for generic
+[    1.502917] usbcore: registered new interface driver ftdi_sio
+[    1.508977] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516659] usbcore: registered new interface driver pl2303
+[    1.522536] usbserial: USB Serial support registered for pl2303
+[    1.528786] usbcore: registered new interface driver usb_serial_simple
+[    1.535644] usbserial: USB Serial support registered for carelink
+[    1.542065] usbserial: USB Serial support registered for zio
+[    1.548035] usbserial: USB Serial support registered for funsoft
+[    1.554344] usbserial: USB Serial support registered for flashloader
+[    1.561037] usbserial: USB Serial support registered for google
+[    1.567262] usbserial: USB Serial support registered for libtransistor
+[    1.574139] usbserial: USB Serial support registered for vivopay
+[    1.580467] usbserial: USB Serial support registered for moto_modem
+[    1.587050] usbserial: USB Serial support registered for motorola_tetra
+[    1.594019] usbserial: USB Serial support registered for novatel_gps
+[    1.600711] usbserial: USB Serial support registered for hp4x
+[    1.606747] usbserial: USB Serial support registered for suunto
+[    1.612984] usbserial: USB Serial support registered for siemens_mpi
+[    1.625387] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635939] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649526] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.660065] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685889] i2c /dev entries driver
+[    1.702828] sdhci: Secure Digital Host Controller Interface driver
+[    1.709408] sdhci: Copyright(c) Pierre Ossman
+[    1.715205] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724405] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729782] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761270] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.793891] Synopsys Designware Multimedia Card Interface Driver
+[    1.801740] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811553] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819466] usbcore: registered new interface driver usbhid
+[    1.825312] usbhid: USB HID core driver
+[    1.834213] NET: Registered protocol family 10
+[    1.840566] Segment Routing with IPv6
+[    1.844484] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851484] NET: Registered protocol family 17
+[    1.856200] can: controller area network core (rev 20170425 abi 9)
+[    1.862808] NET: Registered protocol family 29
+[    1.867490] can: raw protocol (rev 20170425)
+[    1.871963] can: broadcast manager protocol (rev 20170425 t)
+[    1.877912] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884319] Key type dns_resolver registered
+[    1.889062] ThumbEE CPU extension supported.
+[    1.893548] Registering SWP/SWPB emulation handler
+[    1.898612] omap_voltage_late_init: Voltage driver support not added
+[    1.907208] Loading compiled-in X.509 certificates
+[    1.929696] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940144] mmc0: new high speed SDHC card at address 1234
+[    1.946994] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954780]  mmcblk0: p1 p2
+[    1.973689] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980305] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.988022] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999667] mmc1: new high speed MMC card at address 0001
+[    2.006385] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011750] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018528] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025133] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038293]  mmcblk1: p1 p2
+[    2.119891] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.139227] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.144835] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.153006] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.161728] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.169319] usb usb1: Product: MUSB HDRC host driver
+[    2.174518] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.180370] usb usb1: SerialNumber: musb-hdrc.1
+[    2.185812] hub 1-0:1.0: USB hub found
+[    2.189887] hub 1-0:1.0: 1 port detected
+[    2.195463] hctosys: unable to open rtc device (rtc0)
+[    2.214542] net eth0: initializing cpsw version 1.12 (0)
+[    2.318460] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337288] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    4.418265] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    4.437387] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.467490] IP-Config: Guessing netmask 255.255.255.0
+[    4.472786] IP-Config: Complete:
+[    4.476168]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    4.487215]      host=192.168.0.100, domain=, nis-domain=(none)
+[    4.493429]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    4.509443] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.516017] devtmpfs: mounted
+[    4.521849] Freeing unused kernel memory: 2048K
+[    4.528201] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # insmod sysf/ # insmod sysfs_lowercase_module.ko 
+[   11.946982] sysfs_lowercase_module: loading out-of-tree module taints kernel.
+[   11.955175] sysfs_lowercase_module says: Hello!
+/ # lscd /sys/ker/ # cd /sys/kernel/lc/ # cd /sys/kernel/lc_converter/
+/sys/kernel/lc_converter # ls
+statistic  text
+/sys/kernel/lc_converter # cat s/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	0 - symbols entered during last operation
+	0 - symbols converted during last operation
+	0 - symbols entered since module insertion
+	0 - symbols converted since module insertion
+/sys/kernel/lc_converter # echo 'mY sTrInG' > tetx
+-/bin/sh: can't create tetx: Permission denied
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # echo 'mY sTrInG' > tetxxt
+[   48.161227] You entered: mY sTrInG
+/sys/kernel/lc_converter # cat tetxxt
+
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # cat text/sys/kernel/lc_converter # echo 'mY sTrInG' > text/sys/kernel/lc_converter # echo 'mY sTrInG' > tetx/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	0 - symbols entered during last operation
+	-1 - symbols converted during last operation
+	0 - symbols entered since module insertion
+	0 - symbols converted since module insertion
+/sys/kernel/lc_converter # 
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 4.1 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000016] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000034] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000046] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003784] timer_probe: no matching timers found
+[    0.003981] Console: colour dummy device 80x30
+[    0.004038] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089197] pid_max: default: 32768 minimum: 301
+[    0.089360] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089372] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090014] CPU: Testing write buffer coherency: ok
+[    0.090075] CPU0: Spectre v2: using BPIALL workaround
+[    0.090431] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091027] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092426] rcu: Hierarchical SRCU implementation.
+[    0.095231] EFI services will not be available.
+[    0.095406] smp: Bringing up secondary CPUs ...
+[    0.095420] smp: Brought up 1 node, 1 CPU
+[    0.095430] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095438] CPU: All CPU(s) started in SVC mode.
+[    0.096807] devtmpfs: initialized
+[    0.104174] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104671] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104701] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108628] pinctrl core: initialized pinctrl subsystem
+[    0.110634] DMI not present or invalid.
+[    0.111079] NET: Registered protocol family 16
+[    0.113482] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140042] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193806] cpuidle: using governor menu
+[    0.201294] OMAP GPIO hardware version 0.1
+[    0.213443] No ATAGs?
+[    0.213453] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218760] Serial: AMBA PL011 UART driver
+[    0.237472] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241207] vgaarb: loaded
+[    0.242042] SCSI subsystem initialized
+[    0.242628] usbcore: registered new interface driver usbfs
+[    0.242687] usbcore: registered new interface driver hub
+[    0.242737] usbcore: registered new device driver usb
+[    0.244313] pps_core: LinuxPPS API ver. 1 registered
+[    0.244327] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244350] PTP clock support registered
+[    0.244518] EDAC MC: Ver: 3.0.0
+[    0.247339] clocksource: Switched to clocksource timer1
+[    0.312048] NET: Registered protocol family 2
+[    0.312663] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312692] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312735] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312795] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.312905] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.312930] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313062] NET: Registered protocol family 1
+[    0.313707] RPC: Registered named UNIX socket transport module.
+[    0.313723] RPC: Registered udp transport module.
+[    0.313730] RPC: Registered tcp transport module.
+[    0.313736] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.314874] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317146] Initialise system trusted keyrings
+[    0.317631] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324385] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325237] NFS: Registering the id_resolver key type
+[    0.325279] Key type id_resolver registered
+[    0.325287] Key type id_legacy registered
+[    0.325332] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327524] Key type asymmetric registered
+[    0.327543] Asymmetric key parser 'x509' registered
+[    0.327619] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327632] io scheduler noop registered
+[    0.327641] io scheduler deadline registered
+[    0.327842] io scheduler cfq registered (default)
+[    0.327853] io scheduler mq-deadline registered
+[    0.327861] io scheduler kyber registered
+[    0.333646] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399430] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.402855] SuperH (H)SCI(F) driver initialized
+[    0.403731] msm_serial: driver initialized
+[    0.404037] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404131] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.091468] console [ttyO0] enabled
+[    1.095740] STMicroelectronics ASC driver initialized
+[    1.102100] STM32 USART driver initialized
+[    1.107852] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.120152] random: fast init done
+[    1.123838] random: crng init done
+[    1.137214] brd: module loaded
+[    1.148176] loop: module loaded
+[    1.160377] libphy: Fixed MDIO Bus: probed
+[    1.165768] CAN device driver interface
+[    1.170831] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.177836] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.183951] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.190253] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.197570] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277422] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285459] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293112] libphy: 4a101000.mdio: probed
+[    1.297412] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309431] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316512] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323291] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330558] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338504] usbcore: registered new interface driver pegasus
+[    1.344489] usbcore: registered new interface driver asix
+[    1.350221] usbcore: registered new interface driver ax88179_178a
+[    1.356633] usbcore: registered new interface driver cdc_ether
+[    1.362809] usbcore: registered new interface driver smsc75xx
+[    1.368890] usbcore: registered new interface driver smsc95xx
+[    1.374940] usbcore: registered new interface driver net1080
+[    1.380923] usbcore: registered new interface driver cdc_subset
+[    1.387152] usbcore: registered new interface driver zaurus
+[    1.393062] usbcore: registered new interface driver cdc_ncm
+[    1.401430] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408346] ehci-pci: EHCI PCI platform driver
+[    1.413054] ehci-platform: EHCI generic platform driver
+[    1.418789] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424403] ehci-orion: EHCI orion driver
+[    1.428803] SPEAr-ehci: EHCI SPEAr driver
+[    1.433131] ehci-st: EHCI STMicroelectronics driver
+[    1.438412] ehci-exynos: EHCI EXYNOS driver
+[    1.442921] ehci-atmel: EHCI Atmel driver
+[    1.447239] tegra-ehci: Tegra EHCI driver
+[    1.451634] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458181] ohci-pci: OHCI PCI platform driver
+[    1.462902] ohci-platform: OHCI generic platform driver
+[    1.468617] SPEAr-ohci: OHCI SPEAr driver
+[    1.472960] ohci-st: OHCI STMicroelectronics driver
+[    1.478244] ohci-atmel: OHCI Atmel driver
+[    1.483139] usbcore: registered new interface driver usb-storage
+[    1.489606] usbcore: registered new interface driver usbserial_generic
+[    1.496470] usbserial: USB Serial support registered for generic
+[    1.502822] usbcore: registered new interface driver ftdi_sio
+[    1.508883] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516567] usbcore: registered new interface driver pl2303
+[    1.522443] usbserial: USB Serial support registered for pl2303
+[    1.528693] usbcore: registered new interface driver usb_serial_simple
+[    1.535550] usbserial: USB Serial support registered for carelink
+[    1.541972] usbserial: USB Serial support registered for zio
+[    1.547939] usbserial: USB Serial support registered for funsoft
+[    1.554249] usbserial: USB Serial support registered for flashloader
+[    1.560943] usbserial: USB Serial support registered for google
+[    1.567169] usbserial: USB Serial support registered for libtransistor
+[    1.574045] usbserial: USB Serial support registered for vivopay
+[    1.580373] usbserial: USB Serial support registered for moto_modem
+[    1.586955] usbserial: USB Serial support registered for motorola_tetra
+[    1.593924] usbserial: USB Serial support registered for novatel_gps
+[    1.600616] usbserial: USB Serial support registered for hp4x
+[    1.606652] usbserial: USB Serial support registered for suunto
+[    1.612890] usbserial: USB Serial support registered for siemens_mpi
+[    1.625280] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635832] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649434] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.659971] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685745] i2c /dev entries driver
+[    1.702639] sdhci: Secure Digital Host Controller Interface driver
+[    1.709214] sdhci: Copyright(c) Pierre Ossman
+[    1.715006] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724202] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729572] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761240] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.793870] Synopsys Designware Multimedia Card Interface Driver
+[    1.801714] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811515] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819416] usbcore: registered new interface driver usbhid
+[    1.825263] usbhid: USB HID core driver
+[    1.834158] NET: Registered protocol family 10
+[    1.840512] Segment Routing with IPv6
+[    1.844428] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851426] NET: Registered protocol family 17
+[    1.856142] can: controller area network core (rev 20170425 abi 9)
+[    1.862756] NET: Registered protocol family 29
+[    1.867442] can: raw protocol (rev 20170425)
+[    1.871915] can: broadcast manager protocol (rev 20170425 t)
+[    1.877865] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884262] Key type dns_resolver registered
+[    1.889008] ThumbEE CPU extension supported.
+[    1.893495] Registering SWP/SWPB emulation handler
+[    1.898561] omap_voltage_late_init: Voltage driver support not added
+[    1.907170] Loading compiled-in X.509 certificates
+[    1.929621] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940063] mmc0: new high speed SDHC card at address 1234
+[    1.946910] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954690]  mmcblk0: p1 p2
+[    1.973593] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980204] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.987920] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999558] mmc1: new high speed MMC card at address 0001
+[    2.006273] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011641] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018425] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025031] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038218]  mmcblk1: p1 p2
+[    2.119837] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.139177] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.144786] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.152966] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.161688] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.169275] usb usb1: Product: MUSB HDRC host driver
+[    2.174474] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.180326] usb usb1: SerialNumber: musb-hdrc.1
+[    2.185765] hub 1-0:1.0: USB hub found
+[    2.189845] hub 1-0:1.0: 1 port detected
+[    2.195435] hctosys: unable to open rtc device (rtc0)
+[    2.214511] net eth0: initializing cpsw version 1.12 (0)
+[    2.318438] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337269] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    5.458243] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    5.487360] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    5.517464] IP-Config: Guessing netmask 255.255.255.0
+[    5.522758] IP-Config: Complete:
+[    5.526139]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    5.537182]      host=192.168.0.100, domain=, nis-domain=(none)
+[    5.543397]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    5.559362] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    5.565943] devtmpfs: mounted
+[    5.571854] Freeing unused kernel memory: 2048K
+[    5.578053] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # insmod sysf/ # insmod sysfs_lowercase_module.ko 
+[   12.867114] sysfs_lowercase_module: loading out-of-tree module taints kernel.
+[   12.875309] sysfs_lowercase_module says: Hello!
+/ # cd /sys/ke/ # cd /sys/kernel/lc/ # cd /sys/kernel/lc_converter/
+/sys/kernel/lc_converter # ls
+statistic  text
+/sys/kernel/lc_converter # cat s/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	0 - symbols entered during last operation
+	0 - symbols converted during last operation
+	0 - symbols entered since module insertion
+	0 - symbols converted since module insertion
+/sys/kernel/lc_converter # echo 'mY sTrInG' > tetxxt
+[   37.393242] You entered: mY sTrInG
+/sys/kernel/lc_converter # cat text
+my
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # cat text/sys/kernel/lc_converter # echo 'mY sTrInG' > textmY sTrInG' > text"mY sTrInG' > textmY sTrInG' > text" > text > text
+[   37.396830] To get converted result print: cat text
+[  129.022543] You entered: mY sTrInG
+/sys/kernel/lc_converter # cat text
+my
+/sys/kernel/lc_converter # cat s/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	1 - symbols entered during last operation
+	0 - symbols converted during last operation
+	2 - symbols entered since module insertion
+	3 - symbols converted since module insertion
+/sys/kernel/lc_converter # 
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 4.1 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000016] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000035] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000046] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003785] timer_probe: no matching timers found
+[    0.003981] Console: colour dummy device 80x30
+[    0.004040] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089199] pid_max: default: 32768 minimum: 301
+[    0.089363] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089377] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090015] CPU: Testing write buffer coherency: ok
+[    0.090077] CPU0: Spectre v2: using BPIALL workaround
+[    0.090426] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091018] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092426] rcu: Hierarchical SRCU implementation.
+[    0.095244] EFI services will not be available.
+[    0.095428] smp: Bringing up secondary CPUs ...
+[    0.095442] smp: Brought up 1 node, 1 CPU
+[    0.095452] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095460] CPU: All CPU(s) started in SVC mode.
+[    0.096822] devtmpfs: initialized
+[    0.104180] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104682] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104712] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108610] pinctrl core: initialized pinctrl subsystem
+[    0.110643] DMI not present or invalid.
+[    0.111091] NET: Registered protocol family 16
+[    0.113499] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140051] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193814] cpuidle: using governor menu
+[    0.201351] OMAP GPIO hardware version 0.1
+[    0.213535] No ATAGs?
+[    0.213546] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218851] Serial: AMBA PL011 UART driver
+[    0.237589] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241347] vgaarb: loaded
+[    0.242183] SCSI subsystem initialized
+[    0.242771] usbcore: registered new interface driver usbfs
+[    0.242828] usbcore: registered new interface driver hub
+[    0.242873] usbcore: registered new device driver usb
+[    0.244444] pps_core: LinuxPPS API ver. 1 registered
+[    0.244457] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244480] PTP clock support registered
+[    0.244651] EDAC MC: Ver: 3.0.0
+[    0.247470] clocksource: Switched to clocksource timer1
+[    0.312174] NET: Registered protocol family 2
+[    0.312787] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312816] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312858] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312918] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.313021] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313045] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313180] NET: Registered protocol family 1
+[    0.313826] RPC: Registered named UNIX socket transport module.
+[    0.313840] RPC: Registered udp transport module.
+[    0.313847] RPC: Registered tcp transport module.
+[    0.313854] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.315011] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317277] Initialise system trusted keyrings
+[    0.317765] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324494] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325348] NFS: Registering the id_resolver key type
+[    0.325390] Key type id_resolver registered
+[    0.325398] Key type id_legacy registered
+[    0.325439] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327624] Key type asymmetric registered
+[    0.327643] Asymmetric key parser 'x509' registered
+[    0.327717] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327730] io scheduler noop registered
+[    0.327738] io scheduler deadline registered
+[    0.327935] io scheduler cfq registered (default)
+[    0.327947] io scheduler mq-deadline registered
+[    0.327954] io scheduler kyber registered
+[    0.333745] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399644] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.403043] SuperH (H)SCI(F) driver initialized
+[    0.403923] msm_serial: driver initialized
+[    0.404233] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404328] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.091276] console [ttyO0] enabled
+[    1.095542] STMicroelectronics ASC driver initialized
+[    1.101919] STM32 USART driver initialized
+[    1.107669] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.119978] random: fast init done
+[    1.123661] random: crng init done
+[    1.137001] brd: module loaded
+[    1.147878] loop: module loaded
+[    1.159953] libphy: Fixed MDIO Bus: probed
+[    1.165344] CAN device driver interface
+[    1.170423] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.177310] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.183484] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.189785] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.197077] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277491] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285534] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293202] libphy: 4a101000.mdio: probed
+[    1.297421] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309541] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316621] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323402] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330669] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338616] usbcore: registered new interface driver pegasus
+[    1.344602] usbcore: registered new interface driver asix
+[    1.350334] usbcore: registered new interface driver ax88179_178a
+[    1.356748] usbcore: registered new interface driver cdc_ether
+[    1.362926] usbcore: registered new interface driver smsc75xx
+[    1.369006] usbcore: registered new interface driver smsc95xx
+[    1.375053] usbcore: registered new interface driver net1080
+[    1.381035] usbcore: registered new interface driver cdc_subset
+[    1.387264] usbcore: registered new interface driver zaurus
+[    1.393178] usbcore: registered new interface driver cdc_ncm
+[    1.401530] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408452] ehci-pci: EHCI PCI platform driver
+[    1.413161] ehci-platform: EHCI generic platform driver
+[    1.418891] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424508] ehci-orion: EHCI orion driver
+[    1.428915] SPEAr-ehci: EHCI SPEAr driver
+[    1.433248] ehci-st: EHCI STMicroelectronics driver
+[    1.438532] ehci-exynos: EHCI EXYNOS driver
+[    1.443040] ehci-atmel: EHCI Atmel driver
+[    1.447358] tegra-ehci: Tegra EHCI driver
+[    1.451758] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458302] ohci-pci: OHCI PCI platform driver
+[    1.463024] ohci-platform: OHCI generic platform driver
+[    1.468743] SPEAr-ohci: OHCI SPEAr driver
+[    1.473085] ohci-st: OHCI STMicroelectronics driver
+[    1.478374] ohci-atmel: OHCI Atmel driver
+[    1.483280] usbcore: registered new interface driver usb-storage
+[    1.489745] usbcore: registered new interface driver usbserial_generic
+[    1.496612] usbserial: USB Serial support registered for generic
+[    1.502966] usbcore: registered new interface driver ftdi_sio
+[    1.509027] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516710] usbcore: registered new interface driver pl2303
+[    1.522587] usbserial: USB Serial support registered for pl2303
+[    1.528837] usbcore: registered new interface driver usb_serial_simple
+[    1.535694] usbserial: USB Serial support registered for carelink
+[    1.542115] usbserial: USB Serial support registered for zio
+[    1.548086] usbserial: USB Serial support registered for funsoft
+[    1.554396] usbserial: USB Serial support registered for flashloader
+[    1.561089] usbserial: USB Serial support registered for google
+[    1.567315] usbserial: USB Serial support registered for libtransistor
+[    1.574191] usbserial: USB Serial support registered for vivopay
+[    1.580519] usbserial: USB Serial support registered for moto_modem
+[    1.587103] usbserial: USB Serial support registered for motorola_tetra
+[    1.594072] usbserial: USB Serial support registered for novatel_gps
+[    1.600765] usbserial: USB Serial support registered for hp4x
+[    1.606801] usbserial: USB Serial support registered for suunto
+[    1.613038] usbserial: USB Serial support registered for siemens_mpi
+[    1.625442] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635999] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649629] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.660164] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.686007] i2c /dev entries driver
+[    1.702875] sdhci: Secure Digital Host Controller Interface driver
+[    1.709452] sdhci: Copyright(c) Pierre Ossman
+[    1.715233] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724430] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729806] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761369] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.794007] Synopsys Designware Multimedia Card Interface Driver
+[    1.801873] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811697] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819604] usbcore: registered new interface driver usbhid
+[    1.825453] usbhid: USB HID core driver
+[    1.834360] NET: Registered protocol family 10
+[    1.840739] Segment Routing with IPv6
+[    1.844657] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851649] NET: Registered protocol family 17
+[    1.856363] can: controller area network core (rev 20170425 abi 9)
+[    1.862979] NET: Registered protocol family 29
+[    1.867664] can: raw protocol (rev 20170425)
+[    1.872137] can: broadcast manager protocol (rev 20170425 t)
+[    1.878086] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884498] Key type dns_resolver registered
+[    1.889244] ThumbEE CPU extension supported.
+[    1.893729] Registering SWP/SWPB emulation handler
+[    1.898793] omap_voltage_late_init: Voltage driver support not added
+[    1.907393] Loading compiled-in X.509 certificates
+[    1.929904] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940352] mmc0: new high speed SDHC card at address 1234
+[    1.947201] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954984]  mmcblk0: p1 p2
+[    1.973894] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980486] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.988196] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999832] mmc1: new high speed MMC card at address 0001
+[    2.006544] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011908] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018690] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025286] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038541]  mmcblk1: p1 p2
+[    2.120040] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.139396] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.145003] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.153171] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.161890] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.169477] usb usb1: Product: MUSB HDRC host driver
+[    2.174677] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.180539] usb usb1: SerialNumber: musb-hdrc.1
+[    2.185968] hub 1-0:1.0: USB hub found
+[    2.190036] hub 1-0:1.0: 1 port detected
+[    2.195625] hctosys: unable to open rtc device (rtc0)
+[    2.214698] net eth0: initializing cpsw version 1.12 (0)
+[    2.318566] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337389] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    4.418375] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    4.437493] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.467590] IP-Config: Guessing netmask 255.255.255.0
+[    4.472887] IP-Config: Complete:
+[    4.476268]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    4.487311]      host=192.168.0.100, domain=, nis-domain=(none)
+[    4.493523]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    4.509497] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.516067] devtmpfs: mounted
+[    4.522014] Freeing unused kernel memory: 2048K
+[    4.528317] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # insmod sysf/ # insmod sysfs_lowercase_module.ko 
+[   12.698249] sysfs_lowercase_module: loading out-of-tree module taints kernel.
+[   12.706279] sysfs_lowercase_module says: Hello!
+/ # cd /sys/ke/ # cd /sys/kernel/lc/ # cd /sys/kernel/lc_converter/
+/sys/kernel/lc_converter # echo "mY StRiNg" > text
+[   35.112569] You entered: mY StRiNg
+/sys/kernel/lc_converter # cat text
+my
+/sys/kernel/lc_converter # cat st
+cat: can't open 'st': No such file or directory
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # cat st/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	1 - symbols entered during last operation
+	0 - symbols converted during last operation
+	1 - symbols entered since module insertion
+	1 - symbols converted since module insertion
+/sys/kernel/lc_converter # 
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 4.1 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000015] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000035] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000046] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003779] timer_probe: no matching timers found
+[    0.003973] Console: colour dummy device 80x30
+[    0.004031] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089197] pid_max: default: 32768 minimum: 301
+[    0.089355] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089368] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090006] CPU: Testing write buffer coherency: ok
+[    0.090070] CPU0: Spectre v2: using BPIALL workaround
+[    0.090420] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091016] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092417] rcu: Hierarchical SRCU implementation.
+[    0.095221] EFI services will not be available.
+[    0.095404] smp: Bringing up secondary CPUs ...
+[    0.095417] smp: Brought up 1 node, 1 CPU
+[    0.095427] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095436] CPU: All CPU(s) started in SVC mode.
+[    0.096808] devtmpfs: initialized
+[    0.104171] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104661] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104693] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108633] pinctrl core: initialized pinctrl subsystem
+[    0.110651] DMI not present or invalid.
+[    0.111098] NET: Registered protocol family 16
+[    0.113515] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140072] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193827] cpuidle: using governor menu
+[    0.201334] OMAP GPIO hardware version 0.1
+[    0.213479] No ATAGs?
+[    0.213491] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218798] Serial: AMBA PL011 UART driver
+[    0.237484] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241215] vgaarb: loaded
+[    0.242046] SCSI subsystem initialized
+[    0.242632] usbcore: registered new interface driver usbfs
+[    0.242690] usbcore: registered new interface driver hub
+[    0.242739] usbcore: registered new device driver usb
+[    0.244305] pps_core: LinuxPPS API ver. 1 registered
+[    0.244319] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244343] PTP clock support registered
+[    0.244510] EDAC MC: Ver: 3.0.0
+[    0.247317] clocksource: Switched to clocksource timer1
+[    0.311985] NET: Registered protocol family 2
+[    0.312597] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312626] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312669] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312728] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.312838] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.312862] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.312995] NET: Registered protocol family 1
+[    0.313649] RPC: Registered named UNIX socket transport module.
+[    0.313665] RPC: Registered udp transport module.
+[    0.313671] RPC: Registered tcp transport module.
+[    0.313678] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.314828] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317090] Initialise system trusted keyrings
+[    0.317569] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324309] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325167] NFS: Registering the id_resolver key type
+[    0.325207] Key type id_resolver registered
+[    0.325215] Key type id_legacy registered
+[    0.325257] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327267] Key type asymmetric registered
+[    0.327402] Asymmetric key parser 'x509' registered
+[    0.327474] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327489] io scheduler noop registered
+[    0.327497] io scheduler deadline registered
+[    0.327693] io scheduler cfq registered (default)
+[    0.327705] io scheduler mq-deadline registered
+[    0.327712] io scheduler kyber registered
+[    0.333561] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399316] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.402743] SuperH (H)SCI(F) driver initialized
+[    0.403620] msm_serial: driver initialized
+[    0.403924] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404017] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.091341] console [ttyO0] enabled
+[    1.095603] STMicroelectronics ASC driver initialized
+[    1.101974] STM32 USART driver initialized
+[    1.107726] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.120036] random: fast init done
+[    1.123723] random: crng init done
+[    1.137121] brd: module loaded
+[    1.148092] loop: module loaded
+[    1.160254] libphy: Fixed MDIO Bus: probed
+[    1.165649] CAN device driver interface
+[    1.170711] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.177715] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.183830] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.190134] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.197447] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277403] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285446] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293114] libphy: 4a101000.mdio: probed
+[    1.297418] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309438] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316520] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323301] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330575] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338516] usbcore: registered new interface driver pegasus
+[    1.344503] usbcore: registered new interface driver asix
+[    1.350235] usbcore: registered new interface driver ax88179_178a
+[    1.356647] usbcore: registered new interface driver cdc_ether
+[    1.362824] usbcore: registered new interface driver smsc75xx
+[    1.368906] usbcore: registered new interface driver smsc95xx
+[    1.374954] usbcore: registered new interface driver net1080
+[    1.380935] usbcore: registered new interface driver cdc_subset
+[    1.387164] usbcore: registered new interface driver zaurus
+[    1.393073] usbcore: registered new interface driver cdc_ncm
+[    1.401420] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408344] ehci-pci: EHCI PCI platform driver
+[    1.413058] ehci-platform: EHCI generic platform driver
+[    1.418792] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424408] ehci-orion: EHCI orion driver
+[    1.428811] SPEAr-ehci: EHCI SPEAr driver
+[    1.433141] ehci-st: EHCI STMicroelectronics driver
+[    1.438419] ehci-exynos: EHCI EXYNOS driver
+[    1.442922] ehci-atmel: EHCI Atmel driver
+[    1.447238] tegra-ehci: Tegra EHCI driver
+[    1.451633] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458178] ohci-pci: OHCI PCI platform driver
+[    1.462900] ohci-platform: OHCI generic platform driver
+[    1.468617] SPEAr-ohci: OHCI SPEAr driver
+[    1.472962] ohci-st: OHCI STMicroelectronics driver
+[    1.478246] ohci-atmel: OHCI Atmel driver
+[    1.483144] usbcore: registered new interface driver usb-storage
+[    1.489608] usbcore: registered new interface driver usbserial_generic
+[    1.496471] usbserial: USB Serial support registered for generic
+[    1.502822] usbcore: registered new interface driver ftdi_sio
+[    1.508883] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516567] usbcore: registered new interface driver pl2303
+[    1.522443] usbserial: USB Serial support registered for pl2303
+[    1.528693] usbcore: registered new interface driver usb_serial_simple
+[    1.535549] usbserial: USB Serial support registered for carelink
+[    1.541969] usbserial: USB Serial support registered for zio
+[    1.547938] usbserial: USB Serial support registered for funsoft
+[    1.554247] usbserial: USB Serial support registered for flashloader
+[    1.560939] usbserial: USB Serial support registered for google
+[    1.567165] usbserial: USB Serial support registered for libtransistor
+[    1.574041] usbserial: USB Serial support registered for vivopay
+[    1.580368] usbserial: USB Serial support registered for moto_modem
+[    1.586951] usbserial: USB Serial support registered for motorola_tetra
+[    1.593920] usbserial: USB Serial support registered for novatel_gps
+[    1.600611] usbserial: USB Serial support registered for hp4x
+[    1.606647] usbserial: USB Serial support registered for suunto
+[    1.612885] usbserial: USB Serial support registered for siemens_mpi
+[    1.625266] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635821] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649402] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.659943] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685743] i2c /dev entries driver
+[    1.702686] sdhci: Secure Digital Host Controller Interface driver
+[    1.709266] sdhci: Copyright(c) Pierre Ossman
+[    1.715072] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724270] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729649] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761229] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.793847] Synopsys Designware Multimedia Card Interface Driver
+[    1.801724] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811516] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819414] usbcore: registered new interface driver usbhid
+[    1.825260] usbhid: USB HID core driver
+[    1.834147] NET: Registered protocol family 10
+[    1.840515] Segment Routing with IPv6
+[    1.844436] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851432] NET: Registered protocol family 17
+[    1.856149] can: controller area network core (rev 20170425 abi 9)
+[    1.862758] NET: Registered protocol family 29
+[    1.867440] can: raw protocol (rev 20170425)
+[    1.871913] can: broadcast manager protocol (rev 20170425 t)
+[    1.877862] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884272] Key type dns_resolver registered
+[    1.889014] ThumbEE CPU extension supported.
+[    1.893503] Registering SWP/SWPB emulation handler
+[    1.898568] omap_voltage_late_init: Voltage driver support not added
+[    1.907166] Loading compiled-in X.509 certificates
+[    1.929654] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940096] mmc0: new high speed SDHC card at address 1234
+[    1.946942] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954721]  mmcblk0: p1 p2
+[    1.973632] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980237] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.987961] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999600] mmc1: new high speed MMC card at address 0001
+[    2.006320] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011688] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018475] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025081] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038317]  mmcblk1: p1 p2
+[    2.119840] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.139186] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.144794] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.152964] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.161688] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.169277] usb usb1: Product: MUSB HDRC host driver
+[    2.174477] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.180329] usb usb1: SerialNumber: musb-hdrc.1
+[    2.185776] hub 1-0:1.0: USB hub found
+[    2.189852] hub 1-0:1.0: 1 port detected
+[    2.195444] hctosys: unable to open rtc device (rtc0)
+[    2.214528] net eth0: initializing cpsw version 1.12 (0)
+[    2.318417] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337245] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    4.418219] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    4.437344] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.467389] IP-Config: Guessing netmask 255.255.255.0
+[    4.472689] IP-Config: Complete:
+[    4.476071]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    4.487122]      host=192.168.0.100, domain=, nis-domain=(none)
+[    4.493338]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    4.509464] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.516034] devtmpfs: mounted
+[    4.521983] Freeing unused kernel memory: 2048K
+[    4.528165] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # insmod sysf/ # insmod sysfs_lowercase_module.ko 
+[   18.960442] sysfs_lowercase_module: loading out-of-tree module taints kernel.
+[   18.968618] sysfs_lowercase_module says: Hello!
+/ # cd /sys/ke/ # cd /sys/kernel/lc/ # cd /sys/kernel/lc_converter/
+/sys/kernel/lc_converter # echo "mY sTrInG" > text
+[   46.789756] You entered: mY sTrInG
+/sys/kernel/lc_converter # cat text
+
+/sys/kernel/lc_converter # cat st/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	0 - symbols entered during last operation
+	-1 - symbols converted during last operation
+	0 - symbols entered since module insertion
+	0 - symbols converted since module insertion
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # cat statistic /sys/kernel/lc_converter # cat text/sys/kernel/lc_converter # echo "mY sTrInG" > text" > text' > textmY sTrInG' > text'mY sTrInG' > textmY sTrInG' > text
+[   46.793344] To get converted result print: cat text
+[  113.121331] You entered: mY sTrInG
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # echo 'mY sTrInG' > text/sys/kernel/lc_converter # cat statistic /sys/kernel/lc_converter # cat text
+
+/sys/kernel/lc_converter # [  113
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 3.9 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000016] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000035] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000046] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003785] timer_probe: no matching timers found
+[    0.003979] Console: colour dummy device 80x30
+[    0.004039] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089193] pid_max: default: 32768 minimum: 301
+[    0.089357] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089370] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090012] CPU: Testing write buffer coherency: ok
+[    0.090073] CPU0: Spectre v2: using BPIALL workaround
+[    0.090430] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091014] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092406] rcu: Hierarchical SRCU implementation.
+[    0.095208] EFI services will not be available.
+[    0.095386] smp: Bringing up secondary CPUs ...
+[    0.095399] smp: Brought up 1 node, 1 CPU
+[    0.095408] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095416] CPU: All CPU(s) started in SVC mode.
+[    0.096786] devtmpfs: initialized
+[    0.104145] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104643] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104673] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108575] pinctrl core: initialized pinctrl subsystem
+[    0.110606] DMI not present or invalid.
+[    0.111052] NET: Registered protocol family 16
+[    0.113458] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140003] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193782] cpuidle: using governor menu
+[    0.201317] OMAP GPIO hardware version 0.1
+[    0.213492] No ATAGs?
+[    0.213503] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218800] Serial: AMBA PL011 UART driver
+[    0.237517] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241258] vgaarb: loaded
+[    0.242090] SCSI subsystem initialized
+[    0.242677] usbcore: registered new interface driver usbfs
+[    0.242732] usbcore: registered new interface driver hub
+[    0.242780] usbcore: registered new device driver usb
+[    0.244362] pps_core: LinuxPPS API ver. 1 registered
+[    0.244376] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244399] PTP clock support registered
+[    0.244572] EDAC MC: Ver: 3.0.0
+[    0.247374] clocksource: Switched to clocksource timer1
+[    0.312016] NET: Registered protocol family 2
+[    0.312627] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312656] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312698] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312758] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.312865] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.312890] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313023] NET: Registered protocol family 1
+[    0.313677] RPC: Registered named UNIX socket transport module.
+[    0.313692] RPC: Registered udp transport module.
+[    0.313699] RPC: Registered tcp transport module.
+[    0.313705] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.314854] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317149] Initialise system trusted keyrings
+[    0.317629] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324359] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325213] NFS: Registering the id_resolver key type
+[    0.325256] Key type id_resolver registered
+[    0.325265] Key type id_legacy registered
+[    0.325306] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327464] Key type asymmetric registered
+[    0.327483] Asymmetric key parser 'x509' registered
+[    0.327558] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327572] io scheduler noop registered
+[    0.327581] io scheduler deadline registered
+[    0.327779] io scheduler cfq registered (default)
+[    0.327790] io scheduler mq-deadline registered
+[    0.327798] io scheduler kyber registered
+[    0.333647] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399329] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.402771] SuperH (H)SCI(F) driver initialized
+[    0.403658] msm_serial: driver initialized
+[    0.403961] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404055] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.091390] console [ttyO0] enabled
+[    1.095662] STMicroelectronics ASC driver initialized
+[    1.102042] STM32 USART driver initialized
+[    1.107783] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.120062] random: fast init done
+[    1.123744] random: crng init done
+[    1.137085] brd: module loaded
+[    1.148038] loop: module loaded
+[    1.160197] libphy: Fixed MDIO Bus: probed
+[    1.165589] CAN device driver interface
+[    1.170655] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.177640] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.183753] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.190053] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.197365] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277459] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285478] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293126] libphy: 4a101000.mdio: probed
+[    1.297433] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309450] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316538] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323320] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330583] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338524] usbcore: registered new interface driver pegasus
+[    1.344510] usbcore: registered new interface driver asix
+[    1.350244] usbcore: registered new interface driver ax88179_178a
+[    1.356656] usbcore: registered new interface driver cdc_ether
+[    1.362828] usbcore: registered new interface driver smsc75xx
+[    1.368909] usbcore: registered new interface driver smsc95xx
+[    1.374957] usbcore: registered new interface driver net1080
+[    1.380940] usbcore: registered new interface driver cdc_subset
+[    1.387169] usbcore: registered new interface driver zaurus
+[    1.393075] usbcore: registered new interface driver cdc_ncm
+[    1.401418] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408338] ehci-pci: EHCI PCI platform driver
+[    1.413050] ehci-platform: EHCI generic platform driver
+[    1.418792] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424415] ehci-orion: EHCI orion driver
+[    1.428819] SPEAr-ehci: EHCI SPEAr driver
+[    1.433154] ehci-st: EHCI STMicroelectronics driver
+[    1.438439] ehci-exynos: EHCI EXYNOS driver
+[    1.442949] ehci-atmel: EHCI Atmel driver
+[    1.447269] tegra-ehci: Tegra EHCI driver
+[    1.451669] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458213] ohci-pci: OHCI PCI platform driver
+[    1.462936] ohci-platform: OHCI generic platform driver
+[    1.468654] SPEAr-ohci: OHCI SPEAr driver
+[    1.472999] ohci-st: OHCI STMicroelectronics driver
+[    1.478287] ohci-atmel: OHCI Atmel driver
+[    1.483184] usbcore: registered new interface driver usb-storage
+[    1.489653] usbcore: registered new interface driver usbserial_generic
+[    1.496517] usbserial: USB Serial support registered for generic
+[    1.502870] usbcore: registered new interface driver ftdi_sio
+[    1.508933] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516615] usbcore: registered new interface driver pl2303
+[    1.522492] usbserial: USB Serial support registered for pl2303
+[    1.528742] usbcore: registered new interface driver usb_serial_simple
+[    1.535598] usbserial: USB Serial support registered for carelink
+[    1.542020] usbserial: USB Serial support registered for zio
+[    1.547989] usbserial: USB Serial support registered for funsoft
+[    1.554299] usbserial: USB Serial support registered for flashloader
+[    1.560992] usbserial: USB Serial support registered for google
+[    1.567219] usbserial: USB Serial support registered for libtransistor
+[    1.574095] usbserial: USB Serial support registered for vivopay
+[    1.580423] usbserial: USB Serial support registered for moto_modem
+[    1.587005] usbserial: USB Serial support registered for motorola_tetra
+[    1.593974] usbserial: USB Serial support registered for novatel_gps
+[    1.600668] usbserial: USB Serial support registered for hp4x
+[    1.606704] usbserial: USB Serial support registered for suunto
+[    1.612940] usbserial: USB Serial support registered for siemens_mpi
+[    1.625360] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635911] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649498] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.660037] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685877] i2c /dev entries driver
+[    1.702801] sdhci: Secure Digital Host Controller Interface driver
+[    1.709379] sdhci: Copyright(c) Pierre Ossman
+[    1.715161] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724358] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729713] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761270] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.793888] Synopsys Designware Multimedia Card Interface Driver
+[    1.801747] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811524] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819441] usbcore: registered new interface driver usbhid
+[    1.825289] usbhid: USB HID core driver
+[    1.834197] NET: Registered protocol family 10
+[    1.840544] Segment Routing with IPv6
+[    1.844462] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851466] NET: Registered protocol family 17
+[    1.856181] can: controller area network core (rev 20170425 abi 9)
+[    1.862792] NET: Registered protocol family 29
+[    1.867477] can: raw protocol (rev 20170425)
+[    1.871949] can: broadcast manager protocol (rev 20170425 t)
+[    1.877898] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884310] Key type dns_resolver registered
+[    1.889058] ThumbEE CPU extension supported.
+[    1.893536] Registering SWP/SWPB emulation handler
+[    1.898601] omap_voltage_late_init: Voltage driver support not added
+[    1.907205] Loading compiled-in X.509 certificates
+[    1.929707] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940156] mmc0: new high speed SDHC card at address 1234
+[    1.946994] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954770]  mmcblk0: p1 p2
+[    1.973699] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980287] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.988001] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999640] mmc1: new high speed MMC card at address 0001
+[    2.006357] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011721] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018502] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025115] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038288]  mmcblk1: p1 p2
+[    2.119891] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.139231] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.144839] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.152999] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.161724] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.169313] usb usb1: Product: MUSB HDRC host driver
+[    2.174513] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.180365] usb usb1: SerialNumber: musb-hdrc.1
+[    2.185818] hub 1-0:1.0: USB hub found
+[    2.189897] hub 1-0:1.0: 1 port detected
+[    2.195478] hctosys: unable to open rtc device (rtc0)
+[    2.214566] net eth0: initializing cpsw version 1.12 (0)
+[    2.318473] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337306] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    5.458281] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    5.487400] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    5.517497] IP-Config: Guessing netmask 255.255.255.0
+[    5.522796] IP-Config: Complete:
+[    5.526178]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    5.537229]      host=192.168.0.100, domain=, nis-domain=(none)
+[    5.543445]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    5.559472] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    5.566046] devtmpfs: mounted
+[    5.571949] Freeing unused kernel memory: 2048K
+[    5.578101] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # insmod sysf/ # insmod sysfs_lowercase_module.ko 
+[   19.337871] sysfs_lowercase_module: loading out-of-tree module taints kernel.
+[   19.345902] sysfs_lowercase_module says: Hello!
+/ # cd /sys/ke/ # cd /sys/kernel/lc/ # cd /sys/kernel/lc_converter/
+/sys/kernel/lc_converter # echo 'mYsTrInG' > text
+/sys/kernel/lc_converter # lscat text
+mystring
+/sys/kernel/lc_converter # cat sta
+cat: can't open 'sta': No such file or directory
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # cat sta/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	1 - symbols entered during last operation
+	0 - symbols converted during last operation
+	4 - symbols entered since module insertion
+	4 - symbols converted since module insertion
+/sys/kernel/lc_converter # 
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 4.1 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000014] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000034] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000045] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003781] timer_probe: no matching timers found
+[    0.003976] Console: colour dummy device 80x30
+[    0.004036] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089191] pid_max: default: 32768 minimum: 301
+[    0.089349] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089363] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090005] CPU: Testing write buffer coherency: ok
+[    0.090069] CPU0: Spectre v2: using BPIALL workaround
+[    0.090425] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091016] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092419] rcu: Hierarchical SRCU implementation.
+[    0.095228] EFI services will not be available.
+[    0.095406] smp: Bringing up secondary CPUs ...
+[    0.095418] smp: Brought up 1 node, 1 CPU
+[    0.095427] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095436] CPU: All CPU(s) started in SVC mode.
+[    0.096809] devtmpfs: initialized
+[    0.104171] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104674] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104706] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108623] pinctrl core: initialized pinctrl subsystem
+[    0.110632] DMI not present or invalid.
+[    0.111077] NET: Registered protocol family 16
+[    0.113480] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140040] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193901] cpuidle: using governor menu
+[    0.201391] OMAP GPIO hardware version 0.1
+[    0.213585] No ATAGs?
+[    0.213596] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218914] Serial: AMBA PL011 UART driver
+[    0.237620] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241350] vgaarb: loaded
+[    0.242171] SCSI subsystem initialized
+[    0.242758] usbcore: registered new interface driver usbfs
+[    0.242813] usbcore: registered new interface driver hub
+[    0.242861] usbcore: registered new device driver usb
+[    0.244431] pps_core: LinuxPPS API ver. 1 registered
+[    0.244446] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244469] PTP clock support registered
+[    0.244643] EDAC MC: Ver: 3.0.0
+[    0.247475] clocksource: Switched to clocksource timer1
+[    0.312155] NET: Registered protocol family 2
+[    0.312770] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312798] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312840] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312901] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.313010] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313035] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313167] NET: Registered protocol family 1
+[    0.313819] RPC: Registered named UNIX socket transport module.
+[    0.313836] RPC: Registered udp transport module.
+[    0.313843] RPC: Registered tcp transport module.
+[    0.313849] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.314990] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317256] Initialise system trusted keyrings
+[    0.317733] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324484] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325341] NFS: Registering the id_resolver key type
+[    0.325385] Key type id_resolver registered
+[    0.325392] Key type id_legacy registered
+[    0.325435] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327582] Key type asymmetric registered
+[    0.327600] Asymmetric key parser 'x509' registered
+[    0.327673] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327687] io scheduler noop registered
+[    0.327695] io scheduler deadline registered
+[    0.327894] io scheduler cfq registered (default)
+[    0.327905] io scheduler mq-deadline registered
+[    0.327913] io scheduler kyber registered
+[    0.333761] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399603] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.403013] SuperH (H)SCI(F) driver initialized
+[    0.403887] msm_serial: driver initialized
+[    0.404202] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404294] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.091622] console [ttyO0] enabled
+[    1.095872] STMicroelectronics ASC driver initialized
+[    1.102251] STM32 USART driver initialized
+[    1.107991] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.120282] random: fast init done
+[    1.123970] random: crng init done
+[    1.137360] brd: module loaded
+[    1.148273] loop: module loaded
+[    1.160386] libphy: Fixed MDIO Bus: probed
+[    1.165780] CAN device driver interface
+[    1.170861] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.177857] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.183947] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.190222] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.197537] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277561] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285570] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293225] libphy: 4a101000.mdio: probed
+[    1.297532] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309517] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316593] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323378] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330630] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338570] usbcore: registered new interface driver pegasus
+[    1.344553] usbcore: registered new interface driver asix
+[    1.350286] usbcore: registered new interface driver ax88179_178a
+[    1.356701] usbcore: registered new interface driver cdc_ether
+[    1.362878] usbcore: registered new interface driver smsc75xx
+[    1.368961] usbcore: registered new interface driver smsc95xx
+[    1.375008] usbcore: registered new interface driver net1080
+[    1.380991] usbcore: registered new interface driver cdc_subset
+[    1.387219] usbcore: registered new interface driver zaurus
+[    1.393127] usbcore: registered new interface driver cdc_ncm
+[    1.401491] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408409] ehci-pci: EHCI PCI platform driver
+[    1.413122] ehci-platform: EHCI generic platform driver
+[    1.418856] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424472] ehci-orion: EHCI orion driver
+[    1.428870] SPEAr-ehci: EHCI SPEAr driver
+[    1.433201] ehci-st: EHCI STMicroelectronics driver
+[    1.438482] ehci-exynos: EHCI EXYNOS driver
+[    1.442990] ehci-atmel: EHCI Atmel driver
+[    1.447307] tegra-ehci: Tegra EHCI driver
+[    1.451702] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458249] ohci-pci: OHCI PCI platform driver
+[    1.462974] ohci-platform: OHCI generic platform driver
+[    1.468688] SPEAr-ohci: OHCI SPEAr driver
+[    1.473027] ohci-st: OHCI STMicroelectronics driver
+[    1.478313] ohci-atmel: OHCI Atmel driver
+[    1.483208] usbcore: registered new interface driver usb-storage
+[    1.489668] usbcore: registered new interface driver usbserial_generic
+[    1.496528] usbserial: USB Serial support registered for generic
+[    1.502886] usbcore: registered new interface driver ftdi_sio
+[    1.508945] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516626] usbcore: registered new interface driver pl2303
+[    1.522503] usbserial: USB Serial support registered for pl2303
+[    1.528753] usbcore: registered new interface driver usb_serial_simple
+[    1.535610] usbserial: USB Serial support registered for carelink
+[    1.542031] usbserial: USB Serial support registered for zio
+[    1.547977] usbserial: USB Serial support registered for funsoft
+[    1.554288] usbserial: USB Serial support registered for flashloader
+[    1.560979] usbserial: USB Serial support registered for google
+[    1.567205] usbserial: USB Serial support registered for libtransistor
+[    1.574082] usbserial: USB Serial support registered for vivopay
+[    1.580410] usbserial: USB Serial support registered for moto_modem
+[    1.586993] usbserial: USB Serial support registered for motorola_tetra
+[    1.593964] usbserial: USB Serial support registered for novatel_gps
+[    1.600657] usbserial: USB Serial support registered for hp4x
+[    1.606693] usbserial: USB Serial support registered for suunto
+[    1.612931] usbserial: USB Serial support registered for siemens_mpi
+[    1.625288] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635842] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649439] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.659978] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685781] i2c /dev entries driver
+[    1.702668] sdhci: Secure Digital Host Controller Interface driver
+[    1.709244] sdhci: Copyright(c) Pierre Ossman
+[    1.715040] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724239] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729599] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761380] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.794001] Synopsys Designware Multimedia Card Interface Driver
+[    1.801874] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811668] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819580] usbcore: registered new interface driver usbhid
+[    1.825428] usbhid: USB HID core driver
+[    1.834319] NET: Registered protocol family 10
+[    1.840683] Segment Routing with IPv6
+[    1.844605] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851604] NET: Registered protocol family 17
+[    1.856321] can: controller area network core (rev 20170425 abi 9)
+[    1.862927] NET: Registered protocol family 29
+[    1.867613] can: raw protocol (rev 20170425)
+[    1.872085] can: broadcast manager protocol (rev 20170425 t)
+[    1.878036] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884440] Key type dns_resolver registered
+[    1.889186] ThumbEE CPU extension supported.
+[    1.893657] Registering SWP/SWPB emulation handler
+[    1.898718] omap_voltage_late_init: Voltage driver support not added
+[    1.907328] Loading compiled-in X.509 certificates
+[    1.929822] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940274] mmc0: new high speed SDHC card at address 1234
+[    1.947116] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954891]  mmcblk0: p1 p2
+[    1.973768] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980374] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.988098] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999738] mmc1: new high speed MMC card at address 0001
+[    2.006451] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011816] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018569] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025174] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038339]  mmcblk1: p1 p2
+[    2.120894] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.140184] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.145793] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.153970] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.162694] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.170284] usb usb1: Product: MUSB HDRC host driver
+[    2.175484] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.181336] usb usb1: SerialNumber: musb-hdrc.1
+[    2.186777] hub 1-0:1.0: USB hub found
+[    2.190844] hub 1-0:1.0: 1 port detected
+[    2.196426] hctosys: unable to open rtc device (rtc0)
+[    2.215500] net eth0: initializing cpsw version 1.12 (0)
+[    2.318570] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337391] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    4.418377] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    4.437500] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.467606] IP-Config: Guessing netmask 255.255.255.0
+[    4.472884] IP-Config: Complete:
+[    4.476252]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    4.487259]      host=192.168.0.100, domain=, nis-domain=(none)
+[    4.493455]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    4.509896] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.516504] devtmpfs: mounted
+[    4.522330] Freeing unused kernel memory: 2048K
+[    4.528314] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # inmsmod sysf/ # insmod sysfs_lowercase_module.ko 
+[   12.113926] sysfs_lowercase_module: loading out-of-tree module taints kernel.
+[   12.122118] sysfs_lowercase_module says: Hello!
+/ # cd /sys/ke/ # cd /sys/kernel/lc/ # cd /sys/kernel/lc_converter/
+/sys/kernel/lc_converter # cat st/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	0 - symbols entered during last operation
+	0 - symbols converted during last operation
+	0 - symbols entered since module insertion
+	0 - symbols converted since module insertion
+/sys/kernel/lc_converter # echo 'mYsTrInG' > text
+/sys/kernel/lc_converter # cat text
+mystring
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # cat text/sys/kernel/lc_converter # echo 'mYsTrInG' > textA' > textG' > textA' > textI' > textN' > text' > text
+[   32.256413] You entered: mYsTrInG
+[   32.256413] 
+[   32.256413] To get converted result print: cat text
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # echo 'mYsTrInGAGAIN' > text/sys/kernel/lc_converter # cat text
+mystringAgAin
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # cat textst/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	13 - symbols entered during last operation
+	11 - symbols converted during last operation
+	21 - symbols entered since module insertion
+	15 - symbols converted since module insertion
+/sys/kernel/lc_converter # 
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 4.1 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000016] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000036] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000047] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003783] timer_probe: no matching timers found
+[    0.003979] Console: colour dummy device 80x30
+[    0.004037] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089204] pid_max: default: 32768 minimum: 301
+[    0.089365] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089380] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090017] CPU: Testing write buffer coherency: ok
+[    0.090079] CPU0: Spectre v2: using BPIALL workaround
+[    0.090434] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091025] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092430] rcu: Hierarchical SRCU implementation.
+[    0.095245] EFI services will not be available.
+[    0.095431] smp: Bringing up secondary CPUs ...
+[    0.095444] smp: Brought up 1 node, 1 CPU
+[    0.095453] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095461] CPU: All CPU(s) started in SVC mode.
+[    0.096830] devtmpfs: initialized
+[    0.104184] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104691] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104722] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108624] pinctrl core: initialized pinctrl subsystem
+[    0.110622] DMI not present or invalid.
+[    0.111064] NET: Registered protocol family 16
+[    0.113468] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140008] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193755] cpuidle: using governor menu
+[    0.201286] OMAP GPIO hardware version 0.1
+[    0.213470] No ATAGs?
+[    0.213480] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218788] Serial: AMBA PL011 UART driver
+[    0.237511] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241264] vgaarb: loaded
+[    0.242091] SCSI subsystem initialized
+[    0.242670] usbcore: registered new interface driver usbfs
+[    0.242725] usbcore: registered new interface driver hub
+[    0.242771] usbcore: registered new device driver usb
+[    0.244355] pps_core: LinuxPPS API ver. 1 registered
+[    0.244369] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244392] PTP clock support registered
+[    0.244563] EDAC MC: Ver: 3.0.0
+[    0.247382] clocksource: Switched to clocksource timer1
+[    0.312091] NET: Registered protocol family 2
+[    0.312710] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312738] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312781] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312841] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.312946] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.312970] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313104] NET: Registered protocol family 1
+[    0.313749] RPC: Registered named UNIX socket transport module.
+[    0.313764] RPC: Registered udp transport module.
+[    0.313771] RPC: Registered tcp transport module.
+[    0.313777] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.314917] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317193] Initialise system trusted keyrings
+[    0.317667] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324408] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325265] NFS: Registering the id_resolver key type
+[    0.325308] Key type id_resolver registered
+[    0.325315] Key type id_legacy registered
+[    0.325356] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327491] Key type asymmetric registered
+[    0.327511] Asymmetric key parser 'x509' registered
+[    0.327581] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327595] io scheduler noop registered
+[    0.327603] io scheduler deadline registered
+[    0.327800] io scheduler cfq registered (default)
+[    0.327811] io scheduler mq-deadline registered
+[    0.327819] io scheduler kyber registered
+[    0.333675] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399511] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.402915] SuperH (H)SCI(F) driver initialized
+[    0.403790] msm_serial: driver initialized
+[    0.404098] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404190] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.091185] console [ttyO0] enabled
+[    1.095452] STMicroelectronics ASC driver initialized
+[    1.101823] STM32 USART driver initialized
+[    1.107587] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.119906] random: fast init done
+[    1.123592] random: crng init done
+[    1.136952] brd: module loaded
+[    1.147850] loop: module loaded
+[    1.159932] libphy: Fixed MDIO Bus: probed
+[    1.165322] CAN device driver interface
+[    1.170392] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.177274] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.183451] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.189740] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.197033] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277396] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285439] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293113] libphy: 4a101000.mdio: probed
+[    1.297417] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309440] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316525] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323299] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330573] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338519] usbcore: registered new interface driver pegasus
+[    1.344509] usbcore: registered new interface driver asix
+[    1.350241] usbcore: registered new interface driver ax88179_178a
+[    1.356656] usbcore: registered new interface driver cdc_ether
+[    1.362833] usbcore: registered new interface driver smsc75xx
+[    1.368913] usbcore: registered new interface driver smsc95xx
+[    1.374961] usbcore: registered new interface driver net1080
+[    1.380945] usbcore: registered new interface driver cdc_subset
+[    1.387174] usbcore: registered new interface driver zaurus
+[    1.393093] usbcore: registered new interface driver cdc_ncm
+[    1.401437] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408352] ehci-pci: EHCI PCI platform driver
+[    1.413058] ehci-platform: EHCI generic platform driver
+[    1.418794] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424416] ehci-orion: EHCI orion driver
+[    1.428816] SPEAr-ehci: EHCI SPEAr driver
+[    1.433141] ehci-st: EHCI STMicroelectronics driver
+[    1.438417] ehci-exynos: EHCI EXYNOS driver
+[    1.442923] ehci-atmel: EHCI Atmel driver
+[    1.447237] tegra-ehci: Tegra EHCI driver
+[    1.451629] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458174] ohci-pci: OHCI PCI platform driver
+[    1.462900] ohci-platform: OHCI generic platform driver
+[    1.468615] SPEAr-ohci: OHCI SPEAr driver
+[    1.472956] ohci-st: OHCI STMicroelectronics driver
+[    1.478242] ohci-atmel: OHCI Atmel driver
+[    1.483135] usbcore: registered new interface driver usb-storage
+[    1.489601] usbcore: registered new interface driver usbserial_generic
+[    1.496464] usbserial: USB Serial support registered for generic
+[    1.502816] usbcore: registered new interface driver ftdi_sio
+[    1.508877] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516560] usbcore: registered new interface driver pl2303
+[    1.522436] usbserial: USB Serial support registered for pl2303
+[    1.528685] usbcore: registered new interface driver usb_serial_simple
+[    1.535541] usbserial: USB Serial support registered for carelink
+[    1.541961] usbserial: USB Serial support registered for zio
+[    1.547931] usbserial: USB Serial support registered for funsoft
+[    1.554241] usbserial: USB Serial support registered for flashloader
+[    1.560932] usbserial: USB Serial support registered for google
+[    1.567158] usbserial: USB Serial support registered for libtransistor
+[    1.574034] usbserial: USB Serial support registered for vivopay
+[    1.580362] usbserial: USB Serial support registered for moto_modem
+[    1.586945] usbserial: USB Serial support registered for motorola_tetra
+[    1.593914] usbserial: USB Serial support registered for novatel_gps
+[    1.600606] usbserial: USB Serial support registered for hp4x
+[    1.606641] usbserial: USB Serial support registered for suunto
+[    1.612879] usbserial: USB Serial support registered for siemens_mpi
+[    1.625261] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635820] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649412] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.659947] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685747] i2c /dev entries driver
+[    1.702639] sdhci: Secure Digital Host Controller Interface driver
+[    1.709216] sdhci: Copyright(c) Pierre Ossman
+[    1.714998] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724192] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729560] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761276] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.793911] Synopsys Designware Multimedia Card Interface Driver
+[    1.801790] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811578] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819495] usbcore: registered new interface driver usbhid
+[    1.825342] usbhid: USB HID core driver
+[    1.834252] NET: Registered protocol family 10
+[    1.840608] Segment Routing with IPv6
+[    1.844529] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851525] NET: Registered protocol family 17
+[    1.856240] can: controller area network core (rev 20170425 abi 9)
+[    1.862853] NET: Registered protocol family 29
+[    1.867539] can: raw protocol (rev 20170425)
+[    1.872012] can: broadcast manager protocol (rev 20170425 t)
+[    1.877962] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884374] Key type dns_resolver registered
+[    1.889121] ThumbEE CPU extension supported.
+[    1.893608] Registering SWP/SWPB emulation handler
+[    1.898672] omap_voltage_late_init: Voltage driver support not added
+[    1.907277] Loading compiled-in X.509 certificates
+[    1.929801] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940247] mmc0: new high speed SDHC card at address 1234
+[    1.947090] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954873]  mmcblk0: p1 p2
+[    1.973813] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980412] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.988131] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999777] mmc1: new high speed MMC card at address 0001
+[    2.006493] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011860] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018641] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025257] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038505]  mmcblk1: p1 p2
+[    2.120800] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.140149] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.145756] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.153938] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.162659] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.170246] usb usb1: Product: MUSB HDRC host driver
+[    2.175446] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.181298] usb usb1: SerialNumber: musb-hdrc.1
+[    2.186732] hub 1-0:1.0: USB hub found
+[    2.190803] hub 1-0:1.0: 1 port detected
+[    2.196384] hctosys: unable to open rtc device (rtc0)
+[    2.215462] net eth0: initializing cpsw version 1.12 (0)
+[    2.318475] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337295] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    4.418278] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    4.437401] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.467505] IP-Config: Guessing netmask 255.255.255.0
+[    4.472803] IP-Config: Complete:
+[    4.476184]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    4.487230]      host=192.168.0.100, domain=, nis-domain=(none)
+[    4.493442]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    4.511020] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.517776] devtmpfs: mounted
+[    4.523395] Freeing unused kernel memory: 2048K
+[    4.538042] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # insmod sysf/ # insmod sysfs_lowercase_module.ko 
+[   13.446023] sysfs_lowercase_module: loading out-of-tree module taints kernel.
+[   13.454208] sysfs_lowercase_module says: Hello!
+/ # cd /sys/ke/ # cd /sys/kernel//lc/ # cd /sys/kernel//lc_converter/
+/sys/kernel/lc_converter # cat st/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	0 - symbols entered during last operation
+	0 - symbols converted during last operation
+	0 - symbols entered since module insertion
+	0 - symbols converted since module insertion
+/sys/kernel/lc_converter # echo 'mYsTrInG' > text
+/sys/kernel/lc_converter # cat text
+mystring
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # cat text/sys/kernel/lc_converter # echo 'mYsTrInG' > textA' > textG' > textA' > textI' > textN' > text' > text
+[   36.276471] To get converted result print: cat text
+/sys/kernel/lc_converter # /sys/kernel/lc_converter # echo 'mYsTrInGAGAIN' > text/sys/kernel/lc_converter # cat text
+mystringagain
+/sys/kernel/lc_converter # cat st/sys/kernel/lc_converter # cat statistic 
+sysfs_lowercase_module statistic:
+	13 - symbols entered during last operation
+	13 - symbols converted during last operation
+	21 - symbols entered since module insertion
+	17 - symbols converted since module insertion
+/sys/kernel/lc_converter # 
