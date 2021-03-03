@@ -13,9 +13,12 @@ do
   echo "INPUT DATA:"
   echo ${i}
   echo ""
-  echo "$i" > /sys/class/kharchuk/rw
+  echo -n "$i" > /sys/class/kharchuk/rw
   echo "RESULT:"
   cat /sys/class/kharchuk/rw
+  echo ""
+  echo "STATS:"
+  cat /sys/class/kharchuk/r
   echo ""
   sleep 0.1s
 done

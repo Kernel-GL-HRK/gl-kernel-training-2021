@@ -14,26 +14,48 @@ MODULE_VERSION("0.1");
 MODULE_LICENSE("Dual MIT/GPL");
 
 static struct class *attr_class;
-static char message[PAGE_SIZE] = "initial\n";
+static char message[PAGE_SIZE];
 
-static const char* string_to_lower(const char *data)
+struct stats {
+	int total_calls;
+	int char_processed;
+	int char_converted;
+};
+
+struct stats tolower_stats;
+
+static void string_tolower(const char *data, char *msg)
 {
-	static char result[PAGE_SIZE];
 	int i;
-	
-	strcpy(result, data);
 
-	for(i = 0; result[i]; i++) {
-		result[i] = tolower(result[i]);
+	strcpy(msg, data);
+	for (i = 0; msg[i]; i++) {
+		if (isupper(msg[i])) {
+			msg[i] = tolower(msg[i]);
+			tolower_stats.char_converted++;
+		}
 	}
 
-	return result;
+	tolower_stats.total_calls++;
+	tolower_stats.char_processed += strlen(msg);
 }
 
 static ssize_t rw_show(struct class *class, struct class_attribute *attr,
 				char *buf)
 {
 	strcpy(buf, message);
+	return strlen(buf);
+}
+
+static ssize_t r_show(struct class *class, struct class_attribute *attr,
+				char *buf)
+{
+	snprintf(buf, PAGE_SIZE,
+		"Total calls - %d, characters processed - %d characters converted - %d\n",
+		tolower_stats.total_calls,
+		tolower_stats.char_processed,
+		tolower_stats.char_converted);
+
 	return strlen(buf);
 }
 
@@ -46,8 +68,8 @@ static ssize_t rw_store(struct class *class, struct class_attribute *attr,
 		pr_err_once("Error[%s]: length error!", __func__);
 		return -EINVAL;
 	}
-	
-	strcpy(message, string_to_lower(buf));
+
+	string_tolower(buf, message);
 	return count;
 }
 
@@ -57,10 +79,15 @@ struct class_attribute class_attr_rw = {
 	.store	= rw_store
 };
 
+struct class_attribute class_attr_r = {
+	.attr = { .name = "r", .mode = 0444 },
+	.show	= r_show,
+};
+
 static int __init firstmod_init(void)
 {
-	int ret = 0
-;
+	int ret = 0;
+
 	attr_class = class_create(THIS_MODULE, "kharchuk");
 
 	if (attr_class == NULL) {
@@ -76,6 +103,15 @@ static int __init firstmod_init(void)
 		return ret;
 	}
 
+	ret = class_create_file(attr_class, &class_attr_r);
+	if (ret) {
+		pr_err("%s: error creating sysfs class r attribute\n",
+			THIS_MODULE->name);
+		class_remove_file(attr_class, &class_attr_rw);
+		class_destroy(attr_class);
+		return ret;
+	}
+
 	pr_info("%s: loaded!\n", THIS_MODULE->name);
 
 	return 0;
@@ -85,6 +121,7 @@ static void __exit firstmod_exit(void)
 {
 
 	class_remove_file(attr_class, &class_attr_rw);
+	class_remove_file(attr_class, &class_attr_r);
 	class_destroy(attr_class);
 
 	pr_info("%s: removed!\n", THIS_MODULE->name);
