@@ -1,0 +1,32 @@
+/home # ./test.sh
+Insert Module
+[ 1561.041217] khmod: loaded!
+Show value
+INPUT DATA:
+firs_string
+
+RESULT:
+FIRS_STRING
+STATS:
+Total calls - 1, characters processed - 11 characters converted - 10
+
+INPUT DATA:
+SECoNd_StRiNg
+
+RESULT:
+SECOND_STRING
+STATS:
+Total calls - 2, characters processed - 24 characters converted - 15
+
+INPUT DATA:
+Str1ng863_@KmdS
+
+RESULT:
+STR1NG863_@KMDS
+STATS:
+Total calls - 3, characters processed - 39 characters converted - 21
+
+Remove Module
+[ 1561.697824] khmod: removed!
+/home #
+
