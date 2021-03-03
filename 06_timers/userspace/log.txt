@@ -1,0 +1,11 @@
+/ # ./time
+Clock_gettime() - Seconds: 16707 Nanoseconds: 748256283
+Curent time in seconds time(): 16707
+Unix epoch: Thu Jan  1 00:00:00 1970
+Current local time: Thu Jan  1 04:38:27 1970
+
+Current gm time:
+January 1970
+01 Thursday
+4:38:27 AM
+
