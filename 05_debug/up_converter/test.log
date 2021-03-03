@@ -1,0 +1,18 @@
+/tmp # ./test_up_converter.sh 
+Testing up_converter moudule
+[ 7904.848887] up_conv: init success!
+Print statistic
+Total calls - 0, total char processed - 0, total char converted - 0!
+Read datat from converter
+Write data to converter: abcdefghigklmnopqrstuvwxyz0123456789></.,][{}
+Read data from converter
+ABCDEFGHIGKLMNOPQRSTUVWXYZ0123456789></.,][{}
+Print statistic
+Total calls - 5, total char processed - 46, total char converted - 26!
+Write data to converter: ABCDEFGHIGKLMNOPQRSTUVWXYZ0123456789></.,][{}
+Read data from converter
+ABCDEFGHIGKLMNOPQRSTUVWXYZ0123456789></.,][{}
+Print statistic
+Total calls - 9, total char processed - 92, total char converted - 26!
+up_converter.ko
+[ 7905.140774] up_conv: module release!
