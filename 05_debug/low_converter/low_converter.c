@@ -39,7 +39,7 @@ static size_t get_part_size(size_t size, int ptr)
 {
 	size_t part_size;
 
-	/* Get lenght no longer then the endge of the buffer */
+	/* Get length no longer than the edge of the buffer */
 	if (size > BUF_SIZE - ptr)
 		part_size = BUF_SIZE - ptr;
 	else
@@ -67,7 +67,7 @@ static ssize_t conv_show(struct class *class, struct class_attribute *attr,
 		size += part_size;
 		buf_len -= part_size;
 
-		/* Check the and of the buffer for cicling */
+		/* Check the and of the buffer for cycling */
 		if (rd_ptr == BUF_SIZE)
 			rd_ptr = 0;
 	}
@@ -101,7 +101,7 @@ static ssize_t conv_store(struct class *class, struct class_attribute *attr,
 		size += part_size;
 		buf_len += part_size;
 
-		/* Check the and of the buffer for cicling */
+		/* Check the and of the buffer for cycling */
 		if (wr_ptr == BUF_SIZE)
 			wr_ptr = 0;
 	}
