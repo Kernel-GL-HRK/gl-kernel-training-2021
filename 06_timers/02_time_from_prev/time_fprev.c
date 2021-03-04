@@ -16,7 +16,7 @@ MODULE_VERSION("0.01");
 #define BUF_SIZE 256
 #define MODULE_NAME "time_fprev"
 #define CLASS_NAME MODULE_NAME
-#define STAMP_STRING "Time from last call - %ld.%ld sec\n"
+#define STAMP_STRING "Time from last call - %ld.%09ld sec\n"
 #define STAMP_STRING_FIRST "It's a first call, there are no previos calls\n"
 #define DELAY_IN_MS 0
 #define DELAY_IN_SEC 5
