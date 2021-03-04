@@ -20,6 +20,7 @@ MODULE_VERSION("0.01");
 #define STAMP_STRING_FIRST "It's a first call, there are no previos calls\n"
 #define DELAY_IN_MS 0
 #define DELAY_IN_SEC 5
+#define NSEC_IN_SEC 1000000000
 
 static struct class *attr_class;
 
@@ -27,6 +28,7 @@ static ssize_t get_ptime_show(struct class *class, struct class_attribute *attr,
 		char *st_buf)
 {
 	size_t len;
+	long nsec;
 	struct timespec spec;
 	struct timespec stamp_spec;
 	static ktime_t timestamp = {0};
@@ -43,8 +45,14 @@ static ssize_t get_ptime_show(struct class *class, struct class_attribute *attr,
 
 	spec = ktime_to_timespec(timestamp);
 
+	nsec = spec.tv_nsec - stamp_spec.tv_nsec;
+	if (nsec < 0) {
+		nsec += NSEC_IN_SEC;
+		spec.tv_sec -= 1;
+	}
+
 	return snprintf(st_buf, BUF_SIZE, STAMP_STRING, spec.tv_sec -
-			stamp_spec.tv_sec, spec.tv_nsec - stamp_spec.tv_sec);
+			stamp_spec.tv_sec, nsec);
 
 }
 
