@@ -1,0 +1,45 @@
+/tmp # ./test_up_converter.sh
+Testing up_converter moudule
+[ 2395.006307] up_conv: init success!
+Print statistic
+Total calls - 0, total char processed - 0, total char converted - 0!
+Read datat from converter
+
+Test too large string
+Write data to converter: abcdefghigklmnopqrstuvwxyz0123456789></.,][{}
+[ 2395.149675] up_conv: buffer is full
+sh: write error: Operation not permitted
+Read data from converter
+ABCDEFGHIGKLMNOPQRSTUVWXYZ012345
+Print statistic
+Total calls - 6, total char processed - 32, total char converted - 26!
+
+Test for cycling buffer
+Write data to converter: abcdefghigklmnopqrs
+Read data from converter
+ABCDEFGHIGKLMNOPQRS
+Print statistic
+Total calls - 10, total char processed - 52, total char converted - 45!
+
+Test for cycling buffer
+Write data to converter: ABCDEFGHIGKLMNOPQRS
+Read data from converter
+ABCDEFGHIGKLMNOPQRS
+Print statistic
+Total calls - 14, total char processed - 72, total char converted - 45!
+
+Test for cycling buffer
+Write data to converter: abcdefghigklmnopqrs
+Read data from converter
+ABCDEFGHIGKLMNOPQRS
+Print statistic
+Total calls - 18, total char processed - 92, total char converted - 64!
+
+Test for cycling buffer
+Write data to converter: abcdefghigklmnopqrs
+Read data from converter
+ABCDEFGHIGKLMNOPQRS
+Print statistic
+Total calls - 22, total char processed - 112, total char converted - 83!
+up_converter.ko
+[ 2395.465774] up_conv: module release!
