@@ -7,7 +7,7 @@ CFLAGS = -Wall
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 
-CC=${CROSS_COMPILE}gcc
+CC=${CROSS_COMPILE_APP}gcc
 
 .PHONY = all clean re send
 
