@@ -1,0 +1,23 @@
+/ # 
+/ # insmod /home/timer_module.ko 
+[ 8000.137424] timer_module: loading out-of-tree module taints kernel.
+[ 8000.144651] timer_module_init: module starting
+[ 8000.149328] init_sysfs: success
+/ # cd sys/kernel/
+/sys/kernel # cat timer_module/time_of_last timer_module/time_since_last 
+t[-1]: 0.000 sec
+dt: 8062.114005877 sec
+/sys/kernel # cat timer_module/time_of_last timer_module/time_since_last 
+t[-1]: 8062.113660336 sec
+dt: 2.358048417 sec
+/sys/kernel # cat timer_module/time_of_last timer_module/time_since_last 
+t[-1]: 8064.471713377 sec
+dt: 1.427422500 sec
+/sys/kernel # cat timer_module/time_of_last
+t[-1]: 8065.899148419 sec
+/sys/kernel # cat timer_module/time_since_last 
+dt: 22.220338503 sec
+/sys/kernel # rmmod timer_module
+[ 8108.626864] timer_module_exit: module exit 
+/sys/kernel # cd
+/ # 
