@@ -33,24 +33,24 @@ static ssize_t abs_show(struct kobject *kobj, struct kobj_attribute *attr,
 
 	time_of_last = ktime_get_ns();
 
-	return sprintf(buf, "t[-1]: %llu.%03llu sec\n", then_sec, then_ns);
+	return sprintf(buf, "t[-1]: %llu.%09llu sec\n", then_sec, then_ns);
 }
 
 static ssize_t rel_show(struct kobject *kobj, struct kobj_attribute *attr,
 					   char *buf)
 {
-	static u64 time_of_last;
+	static u64 time_of_prev;
 	u64 now_ns;
 	u64 delta_sec, delta_ns;
 
 	now_ns = ktime_get_ns();
 
-	delta_ns = now_ns - time_of_last;
+	delta_ns = now_ns - time_of_prev;
 	delta_sec = div64_u64_rem(delta_ns, NSEC_PER_SEC, &delta_ns);
 
-	time_of_last = now_ns;
+	time_of_prev = now_ns;
 
-	return sprintf(buf, "dt: %llu.%03llu sec\n", delta_sec, delta_ns);
+	return sprintf(buf, "dt: %llu.%09llu sec\n", delta_sec, delta_ns);
 }
 
 static struct kobject *sysfs_kobject;

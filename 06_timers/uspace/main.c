@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	timespec_get(&timespec_var, TIME_UTC);
 	strftime(buffer, sizeof(buffer), "%T",
 		gmtime(&timespec_var.tv_sec));
-	printf("Time now in UTC: %s.%09ld UTC\n", buffer,
+	printf("UTC Time now: %s.%09ld\n", buffer,
 		timespec_var.tv_nsec);
 
 	return 0;
