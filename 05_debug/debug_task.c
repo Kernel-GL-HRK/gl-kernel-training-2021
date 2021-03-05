@@ -16,15 +16,24 @@
 #include <linux/init.h>
 #include <linux/printk.h>
 #include <linux/module.h>
+#include "debug_procfs.h"
 
 static int __init gl_debug_init(void)
 {
+	int retval;
+
 	pr_info("GL Kernel Training 2021\n");
+
+	retval = gl_procfs_init();
+	if (retval)
+		return retval;
+
 	return 0;
 }
 
 static void __exit gl_debug_exit(void)
 {
+	gl_procfs_deinit();
 	pr_info("Exit from 05_debug module\n");
 }
 
