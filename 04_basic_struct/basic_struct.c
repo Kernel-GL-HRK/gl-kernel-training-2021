@@ -10,7 +10,7 @@ MODULE_AUTHOR("Oleksiy Lyubochko <oleksiy.m.lyubochko@globallogic.com>");
 MODULE_DESCRIPTION("A simple example Linux module.");
 MODULE_VERSION("0.01");
 
-#define BUF_SIZE 4096
+#define BUF_SIZE PAGE_SIZE
 #define MODULE_NAME "basic_struct"
 #define STAMP_STRING "List entry:\n'%s'\n"
 
@@ -28,7 +28,8 @@ static ssize_t list_show(struct kobject *kobj, struct kobj_attribute *attr,
 	size_t size = 0;
 
 	list_for_each_entry(ptr, &my_list_head, list) {
-		size += snprintf(buf + size, BUF_SIZE, STAMP_STRING, ptr->str);
+		size += snprintf(buf + size, BUF_SIZE - size, STAMP_STRING,
+				ptr->str);
 	}
 
 	return size;
@@ -102,6 +103,7 @@ static void __exit basic_struct_exit(void)
 	list_for_each_entry_safe(ptr, tmp, &my_list_head, list) {
 		pr_info(MODULE_NAME ": remove entry with string - '%s'",
 				ptr->str);
+		list_del(&ptr->list);
 		kzfree(ptr->str);
 		kzfree(ptr);
 	}
