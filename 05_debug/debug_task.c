@@ -17,6 +17,7 @@
 #include <linux/printk.h>
 #include <linux/module.h>
 #include "debug_procfs.h"
+#include "debug_sysfs.h"
 
 static int __init gl_debug_init(void)
 {
@@ -28,12 +29,17 @@ static int __init gl_debug_init(void)
 	if (retval)
 		return retval;
 
+	retval = gl_sysfs_init();
+	if (retval)
+		return retval;
+
 	return 0;
 }
 
 static void __exit gl_debug_exit(void)
 {
 	gl_procfs_deinit();
+	gl_sysfs_deinit();
 	pr_info("Exit from 05_debug module\n");
 }
 
