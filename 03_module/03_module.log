@@ -1,0 +1,12 @@
+/mnt # insmod 03_module.ko 
+[   55.878586] 03_module: loading out-of-tree module taints kernel.
+[   55.885377] Hello, user!
+/mnt # rmmod 03_module.ko 
+[   75.945805] Goodbye, user!
+/mnt # 
+/mnt # 
+/mnt # insmod 03_module.ko 
+[  193.932837] Hello, user!
+/mnt #  
+/mnt # rmmod 03_module.ko 
+[  211.430520] Goodbye, user!
