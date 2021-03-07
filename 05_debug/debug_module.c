@@ -36,8 +36,11 @@ struct convertor_struct {
 
 } sysfs_conv, procfs_conv;
 
+struct convertor_struct sysfs_conv;
+struct convertor_struct procfs_conv;
+
 static int convert_case(bool to_lover, struct convertor_struct *conv,
-						ssize_t str_size)
+						size_t str_size)
 {
 	size_t indx = 0;
 
@@ -51,17 +54,11 @@ static int convert_case(bool to_lover, struct convertor_struct *conv,
 	while (conv->str_buff[indx] != '\0' &&
 		conv->str_buff[indx] != '\n' &&
 		indx < str_size) {
-		/*
-		 *!( isupper XOR to_lover )
-		 * |   t      |    t      | t - lovercase output
-		 * |   f      |    f      | t - uppercase output
-		 */
-		if (!(isupper(conv->str_buff[indx]) ^ to_lover)) {
-			conv->str_buff[indx] = (to_lover) ?
-					tolower(conv->str_buff[indx]) :
-					toupper(conv->str_buff[indx]);
+			char ch = to_lover ? tolower(conv->str_buff[indx]) : toupper(conv->str_buff[indx]);
+			if (ch != conv->str_buff[indx]) {
 			conv->converted_last++;
-		}
+				conv->str_buff[indx] = ch;
+			}
 		indx++;
 	}
 	conv->processed_last  = indx;
@@ -72,21 +69,19 @@ static int convert_case(bool to_lover, struct convertor_struct *conv,
 	return 0;
 }
 
-int print_stat(char *buf, struct convertor_struct *conv)
+static int print_stat(char *buf, struct convertor_struct *conv)
 {
 	if (conv == NULL || buf == NULL) {
 		pr_err("%s: convertor or buffer is NULL\n", __func__);
 		return -EINVAL;
 	}
 
-	return sprintf(buf, "processed last : %d char(s)\n"
-			"converted last : %d char(s)\n"
-			"converted total: %d char(s)\n"
-			"processed total: %d char(s)\n",
+	return sprintf(buf, "last processed/converted : %d/%d char(s)\n"
+			"total processed/converted : %d/%d char(s)\n",
 			conv->processed_last,
 			conv->converted_last,
-			conv->converted_total,
-			conv->processed_total);
+			conv->processed_total,
+			conv->converted_total);
 }
 
 
@@ -268,9 +263,6 @@ static int debug_module_init(void)
 
 	pr_info("%s: module starting\n",  __func__);
 
-	kzfree(procfs_conv.str_buff);
-	kzfree(sysfs_conv.str_buff);
-
 	ret = init_procfs();
 	if (ret < 0)
 		return ret;
@@ -287,6 +279,9 @@ static int debug_module_init(void)
 static void debug_module_exit(void)
 {
 	pr_info("%s: module exit\n",  __func__);
+
+	kzfree(procfs_conv.str_buff);
+	kzfree(sysfs_conv.str_buff);
 
 	kobject_del(sysfs_kobject);
 
