@@ -1,0 +1,326 @@
+/ # 
+/ # insmod /home/memory_module.ko
+[   71.210860] memory_module: loading out-of-tree module taints kernel.
+[   71.218215] memtest_module_init: module starting
+[   71.223072] calibrate_ktime, ktime dump call delta: 302
+[   71.228637] Runing test with [KMALLOC] function at size: [2^0] bytes
+[   71.228668] [STATS] alloc: min [114 ns], max [407 ns], average [151 ns]
+[   71.242267] [STATS] free: min [114 ns], max [156 ns], average [119 ns]
+[   71.249117] Runing test with [KZMALLOC] function at size: [2^0] bytes
+[   71.249147] [STATS] alloc: min [156 ns], max [240 ns], average [166 ns]
+[   71.262828] [STATS] free: min [198 ns], max [323 ns], average [205 ns]
+[   71.269775] Runing test with [VMALLOC] function at size: [2^0] bytes
+[   71.269870] [STATS] alloc: min [1782 ns], max [4323 ns], average [2406 ns]
+[   71.283747] [STATS] free: min [1740 ns], max [2531 ns], average [1909 ns]
+[   71.290871] Runing test with [GET_FREE_PAGES] function at size: [2^0] bytes
+[   71.290907] [STATS] alloc: min [281 ns], max [448 ns], average [304 ns]
+[   71.305146] [STATS] free: min [323 ns], max [448 ns], average [364 ns]
+[   71.311982] Runing test with [KMALLOC] function at size: [2^1] bytes
+[   71.312010] [STATS] alloc: min [114 ns], max [198 ns], average [135 ns]
+[   71.325636] [STATS] free: min [114 ns], max [198 ns], average [125 ns]
+[   71.332472] Runing test with [KZMALLOC] function at size: [2^1] bytes
+[   71.332502] [STATS] alloc: min [156 ns], max [282 ns], average [166 ns]
+[   71.346206] [STATS] free: min [198 ns], max [281 ns], average [203 ns]
+[   71.353211] Runing test with [VMALLOC] function at size: [2^1] bytes
+[   71.353302] [STATS] alloc: min [1781 ns], max [5740 ns], average [2203 ns]
+[   71.367188] [STATS] free: min [1739 ns], max [2448 ns], average [1862 ns]
+[   71.374249] Runing test with [GET_FREE_PAGES] function at size: [2^1] bytes
+[   71.374284] [STATS] alloc: min [281 ns], max [490 ns], average [315 ns]
+[   71.388476] [STATS] free: min [323 ns], max [406 ns], average [338 ns]
+[   71.395283] Runing test with [KMALLOC] function at size: [2^2] bytes
+[   71.395312] [STATS] alloc: min [114 ns], max [240 ns], average [138 ns]
+[   71.408901] [STATS] free: min [114 ns], max [156 ns], average [125 ns]
+[   71.415750] Runing test with [KZMALLOC] function at size: [2^2] bytes
+[   71.415780] [STATS] alloc: min [156 ns], max [198 ns], average [159 ns]
+[   71.429460] [STATS] free: min [198 ns], max [323 ns], average [208 ns]
+[   71.436320] Runing test with [VMALLOC] function at size: [2^2] bytes
+[   71.436405] [STATS] alloc: min [1781 ns], max [2615 ns], average [1935 ns]
+[   71.450281] [STATS] free: min [1739 ns], max [2073 ns], average [1823 ns]
+[   71.457405] Runing test with [GET_FREE_PAGES] function at size: [2^2] bytes
+[   71.457440] [STATS] alloc: min [281 ns], max [490 ns], average [312 ns]
+[   71.471667] [STATS] free: min [323 ns], max [448 ns], average [356 ns]
+[   71.478514] Runing test with [KMALLOC] function at size: [2^3] bytes
+[   71.478543] [STATS] alloc: min [114 ns], max [198 ns], average [132 ns]
+[   71.492132] [STATS] free: min [114 ns], max [156 ns], average [119 ns]
+[   71.498980] Runing test with [KZMALLOC] function at size: [2^3] bytes
+[   71.499010] [STATS] alloc: min [156 ns], max [239 ns], average [161 ns]
+[   71.512690] [STATS] free: min [156 ns], max [240 ns], average [200 ns]
+[   71.519544] Runing test with [VMALLOC] function at size: [2^3] bytes
+[   71.519629] [STATS] alloc: min [1782 ns], max [2365 ns], average [1921 ns]
+[   71.533449] [STATS] free: min [1740 ns], max [2073 ns], average [1822 ns]
+[   71.540526] Runing test with [GET_FREE_PAGES] function at size: [2^3] bytes
+[   71.540561] [STATS] alloc: min [281 ns], max [406 ns], average [325 ns]
+[   71.554800] [STATS] free: min [323 ns], max [448 ns], average [346 ns]
+[   71.561636] Runing test with [KMALLOC] function at size: [2^4] bytes
+[   71.561664] [STATS] alloc: min [114 ns], max [240 ns], average [138 ns]
+[   71.575178] [STATS] free: min [114 ns], max [198 ns], average [124 ns]
+[   71.581967] Runing test with [KZMALLOC] function at size: [2^4] bytes
+[   71.581997] [STATS] alloc: min [156 ns], max [240 ns], average [161 ns]
+[   71.595688] [STATS] free: min [198 ns], max [282 ns], average [203 ns]
+[   71.602531] Runing test with [VMALLOC] function at size: [2^4] bytes
+[   71.602617] [STATS] alloc: min [1782 ns], max [2198 ns], average [1976 ns]
+[   71.616493] [STATS] free: min [1740 ns], max [2365 ns], average [1859 ns]
+[   71.623603] Runing test with [GET_FREE_PAGES] function at size: [2^4] bytes
+[   71.623638] [STATS] alloc: min [281 ns], max [448 ns], average [325 ns]
+[   71.637876] [STATS] free: min [323 ns], max [448 ns], average [351 ns]
+[   71.644724] Runing test with [KMALLOC] function at size: [2^5] bytes
+[   71.644752] [STATS] alloc: min [114 ns], max [198 ns], average [135 ns]
+[   71.658341] [STATS] free: min [114 ns], max [156 ns], average [119 ns]
+[   71.665147] Runing test with [KZMALLOC] function at size: [2^5] bytes
+[   71.665177] [STATS] alloc: min [156 ns], max [198 ns], average [161 ns]
+[   71.678857] [STATS] free: min [198 ns], max [281 ns], average [210 ns]
+[   71.685713] Runing test with [VMALLOC] function at size: [2^5] bytes
+[   71.685805] [STATS] alloc: min [1823 ns], max [5406 ns], average [2236 ns]
+[   71.699670] [STATS] free: min [1781 ns], max [2532 ns], average [1934 ns]
+[   71.706750] Runing test with [GET_FREE_PAGES] function at size: [2^5] bytes
+[   71.706785] [STATS] alloc: min [281 ns], max [406 ns], average [297 ns]
+[   71.721011] [STATS] free: min [323 ns], max [448 ns], average [336 ns]
+[   71.727860] Runing test with [KMALLOC] function at size: [2^6] bytes
+[   71.727888] [STATS] alloc: min [114 ns], max [240 ns], average [138 ns]
+[   71.741477] [STATS] free: min [114 ns], max [198 ns], average [122 ns]
+[   71.748325] Runing test with [KZMALLOC] function at size: [2^6] bytes
+[   71.748355] [STATS] alloc: min [156 ns], max [281 ns], average [164 ns]
+[   71.762035] [STATS] free: min [198 ns], max [323 ns], average [211 ns]
+[   71.768889] Runing test with [VMALLOC] function at size: [2^6] bytes
+[   71.768974] [STATS] alloc: min [1823 ns], max [2240 ns], average [1924 ns]
+[   71.782753] [STATS] free: min [1740 ns], max [2156 ns], average [1854 ns]
+[   71.789831] Runing test with [GET_FREE_PAGES] function at size: [2^6] bytes
+[   71.789865] [STATS] alloc: min [281 ns], max [448 ns], average [299 ns]
+[   71.804092] [STATS] free: min [323 ns], max [407 ns], average [333 ns]
+[   71.810940] Runing test with [KMALLOC] function at size: [2^7] bytes
+[   71.810969] [STATS] alloc: min [114 ns], max [990 ns], average [187 ns]
+[   71.824570] [STATS] free: min [114 ns], max [406 ns], average [138 ns]
+[   71.831406] Runing test with [KZMALLOC] function at size: [2^7] bytes
+[   71.831437] [STATS] alloc: min [198 ns], max [323 ns], average [205 ns]
+[   71.845129] [STATS] free: min [239 ns], max [323 ns], average [252 ns]
+[   71.851971] Runing test with [VMALLOC] function at size: [2^7] bytes
+[   71.852056] [STATS] alloc: min [1823 ns], max [2448 ns], average [1940 ns]
+[   71.865931] [STATS] free: min [1739 ns], max [2115 ns], average [1856 ns]
+[   71.873040] Runing test with [GET_FREE_PAGES] function at size: [2^7] bytes
+[   71.873075] [STATS] alloc: min [281 ns], max [365 ns], average [291 ns]
+[   71.887313] [STATS] free: min [323 ns], max [448 ns], average [338 ns]
+[   71.894148] Runing test with [KMALLOC] function at size: [2^8] bytes
+[   71.894177] [STATS] alloc: min [114 ns], max [864 ns], average [174 ns]
+[   71.907779] [STATS] free: min [114 ns], max [365 ns], average [138 ns]
+[   71.914626] Runing test with [KZMALLOC] function at size: [2^8] bytes
+[   71.914659] [STATS] alloc: min [239 ns], max [448 ns], average [255 ns]
+[   71.928339] [STATS] free: min [281 ns], max [406 ns], average [291 ns]
+[   71.935193] Runing test with [VMALLOC] function at size: [2^8] bytes
+[   71.935279] [STATS] alloc: min [1823 ns], max [2240 ns], average [1948 ns]
+[   71.949142] [STATS] free: min [1781 ns], max [2240 ns], average [1877 ns]
+[   71.956264] Runing test with [GET_FREE_PAGES] function at size: [2^8] bytes
+[   71.956299] [STATS] alloc: min [281 ns], max [406 ns], average [296 ns]
+[   71.970525] [STATS] free: min [323 ns], max [406 ns], average [333 ns]
+[   71.977331] Runing test with [KMALLOC] function at size: [2^9] bytes
+[   71.977361] [STATS] alloc: min [114 ns], max [989 ns], average [184 ns]
+[   71.990950] [STATS] free: min [114 ns], max [198 ns], average [122 ns]
+[   71.997753] Runing test with [KZMALLOC] function at size: [2^9] bytes
+[   71.997791] [STATS] alloc: min [364 ns], max [739 ns], average [401 ns]
+[   72.011486] [STATS] free: min [406 ns], max [489 ns], average [414 ns]
+[   72.018403] Runing test with [VMALLOC] function at size: [2^9] bytes
+[   72.018499] [STATS] alloc: min [1823 ns], max [5448 ns], average [2416 ns]
+[   72.032288] [STATS] free: min [1823 ns], max [2573 ns], average [1971 ns]
+[   72.039367] Runing test with [GET_FREE_PAGES] function at size: [2^9] bytes
+[   72.039402] [STATS] alloc: min [281 ns], max [489 ns], average [320 ns]
+[   72.053584] [STATS] free: min [323 ns], max [406 ns], average [354 ns]
+[   72.060390] Runing test with [KMALLOC] function at size: [2^10] bytes
+[   72.060419] [STATS] alloc: min [114 ns], max [865 ns], average [174 ns]
+[   72.074100] [STATS] free: min [114 ns], max [365 ns], average [140 ns]
+[   72.080949] Runing test with [KZMALLOC] function at size: [2^10] bytes
+[   72.080997] [STATS] alloc: min [656 ns], max [906 ns], average [700 ns]
+[   72.094809] [STATS] free: min [698 ns], max [823 ns], average [721 ns]
+[   72.101754] Runing test with [VMALLOC] function at size: [2^10] bytes
+[   72.101844] [STATS] alloc: min [1864 ns], max [4281 ns], average [2112 ns]
+[   72.115835] [STATS] free: min [1781 ns], max [2157 ns], average [1898 ns]
+[   72.122946] Runing test with [GET_FREE_PAGES] function at size: [2^10] bytes
+[   72.122981] [STATS] alloc: min [281 ns], max [448 ns], average [320 ns]
+[   72.137312] [STATS] free: min [323 ns], max [448 ns], average [359 ns]
+[   72.144148] Runing test with [KMALLOC] function at size: [2^11] bytes
+[   72.144178] [STATS] alloc: min [114 ns], max [865 ns], average [179 ns]
+[   72.157871] [STATS] free: min [114 ns], max [573 ns], average [148 ns]
+[   72.164674] Runing test with [KZMALLOC] function at size: [2^11] bytes
+[   72.164742] [STATS] alloc: min [1281 ns], max [1490 ns], average [1330 ns]
+[   72.178695] [STATS] free: min [1323 ns], max [1740 ns], average [1406 ns]
+[   72.185797] Runing test with [VMALLOC] function at size: [2^11] bytes
+[   72.185885] [STATS] alloc: min [1823 ns], max [2906 ns], average [1986 ns]
+[   72.199855] [STATS] free: min [1823 ns], max [2573 ns], average [1916 ns]
+[   72.206935] Runing test with [GET_FREE_PAGES] function at size: [2^11] bytes
+[   72.206970] [STATS] alloc: min [281 ns], max [532 ns], average [325 ns]
+[   72.221289] [STATS] free: min [323 ns], max [448 ns], average [354 ns]
+[   72.228092] Runing test with [KMALLOC] function at size: [2^12] bytes
+[   72.228122] [STATS] alloc: min [114 ns], max [823 ns], average [177 ns]
+[   72.241714] [STATS] free: min [114 ns], max [573 ns], average [148 ns]
+[   72.248522] Runing test with [KZMALLOC] function at size: [2^12] bytes
+[   72.248632] [STATS] alloc: min [2573 ns], max [2990 ns], average [2635 ns]
+[   72.262677] [STATS] free: min [2614 ns], max [2990 ns], average [2695 ns]
+[   72.269820] Runing test with [VMALLOC] function at size: [2^12] bytes
+[   72.269916] [STATS] alloc: min [1865 ns], max [10406 ns], average [2494 ns]
+[   72.283965] [STATS] free: min [1823 ns], max [2239 ns], average [1898 ns]
+[   72.291088] Runing test with [GET_FREE_PAGES] function at size: [2^12] bytes
+[   72.291122] [STATS] alloc: min [281 ns], max [448 ns], average [302 ns]
+[   72.305452] [STATS] free: min [323 ns], max [448 ns], average [336 ns]
+[   72.312287] Runing test with [KMALLOC] function at size: [2^13] bytes
+[   72.312317] [STATS] alloc: min [114 ns], max [906 ns], average [177 ns]
+[   72.326010] [STATS] free: min [114 ns], max [614 ns], average [156 ns]
+[   72.332846] Runing test with [KZMALLOC] function at size: [2^13] bytes
+[   72.333038] [STATS] alloc: min [5156 ns], max [5323 ns], average [5172 ns]
+[   72.347094] [STATS] free: min [5156 ns], max [5656 ns], average [5330 ns]
+[   72.354209] Runing test with [VMALLOC] function at size: [2^13] bytes
+[   72.354317] [STATS] alloc: min [2281 ns], max [6406 ns], average [2734 ns]
+[   72.368285] [STATS] free: min [2239 ns], max [4073 ns], average [2458 ns]
+[   72.375416] Runing test with [GET_FREE_PAGES] function at size: [2^13] bytes
+[   72.375468] [STATS] alloc: min [573 ns], max [5448 ns], average [901 ns]
+[   72.389783] [STATS] free: min [531 ns], max [4448 ns], average [802 ns]
+[   72.396678] Runing test with [KMALLOC] function at size: [2^14] bytes
+[   72.396728] [STATS] alloc: min [656 ns], max [2948 ns], average [843 ns]
+[   72.410506] [STATS] free: min [614 ns], max [1698 ns], average [713 ns]
+[   72.417448] Runing test with [KZMALLOC] function at size: [2^14] bytes
+[   72.417825] [STATS] alloc: min [10990 ns], max [12115 ns], average [11104 ns]
+[   72.432055] [STATS] free: min [10864 ns], max [11698 ns], average [10945 ns]
+[   72.439438] Runing test with [VMALLOC] function at size: [2^14] bytes
+[   72.439566] [STATS] alloc: min [3031 ns], max [4823 ns], average [3294 ns]
+[   72.453433] [STATS] free: min [3031 ns], max [3531 ns], average [3143 ns]
+[   72.460509] Runing test with [GET_FREE_PAGES] function at size: [2^14] bytes
+[   72.460556] [STATS] alloc: min [615 ns], max [1365 ns], average [672 ns]
+[   72.474977] [STATS] free: min [573 ns], max [1614 ns], average [677 ns]
+[   72.481904] Runing test with [KMALLOC] function at size: [2^15] bytes
+[   72.481956] [STATS] alloc: min [781 ns], max [2865 ns], average [940 ns]
+[   72.495652] [STATS] free: min [739 ns], max [1615 ns], average [796 ns]
+[   72.502532] Runing test with [KZMALLOC] function at size: [2^15] bytes
+[   72.503256] [STATS] alloc: min [21531 ns], max [22782 ns], average [21679 ns]
+[   72.517490] [STATS] free: min [21656 ns], max [23490 ns], average [21974 ns]
+[   72.524843] Runing test with [VMALLOC] function at size: [2^15] bytes
+[   72.525020] [STATS] alloc: min [4573 ns], max [5407 ns], average [4781 ns]
+[   72.538975] [STATS] free: min [4656 ns], max [5031 ns], average [4739 ns]
+[   72.546053] Runing test with [GET_FREE_PAGES] function at size: [2^15] bytes
+[   72.546101] [STATS] alloc: min [698 ns], max [1198 ns], average [770 ns]
+[   72.560510] [STATS] free: min [698 ns], max [1281 ns], average [742 ns]
+[   72.567450] Runing test with [KMALLOC] function at size: [2^16] bytes
+[   72.567507] [STATS] alloc: min [906 ns], max [3448 ns], average [1093 ns]
+[   72.581370] [STATS] free: min [864 ns], max [1823 ns], average [940 ns]
+[   72.588310] Runing test with [KZMALLOC] function at size: [2^16] bytes
+[   72.589727] [STATS] alloc: min [42656 ns], max [45156 ns], average [43489 ns]
+[   72.604046] [STATS] free: min [42906 ns], max [44698 ns], average [43520 ns]
+[   72.611452] Runing test with [VMALLOC] function at size: [2^16] bytes
+[   72.611745] [STATS] alloc: min [7781 ns], max [20781 ns], average [8768 ns]
+[   72.625807] [STATS] free: min [7865 ns], max [8365 ns], average [8008 ns]
+[   72.632869] Runing test with [GET_FREE_PAGES] function at size: [2^16] bytes
+[   72.632921] [STATS] alloc: min [781 ns], max [1240 ns], average [833 ns]
+[   72.647343] [STATS] free: min [823 ns], max [1323 ns], average [875 ns]
+[   72.654269] Runing test with [KMALLOC] function at size: [2^17] bytes
+[   72.654335] [STATS] alloc: min [1156 ns], max [5323 ns], average [1429 ns]
+[   72.668260] [STATS] free: min [1114 ns], max [1739 ns], average [1161 ns]
+[   72.675334] Runing test with [KZMALLOC] function at size: [2^17] bytes
+[   72.678134] [STATS] alloc: min [86073 ns], max [89740 ns], average [86359 ns]
+[   72.692361] [STATS] free: min [86906 ns], max [87406 ns], average [86994 ns]
+[   72.699716] Runing test with [VMALLOC] function at size: [2^17] bytes
+[   72.700213] [STATS] alloc: min [14198 ns], max [19032 ns], average [14945 ns]
+[   72.714352] [STATS] free: min [14364 ns], max [15406 ns], average [14481 ns]
+[   72.721699] Runing test with [GET_FREE_PAGES] function at size: [2^17] bytes
+[   72.721759] [STATS] alloc: min [948 ns], max [1990 ns], average [1028 ns]
+[   72.736276] [STATS] free: min [1073 ns], max [1532 ns], average [1130 ns]
+[   72.743385] Runing test with [KMALLOC] function at size: [2^18] bytes
+[   72.743479] [STATS] alloc: min [1739 ns], max [11240 ns], average [2362 ns]
+[   72.757452] [STATS] free: min [1739 ns], max [3614 ns], average [1916 ns]
+[   72.764531] Runing test with [KZMALLOC] function at size: [2^18] bytes
+[   72.770136] [STATS] alloc: min [173281 ns], max [176114 ns], average [173606 ns]
+[   72.784695] [STATS] free: min [174823 ns], max [175865 ns], average [175065 ns]
+[   72.792303] Runing test with [VMALLOC] function at size: [2^18] bytes
+[   72.793213] [STATS] alloc: min [26656 ns], max [35573 ns], average [27927 ns]
+[   72.807368] [STATS] free: min [27281 ns], max [27740 ns], average [27356 ns]
+[   72.814714] Runing test with [GET_FREE_PAGES] function at size: [2^18] bytes
+[   72.814791] [STATS] alloc: min [1364 ns], max [2531 ns], average [1458 ns]
+[   72.829382] [STATS] free: min [1698 ns], max [2531 ns], average [1786 ns]
+[   72.836458] Runing test with [KMALLOC] function at size: [2^19] bytes
+[   72.836580] [STATS] alloc: min [2739 ns], max [10115 ns], average [3213 ns]
+[   72.850625] [STATS] free: min [2781 ns], max [3614 ns], average [2851 ns]
+[   72.857748] Runing test with [KZMALLOC] function at size: [2^19] bytes
+[   72.868991] [STATS] alloc: min [348240 ns], max [351948 ns], average [348554 ns]
+[   72.883488] [STATS] free: min [350739 ns], max [365615 ns], average [352487 ns]
+[   72.891218] Runing test with [VMALLOC] function at size: [2^19] bytes
+[   72.893038] [STATS] alloc: min [51573 ns], max [66948 ns], average [54747 ns]
+[   72.907209] [STATS] free: min [53073 ns], max [81240 ns], average [57255 ns]
+[   72.914560] Runing test with [GET_FREE_PAGES] function at size: [2^19] bytes
+[   72.914677] [STATS] alloc: min [1989 ns], max [18281 ns], average [3041 ns]
+[   72.929361] [STATS] free: min [2698 ns], max [3532 ns], average [2776 ns]
+[   72.936482] Runing test with [KMALLOC] function at size: [2^20] bytes
+[   72.936701] [STATS] alloc: min [4864 ns], max [35740 ns], average [6880 ns]
+[   72.950654] [STATS] free: min [5073 ns], max [5698 ns], average [5158 ns]
+[   72.957733] Runing test with [KZMALLOC] function at size: [2^20] bytes
+[   72.980173] [STATS] alloc: min [696656 ns], max [701365 ns], average [697052 ns]
+[   72.994685] [STATS] free: min [701573 ns], max [718365 ns], average [703757 ns]
+[   73.002301] Runing test with [VMALLOC] function at size: [2^20] bytes
+[   73.007374] [STATS] alloc: min [110948 ns], max [128031 ns], average [116635 ns]
+[   73.021823] [STATS] free: min [124365 ns], max [1205865 ns], average [198580 ns]
+[   73.029543] Runing test with [GET_FREE_PAGES] function at size: [2^20] bytes
+[   73.029719] [STATS] alloc: min [3573 ns], max [14156 ns], average [4255 ns]
+[   73.044311] [STATS] free: min [4989 ns], max [5906 ns], average [5070 ns]
+[   73.051386] Runing test with [KMALLOC] function at size: [2^21] bytes
+[   73.051744] [STATS] alloc: min [8948 ns], max [41615 ns], average [11070 ns]
+[   73.065812] [STATS] free: min [9406 ns], max [12698 ns], average [9651 ns]
+[   73.072964] Runing test with [KZMALLOC] function at size: [2^21] bytes
+[   73.117815] [STATS] alloc: min [1393281 ns], max [1406698 ns], average [1395427 ns]
+[   73.132603] [STATS] free: min [1403282 ns], max [1420156 ns], average [1406036 ns]
+[   73.140569] Runing test with [VMALLOC] function at size: [2^21] bytes
+[   73.150085] [STATS] alloc: min [234031 ns], max [302698 ns], average [242638 ns]
+[   73.164554] [STATS] free: min [292906 ns], max [1189990 ns], average [350114 ns]
+[   73.172253] Runing test with [GET_FREE_PAGES] function at size: [2^21] bytes
+[   73.172545] [STATS] alloc: min [6323 ns], max [19031 ns], average [7179 ns]
+[   73.187151] [STATS] free: min [9281 ns], max [10781 ns], average [9437 ns]
+[   73.194306] Runing test with [KMALLOC] function at size: [2^22] bytes
+[   73.195051] [STATS] alloc: min [17989 ns], max [79823 ns], average [22289 ns]
+[   73.209195] [STATS] free: min [19740 ns], max [46490 ns], average [22536 ns]
+[   73.216541] Runing test with [KZMALLOC] function at size: [2^22] bytes
+[   73.306200] [STATS] alloc: min [2787364 ns], max [2801490 ns], average [2791122 ns]
+[   73.320971] [STATS] free: min [2806781 ns], max [2824157 ns], average [2810817 ns]
+[   73.329173] Runing test with [VMALLOC] function at size: [2^22] bytes
+[   73.348842] [STATS] alloc: min [486364 ns], max [616823 ns], average [504531 ns]
+[   73.363274] [STATS] free: min [621781 ns], max [1549615 ns], average [721869 ns]
+[   73.370995] Runing test with [GET_FREE_PAGES] function at size: [2^22] bytes
+[   73.371674] [STATS] alloc: min [12989 ns], max [145823 ns], average [21669 ns]
+[   73.386564] [STATS] free: min [18448 ns], max [24906 ns], average [19067 ns]
+[   73.393899] Runing test with [KMALLOC] function at size: [2^23] bytes
+[   73.395973] [STATS] alloc: min [46073 ns], max [171406 ns], average [59612 ns]
+[   73.410210] [STATS] free: min [62198 ns], max [87782 ns], average [68146 ns]
+[   73.417560] Runing test with [KZMALLOC] function at size: [2^23] bytes
+[   73.597057] [STATS] alloc: min [5585656 ns], max [5603656 ns], average [5593557 ns]
+[   73.611831] [STATS] free: min [5615115 ns], max [5634823 ns], average [5623216 ns]
+[   73.619972] Runing test with [VMALLOC] function at size: [2^23] bytes
+[   73.661474] [STATS] alloc: min [1016989 ns], max [1181323 ns], average [1047112 ns]
+[   73.676211] [STATS] free: min [1303615 ns], max [2203490 ns], average [1544070 ns]
+[   73.684091] Runing test with [GET_FREE_PAGES] function at size: [2^23] bytes
+[   73.685761] [STATS] alloc: min [36615 ns], max [293031 ns], average [54731 ns]
+[   73.700639] [STATS] free: min [42448 ns], max [115365 ns], average [47630 ns]
+[   73.708081] Runing test with [KMALLOC] function at size: [2^24] bytes
+[   73.708087] ------------[ cut here ]------------
+[   73.719677] WARNING: CPU: 0 PID: 79 at mm/page_alloc.c:4387 __alloc_pages_nodemask+0x174/0xfe0
+[   73.728656] Modules linked in: memory_module(O+)
+[   73.733474] CPU: 0 PID: 79 Comm: insmod Tainted: G           O      4.19.176 #1
+[   73.741078] Hardware name: Generic AM33XX (Flattened Device Tree)
+[   73.747455] [<c0311cb8>] (unwind_backtrace) from [<c030c6b0>] (show_stack+0x10/0x14)
+[   73.755521] [<c030c6b0>] (show_stack) from [<c0ee92c0>] (dump_stack+0xb8/0xcc)
+[   73.763050] [<c0ee92c0>] (dump_stack) from [<c0ee1a94>] (__warn.part.0+0xc4/0xe0)
+[   73.770844] [<c0ee1a94>] (__warn.part.0) from [<c0ee1af4>] (warn_slowpath_null+0x44/0x4c)
+[   73.779360] [<c0ee1af4>] (warn_slowpath_null) from [<c0432dbc>] (__alloc_pages_nodemask+0x174/0xfe0)
+[   73.788874] [<c0432dbc>] (__alloc_pages_nodemask) from [<c0452a78>] (kmalloc_order_trace+0x2c/0xdc)
+[   73.798316] [<c0452a78>] (kmalloc_order_trace) from [<bf0001fc>] (memtest_module_init+0x138/0x300 [memory_module])
+[   73.809104] [<bf0001fc>] (memtest_module_init [memory_module]) from [<c0302dd8>] (do_one_initcall+0x54/0x214)
+[   73.819430] [<c0302dd8>] (do_one_initcall) from [<c03d5d5c>] (do_init_module+0x64/0x2a4)
+[   73.827858] [<c03d5d5c>] (do_init_module) from [<c03d89a4>] (sys_init_module+0x154/0x194)
+[   73.836367] [<c03d89a4>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[   73.844785] Exception stack(0xda271fa8 to 0xda271ff0)
+[   73.850042] 1fa0:                   00001a70 b6f085c8 000d8218 00001a70 000c5370 00000001
+[   73.858559] 1fc0: 00001a70 b6f085c8 b6d6baf8 00000080 becb7e98 becb7e9c b6f08000 000b09ec
+[   73.867069] 1fe0: becb7b50 becb7b40 0002ea81 b6df6d72
+[   73.872365] ---[ end trace 2f218e3d38970cdf ]---
+[   73.877185] memtest, alloc failed at size: 2^24 bytes, atempt: 1
+[   73.877192] Runing test with [KZMALLOC] function at size: [2^24] bytes
+[   73.883483] memtest, alloc failed at size: 2^24 bytes, atempt: 1
+[   73.890397] Runing test with [VMALLOC] function at size: [2^24] bytes
+[   73.982209] [STATS] alloc: min [2095823 ns], max [2488989 ns], average [2172200 ns]
+[   73.996999] [STATS] free: min [2668781 ns], max [3820656 ns], average [3168638 ns]
+[   74.004901] Runing test with [GET_FREE_PAGES] function at size: [2^24] bytes
+insmod: can't insert '/home/memory_module.ko': Cannot allocate memory
+/ # 
+
+
