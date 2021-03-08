@@ -1,0 +1,34 @@
+/usr # insmod test_module.ko iparam=1 sparam="Text line passed to module!" array
+=1,2,3
+[  428.477841] Hello, world!
+[  428.480611] ========== PASSED PARAMS ==========
+[  428.485355] Integer passed parameter = 1
+[  428.489517] String passed parameter = Text line passed to module!
+[  428.495901] array : 1 2 3 
+[  428.498748] ===================================
+/usr # dmesg | tail -n7
+[  321.643753] Index cannot be negative in array parameter!
+[  428.477841] Hello, world!
+[  428.480611] ========== PASSED PARAMS ==========
+[  428.485355] Integer passed parameter = 1
+[  428.489517] String passed parameter = Text line passed to module!
+[  428.495901] array : 1 2 3 
+[  428.498748] ===================================
+/usr # rmmod test_module.ko 
+/usr # insmod test_module.ko iparam=1 sparam="Text line passed to module!" array
+=-5,2,3
+[  483.596401] Hello, world!
+[  483.599301] ========== PASSED PARAMS ==========
+[  483.604048] Integer passed parameter = 1
+[  483.608181] String passed parameter = Text line passed to module!
+[  483.614562] Index cannot be negative in array parameter!
+insmod: can't insert 'test_module.ko': invalid parameter
+/usr # dmesg | tail -n7
+[  428.495901] array : 1 2 3 
+[  428.498748] ===================================
+[  483.596401] Hello, world!
+[  483.599301] ========== PASSED PARAMS ==========
+[  483.604048] Integer passed parameter = 1
+[  483.608181] String passed parameter = Text line passed to module!
+[  483.614562] Index cannot be negative in array parameter!
+/usr # rmmod test_module.ko 
