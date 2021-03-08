@@ -1,0 +1,201 @@
+MEASURE TIME AVARAGE = 1085
+
+************TEST MALLOC***********
+
+******2^X + 0*********
+Size: 2^0 + 0. Allocation TIME: 1262 (177) ns. | Free Time: 1187 (102) ns
+Size: 2^1 + 0. Allocation TIME: 1113 (28) ns. | Free Time: 1134 (49) ns
+Size: 2^2 + 0. Allocation TIME: 1116 (31) ns. | Free Time: 1461 (376) ns
+Size: 2^3 + 0. Allocation TIME: 1127 (42) ns. | Free Time: 1142 (57) ns
+Size: 2^4 + 0. Allocation TIME: 1131 (46) ns. | Free Time: 1233 (148) ns
+Size: 2^5 + 0. Allocation TIME: 1133 (48) ns. | Free Time: 1136 (51) ns
+Size: 2^6 + 0. Allocation TIME: 1128 (43) ns. | Free Time: 1142 (57) ns
+Size: 2^7 + 0. Allocation TIME: 1138 (53) ns. | Free Time: 1145 (60) ns
+Size: 2^8 + 0. Allocation TIME: 1135 (50) ns. | Free Time: 1135 (50) ns
+Size: 2^9 + 0. Allocation TIME: 1132 (47) ns. | Free Time: 1142 (57) ns
+Size: 2^10 + 0. Allocation TIME: 1297 (212) ns. | Free Time: 1249 (164) ns
+Size: 2^11 + 0. Allocation TIME: 1289 (204) ns. | Free Time: 1217 (132) ns
+Size: 2^12 + 0. Allocation TIME: 1535 (450) ns. | Free Time: 1220 (135) ns
+Size: 2^13 + 0. Allocation TIME: 1367 (282) ns. | Free Time: 1212 (127) ns
+Size: 2^14 + 0. Allocation TIME: 1358 (273) ns. | Free Time: 1212 (127) ns
+Size: 2^15 + 0. Allocation TIME: 1592 (507) ns. | Free Time: 1218 (133) ns
+Size: 2^16 + 0. Allocation TIME: 1367 (282) ns. | Free Time: 1212 (127) ns
+Size: 2^17 + 0. Allocation TIME: 1825 (740) ns. | Free Time: 1751 (666) ns
+Size: 2^18 + 0. Allocation TIME: 1385 (300) ns. | Free Time: 1216 (131) ns
+Size: 2^19 + 0. Allocation TIME: 12634 (11549) ns. | Free Time: 11300 (10215) ns
+Size: 2^20 + 0. Allocation TIME: 12232 (11147) ns. | Free Time: 12391 (11306) ns
+Size: 2^21 + 0. Allocation TIME: 17722 (16637) ns. | Free Time: 17081 (15996) ns
+Size: 2^22 + 0. Allocation TIME: 17623 (16538) ns. | Free Time: 15797 (14712) ns
+Size: 2^23 + 0. Allocation TIME: 17738 (16653) ns. | Free Time: 16105 (15020) ns
+Size: 2^24 + 0. Allocation TIME: 17639 (16554) ns. | Free Time: 16858 (15773) ns
+Size: 2^25 + 0. Allocation TIME: 17613 (16528) ns. | Free Time: 17320 (16235) ns
+Size: 2^26 + 0. Allocation TIME: 17556 (16471) ns. | Free Time: 19200 (18115) ns
+Size: 2^27 + 0. Allocation TIME: 17506 (16421) ns. | Free Time: 22695 (21610) ns
+Size: 2^28 + 0. Allocation TIME: 17378 (16293) ns. | Free Time: 29362 (28277) ns
+Size: 2^29 + 0. NOT Allocated.
+************TEST END***********
+
+************TEST MALLOC***********
+
+******2^X + 1*********
+Size: 2^0 + 1. Allocation TIME: 1143 (58) ns. | Free Time: 1155 (70) ns
+Size: 2^1 + 1. Allocation TIME: 1120 (35) ns. | Free Time: 1146 (61) ns
+Size: 2^2 + 1. Allocation TIME: 1135 (50) ns. | Free Time: 1142 (57) ns
+Size: 2^3 + 1. Allocation TIME: 1123 (38) ns. | Free Time: 1142 (57) ns
+Size: 2^4 + 1. Allocation TIME: 1125 (40) ns. | Free Time: 1139 (54) ns
+Size: 2^5 + 1. Allocation TIME: 1127 (42) ns. | Free Time: 1140 (55) ns
+Size: 2^6 + 1. Allocation TIME: 1129 (44) ns. | Free Time: 1140 (55) ns
+Size: 2^7 + 1. Allocation TIME: 1124 (39) ns. | Free Time: 1148 (63) ns
+Size: 2^8 + 1. Allocation TIME: 1359 (274) ns. | Free Time: 1145 (60) ns
+Size: 2^9 + 1. Allocation TIME: 1122 (37) ns. | Free Time: 1135 (50) ns
+Size: 2^10 + 1. Allocation TIME: 1316 (231) ns. | Free Time: 1229 (144) ns
+Size: 2^11 + 1. Allocation TIME: 1296 (211) ns. | Free Time: 1216 (131) ns
+Size: 2^12 + 1. Allocation TIME: 1299 (214) ns. | Free Time: 1212 (127) ns
+Size: 2^13 + 1. Allocation TIME: 1292 (207) ns. | Free Time: 1444 (359) ns
+Size: 2^14 + 1. Allocation TIME: 1289 (204) ns. | Free Time: 1208 (123) ns
+Size: 2^15 + 1. Allocation TIME: 1287 (202) ns. | Free Time: 1206 (121) ns
+Size: 2^16 + 1. Allocation TIME: 1298 (213) ns. | Free Time: 1353 (268) ns
+Size: 2^17 + 1. Allocation TIME: 1296 (211) ns. | Free Time: 1214 (129) ns
+Size: 2^18 + 1. Allocation TIME: 1295 (210) ns. | Free Time: 1213 (128) ns
+Size: 2^19 + 1. Allocation TIME: 12650 (11565) ns. | Free Time: 11416 (10331) ns
+Size: 2^20 + 1. Allocation TIME: 12397 (11312) ns. | Free Time: 11675 (10590) ns
+Size: 2^21 + 1. Allocation TIME: 17367 (16282) ns. | Free Time: 15999 (14914) ns
+Size: 2^22 + 1. Allocation TIME: 17449 (16364) ns. | Free Time: 16437 (15352) ns
+Size: 2^23 + 1. Allocation TIME: 17624 (16539) ns. | Free Time: 16065 (14980) ns
+Size: 2^24 + 1. Allocation TIME: 17473 (16388) ns. | Free Time: 16832 (15747) ns
+Size: 2^25 + 1. Allocation TIME: 17438 (16353) ns. | Free Time: 17805 (16720) ns
+Size: 2^26 + 1. Allocation TIME: 17277 (16192) ns. | Free Time: 19557 (18472) ns
+Size: 2^27 + 1. Allocation TIME: 17391 (16306) ns. | Free Time: 22724 (21639) ns
+Size: 2^28 + 1. Allocation TIME: 17095 (16010) ns. | Free Time: 29459 (28374) ns
+Size: 2^29 + 1. NOT Allocated.
+************TEST END***********
+
+************TEST CALLOC***********
+
+******2^X + 0*********
+Size: 2^0 + 0. Allocation TIME: 1562 (477) ns. | Free Time: 1189 (104) ns
+Size: 2^1 + 0. Allocation TIME: 1222 (137) ns. | Free Time: 1166 (81) ns
+Size: 2^2 + 0. Allocation TIME: 1232 (147) ns. | Free Time: 1401 (316) ns
+Size: 2^3 + 0. Allocation TIME: 1219 (134) ns. | Free Time: 1166 (81) ns
+Size: 2^4 + 0. Allocation TIME: 1247 (162) ns. | Free Time: 1167 (82) ns
+Size: 2^5 + 0. Allocation TIME: 1254 (169) ns. | Free Time: 1406 (321) ns
+Size: 2^6 + 0. Allocation TIME: 1634 (549) ns. | Free Time: 1257 (172) ns
+Size: 2^7 + 0. Allocation TIME: 1419 (334) ns. | Free Time: 1232 (147) ns
+Size: 2^8 + 0. Allocation TIME: 1447 (362) ns. | Free Time: 1212 (127) ns
+Size: 2^9 + 0. Allocation TIME: 1583 (498) ns. | Free Time: 1222 (137) ns
+Size: 2^10 + 0. Allocation TIME: 2090 (1005) ns. | Free Time: 1218 (133) ns
+Size: 2^11 + 0. Allocation TIME: 2395 (1310) ns. | Free Time: 1205 (120) ns
+Size: 2^12 + 0. Allocation TIME: 3855 (2770) ns. | Free Time: 1210 (125) ns
+Size: 2^13 + 0. Allocation TIME: 6489 (5404) ns. | Free Time: 1204 (119) ns
+Size: 2^14 + 0. Allocation TIME: 11647 (10562) ns. | Free Time: 1205 (120) ns
+Size: 2^15 + 0. Allocation TIME: 22354 (21269) ns. | Free Time: 1225 (140) ns
+Size: 2^16 + 0. Allocation TIME: 45079 (43994) ns. | Free Time: 1498 (413) ns
+Size: 2^17 + 0. Allocation TIME: 89014 (87929) ns. | Free Time: 1522 (437) ns
+Size: 2^18 + 0. Allocation TIME: 176966 (175881) ns. | Free Time: 1812 (727) ns
+Size: 2^19 + 0. Allocation TIME: 12608 (11523) ns. | Free Time: 11312 (10227) ns
+Size: 2^20 + 0. Allocation TIME: 12331 (11246) ns. | Free Time: 12474 (11389) ns
+Size: 2^21 + 0. Allocation TIME: 17475 (16390) ns. | Free Time: 16017 (14932) ns
+Size: 2^22 + 0. Allocation TIME: 17364 (16279) ns. | Free Time: 16498 (15413) ns
+Size: 2^23 + 0. Allocation TIME: 17119 (16034) ns. | Free Time: 16957 (15872) ns
+Size: 2^24 + 0. Allocation TIME: 17772 (16687) ns. | Free Time: 17648 (16563) ns
+Size: 2^25 + 0. Allocation TIME: 17380 (16295) ns. | Free Time: 17627 (16542) ns
+Size: 2^26 + 0. Allocation TIME: 17358 (16273) ns. | Free Time: 19802 (18717) ns
+Size: 2^27 + 0. Allocation TIME: 17675 (16590) ns. | Free Time: 22495 (21410) ns
+Size: 2^28 + 0. Allocation TIME: 17410 (16325) ns. | Free Time: 29201 (28116) ns
+Size: 2^29 + 0. NOT Allocated.
+************TEST END***********
+
+************TEST CALLOC***********
+
+******2^X + 1*********
+Size: 2^0 + 1. Allocation TIME: 1533 (448) ns. | Free Time: 1178 (93) ns
+Size: 2^1 + 1. Allocation TIME: 1234 (149) ns. | Free Time: 1175 (90) ns
+Size: 2^2 + 1. Allocation TIME: 1245 (160) ns. | Free Time: 1276 (191) ns
+Size: 2^3 + 1. Allocation TIME: 1238 (153) ns. | Free Time: 1166 (81) ns
+Size: 2^4 + 1. Allocation TIME: 1240 (155) ns. | Free Time: 1165 (80) ns
+Size: 2^5 + 1. Allocation TIME: 1245 (160) ns. | Free Time: 1395 (310) ns
+Size: 2^6 + 1. Allocation TIME: 1373 (288) ns. | Free Time: 1246 (161) ns
+Size: 2^7 + 1. Allocation TIME: 1610 (525) ns. | Free Time: 1212 (127) ns
+Size: 2^8 + 1. Allocation TIME: 1425 (340) ns. | Free Time: 1221 (136) ns
+Size: 2^9 + 1. Allocation TIME: 1505 (420) ns. | Free Time: 1203 (118) ns
+Size: 2^10 + 1. Allocation TIME: 1781 (696) ns. | Free Time: 1437 (352) ns
+Size: 2^11 + 1. Allocation TIME: 2320 (1235) ns. | Free Time: 1206 (121) ns
+Size: 2^12 + 1. Allocation TIME: 3555 (2470) ns. | Free Time: 1447 (362) ns
+Size: 2^13 + 1. Allocation TIME: 6080 (4995) ns. | Free Time: 1209 (124) ns
+Size: 2^14 + 1. Allocation TIME: 11600 (10515) ns. | Free Time: 1226 (141) ns
+Size: 2^15 + 1. Allocation TIME: 22100 (21015) ns. | Free Time: 1214 (129) ns
+Size: 2^16 + 1. Allocation TIME: 44659 (43574) ns. | Free Time: 1483 (398) ns
+Size: 2^17 + 1. Allocation TIME: 88129 (87044) ns. | Free Time: 1523 (438) ns
+Size: 2^18 + 1. Allocation TIME: 176392 (175307) ns. | Free Time: 1573 (488) ns
+Size: 2^19 + 1. Allocation TIME: 12783 (11698) ns. | Free Time: 11209 (10124) ns
+Size: 2^20 + 1. Allocation TIME: 12897 (11812) ns. | Free Time: 12680 (11595) ns
+Size: 2^21 + 1. Allocation TIME: 17392 (16307) ns. | Free Time: 16028 (14943) ns
+Size: 2^22 + 1. Allocation TIME: 17397 (16312) ns. | Free Time: 16276 (15191) ns
+Size: 2^23 + 1. Allocation TIME: 18125 (17040) ns. | Free Time: 16095 (15010) ns
+Size: 2^24 + 1. Allocation TIME: 17104 (16019) ns. | Free Time: 16872 (15787) ns
+Size: 2^25 + 1. Allocation TIME: 17368 (16283) ns. | Free Time: 17910 (16825) ns
+Size: 2^26 + 1. Allocation TIME: 17596 (16511) ns. | Free Time: 19581 (18496) ns
+Size: 2^27 + 1. Allocation TIME: 17662 (16577) ns. | Free Time: 22482 (21397) ns
+Size: 2^28 + 1. Allocation TIME: 17662 (16577) ns. | Free Time: 29543 (28458) ns
+Size: 2^29 + 1. NOT Allocated.
+************TEST END***********
+
+************TEST ALLOCA***********
+
+******2^X + 0*********
+Size: 2^0 + 0. Allocation TIME: 1312 (227) ns. | Free Time: 0 (0) ns
+Size: 2^1 + 0. Allocation TIME: 1061 (0) ns. | Free Time: 0 (0) ns
+Size: 2^2 + 0. Allocation TIME: 1062 (0) ns. | Free Time: 0 (0) ns
+Size: 2^3 + 0. Allocation TIME: 1067 (0) ns. | Free Time: 0 (0) ns
+Size: 2^4 + 0. Allocation TIME: 1061 (0) ns. | Free Time: 0 (0) ns
+Size: 2^5 + 0. Allocation TIME: 1060 (0) ns. | Free Time: 0 (0) ns
+Size: 2^6 + 0. Allocation TIME: 1062 (0) ns. | Free Time: 0 (0) ns
+Size: 2^7 + 0. Allocation TIME: 1067 (0) ns. | Free Time: 0 (0) ns
+Size: 2^8 + 0. Allocation TIME: 1061 (0) ns. | Free Time: 0 (0) ns
+Size: 2^9 + 0. Allocation TIME: 1061 (0) ns. | Free Time: 0 (0) ns
+Size: 2^10 + 0. Allocation TIME: 1065 (0) ns. | Free Time: 0 (0) ns
+Size: 2^11 + 0. Allocation TIME: 1181 (96) ns. | Free Time: 0 (0) ns
+Size: 2^12 + 0. Allocation TIME: 1061 (0) ns. | Free Time: 0 (0) ns
+Size: 2^13 + 0. Allocation TIME: 1134 (49) ns. | Free Time: 0 (0) ns
+Size: 2^14 + 0. Allocation TIME: 1127 (42) ns. | Free Time: 0 (0) ns
+Size: 2^15 + 0. Allocation TIME: 1134 (49) ns. | Free Time: 0 (0) ns
+Size: 2^16 + 0. Allocation TIME: 1117 (32) ns. | Free Time: 0 (0) ns
+Size: 2^17 + 0. Allocation TIME: 1120 (35) ns. | Free Time: 0 (0) ns
+Size: 2^18 + 0. Allocation TIME: 1265 (180) ns. | Free Time: 0 (0) ns
+Size: 2^19 + 0. Allocation TIME: 1163 (78) ns. | Free Time: 0 (0) ns
+Size: 2^20 + 0. Allocation TIME: 1168 (83) ns. | Free Time: 0 (0) ns
+Size: 2^21 + 0. Allocation TIME: 1145 (60) ns. | Free Time: 0 (0) ns
+Size: 2^22 + 0. Allocation TIME: 1215 (130) ns. | Free Time: 0 (0) ns
+Size: 2^23 + 0. NOT Allocated.
+************TEST END***********
+
+************TEST ALLOCA***********
+
+******2^X + 1*********
+Size: 2^0 + 1. Allocation TIME: 1072 (0) ns. | Free Time: 0 (0) ns
+Size: 2^1 + 1. Allocation TIME: 1066 (0) ns. | Free Time: 0 (0) ns
+Size: 2^2 + 1. Allocation TIME: 1062 (0) ns. | Free Time: 0 (0) ns
+Size: 2^3 + 1. Allocation TIME: 1062 (0) ns. | Free Time: 0 (0) ns
+Size: 2^4 + 1. Allocation TIME: 1060 (0) ns. | Free Time: 0 (0) ns
+Size: 2^5 + 1. Allocation TIME: 1059 (0) ns. | Free Time: 0 (0) ns
+Size: 2^6 + 1. Allocation TIME: 1064 (0) ns. | Free Time: 0 (0) ns
+Size: 2^7 + 1. Allocation TIME: 1292 (207) ns. | Free Time: 0 (0) ns
+Size: 2^8 + 1. Allocation TIME: 1060 (0) ns. | Free Time: 0 (0) ns
+Size: 2^9 + 1. Allocation TIME: 1059 (0) ns. | Free Time: 0 (0) ns
+Size: 2^10 + 1. Allocation TIME: 1064 (0) ns. | Free Time: 0 (0) ns
+Size: 2^11 + 1. Allocation TIME: 1153 (68) ns. | Free Time: 0 (0) ns
+Size: 2^12 + 1. Allocation TIME: 1060 (0) ns. | Free Time: 0 (0) ns
+Size: 2^13 + 1. Allocation TIME: 1062 (0) ns. | Free Time: 0 (0) ns
+Size: 2^14 + 1. Allocation TIME: 1066 (0) ns. | Free Time: 0 (0) ns
+Size: 2^15 + 1. Allocation TIME: 1064 (0) ns. | Free Time: 0 (0) ns
+Size: 2^16 + 1. Allocation TIME: 1060 (0) ns. | Free Time: 0 (0) ns
+Size: 2^17 + 1. Allocation TIME: 1057 (0) ns. | Free Time: 0 (0) ns
+Size: 2^18 + 1. Allocation TIME: 1141 (56) ns. | Free Time: 0 (0) ns
+Size: 2^19 + 1. Allocation TIME: 1059 (0) ns. | Free Time: 0 (0) ns
+Size: 2^20 + 1. Allocation TIME: 1059 (0) ns. | Free Time: 0 (0) ns
+Size: 2^21 + 1. Allocation TIME: 1061 (0) ns. | Free Time: 0 (0) ns
+Size: 2^22 + 1. Allocation TIME: 1308 (223) ns. | Free Time: 0 (0) ns
+Size: 2^23 + 1. NOT Allocated.
+************TEST END***********
+
+/ # 
