@@ -1,0 +1,337 @@
+/workdir # ./test.sh 
+[18835.676728] MEASURE TIME AVARAGE = 319
+[18835.676728] 
+[18835.682380] ************TEST KMALLOC***********
+[18835.687127] 
+[18835.687127] ******2^X + 0*********
+[18835.692323] Size: 2^0 + 0. Allocation TIME: 173 (97 1848) ns. | Free Time: 108 (97 431) ns
+[18835.701048] Size: 2^1 + 0. Allocation TIME: 125 (97 306) ns. | Free Time: 102 (97 140) ns
+[18835.709680] Size: 2^2 + 0. Allocation TIME: 127 (97 265) ns. | Free Time: 105 (97 140) ns
+[18835.718311] Size: 2^3 + 0. Allocation TIME: 123 (97 223) ns. | Free Time: 102 (97 181) ns
+[18835.726928] Size: 2^4 + 0. Allocation TIME: 122 (97 223) ns. | Free Time: 100 (97 140) ns
+[18835.735558] Size: 2^5 + 0. Allocation TIME: 122 (97 223) ns. | Free Time: 102 (97 140) ns
+[18835.744189] Size: 2^6 + 0. Allocation TIME: 121 (97 223) ns. | Free Time: 102 (97 181) ns
+[18835.752820] Size: 2^7 + 0. Allocation TIME: 143 (97 847) ns. | Free Time: 108 (97 347) ns
+[18835.761451] Size: 2^8 + 0. Allocation TIME: 134 (97 806) ns. | Free Time: 109 (97 347) ns
+[18835.770081] Size: 2^9 + 0. Allocation TIME: 127 (97 640) ns. | Free Time: 110 (97 347) ns
+[18835.778712] Size: 2^10 + 0. Allocation TIME: 128 (97 640) ns. | Free Time: 108 (97 347) ns
+[18835.787434] Size: 2^11 + 0. Allocation TIME: 135 (97 931) ns. | Free Time: 115 (97 598) ns
+[18835.796143] Size: 2^12 + 0. Allocation TIME: 132 (97 847) ns. | Free Time: 113 (97 515) ns
+[18835.804865] Size: 2^13 + 0. Allocation TIME: 133 (97 848) ns. | Free Time: 113 (97 514) ns
+[18835.813635] Size: 2^14 + 0. Allocation TIME: 917 (597 10306) ns. | Free Time: 783 (597 6181) ns
+[18835.822857] Size: 2^15 + 0. Allocation TIME: 815 (722 2847) ns. | Free Time: 744 (681 1473) ns
+[18835.831998] Size: 2^16 + 0. Allocation TIME: 1027 (889 3181) ns. | Free Time: 880 (806 1806) ns
+[18835.841248] Size: 2^17 + 0. Allocation TIME: 1384 (1139 4722) ns. | Free Time: 1092 (1056 1640) ns
+[18835.850811] Size: 2^18 + 0. Allocation TIME: 2165 (1681 8889) ns. | Free Time: 1543 (1472 2056) ns
+[18835.860636] Size: 2^19 + 0. Allocation TIME: 9115 (3598 17556) ns. | Free Time: 2688 (2389 3181) ns
+[18835.871073] Size: 2^20 + 0. Allocation TIME: 22648 (7264 38056) ns. | Free Time: 4626 (4264 6015) ns
+[18835.881364] Size: 2^21 + 0. Allocation TIME: 11369 (9389 70931) ns. | Free Time: 8109 (7806 15931) ns
+[18835.892397] Size: 2^22 + 0. Allocation TIME: 23231 (18848 148973) ns. | Free Time: 17546 (16640 30556) ns
+[18835.906261] Size: 2^23 + 0. Allocation TIME: 57263 (47348 294056) ns. | Free Time: 60217 (53889 90139) ns
+[18835.916327] Size: 2^24 + 0. NOT Allocated.
+[18835.920636] ************TEST END***********
+[18835.920636] 
+[18835.926565] ************TEST KMALLOC***********
+[18835.931323] 
+[18835.931323] ******2^X + 1*********
+[18835.936488] Size: 2^0 + 1. Allocation TIME: 178 (97 1931) ns. | Free Time: 117 (97 639) ns
+[18835.945211] Size: 2^1 + 1. Allocation TIME: 122 (97 222) ns. | Free Time: 100 (97 140) ns
+[18835.953843] Size: 2^2 + 1. Allocation TIME: 126 (97 265) ns. | Free Time: 112 (97 389) ns
+[18835.962473] Size: 2^3 + 1. Allocation TIME: 122 (97 264) ns. | Free Time: 101 (97 140) ns
+[18835.971104] Size: 2^4 + 1. Allocation TIME: 124 (97 264) ns. | Free Time: 100 (97 181) ns
+[18835.979736] Size: 2^5 + 1. Allocation TIME: 128 (97 306) ns. | Free Time: 102 (97 181) ns
+[18835.988367] Size: 2^6 + 1. Allocation TIME: 148 (97 931) ns. | Free Time: 110 (97 347) ns
+[18835.996985] Size: 2^7 + 1. Allocation TIME: 142 (97 848) ns. | Free Time: 109 (97 347) ns
+[18836.005616] Size: 2^8 + 1. Allocation TIME: 123 (97 472) ns. | Free Time: 109 (97 306) ns
+[18836.014247] Size: 2^9 + 1. Allocation TIME: 139 (97 1015) ns. | Free Time: 101 (97 140) ns
+[18836.022973] Size: 2^10 + 1. Allocation TIME: 140 (97 1139) ns. | Free Time: 115 (97 556) ns
+[18836.031786] Size: 2^11 + 1. Allocation TIME: 138 (97 889) ns. | Free Time: 115 (97 556) ns
+[18836.040508] Size: 2^12 + 1. Allocation TIME: 132 (97 848) ns. | Free Time: 110 (97 389) ns
+[18836.049268] Size: 2^13 + 1. Allocation TIME: 742 (597 4598) ns. | Free Time: 675 (597 2847) ns
+[18836.058398] Size: 2^14 + 1. Allocation TIME: 795 (722 2514) ns. | Free Time: 755 (722 1681) ns
+[18836.067536] Size: 2^15 + 1. Allocation TIME: 954 (889 2806) ns. | Free Time: 862 (806 1598) ns
+[18836.076677] Size: 2^16 + 1. Allocation TIME: 1268 (1181 3931) ns. | Free Time: 1084 (1056 1640) ns
+[18836.086229] Size: 2^17 + 1. Allocation TIME: 1855 (1681 6723) ns. | Free Time: 1516 (1472 2181) ns
+[18836.096035] Size: 2^18 + 1. Allocation TIME: 8485 (3098 19014) ns. | Free Time: 2688 (2431 3223) ns
+[18836.106390] Size: 2^19 + 1. Allocation TIME: 20583 (7222 35848) ns. | Free Time: 4641 (4431 5973) ns
+[18836.116640] Size: 2^20 + 1. Allocation TIME: 10630 (9389 47348) ns. | Free Time: 8032 (7806 13014) ns
+[18836.127668] Size: 2^21 + 1. Allocation TIME: 22723 (18931 102139) ns. | Free Time: 17927 (16514 31222) ns
+[18836.141425] Size: 2^22 + 1. Allocation TIME: 54101 (47597 202348) ns. | Free Time: 60006 (53973 79681) ns
+[18836.151483] Size: 2^23 + 1. NOT Allocated.
+[18836.155768] ************TEST END***********
+[18836.155768] 
+[18836.161709] ************TEST KZALLOC***********
+[18836.166448] 
+[18836.166448] ******2^X + 0*********
+[18836.171626] Size: 2^0 + 0. Allocation TIME: 238 (139 2848) ns. | Free Time: 127 (97 889) ns
+[18836.180442] Size: 2^1 + 0. Allocation TIME: 153 (139 348) ns. | Free Time: 102 (97 140) ns
+[18836.189165] Size: 2^2 + 0. Allocation TIME: 156 (139 348) ns. | Free Time: 102 (97 140) ns
+[18836.197888] Size: 2^3 + 0. Allocation TIME: 154 (139 306) ns. | Free Time: 100 (97 139) ns
+[18836.206597] Size: 2^4 + 0. Allocation TIME: 158 (139 306) ns. | Free Time: 104 (97 140) ns
+[18836.215319] Size: 2^5 + 0. Allocation TIME: 154 (139 264) ns. | Free Time: 101 (97 140) ns
+[18836.224041] Size: 2^6 + 0. Allocation TIME: 153 (139 306) ns. | Free Time: 104 (97 140) ns
+[18836.232766] Size: 2^7 + 0. Allocation TIME: 220 (181 1056) ns. | Free Time: 109 (97 348) ns
+[18836.241582] Size: 2^8 + 0. Allocation TIME: 243 (181 848) ns. | Free Time: 106 (97 306) ns
+[18836.250311] Size: 2^9 + 0. Allocation TIME: 357 (347 639) ns. | Free Time: 106 (97 348) ns
+[18836.259051] Size: 2^10 + 0. Allocation TIME: 682 (639 1265) ns. | Free Time: 109 (97 389) ns
+[18836.267994] Size: 2^11 + 0. Allocation TIME: 1333 (1264 1931) ns. | Free Time: 115 (97 556) ns
+[18836.277147] Size: 2^12 + 0. Allocation TIME: 2610 (2556 2931) ns. | Free Time: 113 (97 515) ns
+[18836.286394] Size: 2^13 + 0. Allocation TIME: 5169 (5139 5598) ns. | Free Time: 117 (97 556) ns
+[18836.295851] Size: 2^14 + 0. Allocation TIME: 11091 (10847 15473) ns. | Free Time: 697 (597 3472) ns
+[18836.306103] Size: 2^15 + 0. Allocation TIME: 21623 (21556 23056) ns. | Free Time: 746 (722 1473) ns
+[18836.317069] Size: 2^16 + 0. Allocation TIME: 43795 (42722 47681) ns. | Free Time: 847 (806 1556) ns
+[18836.329436] Size: 2^17 + 0. Allocation TIME: 87328 (85889 101181) ns. | Free Time: 1126 (1097 1639) ns
+[18836.344862] Size: 2^18 + 0. Allocation TIME: 173768 (173431 180056) ns. | Free Time: 1737 (1681 2181) ns
+[18836.366314] Size: 2^19 + 0. Allocation TIME: 354550 (349348 378389) ns. | Free Time: 3730 (2847 4723) ns
+[18836.399399] Size: 2^20 + 0. Allocation TIME: 713320 (699473 736973) ns. | Free Time: 7928 (6764 9515) ns
+[18836.454614] Size: 2^21 + 0. Allocation TIME: 1396967 (1393598 1424889) ns. | Free Time: 16045 (15931 18764) ns
+[18836.555651] Size: 2^22 + 0. Allocation TIME: 2795346 (2789264 2884015) ns. | Free Time: 32679 (32472 35389) ns
+[18836.747574] Size: 2^23 + 0. Allocation TIME: 5600484 (5587722 5766806) ns. | Free Time: 67757 (67389 70889) ns
+[18836.758065] Size: 2^24 + 0. NOT Allocated.
+[18836.762347] ************TEST END***********
+[18836.762347] 
+[18836.768285] ************TEST KZALLOC***********
+[18836.773023] 
+[18836.773023] ******2^X + 1*********
+[18836.778203] Size: 2^0 + 1. Allocation TIME: 186 (139 1306) ns. | Free Time: 112 (97 389) ns
+[18836.787004] Size: 2^1 + 1. Allocation TIME: 153 (139 264) ns. | Free Time: 101 (97 140) ns
+[18836.795728] Size: 2^2 + 1. Allocation TIME: 154 (139 306) ns. | Free Time: 100 (97 139) ns
+[18836.804451] Size: 2^3 + 1. Allocation TIME: 157 (139 306) ns. | Free Time: 98 (97 140) ns
+[18836.813083] Size: 2^4 + 1. Allocation TIME: 153 (139 306) ns. | Free Time: 101 (97 140) ns
+[18836.821805] Size: 2^5 + 1. Allocation TIME: 153 (139 264) ns. | Free Time: 101 (97 140) ns
+[18836.830529] Size: 2^6 + 1. Allocation TIME: 209 (181 847) ns. | Free Time: 109 (97 348) ns
+[18836.839254] Size: 2^7 + 1. Allocation TIME: 225 (181 972) ns. | Free Time: 108 (97 389) ns
+[18836.847984] Size: 2^8 + 1. Allocation TIME: 379 (348 765) ns. | Free Time: 103 (98 181) ns
+[18836.856710] Size: 2^9 + 1. Allocation TIME: 682 (639 1264) ns. | Free Time: 106 (97 347) ns
+[18836.865560] Size: 2^10 + 1. Allocation TIME: 1315 (1264 1722) ns. | Free Time: 108 (97 348) ns
+[18836.874726] Size: 2^11 + 1. Allocation TIME: 2608 (2556 3015) ns. | Free Time: 115 (97 556) ns
+[18836.883973] Size: 2^12 + 1. Allocation TIME: 5154 (5139 5556) ns. | Free Time: 108 (97 348) ns
+[18836.893425] Size: 2^13 + 1. Allocation TIME: 11015 (10847 14222) ns. | Free Time: 643 (597 1931) ns
+[18836.903676] Size: 2^14 + 1. Allocation TIME: 21625 (21515 23556) ns. | Free Time: 740 (681 1431) ns
+[18836.914640] Size: 2^15 + 1. Allocation TIME: 43727 (42764 45056) ns. | Free Time: 890 (847 2014) ns
+[18836.926989] Size: 2^16 + 1. Allocation TIME: 86819 (85847 89681) ns. | Free Time: 1126 (1097 1806) ns
+[18836.942342] Size: 2^17 + 1. Allocation TIME: 174309 (173431 188889) ns. | Free Time: 1744 (1681 2140) ns
+[18836.963778] Size: 2^18 + 1. Allocation TIME: 354001 (349347 375473) ns. | Free Time: 3767 (2890 5056) ns
+[18836.996842] Size: 2^19 + 1. Allocation TIME: 712828 (699306 730598) ns. | Free Time: 7937 (7014 9556) ns
+[18837.052070] Size: 2^20 + 1. Allocation TIME: 1397027 (1393639 1435306) ns. | Free Time: 16029 (15889 18931) ns
+[18837.153100] Size: 2^21 + 1. Allocation TIME: 2795261 (2789222 2864848) ns. | Free Time: 32648 (32473 34222) ns
+[18837.344983] Size: 2^22 + 1. Allocation TIME: 5599187 (5586889 5752598) ns. | Free Time: 67736 (67389 72681) ns
+[18837.355472] Size: 2^23 + 1. NOT Allocated.
+[18837.359771] ************TEST END***********
+[18837.359771] 
+[18837.365693] ************TEST VMALLOC***********
+[18837.370446] 
+[18837.370446] ******2^X + 0*********
+[18837.376341] Size: 2^0 + 0. Allocation TIME: 19522 (1723 529139) ns. | Free Time: 3290 (1639 49014) ns
+[18837.386341] Size: 2^1 + 0. Allocation TIME: 4718 (1764 55473) ns. | Free Time: 1972 (1681 3598) ns
+[18837.395921] Size: 2^2 + 0. Allocation TIME: 2091 (1764 4097) ns. | Free Time: 1864 (1640 2764) ns
+[18837.405415] Size: 2^3 + 0. Allocation TIME: 2044 (1806 3765) ns. | Free Time: 1934 (1765 3098) ns
+[18837.414897] Size: 2^4 + 0. Allocation TIME: 1941 (1806 3597) ns. | Free Time: 1938 (1806 2931) ns
+[18837.424381] Size: 2^5 + 0. Allocation TIME: 2039 (1806 3431) ns. | Free Time: 1985 (1806 2889) ns
+[18837.433869] Size: 2^6 + 0. Allocation TIME: 2074 (1847 3348) ns. | Free Time: 2075 (1889 2973) ns
+[18837.443350] Size: 2^7 + 0. Allocation TIME: 1942 (1806 3223) ns. | Free Time: 1972 (1847 2598) ns
+[18837.452832] Size: 2^8 + 0. Allocation TIME: 1984 (1806 3098) ns. | Free Time: 2000 (1848 2681) ns
+[18837.462320] Size: 2^9 + 0. Allocation TIME: 1953 (1806 3431) ns. | Free Time: 1955 (1847 2681) ns
+[18837.471805] Size: 2^10 + 0. Allocation TIME: 1989 (1806 2973) ns. | Free Time: 2002 (1847 2723) ns
+[18837.481473] Size: 2^11 + 0. Allocation TIME: 4420 (1847 80764) ns. | Free Time: 1970 (1848 3098) ns
+[18837.491147] Size: 2^12 + 0. Allocation TIME: 2039 (1847 3848) ns. | Free Time: 2018 (1889 2722) ns
+[18837.500749] Size: 2^13 + 0. Allocation TIME: 2394 (2222 4265) ns. | Free Time: 2417 (2306 3515) ns
+[18837.510409] Size: 2^14 + 0. Allocation TIME: 3283 (2931 5140) ns. | Free Time: 3330 (3139 4014) ns
+[18837.520165] Size: 2^15 + 0. Allocation TIME: 4717 (4348 7265) ns. | Free Time: 4890 (4722 5972) ns
+[18837.530118] Size: 2^16 + 0. Allocation TIME: 7682 (7472 10431) ns. | Free Time: 8115 (7972 9723) ns
+[18837.540571] Size: 2^17 + 0. Allocation TIME: 13955 (13514 17890) ns. | Free Time: 14626 (14473 16473) ns
+[18837.552282] Size: 2^18 + 0. Allocation TIME: 26056 (25597 33139) ns. | Free Time: 27533 (27389 28514) ns
+[18837.575559] Size: 2^19 + 0. Allocation TIME: 50329 (47889 73222) ns. | Free Time: 364812 (53098 10019306) ns
+[18837.594266] Size: 2^20 + 0. Allocation TIME: 109691 (104389 165181) ns. | Free Time: 150097 (128889 682889) ns
+[18837.622965] Size: 2^21 + 0. Allocation TIME: 237169 (221431 582472) ns. | Free Time: 328717 (289972 835223) ns
+[18837.670636] Size: 2^22 + 0. Allocation TIME: 470326 (458097 556806) ns. | Free Time: 689393 (616431 1162515) ns
+[18837.763462] Size: 2^23 + 0. Allocation TIME: 1013682 (965515 1126889) ns. | Free Time: 1553889 (1298348 2295265) ns
+[18837.950128] Size: 2^24 + 0. Allocation TIME: 2199069 (2100597 2427472) ns. | Free Time: 3287958 (2744347 3859014) ns
+[18838.336738] Size: 2^25 + 0. Allocation TIME: 4767545 (4701014 4865764) ns. | Free Time: 6962214 (6842764 7093640) ns
+[18839.150252] Size: 2^26 + 0. Allocation TIME: 10619149 (10359264 10931348) ns. | Free Time: 14448006 (14364722 14562473) ns
+[18840.786355] Size: 2^27 + 0. Allocation TIME: 21941070 (21644139 22195348) ns. | Free Time: 28816754 (28589723 29110931) ns
+[18844.039173] Size: 2^28 + 0. Allocation TIME: 43823303 (43703306 44094681) ns. | Free Time: 57456950 (57344347 57877806) ns
+[18844.050878] insmod: vmalloc: allocation failure: 536870912 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[18844.061221] CPU: 0 PID: 311 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[18844.068967] Hardware name: Generic AM33XX (Flattened Device Tree)
+[18844.075388] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[18844.083518] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[18844.091095] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[18844.098766] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[18844.107431] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[18844.117459] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[18844.126319] [<c0461a14>] (vmalloc) from [<bf0080c8>] (all_vmalloc+0x28/0x48 [memory])
+[18844.134536] [<bf0080c8>] (all_vmalloc [memory]) from [<bf0083fc>] (aldeal_get_time_stats+0xe8/0x2b4 [memory])
+[18844.144933] [<bf0083fc>] (aldeal_get_time_stats [memory]) from [<bf008748>] (do_mem_range_test+0x68/0x1e4 [memory])
+[18844.155877] [<bf008748>] (do_mem_range_test [memory]) from [<bf00d088>] (memory_init+0x88/0x1000 [memory])
+[18844.166002] [<bf00d088>] (memory_init [memory]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[18844.175037] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[18844.183519] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[18844.191907] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[18844.200204] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[18844.208679] Exception stack(0xd22fbfa8 to 0xd22fbff0)
+[18844.213973] bfa0:                   b6fd038c b6fef950 0011d1d8 000023fc 0010ad3d 00000000
+[18844.222543] bfc0: b6fd038c b6fef950 000023fc 00000080 00000001 beaefe8c 0010ad3d 000f629b
+[18844.231109] bfe0: beaefb48 beaefb38 0003ba90 b6ea91b0
+[18844.236475] Mem-Info:
+[18844.238891] active_anon:105 inactive_anon:0 isolated_anon:0
+[18844.238891]  active_file:492 inactive_file:116 isolated_file:0
+[18844.238891]  unevictable:0 dirty:0 writeback:0 unstable:0
+[18844.238891]  slab_reclaimable:1653 slab_unreclaimable:1816
+[18844.238891]  mapped:444 shmem:0 pagetables:30 bounce:0
+[18844.238891]  free:119062 free_pcp:160 free_cma:16318
+[18844.272795] Node 0 active_anon:420kB inactive_anon:0kB active_file:1968kB inactive_file:464kB unevictable:0kB isolated(anon):0kB isolated(file):0kB mapped:1776kB dirty:0kB writeback:0kB shmem:0kB writeback_to
+[18844.295861] DMA free:476248kB min:2816kB low:3520kB high:4224kB active_anon:420kB inactive_anon:0kB active_file:1968kB inactive_file:464kB unevictable:0kB writepending:0kB present:522240kB managed:497964kB mB
+[18844.324739] lowmem_reserve[]: 0 0 0 0
+[18844.328594] DMA: 57*4kB (UME) 39*8kB (UMEC) 33*16kB (UMEC) 36*32kB (UMEC) 33*64kB (UMEC) 23*128kB (UMEC) 16*256kB (UE) 16*512kB (UC) 18*1024kB (UMEC) 16*2048kB (UMC) 11*4096kB (UMC) 44*8192kB (UMC) = 476268kB
+[18844.348039] 611 total pagecache pages
+[18844.351873] 0 pages in swap cache
+[18844.355341] Swap cache stats: add 0, delete 0, find 0/0
+[18844.360825] Free swap  = 0kB
+[18844.363837] Total swap = 0kB
+[18844.366849] 130560 pages RAM
+[18844.369876] 0 pages HighMem/MovableOnly
+[18844.373889] 6069 pages reserved
+[18844.377174] 16384 pages cma reserved
+[18844.380930] Size: 2^29 + 0. NOT Allocated.
+[18844.385216] ************TEST END***********
+[18844.385216] 
+[18844.391157] ************TEST VMALLOC***********
+[18844.395899] 
+[18844.395899] ******2^X + 1*********
+[18844.401474] Size: 2^0 + 1. Allocation TIME: 10433 (1723 267264) ns. | Free Time: 2041 (1681 10681) ns
+[18844.411410] Size: 2^1 + 1. Allocation TIME: 3014 (1722 33848) ns. | Free Time: 1983 (1681 6223) ns
+[18844.421022] Size: 2^2 + 1. Allocation TIME: 2454 (1764 16139) ns. | Free Time: 1845 (1681 3264) ns
+[18844.430599] Size: 2^3 + 1. Allocation TIME: 2015 (1806 3931) ns. | Free Time: 1876 (1764 3140) ns
+[18844.440080] Size: 2^4 + 1. Allocation TIME: 1966 (1765 4265) ns. | Free Time: 1932 (1806 3140) ns
+[18844.449559] Size: 2^5 + 1. Allocation TIME: 1910 (1806 3098) ns. | Free Time: 1921 (1806 3139) ns
+[18844.459059] Size: 2^6 + 1. Allocation TIME: 2110 (1806 3931) ns. | Free Time: 2039 (1806 3723) ns
+[18844.468539] Size: 2^7 + 1. Allocation TIME: 1925 (1806 3056) ns. | Free Time: 1934 (1806 2723) ns
+[18844.478021] Size: 2^8 + 1. Allocation TIME: 2006 (1806 3056) ns. | Free Time: 1966 (1806 2639) ns
+[18844.487501] Size: 2^9 + 1. Allocation TIME: 1951 (1806 3265) ns. | Free Time: 1949 (1847 2722) ns
+[18844.496966] Size: 2^10 + 1. Allocation TIME: 1964 (1847 2639) ns. | Free Time: 1973 (1847 2597) ns
+[18844.506539] Size: 2^11 + 1. Allocation TIME: 1936 (1806 3389) ns. | Free Time: 1941 (1847 2681) ns
+[18844.516140] Size: 2^12 + 1. Allocation TIME: 2388 (2222 3556) ns. | Free Time: 2421 (2306 3056) ns
+[18844.525766] Size: 2^13 + 1. Allocation TIME: 2697 (2556 4056) ns. | Free Time: 2891 (2723 3806) ns
+[18844.535450] Size: 2^14 + 1. Allocation TIME: 3645 (3306 5223) ns. | Free Time: 3753 (3514 4556) ns
+[18844.545227] Size: 2^15 + 1. Allocation TIME: 5053 (4723 7014) ns. | Free Time: 5295 (5139 5889) ns
+[18844.555214] Size: 2^16 + 1. Allocation TIME: 8324 (8056 11097) ns. | Free Time: 8531 (8389 9639) ns
+[18844.565697] Size: 2^17 + 1. Allocation TIME: 14398 (13931 18181) ns. | Free Time: 15079 (14890 16015) ns
+[18844.577464] Size: 2^18 + 1. Allocation TIME: 26613 (26098 32264) ns. | Free Time: 28699 (27889 47598) ns
+[18844.591945] Size: 2^19 + 1. Allocation TIME: 50617 (48764 61806) ns. | Free Time: 89528 (53556 1193306) ns
+[18844.610529] Size: 2^20 + 1. Allocation TIME: 110546 (106056 168556) ns. | Free Time: 150910 (129931 687098) ns
+[18844.639416] Size: 2^21 + 1. Allocation TIME: 240786 (223014 592306) ns. | Free Time: 331282 (290348 857223) ns
+[18844.689040] Size: 2^22 + 1. Allocation TIME: 474345 (465348 565306) ns. | Free Time: 746113 (619889 1647722) ns
+[18844.782429] Size: 2^23 + 1. Allocation TIME: 1025834 (972514 1255681) ns. | Free Time: 1558780 (1304181 2317723) ns
+[18844.968038] Size: 2^24 + 1. Allocation TIME: 2190320 (2100931 2324181) ns. | Free Time: 3263318 (2729847 3835014) ns
+[18845.356099] Size: 2^25 + 1. Allocation TIME: 4792122 (4719431 4876806) ns. | Free Time: 6983554 (6861223 7117139) ns
+[18846.171343] Size: 2^26 + 1. Allocation TIME: 10639884 (10366473 10841848) ns. | Free Time: 14481218 (14206598 14623848) ns
+[18847.808489] Size: 2^27 + 1. Allocation TIME: 21925873 (21650015 22132472) ns. | Free Time: 28864568 (28703973 29130472) ns
+[18851.065965] Size: 2^28 + 1. Allocation TIME: 43840780 (43726390 44223889) ns. | Free Time: 57585799 (57411473 57994139) ns
+[18851.077672] insmod: vmalloc: allocation failure: 536870913 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[18851.088011] CPU: 0 PID: 311 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[18851.095759] Hardware name: Generic AM33XX (Flattened Device Tree)
+[18851.102181] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[18851.110311] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[18851.117888] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[18851.125560] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[18851.134225] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[18851.144252] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[18851.153113] [<c0461a14>] (vmalloc) from [<bf0080c8>] (all_vmalloc+0x28/0x48 [memory])
+[18851.161328] [<bf0080c8>] (all_vmalloc [memory]) from [<bf0083fc>] (aldeal_get_time_stats+0xe8/0x2b4 [memory])
+[18851.171725] [<bf0083fc>] (aldeal_get_time_stats [memory]) from [<bf008748>] (do_mem_range_test+0x68/0x1e4 [memory])
+[18851.182667] [<bf008748>] (do_mem_range_test [memory]) from [<bf00d0a4>] (memory_init+0xa4/0x1000 [memory])
+[18851.192792] [<bf00d0a4>] (memory_init [memory]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[18851.201827] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[18851.210307] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[18851.218695] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[18851.226992] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[18851.235467] Exception stack(0xd22fbfa8 to 0xd22fbff0)
+[18851.240761] bfa0:                   b6fd038c b6fef950 0011d1d8 000023fc 0010ad3d 00000000
+[18851.249331] bfc0: b6fd038c b6fef950 000023fc 00000080 00000001 beaefe8c 0010ad3d 000f629b
+[18851.257898] bfe0: beaefb48 beaefb38 0003ba90 b6ea91b0
+[18851.263243] Mem-Info:
+[18851.265638] active_anon:105 inactive_anon:0 isolated_anon:0
+[18851.265638]  active_file:492 inactive_file:116 isolated_file:0
+[18851.265638]  unevictable:0 dirty:0 writeback:0 unstable:0
+[18851.265638]  slab_reclaimable:1653 slab_unreclaimable:1816
+[18851.265638]  mapped:444 shmem:0 pagetables:30 bounce:0
+[18851.265638]  free:119066 free_pcp:160 free_cma:16318
+[18851.299544] Node 0 active_anon:420kB inactive_anon:0kB active_file:1968kB inactive_file:464kB unevictable:0kB isolated(anon):0kB isolated(file):0kB mapped:1776kB dirty:0kB writeback:0kB shmem:0kB writeback_to
+[18851.322613] DMA free:476264kB min:2816kB low:3520kB high:4224kB active_anon:420kB inactive_anon:0kB active_file:1968kB inactive_file:464kB unevictable:0kB writepending:0kB present:522240kB managed:497964kB mB
+[18851.351488] lowmem_reserve[]: 0 0 0 0
+[18851.355328] DMA: 55*4kB (UME) 40*8kB (UMEC) 33*16kB (UMEC) 38*32kB (UMEC) 32*64kB (UMEC) 23*128kB (UMEC) 16*256kB (UE) 16*512kB (UC) 18*1024kB (UMEC) 16*2048kB (UMC) 11*4096kB (UMC) 44*8192kB (UMC) = 476268kB
+[18851.374773] 611 total pagecache pages
+[18851.378640] 0 pages in swap cache
+[18851.382109] Swap cache stats: add 0, delete 0, find 0/0
+[18851.387595] Free swap  = 0kB
+[18851.390607] Total swap = 0kB
+[18851.393619] 130560 pages RAM
+[18851.396631] 0 pages HighMem/MovableOnly
+[18851.400658] 6069 pages reserved
+[18851.403943] 16384 pages cma reserved
+[18851.407701] Size: 2^29 + 1. NOT Allocated.
+[18851.411987] ************TEST END***********
+[18851.411987] 
+[18851.417929] ************TEST GET FREE PAGES***********
+[18851.423307] 
+[18851.423307] ******2^X + 0*********
+[18851.428509] Size: 2^0 + 0. Allocation TIME: 529 (264 7556) ns. | Free Time: 446 (306 3681) ns
+[18851.437521] Size: 2^1 + 0. Allocation TIME: 311 (264 640) ns. | Free Time: 357 (306 597) ns
+[18851.446335] Size: 2^2 + 0. Allocation TIME: 307 (264 556) ns. | Free Time: 350 (306 473) ns
+[18851.455163] Size: 2^3 + 0. Allocation TIME: 312 (264 889) ns. | Free Time: 352 (306 597) ns
+[18851.463995] Size: 2^4 + 0. Allocation TIME: 304 (264 598) ns. | Free Time: 354 (306 639) ns
+[18851.472823] Size: 2^5 + 0. Allocation TIME: 311 (264 639) ns. | Free Time: 350 (306 598) ns
+[18851.481651] Size: 2^6 + 0. Allocation TIME: 309 (264 556) ns. | Free Time: 351 (306 640) ns
+[18851.490479] Size: 2^7 + 0. Allocation TIME: 304 (264 639) ns. | Free Time: 351 (306 556) ns
+[18851.499307] Size: 2^8 + 0. Allocation TIME: 312 (264 640) ns. | Free Time: 350 (306 597) ns
+[18851.508135] Size: 2^9 + 0. Allocation TIME: 306 (264 597) ns. | Free Time: 354 (306 556) ns
+[18851.516948] Size: 2^10 + 0. Allocation TIME: 306 (264 473) ns. | Free Time: 345 (306 473) ns
+[18851.525866] Size: 2^11 + 0. Allocation TIME: 308 (264 640) ns. | Free Time: 355 (306 639) ns
+[18851.534785] Size: 2^12 + 0. Allocation TIME: 309 (264 639) ns. | Free Time: 348 (306 639) ns
+[18851.543763] Size: 2^13 + 0. Allocation TIME: 959 (556 6056) ns. | Free Time: 1537 (681 15931) ns
+[18851.553143] Size: 2^14 + 0. Allocation TIME: 958 (556 1431) ns. | Free Time: 2608 (1347 13222) ns
+[18851.562714] Size: 2^15 + 0. Allocation TIME: 1479 (681 2306) ns. | Free Time: 5177 (2639 16597) ns
+[18851.572543] Size: 2^16 + 0. Allocation TIME: 2005 (847 3389) ns. | Free Time: 9484 (5306 15514) ns
+[18851.582666] Size: 2^17 + 0. Allocation TIME: 2800 (1056 5598) ns. | Free Time: 18114 (17472 24889) ns
+[18851.593675] Size: 2^18 + 0. Allocation TIME: 4034 (1597 10764) ns. | Free Time: 36059 (35181 43181) ns
+[18851.606077] Size: 2^19 + 0. Allocation TIME: 8516 (3097 20014) ns. | Free Time: 72405 (70890 79015) ns
+[18851.621277] Size: 2^20 + 0. Allocation TIME: 22015 (6598 69348) ns. | Free Time: 145542 (142140 153931) ns
+[18851.641291] Size: 2^21 + 0. Allocation TIME: 16272 (9556 78348) ns. | Free Time: 290285 (283764 327723) ns
+[18851.671279] Size: 2^22 + 0. Allocation TIME: 35049 (24390 154139) ns. | Free Time: 583445 (580473 604556) ns
+[18851.721593] Size: 2^23 + 0. Allocation TIME: 73378 (51472 305806) ns. | Free Time: 1173938 (1164056 1213556) ns
+[18851.732196] Size: 2^24 + 0. NOT Allocated.
+[18851.736482] ************TEST END***********
+[18851.736482] 
+[18851.742427] ************TEST GET FREE PAGES***********
+[18851.747818] 
+[18851.747818] ******2^X + 1*********
+[18851.752997] Size: 2^0 + 1. Allocation TIME: 416 (264 4056) ns. | Free Time: 375 (306 1265) ns
+[18851.762023] Size: 2^1 + 1. Allocation TIME: 320 (306 681) ns. | Free Time: 356 (306 806) ns
+[18851.770855] Size: 2^2 + 1. Allocation TIME: 315 (306 515) ns. | Free Time: 351 (306 556) ns
+[18851.779684] Size: 2^3 + 1. Allocation TIME: 313 (264 640) ns. | Free Time: 352 (306 597) ns
+[18851.788513] Size: 2^4 + 1. Allocation TIME: 324 (306 640) ns. | Free Time: 350 (306 597) ns
+[18851.797340] Size: 2^5 + 1. Allocation TIME: 309 (264 597) ns. | Free Time: 359 (347 639) ns
+[18851.806154] Size: 2^6 + 1. Allocation TIME: 305 (264 472) ns. | Free Time: 351 (306 473) ns
+[18851.814981] Size: 2^7 + 1. Allocation TIME: 309 (264 556) ns. | Free Time: 359 (306 598) ns
+[18851.823809] Size: 2^8 + 1. Allocation TIME: 313 (264 639) ns. | Free Time: 354 (306 556) ns
+[18851.832637] Size: 2^9 + 1. Allocation TIME: 315 (264 639) ns. | Free Time: 357 (306 639) ns
+[18851.841465] Size: 2^10 + 1. Allocation TIME: 312 (264 681) ns. | Free Time: 354 (306 597) ns
+[18851.850384] Size: 2^11 + 1. Allocation TIME: 315 (306 598) ns. | Free Time: 347 (306 598) ns
+[18851.859375] Size: 2^12 + 1. Allocation TIME: 941 (514 3931) ns. | Free Time: 1248 (681 9681) ns
+[18851.868669] Size: 2^13 + 1. Allocation TIME: 1773 (1056 9389) ns. | Free Time: 1924 (972 14181) ns
+[18851.878307] Size: 2^14 + 1. Allocation TIME: 2933 (1681 11806) ns. | Free Time: 2908 (1639 10181) ns
+[18851.888295] Size: 2^15 + 1. Allocation TIME: 5820 (3139 12598) ns. | Free Time: 5298 (2972 11014) ns
+[18851.898560] Size: 2^16 + 1. Allocation TIME: 10165 (6014 13098) ns. | Free Time: 9606 (5597 13931) ns
+[18851.909551] Size: 2^17 + 1. Allocation TIME: 21132 (18556 28598) ns. | Free Time: 18471 (17556 25140) ns
+[18851.922126] Size: 2^18 + 1. Allocation TIME: 43976 (38431 56639) ns. | Free Time: 36407 (35347 42639) ns
+[18851.937452] Size: 2^19 + 1. Allocation TIME: 91685 (77598 113598) ns. | Free Time: 74317 (70973 117889) ns
+[18851.957302] Size: 2^20 + 1. Allocation TIME: 156192 (149972 215222) ns. | Free Time: 145661 (141806 181848) ns
+[18851.987487] Size: 2^21 + 1. Allocation TIME: 321428 (306972 430015) ns. | Free Time: 292053 (286515 313181) ns
+[18852.037620] Size: 2^22 + 1. Allocation TIME: 650997 (629306 847348) ns. | Free Time: 585739 (582056 603431) ns
+[18852.048128] Size: 2^23 + 1. NOT Allocated.
+[18852.052415] ************TEST END***********
+[18852.052415] 
+[18852.058357] module loaded
+[18852.080562] module exited
+
