@@ -1,0 +1,30 @@
+/usr # insmod debug_module.ko 
+[  106.624768] debug_module: loading out-of-tree module taints kernel.
+[  106.632065] /home/jack/Projects/Tasks/proc_sys/debug_module.c
+[  106.638216] === debug_module loaded ===
+/usr # cat /proc/debug_info_dir/info 
+Uppercase conversion stat info:
+Total calls to read string: 0
+Total calls to write string:0
+Total characters processed:0
+Total characters converted:0
+/usr # echo 'Test' > /proc/debug_info_dir/uppercase 
+[  177.203781] passed data: Test
+[  177.203781] 
+[  177.208548] data in Uppercase: TEST
+/usr # cat /proc/debug_info_dir/info 
+Uppercase conversion stat info:
+Total calls to read string: 0
+Total calls to write string:1
+Total characters processed:4
+Total characters converted:3
+/usr # echo 'linux' > /proc/debug_info_dir/uppercase 
+[  231.386420] passed data: linux
+[  231.386420] 
+[  231.391285] data in Uppercase: LINUX
+/usr # cat /proc/debug_info_dir/info 
+Uppercase conversion stat info:
+Total calls to read string: 0
+Total calls to write string:2
+Total characters processed:9
+Total characters converted:8
