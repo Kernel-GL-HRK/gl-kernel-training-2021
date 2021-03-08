@@ -34,10 +34,10 @@ struct convertor_struct {
 	int processed_last;
 	int processed_total;
 
-} sysfs_conv, procfs_conv;
+};
 
-struct convertor_struct sysfs_conv;
-struct convertor_struct procfs_conv;
+static struct convertor_struct sysfs_conv;
+static struct convertor_struct procfs_conv;
 
 static int convert_case(bool to_lover, struct convertor_struct *conv,
 						size_t str_size)
@@ -54,12 +54,14 @@ static int convert_case(bool to_lover, struct convertor_struct *conv,
 	while (conv->str_buff[indx] != '\0' &&
 		conv->str_buff[indx] != '\n' &&
 		indx < str_size) {
-			char ch = to_lover ? tolower(conv->str_buff[indx]) : toupper(conv->str_buff[indx]);
+			char ch = to_lover ? tolower(conv->str_buff[indx])
+					   : toupper(conv->str_buff[indx]);
+
 			if (ch != conv->str_buff[indx]) {
-			conv->converted_last++;
+				conv->converted_last++;
 				conv->str_buff[indx] = ch;
 			}
-		indx++;
+			indx++;
 	}
 	conv->processed_last  = indx;
 
