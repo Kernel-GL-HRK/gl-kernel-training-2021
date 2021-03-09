@@ -1,0 +1,29 @@
+/tmp # ./test.sh 
+Testing up_converter moudule
+[ 7471.662050] basic_struct: init success
+
+Read device data:
+
+Write device data: This is the first string.
+
+Write device data: This is the second string.
+
+Read device data:
+List entry:
+'This is the second string.'
+List entry:
+'This is the first string.'
+
+Write device data: This is the third string.
+
+Read device data:
+List entry:
+'This is the third string.'
+List entry:
+'This is the second string.'
+List entry:
+'This is the first string.'
+[ 7471.925777] basic_struct: remove entry with string - 'This is the third string.'
+[ 7471.925789] basic_struct: remove entry with string - 'This is the second string.'
+[ 7471.933693] basic_struct: remove entry with string - 'This is the first string.'
+[ 7471.941550] basic_struct: module release!

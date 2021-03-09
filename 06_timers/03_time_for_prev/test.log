@@ -1,0 +1,22 @@
+/tmp # ./test.sh
+Testing up_converter moudule
+[ 6884.916746] time_oprev: init success
+
+Read device data:
+It's a first call, there are no previos calls
+
+Sleep 1.2 sec...
+Read device data:
+Time of the last call - 6884.930976904 sec
+
+Sleep 2.2 sec...
+Read device data:
+Time of the last call - 6886.151450279 sec
+
+Sleep 1.1 sec...
+Read device data:
+Time of the last call - 6888.370284612 sec
+
+Read device data:
+Time of the last call - 6889.488454946 sec
+[ 6889.734629] time_oprev: module release!
