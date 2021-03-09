@@ -52,16 +52,15 @@ static int convert_case(bool to_lover, struct convertor_struct *conv,
 	}
 
 	while (conv->str_buff[indx] != '\0' &&
-		conv->str_buff[indx] != '\n' &&
 		indx < str_size) {
-			char ch = to_lover ? tolower(conv->str_buff[indx])
-					   : toupper(conv->str_buff[indx]);
+		char ch = to_lover ? tolower(conv->str_buff[indx])
+				   : toupper(conv->str_buff[indx]);
 
-			if (ch != conv->str_buff[indx]) {
-				conv->converted_last++;
-				conv->str_buff[indx] = ch;
-			}
-			indx++;
+		if (ch != conv->str_buff[indx]) {
+			conv->converted_last++;
+			conv->str_buff[indx] = ch;
+		}
+		indx++;
 	}
 	conv->processed_last  = indx;
 
