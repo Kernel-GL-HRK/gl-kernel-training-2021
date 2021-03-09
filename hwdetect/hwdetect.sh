@@ -1,46 +1,38 @@
 #!/bin/sh
 
+USB_UART="ttyUSB"
+MMCBLK="mmcblk"
+I2C="i2c"
+SD="sd"
+
+check_device()
+{
+    printf "\n$1 :{\n" >> devices.txt
+    ls /dev/ | grep $1 >> devices.txt
+    printf "\n}">> devices.txt
+}
+
+
+touch devices.txt
+touch tmp_devices.txt
+
+while [ 1 ]
+do
     rm devices.txt
     touch devices.txt
+    check_device $USB_UART
+    check_device $MMCBLK
+    check_device $I2C
+    check_device $SD
+    CHK_DVC=$(diff tmp_devices.txt devices.txt)
 
-usb_devices()
-{
-    printf "\nUSB-UART devices :{\n" >> devices.txt
-    ls /dev/ | grep ttyUSB >> devices.txt
-    printf "\n}">> devices.txt
-}
-    
-mmcblk_devices()
-{
-    printf "\nSD cards :{\n" >> devices.txt
-    ls /dev/ | grep mmcblk >> devices.txt
-    printf "\n}">> devices.txt
-}
+    if [ "$CHK_DVC" != "" ]
+    then
+        cp devices.txt tmp_devices.txt
+	cat devices.txt
+    fi
 
-    
-i2c_devices()
-{
-    printf "\ni2c :{\n" >> devices.txt
-    ls /dev/ | grep i2c >> devices.txt
-    printf "\n}">> devices.txt
-}
+    sleep 1
+done
 
-sd_devices()
-{
-    printf "\nDisk :{\n" >> devices.txt
-    ls /dev/ | grep sd >> devices.txt
-    printf "\n}">> devices.txt
-}
 
-all_devices()
-{
-    usb_devices
-    mmcblk_devices
-    i2c_devices
-    sd_devices
-    
-}
-
-all_devices
-
-cat devices.txt
