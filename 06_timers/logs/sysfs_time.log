@@ -1,0 +1,40 @@
+/home # ./test.sh
+Insert Module
+[  125.184499] khmod: loaded!
+Iteration - 0
+sleep - 3.7399
+RELATION TIME:
+First read
+ABSOLUTE TIME:
+First read
+
+Iteration - 1
+sleep - 2.9001
+RELATION TIME:
+Time between last read - 2.933158875 sec.
+ABSOLUTE TIME:
+Previous read 129.73614098 sec. ago
+
+Iteration - 2
+sleep - 2.2195
+RELATION TIME:
+Time between last read - 2.255697375 sec.
+ABSOLUTE TIME:
+Previous read 132.6851390 sec. ago
+
+Iteration - 3
+sleep - 3.6029
+RELATION TIME:
+Time between last read - 3.635977293 sec.
+ABSOLUTE TIME:
+Previous read 134.262843057 sec. ago
+
+Iteration - 4
+sleep - 1.3623
+RELATION TIME:
+Time between last read - 1.394035000 sec.
+ABSOLUTE TIME:
+Previous read 137.897610266 sec. ago
+
+Remove Module
+[
