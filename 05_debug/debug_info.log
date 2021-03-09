@@ -1,0 +1,42 @@
+/usr # insmod debug_module.ko 
+[   42.062447] debug_module: loading out-of-tree module taints kernel.
+[   42.069743] === debug_module loaded === 
+/usr # ls -la /sys/kernel/debug_info_dir/
+total 0
+drwxr-xr-x    2 root     root             0 Jan  1 00:01 .
+drwxr-xr-x   11 root     root             0 Jan  1 00:00 ..
+-r--r--r--    1 root     root          4096 Jan  1 00:01 info
+-rw-rw-rw-    1 root     root          4096 Jan  1 00:01 lowercase
+/usr # cat /sys/kernel/debug_info_dir/info 
+Lowercase conversion stat info:
+Total calls to read string: 0
+Total calls to write string: 0
+Total characters processed: 0
+Total characters converted: 0
+/usr # cat /sys/kernel/debug_info_dir/lowercase 
+/usr # echo 'ApPliCaTiOn' > /sys/kernel/debug_info_dir/lowercase 
+[  146.738672] passed data: ApPliCaTiOn
+[  146.738672] 
+[  146.743992] data in lowercase: application
+/usr # cat /sys/kernel/debug_info_dir/info 
+Lowercase conversion stat info:
+Total calls to read string: 1
+Total calls to write string: 1
+Total characters processed: 11
+Total characters converted: 5
+/usr # cat /sys/kernel/debug_info_dir/lowercase 
+application
+/usr # echo 'OraNgE' > /sys/kernel/debug_info_dir/lowercase 
+[  196.893981] passed data: OraNgE
+[  196.893981] 
+[  196.898951] data in lowercase: orange
+/usr # cat /sys/kernel/debug_info_dir/lowercase 
+orange
+/usr # cat /sys/kernel/debug_info_dir/info 
+Lowercase conversion stat info:
+Total calls to read string: 3
+Total calls to write string: 2
+Total characters processed: 17
+Total characters converted: 8
+/usr # rmmod debug_module.ko 
+[  438.127392] --- debug_module removed ---
