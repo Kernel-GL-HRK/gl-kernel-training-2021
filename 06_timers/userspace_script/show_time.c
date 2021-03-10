@@ -12,7 +12,8 @@ int main(void)
 	printf("It is %d:%d:%d %d-%d-%d\n",
 			hrt->tm_hour, hrt->tm_min, hrt->tm_sec,
 			hrt->tm_year + 1900,
-			hrt->tm_mon, hrt->tm_mday);
+			hrt->tm_mon + 1,
+			hrt->tm_mday);
 
 	return 0;
 }
