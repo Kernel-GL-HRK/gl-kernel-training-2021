@@ -1,4 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0
+#include <stdlib.h>
+#include <time.h>
 #include "scissors.h"
 
 int char_to_element_index(char c)
@@ -17,4 +19,14 @@ int char_to_element_index(char c)
 		break;
 	}
 	return ans;
+}
+
+void init_scissors(void)
+{
+	srand(time(NULL));
+}
+
+int play_scissors(void)
+{
+	return (rand()%3);
 }

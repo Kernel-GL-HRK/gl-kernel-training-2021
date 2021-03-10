@@ -6,3 +6,5 @@
 #define	UNKNOWN		3
 
 int char_to_element_index(char c);
+void init_scissors(void);
+int play_scissors(void);
