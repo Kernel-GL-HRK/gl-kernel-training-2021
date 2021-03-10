@@ -116,7 +116,12 @@ char *change_case(const char *in, enum low_up_t shift_dir)
 {
 	uint16_t L = strlen(in);
 	uint16_t i;
-	char *res = kzalloc(sizeof(*res) * L, GFP_KERNEL);
+	char *res = kzalloc(sizeof(*res) * (L + 1), GFP_KERNEL); // +1 for being shure that last symbol is '\0'
+
+	if (res == NULL) {
+		pr_err("in function 'change_case' couldn't allocate enough bytes:(\n");
+		goto ret;
+	}
 
 	characters_converted = 0;
 
@@ -130,6 +135,9 @@ char *change_case(const char *in, enum low_up_t shift_dir)
 			characters_converted++;
 	}
 
+	res[L] = '\n';
+
+	ret:
 	return res;
 }
 
@@ -281,8 +289,7 @@ static void __exit mod_exit(void)
 {
 	_cleanup_proc();
 
-	if (text_buf != NULL)
-		kfree(text_buf);
+	kfree(text_buf);
 
 	pr_info("Goodbye:)\n");
 }
