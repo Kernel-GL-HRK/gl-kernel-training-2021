@@ -15,43 +15,38 @@ MODULE_VERSION("0.1");
 MODULE_LICENSE("Dual MIT/GPL");
 
 static struct class *attr_class;
-static struct timespec64 prev_read_time;
-static struct timespec64 last_read_time;
 
 static ssize_t r_diff_show(struct class *class, struct class_attribute *attr,
 				char *buf)
 {
+	static unsigned long long last_read_time;
 	unsigned long long current_time;
-	unsigned long long diff;
+	struct timespec64 diff_time;
 
 	current_time = ktime_get_ns();
 
-	if (unlikely(prev_read_time.tv_nsec == 0)) {
+	if (unlikely(last_read_time == 0)) {
 		snprintf(buf, PAGE_SIZE, "First read\n");
 	} else {
-		diff = current_time - timespec64_to_ns(&prev_read_time);
-		snprintf(buf, PAGE_SIZE, "Time between last read - %lld.%ld sec.\n",
-			ns_to_timespec64(diff).tv_sec,
-			ns_to_timespec64(diff).tv_nsec);
+		diff_time = ns_to_timespec64(current_time - last_read_time);
+		snprintf(buf, PAGE_SIZE, "Time between last read - %lld.%09ld sec.\n",
+			diff_time.tv_sec, diff_time.tv_nsec);
 	}
 
-	prev_read_time = ns_to_timespec64(current_time);
+	last_read_time = current_time;
 	return strlen(buf);
 }
 
 static ssize_t r_prev_show(struct class *class, struct class_attribute *attr,
 				char *buf)
 {
-	struct tm time;
-	unsigned long long t_temp;
+	static struct timespec64 last_read_time;
 
-	if (unlikely(last_read_time.tv_nsec == 0)) {
+	if (unlikely(last_read_time.tv_sec == 0)) {
 		snprintf(buf, PAGE_SIZE, "First read\n");
 	} else {
-		time_to_tm(last_read_time.tv_sec, 0, &time);
-		t_temp = time.tm_min * 60 + time.tm_sec;
-		sprintf(buf, "Previous read %lld.%ld sec. ago\n",
-			t_temp, last_read_time.tv_nsec);
+		sprintf(buf, "Previous read %lld.%09ld sec. ago\n",
+			last_read_time.tv_sec, last_read_time.tv_nsec);
 	}
 
 	ktime_get_ts64(&last_read_time);

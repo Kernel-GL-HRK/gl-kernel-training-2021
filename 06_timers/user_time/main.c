@@ -10,7 +10,7 @@ int main(void)
 
     struct timespec spec;
     clock_gettime(CLOCK_REALTIME, &spec);
-    printf("now: %d-%02d-%02d %02d:%02d:%d.%09ld\n", tm.tm_year + YEARS_START,
+    printf("now: %d-%02d-%02d %02d:%02d:%02d.%09ld\n", tm.tm_year + YEARS_START,
                 tm.tm_mon + 1, tm.tm_mday, tm.tm_hour,
                 tm.tm_min, tm.tm_sec, spec.tv_nsec);
 

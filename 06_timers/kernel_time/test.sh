@@ -1,4 +1,3 @@
-DELAY=1;
 echo "Insert Module"
 insmod khmod.ko
 sleep 0.1s
