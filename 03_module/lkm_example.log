@@ -1,0 +1,9 @@
+/tmp # insmod lkm_example.ko bbb_arch_size=32
+[83382.375852] Hello, World!
+[83382.377220] Yes! BBB architecture size is: 32
+/tmp # rmmod lkm_example.ko
+[83392.617296] Goodbye, World!
+/tmp # insmod lkm_example.ko bbb_arch_size=64
+[83398.452958] Hello, World!
+[83398.453184] Not really. BBB architecture size is: 32
+insmod: can't insert 'lkm_example.ko': invalid parameter
