@@ -77,7 +77,13 @@ char *change_case(const char *in, enum low_up_t shift_dir)
 {
 	uint16_t L = strlen(in);
 	uint16_t i;
-	char *res = kzalloc(sizeof(*res) * L, GFP_KERNEL);
+
+	char *res = kmalloc(sizeof(*res) * L, GFP_KERNEL);
+
+	if (res == NULL) {
+		pr_err("in func 'change_case' couldn't allocate enough memory:(\n");
+		goto ret;
+	}
 
 	characters_converted = 0;
 
@@ -91,6 +97,9 @@ char *change_case(const char *in, enum low_up_t shift_dir)
 			characters_converted++;
 	}
 
+	res[L] = '\0';
+
+	ret:
 	return res;
 }
 
@@ -128,9 +137,7 @@ static ssize_t text_buf_store(struct class *class, struct class_attribute *attr,
 /* sysfs show() method. Calls the show() method corresponding to the individual sysfs file */
 static ssize_t total_calls_show(struct class *class, struct class_attribute *attr, char *buf)
 {
-	sprintf(buf, "%d\n", total_calls);
-
-	return strlen(buf);
+	return sprintf(buf, "%d\n", total_calls);;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -138,9 +145,7 @@ static ssize_t total_calls_show(struct class *class, struct class_attribute *att
 /* sysfs show() method. Calls the show() method corresponding to the individual sysfs file */
 static ssize_t total_characters_processed_show(struct class *class, struct class_attribute *attr, char *buf)
 {
-	sprintf(buf, "%d\n", total_characters_processed);
-
-	return strlen(buf);
+	return sprintf(buf, "%d\n", total_characters_processed);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -148,9 +153,7 @@ static ssize_t total_characters_processed_show(struct class *class, struct class
 /* sysfs show() method. Calls the show() method corresponding to the individual sysfs file */
 static ssize_t characters_converted_show(struct class *class, struct class_attribute *attr, char *buf)
 {
-	sprintf(buf, "%d\n", characters_converted);
-
-	return strlen(buf);
+	return sprintf(buf, "%d\n", characters_converted);
 }
 
 CLASS_ATTR(text, 0644, &text_buf_show, &text_buf_store);
@@ -167,14 +170,39 @@ int __init mod_init(void)
 	int res;
 
 	mod_class = class_create(THIS_MODULE, "task_05");
-	if (IS_ERR(mod_class))
-		pr_info("bad class create\n");
+	if (IS_ERR(mod_class)) {
+		pr_err("bad class create\n");
+		res = -ENOMEM;
+		goto err;
+	}
+
 	res = class_create_file(mod_class, &class_attr_text);
+	if (IS_ERR_VALUE(res)) {
+		pr_err("bad file 'text' create\n");
+		goto err;
+	}
+
 	res = class_create_file(mod_class, &class_attr_total_calls);
+	if (IS_ERR_VALUE(res)) {
+		pr_err("bad file 'total_calls' create\n");
+		goto err;
+	}
+
 	res = class_create_file(mod_class, &class_attr_total_characters_processed);
+	if (IS_ERR_VALUE(res)) {
+		pr_err("bad file 'total_characters_processed' create\n");
+		goto err;
+	}
+
 	res = class_create_file(mod_class, &class_attr_characters_converted);
+	if (IS_ERR_VALUE(res)) {
+		pr_err("bad file 'characters_converted' create\n");
+		goto err;
+	}
 
 	pr_info("'task_05' module initialized\n");
+
+	err:
 	return res;
 }
 

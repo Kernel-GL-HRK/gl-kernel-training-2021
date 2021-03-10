@@ -36,7 +36,7 @@ clean:
 	-rm -f $(addsuffix .cmd,$(addprefix .,$(obj-m:.o=.mod.o)))
 
 deploy:
-	sudo rm $(REMDIR)/$(TARGET).ko $(REMDIR)/test.sh
+	sudo rm -f $(REMDIR)/$(TARGET).ko $(REMDIR)/test.sh
 	sudo cp $(TARGET).ko test.sh $(REMDIR)
 
 
