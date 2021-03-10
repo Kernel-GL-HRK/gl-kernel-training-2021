@@ -24,6 +24,19 @@ int main(void)
 		comp_choise = play_scissors();
 		printf("You choose %s, I choose %s\n",
 			Game_Elements[res], Game_Elements[comp_choise]);
+		switch (get_game_result(res, comp_choise)) {
+		case LOST:
+			printf("I win: %s beats %s\n",
+				Game_Elements[comp_choise], Game_Elements[res]);
+			break;
+		case WINN:
+			printf("You win: %s beats %s\n",
+				Game_Elements[res], Game_Elements[comp_choise]);
+			break;
+		case DRAW:
+			printf("It's draw\n");
+			break;
+		}
 	} while (1);
 }
 
