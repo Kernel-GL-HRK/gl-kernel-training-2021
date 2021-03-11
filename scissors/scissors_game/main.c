@@ -3,31 +3,42 @@
 #include <stdlib.h>
 #include <time.h>
 
-//"-1" - draw
-// "0" - fail
-// "1" - win
+typedef enum {
+	eDRAW = -1,
+	eLOST,
+	eWINN
+} decision_t;
+
+/*Enum of Unknown, Rock, Paper and Scissors choise*/
+typedef enum {
+	eU = -1,
+	eR,
+	eP,
+	eS
+
+} element_t;
 
 const int game_table[3][3]={
-	-1,   0,  1,
-	 1,  -1,  0,
-	 0,   1, -1
+	eDRAW,   eLOST,  eWINN,
+	eWINN,   eDRAW,  eLOST,
+	eLOST,   eWINN,  eDRAW
 };
 
 int static char_to_text(char c, char *res, int size)
 {
-	int ans = -1;
+	int ans = eU;
 	switch(c) {
 	case 'r':
 		strncpy(res, "rock", size);
-		ans=0;
+		ans=eR;
 		break;
 	case 'p':
 		strncpy(res, "paper", size);
-		ans=1;
+		ans=eP;
 		break;
 	case 's':
 		strncpy(res, "scissors", size);
-		ans=2;
+		ans=eS;
 		break;
 	default:
 		strncpy(res, "unknown", size);
@@ -53,17 +64,17 @@ int main(void)
 		};
 		int comp=rand()%3;
 		printf("You choose %s, I choose %s\n", res, ChNames[comp]);
-		if (user==-1)
+		if (user==eU)
 		       continue;
 		int check = game_table[user][comp];
 		switch (check) {
-		case 0:
+		case eLOST:
 			printf("I win: %s beats %s\n", ChNames[comp], res);
 			break;
-		case 1:
+		case eWINN:
 			printf("You win: %s beats %s\n", res, ChNames[comp]);
 			break;
-		case -1:
+		case eDRAW:
 			printf("It's draw\n");
 		}
 	}
