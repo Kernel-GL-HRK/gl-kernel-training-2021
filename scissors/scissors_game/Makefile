@@ -1,5 +1,5 @@
 CC=gcc
-SOURCES=main.c
+SOURCES=main.c scissors.h
 EXECUTABLE=scissors_game
 
 all: $(SOURCES)
