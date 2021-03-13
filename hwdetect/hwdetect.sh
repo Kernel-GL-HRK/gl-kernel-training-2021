@@ -17,7 +17,13 @@ function find_usb_ttl()
 
 function find_flash()
 {
-	echo "flash"
+	if ! command -v lsblk &> /dev/null
+	then
+		echo "COMMAND lsblk could not be found"
+		echo "Please install it before"
+		return -1
+	fi
+	lsblk -rno SIZE,NAME,HOTPLUG,MOUNTPOINT | grep -w 1| grep -vE "sr|loop" | awk '{if ($4 != "") print $1, " ", $4}'
 }
 
 while true; do
