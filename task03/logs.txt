@@ -1,0 +1,7 @@
+/tmp # insmod firstmod.ko
+[178533.291320] username wasn`t passed as a parameter
+[178533.291470] Hello, $usrname!
+/tmp # rmmod firstmod.ko
+[178556.954845] Goodbye
+
+
