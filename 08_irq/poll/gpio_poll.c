@@ -5,6 +5,8 @@
 #include <linux/kernel.h>
 #include <linux/gpio.h>
 
+#include <linux/delay.h>
+
 #include <linux/timer.h>
 #include <linux/moduleparam.h>
 #include <linux/interrupt.h>
@@ -17,6 +19,10 @@ MODULE_LICENSE("Dual BSD/GPL");
 static u32 state_led_pin;
 module_param(state_led_pin, uint, 0);
 MODULE_PARM_DESC(state_led_pin, "LED pin ID");
+
+static u32 busy_led_pin;
+module_param(busy_led_pin, uint, 0);
+MODULE_PARM_DESC(busy_led_pin, "Busy LED pin ID");
 
 static u32 user_btn_pin;
 module_param(user_btn_pin, uint, 0);
@@ -33,6 +39,7 @@ struct gpio_conf {
 
 static struct gpio_conf user_btn  = {66, false, -1, NULL, NULL};
 static struct gpio_conf state_led = {67, true, -1, NULL, NULL};
+static struct gpio_conf busy_led  = {68, true, -1, NULL, NULL};
 
 static struct timer_list g_timer;
 
@@ -87,13 +94,23 @@ static void gpio_deinit(struct gpio_conf *pin)
 
 void gpio_debounce(struct timer_list *tm)
 {
-	static int prew_state;
-	int curr_state = gpio_get_value(user_btn.pin_id);
+	static int debounce_state;
+	static int debounce_cnt = 5;
 
-	if (prew_state == curr_state)
-		gpio_set_value(state_led.pin_id, 1 - curr_state);
+	int raw_state = gpio_get_value(user_btn.pin_id);
 
-	prew_state = curr_state;
+	if (debounce_state == raw_state)
+		debounce_cnt = 5;
+	else if (!(--debounce_cnt))
+	{
+		debounce_state = raw_state;
+		debounce_cnt = 5;
+		gpio_set_value(busy_led.pin_id, 1);
+		msleep(1);
+		gpio_set_value(busy_led.pin_id, 0);
+	}
+
+	gpio_set_value(state_led.pin_id, 1 - debounce_state);
 
 	mod_timer(&g_timer, jiffies + msecs_to_jiffies(20));
 }
@@ -104,27 +121,37 @@ static int gpio_poll_init(void)
 
 	if (state_led_pin)
 		state_led.pin_id = state_led_pin;
+	if (busy_led_pin)
+		user_btn.pin_id = busy_led_pin;
 	if (user_btn_pin)
 		user_btn.pin_id = user_btn_pin;
 
 	pr_info("%s: module starting\n",  __func__);
 
-	timer_setup(&g_timer, &gpio_debounce, 0);
-	res = mod_timer(&g_timer, jiffies + msecs_to_jiffies(20));
-	if (res < 0)
-		return res;
-
 	res = gpio_init(&state_led);
 	if (res < 0)
 		return res;
 
+	res = gpio_init(&busy_led);
+	if (res < 0)
+		goto deinit_sts;
+
 	res = gpio_init(&user_btn);
-	if (res < 0) {
-		del_timer(&g_timer);
-		gpio_deinit(&state_led);
-		return res;
-	}
-	return 0;
+	if (res < 0)
+		goto deinit_leds;
+
+	timer_setup(&g_timer, &gpio_debounce, 0);
+	res = mod_timer(&g_timer, jiffies + msecs_to_jiffies(20));
+	if (res == 0)
+		return 0;
+
+	gpio_deinit(&user_btn);
+deinit_leds:
+	gpio_deinit(&busy_led);
+deinit_sts:
+	gpio_deinit(&state_led);
+
+	return res;
 }
 
 static void gpio_poll_exit(void)
@@ -132,8 +159,9 @@ static void gpio_poll_exit(void)
 	pr_info("%s: module exit\n",  __func__);
 
 	del_timer(&g_timer);
-	gpio_deinit(&state_led);
 	gpio_deinit(&user_btn);
+	gpio_deinit(&busy_led);
+	gpio_deinit(&state_led);
 }
 
 module_init(gpio_poll_init);

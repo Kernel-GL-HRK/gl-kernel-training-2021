@@ -65,7 +65,7 @@ static int gpio_init(struct gpio_conf *pin)
 		goto failed_gpio_init;
 
 	if (pin->output == false)
-		gpio_set_debounce(pin->pin_id, 20);
+		gpio_set_debounce(pin->pin_id, 2000);
 
 	if (pin->irq_handler == NULL && pin->irq_thread == NULL)
 		return 0;
@@ -149,28 +149,31 @@ static int gpio_irq_init(void)
 		return res;
 
 	res = gpio_init(&busy_led);
-	if (res < 0) {
-		gpio_deinit(&state_led);
-		return res;
-	}
+	if (res < 0)
+		goto exit_deinit_state_led;
 
 	res = gpio_init(&user_btn);
-	if (res < 0) {
-		gpio_deinit(&busy_led);
-		gpio_deinit(&state_led);
-		return res;
-	}
+	if (res < 0)
+		goto exit_deinit_all;
 
-	return 0;
+	return res;
+
+exit_deinit_all:
+	gpio_deinit(&busy_led);
+
+exit_deinit_state_led:
+	gpio_deinit(&state_led);
+	return res;
+
 }
 
 static void gpio_irq_exit(void)
 {
 	pr_info("%s: module exit\n",  __func__);
 
-	gpio_deinit(&state_led);
-	gpio_deinit(&busy_led);
 	gpio_deinit(&user_btn);
+	gpio_deinit(&busy_led);
+	gpio_deinit(&state_led);
 }
 
 module_init(gpio_irq_init);
