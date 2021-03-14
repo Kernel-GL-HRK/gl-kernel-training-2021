@@ -1,0 +1,1903 @@
+
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 4.1 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000016] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000037] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000048] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003790] timer_probe: no matching timers found
+[    0.003986] Console: colour dummy device 80x30
+[    0.004044] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089188] pid_max: default: 32768 minimum: 301
+[    0.089350] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089364] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090003] CPU: Testing write buffer coherency: ok
+[    0.090064] CPU0: Spectre v2: using BPIALL workaround
+[    0.090420] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091001] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092415] rcu: Hierarchical SRCU implementation.
+[    0.095235] EFI services will not be available.
+[    0.095422] smp: Bringing up secondary CPUs ...
+[    0.095436] smp: Brought up 1 node, 1 CPU
+[    0.095445] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095453] CPU: All CPU(s) started in SVC mode.
+[    0.096826] devtmpfs: initialized
+[    0.104187] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104694] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104728] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108668] pinctrl core: initialized pinctrl subsystem
+[    0.110682] DMI not present or invalid.
+[    0.111130] NET: Registered protocol family 16
+[    0.113544] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140117] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193885] cpuidle: using governor menu
+[    0.201392] OMAP GPIO hardware version 0.1
+[    0.213617] No ATAGs?
+[    0.213629] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218932] Serial: AMBA PL011 UART driver
+[    0.237676] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241433] vgaarb: loaded
+[    0.242267] SCSI subsystem initialized
+[    0.242855] usbcore: registered new interface driver usbfs
+[    0.242911] usbcore: registered new interface driver hub
+[    0.242958] usbcore: registered new device driver usb
+[    0.244537] pps_core: LinuxPPS API ver. 1 registered
+[    0.244552] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244574] PTP clock support registered
+[    0.244748] EDAC MC: Ver: 3.0.0
+[    0.247595] clocksource: Switched to clocksource timer1
+[    0.312423] NET: Registered protocol family 2
+[    0.313044] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.313072] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.313115] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.313175] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.313281] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313306] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313441] NET: Registered protocol family 1
+[    0.314091] RPC: Registered named UNIX socket transport module.
+[    0.314106] RPC: Registered udp transport module.
+[    0.314113] RPC: Registered tcp transport module.
+[    0.314119] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.315270] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317704] Initialise system trusted keyrings
+[    0.318042] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324784] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325639] NFS: Registering the id_resolver key type
+[    0.325681] Key type id_resolver registered
+[    0.325689] Key type id_legacy registered
+[    0.325731] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327937] Key type asymmetric registered
+[    0.327958] Asymmetric key parser 'x509' registered
+[    0.328033] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.328047] io scheduler noop registered
+[    0.328055] io scheduler deadline registered
+[    0.328248] io scheduler cfq registered (default)
+[    0.328258] io scheduler mq-deadline registered
+[    0.328266] io scheduler kyber registered
+[    0.334080] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.400034] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.403450] SuperH (H)SCI(F) driver initialized
+[    0.404323] msm_serial: driver initialized
+[    0.404635] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404727] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.092066] console [ttyO0] enabled
+[    1.096337] STMicroelectronics ASC driver initialized
+[    1.102715] STM32 USART driver initialized
+[    1.108503] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.120828] random: fast init done
+[    1.124516] random: crng init done
+[    1.138173] brd: module loaded
+[    1.148957] loop: module loaded
+[    1.161153] libphy: Fixed MDIO Bus: probed
+[    1.166544] CAN device driver interface
+[    1.171625] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.178610] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.184721] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.191027] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.198342] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277669] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285712] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293384] libphy: 4a101000.mdio: probed
+[    1.297688] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309725] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316807] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323587] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330859] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338810] usbcore: registered new interface driver pegasus
+[    1.344800] usbcore: registered new interface driver asix
+[    1.350534] usbcore: registered new interface driver ax88179_178a
+[    1.356945] usbcore: registered new interface driver cdc_ether
+[    1.363125] usbcore: registered new interface driver smsc75xx
+[    1.369205] usbcore: registered new interface driver smsc95xx
+[    1.375254] usbcore: registered new interface driver net1080
+[    1.381237] usbcore: registered new interface driver cdc_subset
+[    1.387465] usbcore: registered new interface driver zaurus
+[    1.393382] usbcore: registered new interface driver cdc_ncm
+[    1.401755] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408676] ehci-pci: EHCI PCI platform driver
+[    1.413387] ehci-platform: EHCI generic platform driver
+[    1.419125] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424750] ehci-orion: EHCI orion driver
+[    1.429155] SPEAr-ehci: EHCI SPEAr driver
+[    1.433488] ehci-st: EHCI STMicroelectronics driver
+[    1.438773] ehci-exynos: EHCI EXYNOS driver
+[    1.443280] ehci-atmel: EHCI Atmel driver
+[    1.447637] tegra-ehci: Tegra EHCI driver
+[    1.451996] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458543] ohci-pci: OHCI PCI platform driver
+[    1.463267] ohci-platform: OHCI generic platform driver
+[    1.468985] SPEAr-ohci: OHCI SPEAr driver
+[    1.473330] ohci-st: OHCI STMicroelectronics driver
+[    1.478622] ohci-atmel: OHCI Atmel driver
+[    1.483513] usbcore: registered new interface driver usb-storage
+[    1.489977] usbcore: registered new interface driver usbserial_generic
+[    1.496840] usbserial: USB Serial support registered for generic
+[    1.503192] usbcore: registered new interface driver ftdi_sio
+[    1.509253] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516936] usbcore: registered new interface driver pl2303
+[    1.522812] usbserial: USB Serial support registered for pl2303
+[    1.529064] usbcore: registered new interface driver usb_serial_simple
+[    1.535921] usbserial: USB Serial support registered for carelink
+[    1.542342] usbserial: USB Serial support registered for zio
+[    1.548312] usbserial: USB Serial support registered for funsoft
+[    1.554621] usbserial: USB Serial support registered for flashloader
+[    1.561314] usbserial: USB Serial support registered for google
+[    1.567542] usbserial: USB Serial support registered for libtransistor
+[    1.574417] usbserial: USB Serial support registered for vivopay
+[    1.580746] usbserial: USB Serial support registered for moto_modem
+[    1.587329] usbserial: USB Serial support registered for motorola_tetra
+[    1.594298] usbserial: USB Serial support registered for novatel_gps
+[    1.600990] usbserial: USB Serial support registered for hp4x
+[    1.607026] usbserial: USB Serial support registered for suunto
+[    1.613263] usbserial: USB Serial support registered for siemens_mpi
+[    1.625681] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.636235] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649854] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.660398] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.686322] i2c /dev entries driver
+[    1.703311] sdhci: Secure Digital Host Controller Interface driver
+[    1.709886] sdhci: Copyright(c) Pierre Ossman
+[    1.715692] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724892] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.730267] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761530] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.794170] Synopsys Designware Multimedia Card Interface Driver
+[    1.802068] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811845] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819753] usbcore: registered new interface driver usbhid
+[    1.825599] usbhid: USB HID core driver
+[    1.834507] NET: Registered protocol family 10
+[    1.840865] Segment Routing with IPv6
+[    1.844785] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851799] NET: Registered protocol family 17
+[    1.856517] can: controller area network core (rev 20170425 abi 9)
+[    1.863126] NET: Registered protocol family 29
+[    1.867810] can: raw protocol (rev 20170425)
+[    1.872283] can: broadcast manager protocol (rev 20170425 t)
+[    1.878233] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884646] Key type dns_resolver registered
+[    1.889395] ThumbEE CPU extension supported.
+[    1.893882] Registering SWP/SWPB emulation handler
+[    1.898949] omap_voltage_late_init: Voltage driver support not added
+[    1.907657] Loading compiled-in X.509 certificates
+[    1.930096] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940540] mmc0: new high speed SDHC card at address 1234
+[    1.947388] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.955196]  mmcblk0: p1 p2
+[    1.974156] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980762] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.988489] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    2.000135] mmc1: new high speed MMC card at address 0001
+[    2.006862] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.012229] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.019013] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025617] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038840]  mmcblk1: p1 p2
+[    2.120149] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.139535] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.145146] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.153316] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.162039] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.169637] usb usb1: Product: MUSB HDRC host driver
+[    2.174837] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.180691] usb usb1: SerialNumber: musb-hdrc.1
+[    2.186128] hub 1-0:1.0: USB hub found
+[    2.190194] hub 1-0:1.0: 1 port detected
+[    2.195779] hctosys: unable to open rtc device (rtc0)
+[    2.214860] net eth0: initializing cpsw version 1.12 (0)
+[    2.318691] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337515] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    4.418496] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    4.437620] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.467726] IP-Config: Guessing netmask 255.255.255.0
+[    4.473020] IP-Config: Complete:
+[    4.476401]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    4.487448]      host=192.168.0.100, domain=, nis-domain=(none)
+[    4.493661]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    4.510164] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.516967] devtmpfs: mounted
+[    4.522804] Freeing unused kernel memory: 2048K
+[    4.528433] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # insmod mem/ # insmod memory_test_module.ko 
+[   11.556550] memory_test_module: loading out-of-tree module taints kernel.
+[   11.564394] memory_test_module says: Lean back andwait for memory allocation test results!
+[   11.564394] 
+[   11.574689] ********************************kmalloc ********************************
+[   11.582824] x   alloc (min	avr	max)	|   dealloc (min	avr	max), ns
+[   11.589251] 1		417	484	1083	|	417	474	1208
+[   11.593565] 2		416	429	542	|	416	423	459
+[   11.597712] 3		416	479	833	|	416	424	459
+[   11.601843] 4		417	427	541	|	417	419	458
+[   11.605974] 5		459	464	542	|	417	422	459
+[   11.610119] 8		416	457	583	|	416	450	500
+[   11.614251] 9		417	427	541	|	417	419	458
+[   11.618397] 16		417	463	583	|	416	451	459
+[   11.622619] 17		416	429	584	|	416	418	459
+[   11.626841] 32		417	464	583	|	458	458	459
+[   11.631076] 33		417	430	584	|	417	419	458
+[   11.635299] 64		417	432	584	|	417	424	459
+[   11.639536] 65		459	503	1166	|	417	437	708
+[   11.643849] 128		417	458	500	|	417	422	500
+[   11.648177] 129		417	489	1000	|	417	435	709
+[   11.652582] 256		417	463	1167	|	417	430	625
+[   11.656986] 257		417	471	916	|	417	419	458
+[   11.661314] 512		417	440	583	|	417	422	459
+[   11.665627] 513		417	445	791	|	416	435	708
+[   11.669955] 1024		416	432	625	|	416	419	458
+[   11.674360] 1025		416	478	1167	|	416	434	708
+[   11.678869] 2048		417	440	625	|	417	419	458
+[   11.683275] 2049		458	499	1125	|	417	443	833
+[   11.687785] 4096		417	440	541	|	417	419	459
+[   11.692190] 4097		417	498	1125	|	417	448	833
+[   11.696685] 8192		416	437	584	|	416	416	417
+[   11.701144] 8193		916	1442	8792	|	916	1099	3750
+[   11.705930] 16384		916	950	1209	|	916	927	1041
+[   11.710647] 16385		1041	1142	2167	|	1041	1090	1792
+[   11.715709] 32768		1084	1097	1292	|	1042	1047	1125
+[   11.720794] 32769		1208	1372	3625	|	1166	1271	2292
+[   11.725862] 65536		1208	1229	1541	|	1166	1203	1334
+[   11.730955] 65537		1458	1695	5042	|	1375	1414	1875
+[   11.736030] 131072		1458	1486	1708	|	1375	1395	1542
+[   11.741234] 131073		2000	2500	9666	|	1791	1846	2250
+[   11.746416] 262144		2000	2028	2333	|	1791	1828	1917
+[   11.751666] 262145		3208	4299	19458	|	2791	2903	4042
+[   11.756974] 524288		3208	3276	3541	|	2791	2830	2959
+[   11.762284] 524289		5375	6354	20292	|	4541	4617	5083
+[   11.767483] ********************************kzalloc ********************************
+[   11.775608] x   alloc (min	avr	max)	|   dealloc (min	avr	max), ns
+[   11.782031] 1		458	520	1209	|	416	429	500
+[   11.786254] 2		458	489	667	|	416	424	459
+[   11.790400] 3		458	487	709	|	416	427	500
+[   11.794532] 4		458	489	625	|	416	416	417
+[   11.798678] 5		458	484	666	|	416	424	500
+[   11.802809] 8		458	481	625	|	416	421	458
+[   11.806941] 9		458	487	750	|	416	421	458
+[   11.811086] 16		458	486	708	|	416	421	459
+[   11.815309] 17		458	484	625	|	416	419	459
+[   11.819546] 32		458	489	708	|	416	421	459
+[   11.823769] 33		458	479	584	|	416	421	458
+[   11.828006] 64		458	484	666	|	416	422	459
+[   11.832230] 65		500	533	875	|	416	421	459
+[   11.836453] 128		500	526	666	|	416	421	459
+[   11.840782] 129		500	533	1000	|	416	440	709
+[   11.845189] 256		500	570	917	|	416	421	459
+[   11.849520] 257		666	705	1167	|	416	419	458
+[   11.853928] 512		666	679	833	|	416	424	459
+[   11.858264] 513		958	1033	1333	|	416	421	500
+[   11.862769] 1024		958	1005	1167	|	416	424	458
+[   11.867374] 1025		1625	1664	2167	|	416	419	459
+[   11.872085] 2048		1625	1669	1875	|	416	424	459
+[   11.876802] 2049		2875	2919	3084	|	416	427	500
+[   11.881533] 4096		2875	2927	3125	|	416	427	500
+[   11.886291] 4097		5458	5492	5833	|	416	424	500
+[   11.891063] 8192		5458	5484	5667	|	416	421	500
+[   11.895926] 8193		11208	11416	13875	|	916	966	1500
+[   11.901165] 16384		11208	11325	11959	|	916	947	1208
+[   11.906645] 16385		21333	21440	22083	|	1041	1057	1209
+[   11.912322] 32768		21375	21434	21958	|	1041	1072	1292
+[   11.918361] 32769		43000	43848	44083	|	1208	1291	2084
+[   11.924386] 65536		43042	43932	44084	|	1208	1236	1416
+[   11.931117] 65537		86167	87000	88250	|	1375	1421	1709
+[   11.937852] 131072		86208	88125	102833	|	1375	1448	1667
+[   11.946162] 131073		173667	174643	175083	|	1875	1937	2333
+[   11.954667] 262144		173667	174617	175417	|	1916	1937	2208
+[   11.965984] 262145		348709	349010	351875	|	3333	3401	3708
+[   11.977301] 524288		348750	348903	349584	|	3375	3414	3667
+[   11.994275] 524289		697084	698268	711417	|	7541	7572	7833
+[   11.999940] ********************************vmalloc ********************************
+[   12.008057] x   alloc (min	avr	max)	|   dealloc (min	avr	max), ns
+[   12.014665] 1		2125	10822	134625	|	2125	2471	6291
+[   12.019827] 2		2167	6815	60541	|	2125	2486	4541
+[   12.024702] 3		2083	3416	20958	|	2083	2210	3375
+[   12.029583] 4		2125	3463	21416	|	2084	2273	3584
+[   12.034411] 5		2125	2276	2958	|	2084	2208	2792
+[   12.039175] 8		2125	2575	5458	|	2166	2447	3542
+[   12.043913] 9		2083	2250	2708	|	2125	2263	2542
+[   12.048668] 16		2125	2296	3583	|	2208	2312	2917
+[   12.053496] 17		2166	2252	2667	|	2125	2270	2625
+[   12.058347] 32		2125	2551	5291	|	2166	2393	3083
+[   12.063175] 33		2166	2265	2833	|	2208	2283	2708
+[   12.068023] 64		2125	2304	3542	|	2208	2346	3334
+[   12.072861] 65		2167	2781	9542	|	2167	2307	2917
+[   12.077713] 128		2167	2575	5083	|	2250	2419	3083
+[   12.082633] 129		2166	2275	2792	|	2167	2307	2792
+[   12.087574] 256		2166	3419	19458	|	2208	2387	3166
+[   12.092585] 257		2167	2281	2834	|	2208	2315	2750
+[   12.097511] 512		2125	2549	5833	|	2208	2471	3375
+[   12.102502] 513		2125	4450	36792	|	2167	2364	3500
+[   12.107516] 1024		2166	2294	3167	|	2208	2310	2584
+[   12.112552] 1025		2125	2333	3417	|	2167	2359	3583
+[   12.117591] 2048		2208	2586	5584	|	2208	2484	3459
+[   12.122602] 2049		2167	2263	2708	|	2167	2307	2708
+[   12.127704] 4096		2166	5958	59584	|	2209	4169	30208
+[   12.132912] 4097		2542	2716	3333	|	2667	2750	3167
+[   12.137967] 8192		2583	3046	6708	|	2625	2872	3791
+[   12.143011] 8193		2958	3401	8125	|	3041	3223	3833
+[   12.148083] 16384		3292	3544	5334	|	3500	3617	4333
+[   12.153237] 16385		3667	3817	4416	|	3875	4020	4584
+[   12.158454] 32768		4750	5333	8000	|	5166	5367	5958
+[   12.163660] 32769		5125	5349	5958	|	5542	5669	6292
+[   12.168989] 65536		7833	9057	25959	|	8416	8536	9417
+[   12.174394] 65537		8458	8916	13000	|	8791	8877	9209
+[   12.180011] 131072		13833	14768	19042	|	14875	15080	15750
+[   12.186161] 131073		14375	14862	19166	|	15291	15421	16250
+[   12.192781] 262144		26000	27914	36917	|	27833	30419	47667
+[   12.199361] 262145		26375	27307	31166	|	28166	28359	29959
+[   12.206775] 524288		49875	52807	62500	|	53666	56247	73959
+[   12.215311] 524289		48791	51098	55750	|	53833	126291	1209084
+[   12.221294] ********************************pages ********************************
+[   12.229243] x   alloc (min	avr	max)	|   dealloc (min	avr	max), ns
+[   12.235662] 1		583	750	2708	|	666	734	1500
+[   12.240000] 2		583	640	958	|	625	677	916
+[   12.244139] 3		583	632	791	|	625	669	791
+[   12.248292] 4		583	651	1209	|	666	692	917
+[   12.252522] 5		583	622	708	|	625	692	875
+[   12.256660] 8		583	617	750	|	625	669	750
+[   12.260826] 9		583	643	1000	|	625	684	959
+[   12.265056] 16		583	625	750	|	625	674	791
+[   12.269301] 17		583	632	875	|	625	697	1000
+[   12.273622] 32		583	622	750	|	625	679	833
+[   12.277866] 33		583	638	875	|	625	685	917
+[   12.282096] 64		583	630	792	|	625	679	792
+[   12.286324] 65		583	630	791	|	625	679	791
+[   12.290568] 128		583	638	917	|	625	687	1000
+[   12.294980] 129		583	619	792	|	666	687	792
+[   12.299314] 256		583	630	917	|	666	687	959
+[   12.303635] 257		583	619	750	|	666	687	792
+[   12.307970] 512		583	632	917	|	666	692	958
+[   12.312290] 513		583	622	792	|	625	684	833
+[   12.316610] 1024		583	627	708	|	625	671	791
+[   12.321035] 1025		583	630	833	|	666	692	917
+[   12.325447] 2048		625	638	833	|	625	677	833
+[   12.329872] 2049		583	632	958	|	666	695	917
+[   12.334284] 4096		583	635	833	|	625	671	792
+[   12.338743] 4097		875	1380	5833	|	1000	1773	12625
+[   12.343724] 8192		875	1070	2041	|	1041	1627	10125
+[   12.348743] 8193		1250	2187	10250	|	1291	1880	10000
+[   12.353922] 16384		875	1125	1625	|	1666	2625	9459
+[   12.358981] 16385		2041	2781	11958	|	1958	3716	9250
+[   12.364194] 32768		1000	1124	1666	|	2959	4716	10167
+[   12.369502] 32769		3458	7028	12500	|	3291	3755	10500
+[   12.374877] 65536		1125	1192	1459	|	5625	9119	12792
+[   12.380336] 65537		6334	10398	16375	|	5916	9828	12958
+[   12.385948] 131072		1375	1434	1667	|	17792	17952	18166
+[   12.391979] 131073		18917	20234	28083	|	17875	18643	25416
+[   12.398272] 262144		1916	2000	3083	|	35333	36125	43000
+[   12.404857] 262145		37542	38260	44750	|	35584	36216	42750
+[   12.411739] 524288		2916	3039	3667	|	70958	72044	78958
+[   12.419541] 524289		74834	76456	97709	|	70833	74072	90125
+/ # q
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 4.1 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000015] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000035] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000047] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003782] timer_probe: no matching timers found
+[    0.003980] Console: colour dummy device 80x30
+[    0.004038] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089188] pid_max: default: 32768 minimum: 301
+[    0.089349] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089363] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089998] CPU: Testing write buffer coherency: ok
+[    0.090060] CPU0: Spectre v2: using BPIALL workaround
+[    0.090422] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091017] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092420] rcu: Hierarchical SRCU implementation.
+[    0.095223] EFI services will not be available.
+[    0.095406] smp: Bringing up secondary CPUs ...
+[    0.095420] smp: Brought up 1 node, 1 CPU
+[    0.095430] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095438] CPU: All CPU(s) started in SVC mode.
+[    0.096811] devtmpfs: initialized
+[    0.104164] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104666] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104696] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108576] pinctrl core: initialized pinctrl subsystem
+[    0.110605] DMI not present or invalid.
+[    0.111052] NET: Registered protocol family 16
+[    0.113458] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140009] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193786] cpuidle: using governor menu
+[    0.201291] OMAP GPIO hardware version 0.1
+[    0.213483] No ATAGs?
+[    0.213494] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218782] Serial: AMBA PL011 UART driver
+[    0.237438] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241172] vgaarb: loaded
+[    0.242005] SCSI subsystem initialized
+[    0.242592] usbcore: registered new interface driver usbfs
+[    0.242648] usbcore: registered new interface driver hub
+[    0.242694] usbcore: registered new device driver usb
+[    0.244274] pps_core: LinuxPPS API ver. 1 registered
+[    0.244286] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244309] PTP clock support registered
+[    0.244481] EDAC MC: Ver: 3.0.0
+[    0.247305] clocksource: Switched to clocksource timer1
+[    0.312008] NET: Registered protocol family 2
+[    0.312628] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312657] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312700] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312760] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.312866] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.312890] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313025] NET: Registered protocol family 1
+[    0.313676] RPC: Registered named UNIX socket transport module.
+[    0.313692] RPC: Registered udp transport module.
+[    0.313699] RPC: Registered tcp transport module.
+[    0.313705] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.314849] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317108] Initialise system trusted keyrings
+[    0.317586] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324351] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325216] NFS: Registering the id_resolver key type
+[    0.325258] Key type id_resolver registered
+[    0.325266] Key type id_legacy registered
+[    0.325307] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327511] Key type asymmetric registered
+[    0.327529] Asymmetric key parser 'x509' registered
+[    0.327603] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327616] io scheduler noop registered
+[    0.327624] io scheduler deadline registered
+[    0.327825] io scheduler cfq registered (default)
+[    0.327835] io scheduler mq-deadline registered
+[    0.327843] io scheduler kyber registered
+[    0.333644] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399421] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.402858] SuperH (H)SCI(F) driver initialized
+[    0.403736] msm_serial: driver initialized
+[    0.404041] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404134] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.090351] console [ttyO0] enabled
+[    1.094611] STMicroelectronics ASC driver initialized
+[    1.100975] STM32 USART driver initialized
+[    1.106658] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.118983] random: fast init done
+[    1.122670] random: crng init done
+[    1.136054] brd: module loaded
+[    1.146811] loop: module loaded
+[    1.159049] libphy: Fixed MDIO Bus: probed
+[    1.164445] CAN device driver interface
+[    1.169515] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.176400] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.182559] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.188844] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.196136] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277323] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285349] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.292996] libphy: 4a101000.mdio: probed
+[    1.297211] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309332] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316421] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323197] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330462] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338402] usbcore: registered new interface driver pegasus
+[    1.344390] usbcore: registered new interface driver asix
+[    1.350123] usbcore: registered new interface driver ax88179_178a
+[    1.356536] usbcore: registered new interface driver cdc_ether
+[    1.362714] usbcore: registered new interface driver smsc75xx
+[    1.368795] usbcore: registered new interface driver smsc95xx
+[    1.374842] usbcore: registered new interface driver net1080
+[    1.380823] usbcore: registered new interface driver cdc_subset
+[    1.387051] usbcore: registered new interface driver zaurus
+[    1.392966] usbcore: registered new interface driver cdc_ncm
+[    1.401309] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408234] ehci-pci: EHCI PCI platform driver
+[    1.412943] ehci-platform: EHCI generic platform driver
+[    1.418683] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424305] ehci-orion: EHCI orion driver
+[    1.428709] SPEAr-ehci: EHCI SPEAr driver
+[    1.433041] ehci-st: EHCI STMicroelectronics driver
+[    1.438330] ehci-exynos: EHCI EXYNOS driver
+[    1.442843] ehci-atmel: EHCI Atmel driver
+[    1.447159] tegra-ehci: Tegra EHCI driver
+[    1.451557] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458102] ohci-pci: OHCI PCI platform driver
+[    1.462824] ohci-platform: OHCI generic platform driver
+[    1.468536] SPEAr-ohci: OHCI SPEAr driver
+[    1.472875] ohci-st: OHCI STMicroelectronics driver
+[    1.478165] ohci-atmel: OHCI Atmel driver
+[    1.483049] usbcore: registered new interface driver usb-storage
+[    1.489509] usbcore: registered new interface driver usbserial_generic
+[    1.496371] usbserial: USB Serial support registered for generic
+[    1.502726] usbcore: registered new interface driver ftdi_sio
+[    1.508788] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516472] usbcore: registered new interface driver pl2303
+[    1.522350] usbserial: USB Serial support registered for pl2303
+[    1.528600] usbcore: registered new interface driver usb_serial_simple
+[    1.535458] usbserial: USB Serial support registered for carelink
+[    1.541879] usbserial: USB Serial support registered for zio
+[    1.547850] usbserial: USB Serial support registered for funsoft
+[    1.554160] usbserial: USB Serial support registered for flashloader
+[    1.560851] usbserial: USB Serial support registered for google
+[    1.567077] usbserial: USB Serial support registered for libtransistor
+[    1.573953] usbserial: USB Serial support registered for vivopay
+[    1.580281] usbserial: USB Serial support registered for moto_modem
+[    1.586863] usbserial: USB Serial support registered for motorola_tetra
+[    1.593832] usbserial: USB Serial support registered for novatel_gps
+[    1.600525] usbserial: USB Serial support registered for hp4x
+[    1.606561] usbserial: USB Serial support registered for suunto
+[    1.612798] usbserial: USB Serial support registered for siemens_mpi
+[    1.625175] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635730] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649310] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.659851] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685638] i2c /dev entries driver
+[    1.702495] sdhci: Secure Digital Host Controller Interface driver
+[    1.709071] sdhci: Copyright(c) Pierre Ossman
+[    1.714875] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724059] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729431] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761197] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.793830] Synopsys Designware Multimedia Card Interface Driver
+[    1.801695] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811507] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819419] usbcore: registered new interface driver usbhid
+[    1.825268] usbhid: USB HID core driver
+[    1.834143] NET: Registered protocol family 10
+[    1.840497] Segment Routing with IPv6
+[    1.844415] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851422] NET: Registered protocol family 17
+[    1.856137] can: controller area network core (rev 20170425 abi 9)
+[    1.862748] NET: Registered protocol family 29
+[    1.867433] can: raw protocol (rev 20170425)
+[    1.871906] can: broadcast manager protocol (rev 20170425 t)
+[    1.877854] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884271] Key type dns_resolver registered
+[    1.889014] ThumbEE CPU extension supported.
+[    1.893498] Registering SWP/SWPB emulation handler
+[    1.898563] omap_voltage_late_init: Voltage driver support not added
+[    1.907167] Loading compiled-in X.509 certificates
+[    1.929680] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940126] mmc0: new high speed SDHC card at address 1234
+[    1.946972] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954762]  mmcblk0: p1 p2
+[    1.973684] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980293] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.988007] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999647] mmc1: new high speed MMC card at address 0001
+[    2.006363] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011730] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018513] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025124] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038356]  mmcblk1: p1 p2
+[    2.119840] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.139173] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.144782] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.152956] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.161677] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.169264] usb usb1: Product: MUSB HDRC host driver
+[    2.174465] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.180325] usb usb1: SerialNumber: musb-hdrc.1
+[    2.185766] hub 1-0:1.0: USB hub found
+[    2.189841] hub 1-0:1.0: 1 port detected
+[    2.195419] hctosys: unable to open rtc device (rtc0)
+[    2.214491] net eth0: initializing cpsw version 1.12 (0)
+[    2.318402] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337223] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    5.458209] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    5.487325] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    5.517424] IP-Config: Guessing netmask 255.255.255.0
+[    5.522712] IP-Config: Complete:
+[    5.526089]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    5.537118]      host=192.168.0.100, domain=, nis-domain=(none)
+[    5.543321]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    5.560121] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    5.566907] devtmpfs: mounted
+[    5.572797] Freeing unused kernel memory: 2048K
+[    5.578328] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # insmod mem/ # insmod memory_test_module.ko 
+[   10.587670] memory_test_module: loading out-of-tree module taints kernel.
+[   10.595351] memory_test_module says: Lean back and wait for memory allocation test results!
+[   10.595351] 
+[   10.605757] ******************************** kmalloc ********************************
+[   10.613986] x   alloc (min	avr	max)	|   dealloc (min	avr	max), ns
+[   10.620414] 1	416	450	875	|	416	440	792
+[   10.624456] 2	416	426	541	|	416	421	500
+[   10.628512] 3	458	468	625	|	458	460	500
+[   10.632553] 4	416	450	583	|	416	440	459
+[   10.636593] 5	417	456	459	|	417	419	458
+[   10.640648] 8	417	430	584	|	417	419	458
+[   10.644688] 9	417	427	541	|	417	419	458
+[   10.648743] 16	458	471	667	|	417	422	500
+[   10.652874] 17	416	460	542	|	416	418	459
+[   10.657004] 32	416	423	500	|	416	418	459
+[   10.661163] 33	417	432	667	|	417	424	542
+[   10.665295] 64	416	423	500	|	416	418	459
+[   10.669443] 65	417	500	1166	|	417	435	708
+[   10.673665] 128	458	460	500	|	417	417	417
+[   10.677912] 129	417	500	1666	|	417	435	667
+[   10.682226] 256	417	492	1125	|	417	443	708
+[   10.686539] 257	417	461	708	|	416	419	458
+[   10.690776] 512	417	440	541	|	417	419	458
+[   10.694999] 513	416	481	958	|	416	437	708
+[   10.699235] 1024	417	443	583	|	417	419	458
+[   10.703549] 1025	417	479	1167	|	417	432	667
+[   10.707968] 2048	416	439	541	|	416	418	459
+[   10.712282] 2049	416	471	1209	|	416	445	875
+[   10.716686] 4096	416	452	542	|	416	418	458
+[   10.721015] 4097	416	471	1209	|	416	445	875
+[   10.725419] 8192	416	452	542	|	416	424	459
+[   10.729776] 8193	916	1447	8916	|	916	1229	5750
+[   10.734470] 16384	916	948	1208	|	916	929	1083
+[   10.739095] 16385	1041	1171	2791	|	1041	1085	1750
+[   10.744066] 32768	1083	1096	1291	|	1042	1070	1459
+[   10.749060] 32769	1167	1354	3541	|	1166	1247	2416
+[   10.754035] 65536	1166	1205	1375	|	1125	1169	1333
+[   10.759037] 65537	1458	1710	4959	|	1375	1429	1917
+[   10.764021] 131072	1458	1502	1959	|	1375	1393	1541
+[   10.769133] 131073	2000	2507	9875	|	1791	1851	2250
+[   10.774223] 262144	2000	2028	2250	|	1791	1838	2041
+[   10.779383] 262145	3208	4304	19584	|	2791	2901	4042
+[   10.784601] 524288	3208	3289	3542	|	2791	2828	2958
+[   10.789822] 524289	5416	6356	19833	|	4542	4614	4958
+[   10.795062] ******************************** kzalloc ********************************
+[   10.803291] x   alloc (min	avr	max)	|   dealloc (min	avr	max), ns
+[   10.809717] 1	458	539	1459	|	416	440	750
+[   10.813849] 2	458	489	667	|	416	424	459
+[   10.817903] 3	458	484	667	|	416	419	458
+[   10.821944] 4	458	481	583	|	416	424	459
+[   10.825984] 5	458	479	583	|	416	419	458
+[   10.830039] 8	458	487	708	|	416	424	459
+[   10.834080] 9	458	484	584	|	416	419	458
+[   10.838133] 16	458	481	708	|	416	421	458
+[   10.842265] 17	458	494	625	|	416	440	667
+[   10.846397] 32	458	487	625	|	416	424	459
+[   10.850541] 33	458	487	667	|	416	424	459
+[   10.854673] 64	458	479	625	|	416	421	459
+[   10.858819] 65	500	531	708	|	416	424	500
+[   10.862951] 128	500	526	667	|	416	419	458
+[   10.867174] 129	500	533	708	|	416	432	625
+[   10.871412] 256	500	554	792	|	416	427	500
+[   10.875638] 257	666	687	917	|	416	421	459
+[   10.879876] 512	666	697	916	|	416	419	458
+[   10.884108] 513	958	1020	1291	|	416	421	458
+[   10.888534] 1024	958	1005	1208	|	416	427	500
+[   10.893049] 1025	1584	1661	2208	|	416	429	625
+[   10.897667] 2048	1583	1648	1875	|	416	424	459
+[   10.902294] 2049	2875	2937	3458	|	416	437	666
+[   10.906920] 4096	2916	2929	3041	|	416	416	417
+[   10.911600] 4097	5458	5523	5958	|	416	440	709
+[   10.916267] 8192	5458	5489	5667	|	416	421	459
+[   10.921054] 8193	11208	11526	15166	|	916	1036	2541
+[   10.926280] 16384	11208	11322	11792	|	916	940	1125
+[   10.931681] 16385	21250	21408	22166	|	1041	1060	1292
+[   10.937268] 32768	21250	21578	21750	|	1041	1947	15166
+[   10.943285] 32769	43000	43263	46417	|	1375	1427	2084
+[   10.949224] 65536	43000	43200	44667	|	1333	1401	1625
+[   10.955851] 65537	86167	87114	88791	|	1375	1411	1500
+[   10.962493] 131072	86166	87101	87750	|	1375	1429	1667
+[   10.970638] 131073	173708	174859	178333	|	1917	1966	2375
+[   10.979044] 262144	173750	174601	174792	|	1875	2877	17042
+[   10.990358] 262145	348709	350169	364917	|	3333	3408	3625
+[   11.001574] 524288	348708	349687	362292	|	3375	3429	3625
+[   11.018448] 524289	697166	699161	712917	|	7500	7570	7792
+[   11.024002] ******************************** vmalloc ********************************
+[   11.032202] x   alloc (min	avr	max)	|   dealloc (min	avr	max), ns
+[   11.039081] 1	2125	26960	393458	|	2084	2606	8667
+[   11.044059] 2	2208	4315	22125	|	2125	2523	4375
+[   11.048931] 3	2166	6351	67000	|	2083	2315	4708
+[   11.053671] 4	2125	2276	3000	|	2125	2221	2750
+[   11.058450] 5	2125	2515	6667	|	2125	2401	5291
+[   11.063108] 8	2125	2659	6875	|	2166	2377	3375
+[   11.067816] 9	2125	3658	24042	|	2166	2312	3458
+[   11.072556] 16	2125	2252	3083	|	2166	2276	2625
+[   11.077346] 17	2166	5325	32375	|	2125	2372	3125
+[   11.082183] 32	2166	2536	5833	|	2208	2416	3500
+[   11.086919] 33	2167	2268	2709	|	2166	2263	2583
+[   11.091708] 64	2167	3143	15917	|	2208	2359	3416
+[   11.096546] 65	2125	2726	9750	|	2208	2291	2750
+[   11.101314] 128	2167	2677	6375	|	2208	2487	3542
+[   11.106144] 129	2166	2281	2750	|	2166	2325	3167
+[   11.110994] 256	2166	2362	4167	|	2250	2359	3125
+[   11.115823] 257	2167	2289	2792	|	2167	2299	2625
+[   11.120684] 512	2166	2635	5792	|	2208	2458	3250
+[   11.125513] 513	2166	2268	2792	|	2166	2278	2708
+[   11.130364] 1024	2166	2388	4458	|	2208	2364	3375
+[   11.135284] 1025	2166	2268	2708	|	2166	2302	2667
+[   11.140285] 2048	2167	4963	41125	|	2291	2557	4083
+[   11.145299] 2049	2166	2309	3000	|	2250	2372	2833
+[   11.150321] 4096	2166	6362	66750	|	2291	2432	3667
+[   11.155348] 4097	2583	2716	3500	|	2625	2768	3333
+[   11.160311] 8192	2541	3041	6333	|	2708	2903	3959
+[   11.165264] 8193	2916	3395	8375	|	3083	3203	3584
+[   11.170242] 16384	3291	3510	4834	|	3500	3617	4333
+[   11.175305] 16385	3667	3820	4208	|	3916	4015	4500
+[   11.180431] 32768	4750	5338	7959	|	5166	5330	6000
+[   11.185545] 32769	5041	5307	5875	|	5500	5648	6125
+[   11.190785] 65536	7792	9140	27375	|	8375	8559	9459
+[   11.196098] 65537	8375	8835	13000	|	8750	8885	9334
+[   11.201623] 131072	13791	14789	18750	|	14833	15057	15875
+[   11.207704] 131073	14417	16039	31334	|	15208	15427	16250
+[   11.214208] 262144	26000	27744	34875	|	27750	30260	46041
+[   11.220697] 262145	26333	27403	31916	|	28125	28309	29583
+[   11.228050] 524288	49792	53143	63041	|	53709	57630	75500
+[   11.236472] 524289	49375	51096	55166	|	53833	126645	1215042
+[   11.242360] ******************************** pages ********************************
+[   11.250401] x   alloc (min	avr	max)	|   dealloc (min	avr	max), ns
+[   11.256821] 1	583	783	3208	|	625	734	1750
+[   11.261066] 2	583	643	1000	|	625	682	958
+[   11.265205] 3	583	622	792	|	666	690	834
+[   11.269276] 4	583	630	958	|	666	695	875
+[   11.273323] 5	583	630	750	|	625	677	792
+[   11.277386] 8	583	637	916	|	625	684	916
+[   11.281434] 9	583	627	750	|	625	669	791
+[   11.285480] 16	583	630	750	|	625	671	792
+[   11.289633] 17	583	632	833	|	625	679	834
+[   11.293772] 32	583	632	792	|	625	677	833
+[   11.297925] 33	583	635	875	|	666	692	916
+[   11.302063] 64	583	619	792	|	666	684	833
+[   11.306201] 65	583	622	709	|	625	684	792
+[   11.310354] 128	583	638	875	|	625	677	917
+[   11.314583] 129	583	614	792	|	666	684	834
+[   11.318827] 256	583	637	958	|	666	690	917
+[   11.323057] 257	583	630	833	|	625	677	834
+[   11.327300] 512	583	640	917	|	666	708	959
+[   11.331530] 513	584	635	833	|	666	687	834
+[   11.335759] 1024	583	627	750	|	625	679	791
+[   11.340094] 1025	583	635	875	|	625	677	917
+[   11.344414] 2048	583	627	791	|	666	679	791
+[   11.348760] 2049	583	638	917	|	625	682	958
+[   11.353081] 4096	583	625	750	|	625	677	792
+[   11.357444] 4097	875	1257	4916	|	1000	1734	12000
+[   11.362333] 8192	833	1073	2459	|	1000	1583	9542
+[   11.367154] 8193	1291	2244	11500	|	1292	1955	10916
+[   11.372261] 16384	875	1135	1917	|	1667	2622	9917
+[   11.377210] 16385	2000	2671	10083	|	1958	3729	9083
+[   11.382371] 32768	958	1101	1750	|	2959	4812	11041
+[   11.387501] 32769	3500	7192	12750	|	3291	3784	10917
+[   11.392785] 65536	1125	1184	1417	|	5625	9122	12959
+[   11.398150] 65537	6333	10268	16042	|	5916	9825	13042
+[   11.403671] 131072	1375	1434	1750	|	17750	17960	18125
+[   11.409607] 131073	18834	20104	27292	|	17917	18617	25333
+[   11.415790] 262144	1916	1942	2167	|	35375	36085	42750
+[   11.422300] 262145	37583	38341	45125	|	35584	36247	42750
+[   11.429090] 524288	2958	3054	3625	|	70916	72015	78958
+[   11.436827] 524289	74833	79179	112542	|	71041	72963	78417
+/ # 
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 4.1 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.3 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000014] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000033] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000044] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003773] timer_probe: no matching timers found
+[    0.003969] Console: colour dummy device 80x30
+[    0.004027] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089203] pid_max: default: 32768 minimum: 301
+[    0.089364] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089379] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090021] CPU: Testing write buffer coherency: ok
+[    0.090085] CPU0: Spectre v2: using BPIALL workaround
+[    0.090437] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091026] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092429] rcu: Hierarchical SRCU implementation.
+[    0.095249] EFI services will not be available.
+[    0.095437] smp: Bringing up secondary CPUs ...
+[    0.095451] smp: Brought up 1 node, 1 CPU
+[    0.095460] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095468] CPU: All CPU(s) started in SVC mode.
+[    0.096833] devtmpfs: initialized
+[    0.104197] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104696] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104728] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108608] pinctrl core: initialized pinctrl subsystem
+[    0.110639] DMI not present or invalid.
+[    0.111081] NET: Registered protocol family 16
+[    0.113483] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140026] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193817] cpuidle: using governor menu
+[    0.201315] OMAP GPIO hardware version 0.1
+[    0.213527] No ATAGs?
+[    0.213539] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218816] Serial: AMBA PL011 UART driver
+[    0.237530] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241268] vgaarb: loaded
+[    0.242108] SCSI subsystem initialized
+[    0.242685] usbcore: registered new interface driver usbfs
+[    0.242743] usbcore: registered new interface driver hub
+[    0.242790] usbcore: registered new device driver usb
+[    0.244367] pps_core: LinuxPPS API ver. 1 registered
+[    0.244381] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244404] PTP clock support registered
+[    0.244578] EDAC MC: Ver: 3.0.0
+[    0.247395] clocksource: Switched to clocksource timer1
+[    0.312095] NET: Registered protocol family 2
+[    0.312713] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312742] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312784] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.312844] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.312951] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.312976] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313114] NET: Registered protocol family 1
+[    0.313757] RPC: Registered named UNIX socket transport module.
+[    0.313772] RPC: Registered udp transport module.
+[    0.313779] RPC: Registered tcp transport module.
+[    0.313786] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.314935] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317215] Initialise system trusted keyrings
+[    0.317697] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324434] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325295] NFS: Registering the id_resolver key type
+[    0.325336] Key type id_resolver registered
+[    0.325344] Key type id_legacy registered
+[    0.325385] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327565] Key type asymmetric registered
+[    0.327584] Asymmetric key parser 'x509' registered
+[    0.327658] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327672] io scheduler noop registered
+[    0.327679] io scheduler deadline registered
+[    0.327877] io scheduler cfq registered (default)
+[    0.327888] io scheduler mq-deadline registered
+[    0.327896] io scheduler kyber registered
+[    0.333681] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399456] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.402894] SuperH (H)SCI(F) driver initialized
+[    0.403772] msm_serial: driver initialized
+[    0.404078] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404172] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.091195] console [ttyO0] enabled
+[    1.095462] STMicroelectronics ASC driver initialized
+[    1.101830] STM32 USART driver initialized
+[    1.107571] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.119887] random: fast init done
+[    1.123572] random: crng init done
+[    1.136912] brd: module loaded
+[    1.147810] loop: module loaded
+[    1.159893] libphy: Fixed MDIO Bus: probed
+[    1.165280] CAN device driver interface
+[    1.170334] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.177209] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.183380] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.189670] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.196963] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277407] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285443] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293109] libphy: 4a101000.mdio: probed
+[    1.297329] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309437] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316518] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323297] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330561] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338509] usbcore: registered new interface driver pegasus
+[    1.344497] usbcore: registered new interface driver asix
+[    1.350233] usbcore: registered new interface driver ax88179_178a
+[    1.356647] usbcore: registered new interface driver cdc_ether
+[    1.362823] usbcore: registered new interface driver smsc75xx
+[    1.368904] usbcore: registered new interface driver smsc95xx
+[    1.374951] usbcore: registered new interface driver net1080
+[    1.380934] usbcore: registered new interface driver cdc_subset
+[    1.387162] usbcore: registered new interface driver zaurus
+[    1.393079] usbcore: registered new interface driver cdc_ncm
+[    1.401430] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408356] ehci-pci: EHCI PCI platform driver
+[    1.413064] ehci-platform: EHCI generic platform driver
+[    1.418805] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424425] ehci-orion: EHCI orion driver
+[    1.428832] SPEAr-ehci: EHCI SPEAr driver
+[    1.433166] ehci-st: EHCI STMicroelectronics driver
+[    1.438453] ehci-exynos: EHCI EXYNOS driver
+[    1.442959] ehci-atmel: EHCI Atmel driver
+[    1.447276] tegra-ehci: Tegra EHCI driver
+[    1.451677] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458222] ohci-pci: OHCI PCI platform driver
+[    1.462945] ohci-platform: OHCI generic platform driver
+[    1.468665] SPEAr-ohci: OHCI SPEAr driver
+[    1.473014] ohci-st: OHCI STMicroelectronics driver
+[    1.478304] ohci-atmel: OHCI Atmel driver
+[    1.483200] usbcore: registered new interface driver usb-storage
+[    1.489666] usbcore: registered new interface driver usbserial_generic
+[    1.496528] usbserial: USB Serial support registered for generic
+[    1.502882] usbcore: registered new interface driver ftdi_sio
+[    1.508941] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516624] usbcore: registered new interface driver pl2303
+[    1.522499] usbserial: USB Serial support registered for pl2303
+[    1.528750] usbcore: registered new interface driver usb_serial_simple
+[    1.535608] usbserial: USB Serial support registered for carelink
+[    1.542030] usbserial: USB Serial support registered for zio
+[    1.547998] usbserial: USB Serial support registered for funsoft
+[    1.554308] usbserial: USB Serial support registered for flashloader
+[    1.561000] usbserial: USB Serial support registered for google
+[    1.567226] usbserial: USB Serial support registered for libtransistor
+[    1.574102] usbserial: USB Serial support registered for vivopay
+[    1.580431] usbserial: USB Serial support registered for moto_modem
+[    1.587014] usbserial: USB Serial support registered for motorola_tetra
+[    1.593982] usbserial: USB Serial support registered for novatel_gps
+[    1.600675] usbserial: USB Serial support registered for hp4x
+[    1.606710] usbserial: USB Serial support registered for suunto
+[    1.612947] usbserial: USB Serial support registered for siemens_mpi
+[    1.625324] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635880] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649478] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.660015] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685837] i2c /dev entries driver
+[    1.702752] sdhci: Secure Digital Host Controller Interface driver
+[    1.709330] sdhci: Copyright(c) Pierre Ossman
+[    1.715125] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724325] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729699] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761302] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.793908] Synopsys Designware Multimedia Card Interface Driver
+[    1.801760] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811558] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819463] usbcore: registered new interface driver usbhid
+[    1.825309] usbhid: USB HID core driver
+[    1.834204] NET: Registered protocol family 10
+[    1.840556] Segment Routing with IPv6
+[    1.844476] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851476] NET: Registered protocol family 17
+[    1.856189] can: controller area network core (rev 20170425 abi 9)
+[    1.862797] NET: Registered protocol family 29
+[    1.867481] can: raw protocol (rev 20170425)
+[    1.871954] can: broadcast manager protocol (rev 20170425 t)
+[    1.877903] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884307] Key type dns_resolver registered
+[    1.889049] ThumbEE CPU extension supported.
+[    1.893536] Registering SWP/SWPB emulation handler
+[    1.898599] omap_voltage_late_init: Voltage driver support not added
+[    1.907204] Loading compiled-in X.509 certificates
+[    1.929720] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940168] mmc0: new high speed SDHC card at address 1234
+[    1.947013] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954790]  mmcblk0: p1 p2
+[    1.973678] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980288] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.988011] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999643] mmc1: new high speed MMC card at address 0001
+[    2.006360] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.011728] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018507] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025116] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038301]  mmcblk1: p1 p2
+[    2.119921] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.139262] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.144872] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.153039] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.161764] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.169352] usb usb1: Product: MUSB HDRC host driver
+[    2.174552] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.180413] usb usb1: SerialNumber: musb-hdrc.1
+[    2.185853] hub 1-0:1.0: USB hub found
+[    2.189926] hub 1-0:1.0: 1 port detected
+[    2.195498] hctosys: unable to open rtc device (rtc0)
+[    2.214586] net eth0: initializing cpsw version 1.12 (0)
+[    2.318487] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337320] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    4.418293] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    4.437415] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.467515] IP-Config: Guessing netmask 255.255.255.0
+[    4.472811] IP-Config: Complete:
+[    4.476194]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    4.487250]      host=192.168.0.100, domain=, nis-domain=(none)
+[    4.493465]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    4.509796] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.516556] devtmpfs: mounted
+[    4.522387] Freeing unused kernel memory: 2048K
+[    4.528232] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # insmod me/ # insmod memory_test_module.ko 
+[   11.543400] memory_test_module: loading out-of-tree module taints kernel.
+[   11.551230] memory_test_module says: Lean back and wait for memory allocation test results!
+[   11.551230] 
+[   11.561634] ******************************** kmalloc ********************************
+[   11.569859] x   alloc (min	avr	max)	|dealloc (min	avr	max), ns
+[   11.575999] 1	416	515	1541	|	416	427	500
+[   11.580147] 2	416	439	583	|	416	426	458
+[   11.584188] 3	458	464	542	|	417	419	458
+[   11.588241] 4	458	465	583	|	416	419	459
+[   11.592282] 5	417	460	583	|	416	421	459
+[   11.596321] 8	417	424	541	|	417	417	417
+[   11.600375] 9	416	429	583	|	416	418	459
+[   11.604415] 16	417	429	583	|	417	422	459
+[   11.608559] 17	416	423	542	|	416	418	458
+[   11.612690] 32	416	463	584	|	417	422	458
+[   11.616821] 33	416	426	542	|	416	416	417
+[   11.620965] 64	417	435	667	|	416	419	459
+[   11.625097] 65	417	469	1208	|	417	430	625
+[   11.629333] 128	458	465	583	|	416	418	459
+[   11.633556] 129	417	503	1209	|	417	466	667
+[   11.637883] 256	417	474	1250	|	417	432	666
+[   11.642197] 257	417	476	959	|	417	432	667
+[   11.646419] 512	417	460	542	|	416	416	417
+[   11.650654] 513	416	460	917	|	416	434	709
+[   11.654876] 1024	416	460	583	|	416	418	458
+[   11.659203] 1025	417	469	1208	|	417	432	667
+[   11.663607] 2048	417	458	500	|	417	447	459
+[   11.667934] 2049	417	499	1167	|	417	453	875
+[   11.672339] 4096	417	430	583	|	417	422	459
+[   11.676652] 4097	417	461	1084	|	417	443	833
+[   11.681070] 8192	458	471	625	|	417	422	459
+[   11.685411] 8193	916	1341	7250	|	916	1239	5959
+[   11.690119] 16384	916	961	1334	|	916	940	1208
+[   11.694725] 16385	1000	1070	1958	|	958	1015	1375
+[   11.699618] 32768	1000	1039	1459	|	958	1013	1250
+[   11.704504] 32769	1208	1364	3500	|	1125	1179	1541
+[   11.709493] 65536	1208	1255	1709	|	1125	1187	1708
+[   11.714481] 65537	1458	1703	5000	|	1375	1450	2375
+[   11.719479] 131072	1458	1536	2500	|	1375	1401	1625
+[   11.724575] 131073	2000	2447	8958	|	1791	1828	2000
+[   11.729681] 262144	2000	2054	2708	|	1791	1856	2333
+[   11.734824] 262145	3250	4273	18875	|	2792	2908	4000
+[   11.740055] 524288	3250	3317	4250	|	2791	2825	3084
+[   11.745255] 524289	5416	6291	18958	|	4541	4586	4750
+[   11.750378] ******************************** kzalloc ********************************
+[   11.758591] x   alloc (min	avr	max)	|dealloc (min	avr	max), ns
+[   11.764727] 1	458	533	1459	|	416	458	1041
+[   11.768964] 2	458	486	708	|	416	421	500
+[   11.773005] 3	458	486	625	|	416	421	459
+[   11.777045] 4	458	481	625	|	416	419	459
+[   11.781098] 5	458	486	666	|	416	421	458
+[   11.785139] 8	458	481	625	|	416	422	459
+[   11.789193] 9	458	484	667	|	416	422	459
+[   11.793234] 16	458	479	625	|	416	427	459
+[   11.797378] 17	458	497	667	|	416	427	500
+[   11.801510] 32	458	486	666	|	416	419	458
+[   11.805641] 33	458	481	583	|	416	421	459
+[   11.809786] 64	458	481	625	|	416	421	458
+[   11.813918] 65	500	528	708	|	416	421	459
+[   11.818064] 128	500	536	709	|	416	421	458
+[   11.822287] 129	500	539	708	|	416	421	459
+[   11.826511] 256	541	559	750	|	416	419	459
+[   11.830750] 257	666	692	916	|	416	419	458
+[   11.834975] 512	666	684	834	|	416	421	459
+[   11.839220] 513	958	1007	1208	|	416	416	417
+[   11.843633] 1024	958	992	1125	|	416	427	459
+[   11.848069] 1025	1583	1651	1875	|	416	424	500
+[   11.852675] 2048	1583	1645	1834	|	416	424	459
+[   11.857301] 2049	2875	2971	3292	|	416	424	500
+[   11.861940] 4096	2875	2911	3125	|	416	424	459
+[   11.866607] 4097	5458	5500	5875	|	416	429	500
+[   11.871287] 8192	5458	5479	5708	|	416	421	500
+[   11.876057] 8193	11167	11375	12958	|	916	947	1250
+[   11.881205] 16384	11208	11343	11833	|	916	950	1208
+[   11.886596] 16385	21500	21630	22125	|	1041	1057	1167
+[   11.892183] 32768	21500	21557	22042	|	1041	1075	1292
+[   11.898129] 32769	43042	43968	44125	|	1125	1179	1458
+[   11.904063] 65536	43333	44031	44375	|	1166	1198	1291
+[   11.910706] 65537	86250	87226	88667	|	1375	1434	1667
+[   11.917332] 131072	86250	87005	87666	|	1375	1419	1542
+[   11.925472] 131073	173666	174609	176291	|	1916	1942	2167
+[   11.933882] 262144	173667	174601	175250	|	1875	1929	2125
+[   11.945107] 262145	348750	348989	351125	|	3375	3442	4250
+[   11.956330] 524288	348709	348864	349500	|	3375	3419	3708
+[   11.973211] 524289	697042	698182	710291	|	7500	7567	7791
+[   11.978783] ******************************** vmalloc ********************************
+[   11.986976] x   alloc (min	avr	max)	|dealloc (min	avr	max), ns
+[   11.993376] 1	2167	14236	190167	|	2125	2416	5667
+[   11.998383] 2	2208	4820	30209	|	2166	2541	4375
+[   12.003156] 3	2125	3411	20000	|	2083	2263	3500
+[   12.007940] 4	2166	3586	23167	|	2125	2302	3417
+[   12.012679] 5	2125	2296	2750	|	2083	2229	2875
+[   12.017331] 8	2125	2523	5958	|	2167	2364	3167
+[   12.021999] 9	2125	2341	3959	|	2167	2302	3291
+[   12.026645] 16	2125	2234	2750	|	2166	2286	2791
+[   12.031400] 17	2167	2320	3375	|	2167	2294	3208
+[   12.036144] 32	2125	2541	6042	|	2208	2348	2792
+[   12.040899] 33	2125	2302	3417	|	2125	2299	3000
+[   12.045638] 64	2166	2260	3000	|	2208	2296	2542
+[   12.050400] 65	2166	2820	10083	|	2166	2333	3042
+[   12.055236] 128	2166	2512	5416	|	2250	2395	2792
+[   12.060083] 129	2166	2338	3666	|	2167	2341	3208
+[   12.064912] 256	2167	2263	2750	|	2250	2320	2666
+[   12.069760] 257	2208	2372	3625	|	2166	2317	3084
+[   12.074594] 512	2167	2505	5291	|	2208	2367	2750
+[   12.079441] 513	2167	2346	3458	|	2167	2315	3125
+[   12.084270] 1024	2166	2268	2833	|	2208	2304	2500
+[   12.089208] 1025	2125	2341	3625	|	2166	2333	3375
+[   12.094134] 2048	2167	2549	5458	|	2250	2411	2875
+[   12.099126] 2049	2166	4307	33833	|	2208	2361	3333
+[   12.104142] 4096	2166	2299	3083	|	2250	2346	2667
+[   12.109167] 4097	2583	6218	58834	|	2625	2848	4500
+[   12.114202] 8192	2583	3062	7000	|	2708	2854	3459
+[   12.119176] 8193	2917	3460	8167	|	3083	3263	4458
+[   12.124137] 16384	3292	3445	3916	|	3500	3598	3917
+[   12.129219] 16385	3625	3890	5458	|	3875	4010	4875
+[   12.134327] 32768	4750	5236	8167	|	5167	5310	5916
+[   12.139460] 32769	5125	5367	6500	|	5541	5661	6542
+[   12.144668] 65536	7792	8380	15041	|	8375	8458	8834
+[   12.150012] 65537	8458	9619	20625	|	8708	8890	10042
+[   12.155608] 131072	13875	14674	18625	|	14833	14986	15458
+[   12.161695] 131073	14334	14906	18833	|	15041	15333	16250
+[   12.168223] 262144	25625	29033	50875	|	27750	30237	44750
+[   12.174681] 262145	26333	27169	30958	|	28125	28242	28625
+[   12.182043] 524288	49875	52971	61292	|	53667	57208	72416
+[   12.190489] 524289	48958	51088	55625	|	53833	126744	1215750
+[   12.196331] ******************************** pages ********************************
+[   12.204394] x   alloc (min	avr	max)	|dealloc (min	avr	max), ns
+[   12.210562] 1	583	807	3667	|	625	737	1792
+[   12.214792] 2	583	622	750	|	625	682	833
+[   12.218857] 3	583	638	958	|	625	685	959
+[   12.222904] 4	583	632	834	|	625	677	833
+[   12.226950] 5	583	627	709	|	625	677	792
+[   12.231013] 8	583	624	833	|	666	700	958
+[   12.235060] 9	583	619	750	|	666	684	791
+[   12.239123] 16	583	632	917	|	625	690	958
+[   12.243261] 17	583	630	750	|	625	671	834
+[   12.247413] 32	583	638	833	|	625	679	875
+[   12.251552] 33	583	622	750	|	666	677	792
+[   12.255689] 64	583	627	708	|	625	666	750
+[   12.259856] 65	583	627	958	|	666	695	1000
+[   12.264086] 128	583	627	750	|	625	677	792
+[   12.268331] 129	583	632	875	|	625	684	875
+[   12.272560] 256	583	622	750	|	625	669	750
+[   12.276789] 257	583	617	708	|	666	682	791
+[   12.281033] 512	583	619	833	|	625	682	875
+[   12.285262] 513	583	619	750	|	625	679	792
+[   12.289507] 1024	583	643	958	|	625	690	959
+[   12.293827] 1025	583	625	791	|	666	692	875
+[   12.298163] 2048	583	640	916	|	625	687	959
+[   12.302483] 2049	583	614	792	|	666	679	792
+[   12.306803] 4096	583	614	709	|	625	677	792
+[   12.311154] 4097	875	1249	4000	|	1000	1046	1375
+[   12.315952] 8192	875	1025	1709	|	1000	1710	11750
+[   12.320878] 8193	1250	1583	4000	|	1291	2429	11000
+[   12.325878] 16384	875	1083	1458	|	1666	3031	9375
+[   12.330839] 16385	2041	2398	3458	|	1958	3742	9208
+[   12.335868] 32768	958	1039	1209	|	3000	4731	10250
+[   12.340997] 32769	3458	6986	12250	|	3291	3737	10167
+[   12.346281] 65536	1125	1192	1417	|	5625	9093	12834
+[   12.351650] 65537	6333	10070	18666	|	5917	10226	13000
+[   12.357262] 131072	1375	1429	1708	|	17709	17919	18042
+[   12.363185] 131073	18792	19184	21708	|	17875	18656	25375
+[   12.369384] 262144	1916	1976	2584	|	35500	36088	42625
+[   12.375893] 262145	37417	38713	53583	|	35583	36690	43541
+[   12.382691] 524288	2916	3057	3584	|	70916	72434	78792
+[   12.390439] 524289	74667	78880	107125	|	71042	72973	78458
+/ # q
+-/bin/sh: q: not found
+/ # 
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+Loading Environment from FAT... OK
+Net:   eth2: ethernet@4a100000, eth3: usb_ether
+Hit any key to stop autoboot:  2  1  0 
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'zImage'.
+Load address: 0x82000000
+Loading: *#################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 ######################
+	 4.1 MiB/s
+done
+Bytes transferred = 8909312 (87f200 hex)
+link up on port 0, speed 100, full duplex
+Using ethernet@4a100000 device
+TFTP from server 192.168.0.1; our IP address is 192.168.0.100
+Filename 'am335x-boneblack.dtb'.
+Load address: 0x88000000
+Loading: *###
+	 3.7 MiB/s
+done
+Bytes transferred = 34782 (87de hex)
+## Flattened Device Tree blob at 88000000
+   Booting using the fdt blob at 0x88000000
+   Loading Device Tree to 8fff4000, end 8ffff7dd ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.176 (den@notApc) (gcc version 8.3.0 (GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))) #2 SMP Wed Feb 24 16:40:30 EET 2021
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] random: get_random_bytes called from start_kernel+0x9c/0x47c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s36172 r8192 d21172 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/nfs nfsroot=192.168.0.1:/srv/nfs/busybox,nolock,nfsvers=3 rw ip=192.168.0.100
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 430380K/522240K available (12288K kernel code, 1618K rwdata, 4780K rodata, 2048K init, 394K bss, 26324K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1619 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 395 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000015] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000035] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000046] OMAP clocksource: timer1 at 24000000 Hz
+[    0.003781] timer_probe: no matching timers found
+[    0.003979] Console: colour dummy device 80x30
+[    0.004038] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.089190] pid_max: default: 32768 minimum: 301
+[    0.089350] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.089364] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090006] CPU: Testing write buffer coherency: ok
+[    0.090069] CPU0: Spectre v2: using BPIALL workaround
+[    0.090424] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.091017] Setting up static identity map for 0x80300000 - 0x803000a0
+[    0.092414] rcu: Hierarchical SRCU implementation.
+[    0.095231] EFI services will not be available.
+[    0.095412] smp: Bringing up secondary CPUs ...
+[    0.095426] smp: Brought up 1 node, 1 CPU
+[    0.095436] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.095444] CPU: All CPU(s) started in SVC mode.
+[    0.096819] devtmpfs: initialized
+[    0.104171] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.104669] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.104701] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.108603] pinctrl core: initialized pinctrl subsystem
+[    0.110612] DMI not present or invalid.
+[    0.111063] NET: Registered protocol family 16
+[    0.113473] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.140049] l4_wkup_cm:clk:0010:0: failed to disable
+[    0.193836] cpuidle: using governor menu
+[    0.201344] OMAP GPIO hardware version 0.1
+[    0.213519] No ATAGs?
+[    0.213529] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.218847] Serial: AMBA PL011 UART driver
+[    0.237591] edma 49000000.edma: TI EDMA DMA engine driver
+[    0.241334] vgaarb: loaded
+[    0.242167] SCSI subsystem initialized
+[    0.242756] usbcore: registered new interface driver usbfs
+[    0.242812] usbcore: registered new interface driver hub
+[    0.242859] usbcore: registered new device driver usb
+[    0.244442] pps_core: LinuxPPS API ver. 1 registered
+[    0.244457] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.244479] PTP clock support registered
+[    0.244650] EDAC MC: Ver: 3.0.0
+[    0.247469] clocksource: Switched to clocksource timer1
+[    0.312266] NET: Registered protocol family 2
+[    0.312885] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.312915] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.312958] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.313018] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.313124] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313148] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.313280] NET: Registered protocol family 1
+[    0.313926] RPC: Registered named UNIX socket transport module.
+[    0.313942] RPC: Registered udp transport module.
+[    0.313949] RPC: Registered tcp transport module.
+[    0.313955] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.315102] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    0.317397] Initialise system trusted keyrings
+[    0.317880] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.324608] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325458] NFS: Registering the id_resolver key type
+[    0.325500] Key type id_resolver registered
+[    0.325508] Key type id_legacy registered
+[    0.325551] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.327761] Key type asymmetric registered
+[    0.327781] Asymmetric key parser 'x509' registered
+[    0.327856] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.327871] io scheduler noop registered
+[    0.327878] io scheduler deadline registered
+[    0.328074] io scheduler cfq registered (default)
+[    0.328086] io scheduler mq-deadline registered
+[    0.328094] io scheduler kyber registered
+[    0.333905] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    0.399818] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.403248] SuperH (H)SCI(F) driver initialized
+[    0.404128] msm_serial: driver initialized
+[    0.404435] omap_uart 44e09000.serial: no wakeirq for uart0
+[    0.404527] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+[    1.091863] console [ttyO0] enabled
+[    1.096138] STMicroelectronics ASC driver initialized
+[    1.102500] STM32 USART driver initialized
+[    1.108299] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    1.120600] random: fast init done
+[    1.124288] random: crng init done
+[    1.137901] brd: module loaded
+[    1.148698] loop: module loaded
+[    1.160890] libphy: Fixed MDIO Bus: probed
+[    1.166283] CAN device driver interface
+[    1.171369] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.178360] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.184475] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.190784] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.198099] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.277547] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    1.285549] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+[    1.293190] libphy: 4a101000.mdio: probed
+[    1.297408] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    1.309527] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:9a:45:60
+[    1.316612] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+[    1.323396] cpsw 4a100000.ethernet: ALE Table size 1024
+[    1.330655] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.338600] usbcore: registered new interface driver pegasus
+[    1.344586] usbcore: registered new interface driver asix
+[    1.350315] usbcore: registered new interface driver ax88179_178a
+[    1.356727] usbcore: registered new interface driver cdc_ether
+[    1.362904] usbcore: registered new interface driver smsc75xx
+[    1.368983] usbcore: registered new interface driver smsc95xx
+[    1.375031] usbcore: registered new interface driver net1080
+[    1.381014] usbcore: registered new interface driver cdc_subset
+[    1.387242] usbcore: registered new interface driver zaurus
+[    1.393157] usbcore: registered new interface driver cdc_ncm
+[    1.401534] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.408453] ehci-pci: EHCI PCI platform driver
+[    1.413160] ehci-platform: EHCI generic platform driver
+[    1.418899] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.424516] ehci-orion: EHCI orion driver
+[    1.428920] SPEAr-ehci: EHCI SPEAr driver
+[    1.433249] ehci-st: EHCI STMicroelectronics driver
+[    1.438530] ehci-exynos: EHCI EXYNOS driver
+[    1.443035] ehci-atmel: EHCI Atmel driver
+[    1.447352] tegra-ehci: Tegra EHCI driver
+[    1.451746] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.458292] ohci-pci: OHCI PCI platform driver
+[    1.463017] ohci-platform: OHCI generic platform driver
+[    1.468733] SPEAr-ohci: OHCI SPEAr driver
+[    1.473077] ohci-st: OHCI STMicroelectronics driver
+[    1.478363] ohci-atmel: OHCI Atmel driver
+[    1.483263] usbcore: registered new interface driver usb-storage
+[    1.489725] usbcore: registered new interface driver usbserial_generic
+[    1.496588] usbserial: USB Serial support registered for generic
+[    1.502939] usbcore: registered new interface driver ftdi_sio
+[    1.508999] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.516682] usbcore: registered new interface driver pl2303
+[    1.522558] usbserial: USB Serial support registered for pl2303
+[    1.528809] usbcore: registered new interface driver usb_serial_simple
+[    1.535665] usbserial: USB Serial support registered for carelink
+[    1.542086] usbserial: USB Serial support registered for zio
+[    1.548030] usbserial: USB Serial support registered for funsoft
+[    1.554340] usbserial: USB Serial support registered for flashloader
+[    1.561034] usbserial: USB Serial support registered for google
+[    1.567261] usbserial: USB Serial support registered for libtransistor
+[    1.574137] usbserial: USB Serial support registered for vivopay
+[    1.580467] usbserial: USB Serial support registered for moto_modem
+[    1.587050] usbserial: USB Serial support registered for motorola_tetra
+[    1.594019] usbserial: USB Serial support registered for novatel_gps
+[    1.600712] usbserial: USB Serial support registered for hp4x
+[    1.606748] usbserial: USB Serial support registered for suunto
+[    1.612986] usbserial: USB Serial support registered for siemens_mpi
+[    1.625393] am335x-phy-driver 47401300.usb-phy: 47401300.usb-phy supply vcc not found, using dummy regulator
+[    1.635951] am335x-phy-driver 47401300.usb-phy: Linked as a consumer to regulator.0
+[    1.649577] am335x-phy-driver 47401b00.usb-phy: 47401b00.usb-phy supply vcc not found, using dummy regulator
+[    1.660115] am335x-phy-driver 47401b00.usb-phy: Linked as a consumer to regulator.0
+[    1.685973] i2c /dev entries driver
+[    1.702924] sdhci: Secure Digital Host Controller Interface driver
+[    1.709500] sdhci: Copyright(c) Pierre Ossman
+[    1.715296] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    1.724498] omap_hsmmc 48060000.mmc: Got CD GPIO
+[    1.729875] omap_hsmmc 48060000.mmc: Linked as a consumer to regulator.1
+[    1.761373] omap_hsmmc 481d8000.mmc: Linked as a consumer to regulator.1
+[    1.794005] Synopsys Designware Multimedia Card Interface Driver
+[    1.801873] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.811690] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.819598] usbcore: registered new interface driver usbhid
+[    1.825446] usbhid: USB HID core driver
+[    1.834370] NET: Registered protocol family 10
+[    1.840738] Segment Routing with IPv6
+[    1.844655] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.851659] NET: Registered protocol family 17
+[    1.856379] can: controller area network core (rev 20170425 abi 9)
+[    1.862991] NET: Registered protocol family 29
+[    1.867675] can: raw protocol (rev 20170425)
+[    1.872125] can: broadcast manager protocol (rev 20170425 t)
+[    1.878048] can: netlink gateway (rev 20170425) max_hops=1
+[    1.884459] Key type dns_resolver registered
+[    1.889204] ThumbEE CPU extension supported.
+[    1.893671] Registering SWP/SWPB emulation handler
+[    1.898736] omap_voltage_late_init: Voltage driver support not added
+[    1.907345] Loading compiled-in X.509 certificates
+[    1.929896] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.940344] mmc0: new high speed SDHC card at address 1234
+[    1.947185] mmcblk0: mmc0:1234 SA08G 7.25 GiB 
+[    1.954981]  mmcblk0: p1 p2
+[    1.973987] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    1.980600] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    1.988328] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    1.999940] mmc1: new high speed MMC card at address 0001
+[    2.006663] mmcblk1: mmc1:0001 M62704 3.56 GiB 
+[    2.012033] mmcblk1boot0: mmc1:0001 M62704 partition 1 2.00 MiB
+[    2.018815] mmcblk1boot1: mmc1:0001 M62704 partition 2 2.00 MiB
+[    2.025424] mmcblk1rpmb: mmc1:0001 M62704 partition 3 512 KiB, chardev (234:0)
+[    2.038627]  mmcblk1: p1 p2
+[    2.120003] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.139357] musb-hdrc musb-hdrc.1: MUSB HDRC host driver
+[    2.144966] musb-hdrc musb-hdrc.1: new USB bus registered, assigned bus number 1
+[    2.153130] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+[    2.161848] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.169437] usb usb1: Product: MUSB HDRC host driver
+[    2.174637] usb usb1: Manufacturer: Linux 4.19.176 musb-hcd
+[    2.180488] usb usb1: SerialNumber: musb-hdrc.1
+[    2.185926] hub 1-0:1.0: USB hub found
+[    2.190002] hub 1-0:1.0: 1 port detected
+[    2.195593] hctosys: unable to open rtc device (rtc0)
+[    2.214680] net eth0: initializing cpsw version 1.12 (0)
+[    2.318565] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+[    2.337338] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    4.418367] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[    4.437491] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.467602] IP-Config: Guessing netmask 255.255.255.0
+[    4.472880] IP-Config: Complete:
+[    4.476247]      device=eth0, hwaddr=38:d2:69:9a:45:60, ipaddr=192.168.0.100, mask=255.255.255.0, gw=255.255.255.255
+[    4.487244]      host=192.168.0.100, domain=, nis-domain=(none)
+[    4.493431]      bootserver=255.255.255.255, rootserver=192.168.0.1, rootpath=
+[    4.509957] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.516515] devtmpfs: mounted
+[    4.522348] Freeing unused kernel memory: 2048K
+[    4.528306] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # ins/ # insmod m/ # insmod memory_test_module.ko 
+[    9.816518] memory_test_module: loading out-of-tree module taints kernel.
+[    9.824318] memory_test_module says: Lean back and wait for memory allocation test results!
+[    9.824318] 
+[    9.834710] ******************************** kmalloc ********************************
+[    9.842939] x   alloc (min	avr	max)	|dealloc (min	avr	max), ns
+[    9.849092] 1	458	494	1041	|	416	439	792
+[    9.853224] 2	417	461	541	|	417	422	459
+[    9.857264] 3	417	427	542	|	417	417	417
+[    9.861319] 4	417	468	667	|	417	419	458
+[    9.865360] 5	416	455	584	|	416	419	458
+[    9.869414] 8	416	463	583	|	416	419	458
+[    9.873455] 9	417	427	542	|	417	417	417
+[    9.877509] 16	416	435	583	|	416	422	459
+[    9.881640] 17	458	460	500	|	416	416	417
+[    9.885770] 32	458	465	583	|	417	417	417
+[    9.889916] 33	459	464	542	|	417	451	459
+[    9.894047] 64	417	427	542	|	417	419	458
+[    9.898193] 65	416	461	1125	|	416	429	625
+[    9.902415] 128	459	464	541	|	417	417	417
+[    9.906637] 129	459	498	1084	|	417	430	625
+[    9.910965] 256	416	497	1416	|	416	440	708
+[    9.915278] 257	416	447	750	|	416	419	458
+[    9.919514] 512	416	437	583	|	416	419	458
+[    9.923737] 513	416	450	750	|	416	434	667
+[    9.927972] 1024	416	448	666	|	416	427	459
+[    9.932286] 1025	416	474	1125	|	416	434	625
+[    9.936690] 2048	416	445	584	|	416	421	459
+[    9.941019] 2049	416	481	1250	|	416	447	917
+[    9.945423] 4096	416	440	542	|	416	424	459
+[    9.949750] 4097	416	486	1166	|	416	450	834
+[    9.954155] 8192	416	440	583	|	416	429	625
+[    9.958514] 8193	916	1518	10083	|	916	1283	6709
+[    9.963299] 16384	916	958	1292	|	916	932	1083
+[    9.967925] 16385	1041	1200	2958	|	1041	1114	2041
+[    9.972897] 32768	1041	1085	1292	|	1041	1065	1250
+[    9.977890] 32769	1208	1377	3750	|	1125	1187	1666
+[    9.982865] 65536	1208	1239	1500	|	1125	1156	1292
+[    9.987868] 65537	1458	1731	5459	|	1375	1453	2375
+[    9.992851] 131072	1458	1486	1666	|	1375	1385	1500
+[    9.997963] 131073	2000	2468	9292	|	1791	1843	2125
+[   10.003053] 262144	2000	2036	2458	|	1791	1825	1959
+[   10.008211] 262145	3250	4291	19000	|	2791	2914	4208
+[   10.013405] 524288	3209	3276	3542	|	2792	2820	2916
+[   10.018641] 524289	5416	6403	20667	|	4542	4617	5042
+[   10.023922] 1048576	5375	5458	5792	|	4541	4593	4875
+[   10.029358] 1048577	9708	11593	38917	|	8083	8338	11291
+[   10.035013] 2097152	9708	9765	10333	|	8083	8140	8417
+[   10.040887] 2097153	19291	23210	75958	|	17125	18387	28667
+[   10.046518] ******************************** kzalloc ********************************
+[   10.054714] x   alloc (min	avr	max)	|dealloc (min	avr	max), ns
+[   10.060842] 1	458	570	1917	|	416	463	1042
+[   10.065065] 2	458	479	667	|	416	424	459
+[   10.069121] 3	458	505	958	|	416	421	459
+[   10.073161] 4	458	487	625	|	416	419	458
+[   10.077201] 5	458	479	583	|	416	424	458
+[   10.081257] 8	458	487	750	|	416	434	666
+[   10.085298] 9	458	484	625	|	416	419	459
+[   10.089353] 16	458	487	667	|	416	424	459
+[   10.093485] 17	458	487	625	|	416	424	459
+[   10.097678] 32	458	502	958	|	416	424	500
+[   10.101811] 33	458	484	583	|	416	421	459
+[   10.105942] 64	458	484	625	|	416	419	458
+[   10.110092] 65	500	549	959	|	416	450	917
+[   10.114225] 128	500	528	709	|	416	427	459
+[   10.118463] 129	500	562	958	|	416	440	708
+[   10.122687] 256	541	562	792	|	416	419	459
+[   10.126912] 257	666	695	1041	|	416	419	458
+[   10.131242] 512	666	684	875	|	416	427	459
+[   10.135474] 513	958	1013	1375	|	416	419	458
+[   10.139901] 1024	958	1010	1334	|	416	421	458
+[   10.144416] 1025	1584	1661	2209	|	416	432	625
+[   10.149035] 2048	1583	1627	1792	|	416	424	459
+[   10.153661] 2049	2875	2971	3292	|	416	419	459
+[   10.158300] 4096	2875	2919	3084	|	416	427	459
+[   10.162967] 4097	5458	5476	5667	|	416	437	667
+[   10.167646] 8192	5458	5486	5666	|	416	427	500
+[   10.172420] 8193	11167	11458	13792	|	916	1034	2625
+[   10.177659] 16384	11208	11323	11708	|	916	950	1166
+[   10.183056] 16385	21833	21945	23042	|	1041	1106	1792
+[   10.188649] 32768	21875	21924	22417	|	1041	1085	1292
+[   10.194568] 32769	43041	43114	43875	|	1166	1195	1500
+[   10.200503] 65536	43042	43262	44708	|	1166	1213	1375
+[   10.207132] 65537	86208	87203	89208	|	1375	1445	2042
+[   10.213771] 131072	86167	86958	87792	|	1375	1429	1667
+[   10.221915] 131073	173750	174843	178125	|	1875	1929	2125
+[   10.230306] 262144	173708	174666	175500	|	1916	1948	2125
+[   10.241516] 262145	348625	350143	365917	|	3333	3471	4209
+[   10.252719] 524288	348625	349739	363959	|	3375	3411	3542
+[   10.269581] 524289	697166	698354	709625	|	7500	7570	7834
+[   10.286422] 1048576	697084	698075	710459	|	7500	7565	7709
+[   10.314670] 1048577	1394083	1396114	1407667	|	15875	15927	16084
+[   10.343457] 2097152	1394125	1395841	1406167	|	15875	15924	16083
+[   10.394863] 2097153	2788584	2792372	2802833	|	32708	32833	33042
+[   10.401051] ******************************** vmalloc ********************************
+[   10.409229] x   alloc (min	avr	max)	|dealloc (min	avr	max), ns
+[   10.415575] 1	2125	12596	152875	|	2125	2687	7458
+[   10.420599] 2	2125	4541	38125	|	2125	2411	5750
+[   10.425338] 3	2084	2242	2666	|	2125	2203	2875
+[   10.430008] 4	2125	2336	3791	|	2166	2276	3167
+[   10.434661] 5	2167	2588	6208	|	2125	2338	3083
+[   10.439328] 8	2166	2343	3916	|	2125	2307	3000
+[   10.443975] 9	2166	2278	2958	|	2166	2244	2667
+[   10.448639] 16	2166	2299	3375	|	2166	2294	2875
+[   10.453385] 17	2208	2700	6292	|	2166	2349	3042
+[   10.458145] 32	2375	2565	3958	|	2208	2325	3000
+[   10.462885] 33	2375	2450	3000	|	2167	2276	2667
+[   10.467645] 64	2375	2570	4417	|	2208	2333	3042
+[   10.472395] 65	2208	3044	9000	|	2166	2317	2750
+[   10.477133] 128	2166	2268	2708	|	2208	2304	2500
+[   10.481979] 129	2166	2320	3333	|	2166	2322	3000
+[   10.486809] 256	2166	2276	2875	|	2167	2289	2541
+[   10.491662] 257	2166	2627	5334	|	2208	2390	3042
+[   10.496492] 512	2166	2273	2750	|	2208	2317	2625
+[   10.501487] 513	2167	10096	125083	|	2167	2395	3667
+[   10.506593] 1024	2125	2275	2875	|	2208	2317	2625
+[   10.511550] 1025	2166	2630	5375	|	2208	2432	3292
+[   10.516472] 2048	2208	2296	2792	|	2291	2372	2666
+[   10.521413] 2049	2166	2385	3708	|	2208	2372	3125
+[   10.526335] 4096	2166	2296	2792	|	2250	2387	2750
+[   10.531303] 4097	2583	3666	15541	|	2625	2877	3791
+[   10.536329] 8192	2541	2677	3208	|	2666	2773	3084
+[   10.541299] 8193	2916	3427	8375	|	3042	3211	3958
+[   10.546260] 16384	3291	3461	3917	|	3500	3588	3875
+[   10.551345] 16385	3666	4065	6417	|	3875	4088	4875
+[   10.556447] 32768	4750	4968	5584	|	5166	5260	5583
+[   10.561579] 32769	5125	5395	6666	|	5542	5687	6417
+[   10.566786] 65536	7833	8278	13666	|	8416	8507	8959
+[   10.572123] 65537	8334	9125	13333	|	8750	8992	9667
+[   10.577649] 131072	14000	15953	31375	|	14833	14974	15458
+[   10.583708] 131073	14291	14846	19125	|	15167	15341	16000
+[   10.590204] 262144	26000	27265	34583	|	27791	29106	46959
+[   10.596677] 262145	26417	27479	31375	|	28167	28448	29500
+[   10.604047] 524288	50000	52924	62750	|	53708	57590	76958
+[   10.612500] 524289	49500	51325	56500	|	53875	126794	1215083
+[   10.622150] 1048576	102667	107851	162667	|	123750	126039	144167
+[   10.632667] 1048577	102916	106684	133917	|	123208	159421	684750
+[   10.648041] 2097152	219291	248968	561125	|	285292	320216	829250
+[   10.663196] 2097153	220375	237908	361833	|	285458	321968	830042
+[   10.669411] ******************************** pages ********************************
+[   10.677391] x   alloc (min	avr	max)	|dealloc (min	avr	max), ns
+[   10.683527] 1	584	760	2667	|	666	765	2083
+[   10.687773] 2	583	645	1000	|	666	700	958
+[   10.691912] 3	625	640	792	|	666	685	875
+[   10.695959] 4	583	619	750	|	666	684	750
+[   10.700021] 5	583	640	917	|	666	697	917
+[   10.704069] 8	625	643	834	|	666	684	875
+[   10.708131] 9	583	635	875	|	666	697	958
+[   10.712179] 16	583	630	792	|	666	690	833
+[   10.716317] 17	625	632	709	|	666	677	750
+[   10.720470] 32	583	635	834	|	666	695	917
+[   10.724608] 33	583	630	834	|	666	692	833
+[   10.728761] 64	583	648	917	|	666	697	958
+[   10.732900] 65	583	624	708	|	666	682	791
+[   10.737037] 128	584	625	708	|	667	682	750
+[   10.741281] 129	583	638	875	|	666	695	959
+[   10.745511] 256	583	627	834	|	666	692	833
+[   10.749755] 257	583	632	916	|	666	700	1000
+[   10.754075] 512	625	637	791	|	666	679	833
+[   10.758319] 513	583	640	875	|	666	697	917
+[   10.762548] 1024	584	632	791	|	666	687	833
+[   10.766869] 1025	625	635	750	|	666	684	833
+[   10.771214] 2048	583	645	1000	|	666	705	1042
+[   10.775717] 2049	584	638	792	|	666	685	791
+[   10.780054] 4096	583	645	916	|	666	687	958
+[   10.784399] 4097	875	1163	4166	|	1000	1617	10291
+[   10.789299] 8192	833	966	1458	|	1000	1484	8125
+[   10.794029] 8193	1250	1823	8542	|	1291	2289	8875
+[   10.798948] 16384	916	1041	1416	|	1625	2572	9250
+[   10.803887] 16385	2000	2976	9084	|	1958	2849	8917
+[   10.808933] 32768	1000	1091	1417	|	3000	4752	10458
+[   10.814129] 32769	3500	5838	11167	|	3291	4596	10167
+[   10.819562] 65536	1125	1315	3333	|	5625	9333	14792
+[   10.824910] 65537	6333	8690	14750	|	5916	11119	12959
+[   10.830455] 131072	1375	1468	1916	|	17791	18018	18667
+[   10.836368] 131073	18792	19466	22666	|	17958	18710	25625
+[   10.842571] 262144	1916	2049	3167	|	35541	36153	42500
+[   10.849097] 262145	37584	38820	48000	|	35625	36726	43750
+[   10.855872] 524288	2917	2984	3333	|	70916	71999	78208
+[   10.863591] 524289	74875	77864	104834	|	71084	72202	78417
+[   10.871632] 1048576	5041	5184	6041	|	141708	143862	149125
+[   10.882140] 1048577	150292	160156	227917	|	142084	143963	149708
+[   10.893126] 2097152	9792	10411	12000	|	284333	288442	294292
+[   10.908874] 2097153	307084	324026	436459	|	286917	294937	325417
+/ # 
