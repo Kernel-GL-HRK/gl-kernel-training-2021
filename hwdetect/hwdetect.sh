@@ -15,7 +15,13 @@ function find_i2c()
 
 function find_usb_ttl()
 {
-	echo "usb_ttl"
+	if ! command -v lsusb &> /dev/null
+	then
+		echo "COMMAND lsusb could not be found"
+		echo "Please install it before"
+		return -1
+	fi
+	lsusb | grep "USB-Serial"
 }
 
 function find_flash()
