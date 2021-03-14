@@ -13,17 +13,11 @@ MODULE_AUTHOR("Andrii Synenko");
 MODULE_DESCRIPTION("List data module for Linux Kernel ProCamp");
 MODULE_LICENSE("Dual BSD/GPL");
 
-#define MEMTEST_ATEMPTS 16
-#define MEMTEST_SIZE(x) (1ll<<(x))
-#define MEMTEST_LINMIT	64
+#define MEMTEST_ATEMPTS_POWER (4)
+#define MEMTEST_ATEMPTS (1<<MEMTEST_ATEMPTS_POWER)
 
-enum {
-	MEMTS_KMALLOC = 0,
-	MEMTS_KZMALLOC,
-	MEMTS_VMALLOC,
-	MEMTS_GFPAGES,
-	MEMTS_MAX,
-};
+#define MEMTEST_SIZE(x) (1ll<<(x))
+#define MEMTEST_LINMIT	(64)
 
 struct mem_ops {
 	char head_str[16];
@@ -55,7 +49,7 @@ static void update_stats(struct time_stats *stats, u64 time_ns)
 
 static void process_stats(struct time_stats *stats, const char *msg)
 {
-	stats->average_ns >>= 4;
+	stats->average_ns >>= MEMTEST_ATEMPTS_POWER;
 
 	pr_info("%s: min [%llu ns], max [%llu ns], average [%llu ns]\n",
 		msg, stats->min_ns, stats->max_ns, stats->average_ns);
@@ -63,7 +57,6 @@ static void process_stats(struct time_stats *stats, const char *msg)
 	stats->average_ns = 0;
 	stats->min_ns = U64_MAX;
 	stats->max_ns = 0;
-
 }
 
 static int memtest(u8 stage, struct mem_ops *test_func)
@@ -78,7 +71,7 @@ static int memtest(u8 stage, struct mem_ops *test_func)
 		return -EINVAL;
 	}
 
-	// pull testes functions to cashe
+	// pull testes functions to cache
 	buffer = test_func->space_alloc(1);
 	if (buffer == NULL) {
 		pr_err("%s, failed to cashe function %s",
@@ -168,13 +161,12 @@ static void calibrate_ktime(void)
 	while (iteration--) {
 		time_stamp = ktime_get_ns();
 		ktime_delta += ktime_get_ns() - time_stamp;
+	}
 
-}
-	ktime_delta >>= 4;
+	ktime_delta >>= MEMTEST_ATEMPTS_POWER;
 
 	pr_info("%s, ktime dump call delta: %llu\n",
 		__func__, ktime_delta);
-
 }
 
 static int memtest_module_init(void)
@@ -182,12 +174,11 @@ static int memtest_module_init(void)
 	int res = 0;
 	u8 stage = 0;
 	u8 funk_indx;
-	struct mem_ops memtest_func[MEMTS_MAX] = {
-		[MEMTS_KMALLOC]  = {"KMALLOC", &my_kmalloc, &my_kfree},
-		[MEMTS_KZMALLOC] = {"KZMALLOC", &my_kzalloc, &my_kzfree},
-		[MEMTS_VMALLOC]  = {"VMALLOC", &my_vmalloc, &my_vfree},
-		[MEMTS_GFPAGES]  = {"GET_FREE_PAGES", &my_get_free_pages,
-					&my_free_pages}
+	struct mem_ops memtest_func[] = {
+		{"KMALLOC", &my_kmalloc, &my_kfree},
+		{"KZMALLOC", &my_kzalloc, &my_kzfree},
+		{"VMALLOC", &my_vmalloc, &my_vfree},
+		{"GET_FREE_PAGES", &my_get_free_pages, &my_free_pages}
 	};
 
 	pr_info("%s: module starting\n",  __func__);
@@ -195,8 +186,8 @@ static int memtest_module_init(void)
 	calibrate_ktime();
 
 	while (res == 0) {
-		for (funk_indx = MEMTS_KMALLOC;
-		     funk_indx < MEMTS_MAX;
+		for (funk_indx = 0;
+		     funk_indx < ARRAY_SIZE(memtest_func);
 		     funk_indx++)
 			res = memtest(stage, &memtest_func[funk_indx]);
 		stage++;
