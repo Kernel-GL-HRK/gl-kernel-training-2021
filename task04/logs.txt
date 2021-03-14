@@ -1,0 +1,41 @@
+/ # cat /sys/class/hello-class/hello 
+[  105.485074] read 22
+List is empty:(
+/ # echo Five me five dollars > /sys/class/hello-class/hello 
+[  127.095734] write 21
+[  127.096742] String was wrote succesfully
+/ # cat /sys/class/hello-class/hello 
+[  131.256929] read 21
+[  131.257018] Five me five dollars
+[  131.257018] 
+List has printed successfuly:)
+/ # echo Not five just give > /sys/class/hello-class/hello 
+[  156.092874] write 19
+[  156.093361] String was wrote succesfully
+/ # echo This module is working > /sys/class/hello-class/hello 
+[  173.493774] write 23
+[  173.494042] String was wrote succesfully
+/ # cat /sys/class/hello-class/hello 
+[  176.246676] read 23
+[  176.246747] Five me five dollars
+[  176.246747] 
+[  176.246811] Not five just give
+[  176.246811] 
+[  176.246903] This module is working
+[  176.246903] 
+List has printed successfuly:)
+/ # echo The trampeling is working > /sys/class/hello-class/hello 
+[  191.061511] write 26
+[  191.061947] String was wrote succesfully
+/ # cat /sys/class/hello-class/hello 
+[  195.625471] read 26
+[  195.625544] Five me five dollars
+[  195.625544] 
+[  195.625612] Not five just give
+[  195.625612] 
+[  195.625710] This module is working
+[  195.625710] 
+[  195.625826] The trampeling is working
+[  195.625826] 
+List has printed successfuly:)
+
