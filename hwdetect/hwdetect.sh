@@ -2,7 +2,8 @@
 
 function find_sdcard()
 {
-	echo "SDcards"
+	ls /dev | grep mmcblk
+	lsblk | grep sda
 }
 
 function find_i2c()
