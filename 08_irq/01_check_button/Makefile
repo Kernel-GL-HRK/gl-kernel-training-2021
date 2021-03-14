@@ -13,6 +13,6 @@ clean:
 check:
 	$(KDIR)/scripts/checkpatch.pl -f check_button.c
 send:
-	sudo cp check_button.ko test.sh /srv/nfs/busybox/tmp
+	sudo cp check_button.ko /srv/nfs/busybox/tmp
 
 endif
