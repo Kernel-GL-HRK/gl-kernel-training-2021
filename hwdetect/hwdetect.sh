@@ -7,7 +7,10 @@ function find_sdcard()
 
 function find_i2c()
 {
-	echo "i2c"
+	mapfile -t i2c_array < <(ls /dev | grep i2c)
+        for i in ${i2c_array[@]}; do
+                echo $i
+        done
 }
 
 function find_usb_ttl()
