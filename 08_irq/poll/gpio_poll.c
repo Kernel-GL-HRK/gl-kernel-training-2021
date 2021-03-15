@@ -42,6 +42,9 @@ static struct gpio_conf state_led = {67, true, -1, NULL, NULL};
 static struct gpio_conf busy_led  = {68, true, -1, NULL, NULL};
 
 static struct timer_list g_timer;
+static struct hrtimer g_hr_timer;
+static ktime_t hr_ktime;
+
 
 static int gpio_init(struct gpio_conf *pin)
 {
@@ -106,13 +109,19 @@ void gpio_debounce(struct timer_list *tm)
 		debounce_state = raw_state;
 		debounce_cnt = 5;
 		gpio_set_value(busy_led.pin_id, 1);
-		msleep(1);
-		gpio_set_value(busy_led.pin_id, 0);
+
+		hrtimer_start( &g_hr_timer, hr_ktime, HRTIMER_MODE_REL);
 	}
 
 	gpio_set_value(state_led.pin_id, 1 - debounce_state);
 
 	mod_timer(&g_timer, jiffies + msecs_to_jiffies(20));
+}
+
+enum hrtimer_restart gpio_unbusy(struct hrtimer *timer)
+{
+	gpio_set_value(busy_led.pin_id, 0);
+	return HRTIMER_NORESTART;
 }
 
 static int gpio_poll_init(void)
@@ -140,11 +149,18 @@ static int gpio_poll_init(void)
 	if (res < 0)
 		goto deinit_leds;
 
+	hr_ktime = ktime_set(0, NSEC_PER_MSEC);
+	hrtimer_init(&g_hr_timer, CLOCK_MONOTONIC, HRTIMER_MODE_REL);
+	g_hr_timer.function = &gpio_unbusy;
+
 	timer_setup(&g_timer, &gpio_debounce, 0);
 	res = mod_timer(&g_timer, jiffies + msecs_to_jiffies(20));
-	if (res == 0)
-		return 0;
+	if (res < 0)
+		goto deinit_hrt;
+	return 0;
 
+deinit_hrt:
+	hrtimer_cancel(&g_hr_timer);
 	gpio_deinit(&user_btn);
 deinit_leds:
 	gpio_deinit(&busy_led);
@@ -158,6 +174,7 @@ static void gpio_poll_exit(void)
 {
 	pr_info("%s: module exit\n",  __func__);
 
+	hrtimer_cancel(&g_hr_timer);
 	del_timer(&g_timer);
 	gpio_deinit(&user_btn);
 	gpio_deinit(&busy_led);
