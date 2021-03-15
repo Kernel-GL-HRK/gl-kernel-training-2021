@@ -1,0 +1,19 @@
+/ # date
+Sat Jan  1 00:28:08 UTC 2000
+/ # reboot
+/ # umount: devtmpfs busy - remounted read-only
+
+.
+.
+.
+
+[    4.264195] VFS: Mounted root (nfs filesystem) on device 0:14.
+[    4.271454] devtmpfs: mounted
+[    4.277139] Freeing unused kernel memory: 2048K
+[    4.286144] Run /sbin/init as init process
+
+Please press Enter to activate this console.
+/ # date
+Sat Jan  1 00:29:14 UTC 2000
+/ #
+
