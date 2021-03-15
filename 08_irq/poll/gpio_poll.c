@@ -52,7 +52,7 @@ static int gpio_init(struct gpio_conf *pin)
 
 	res = gpio_request(pin->pin_id, "Onboard user button");
 	if (res < 0) {
-		pr_err("%s: failed to request gpio pin: %d",
+		pr_err("%s: failed to request gpio pin: %d\n",
 		       __func__, pin->pin_id);
 		return res;
 	}
@@ -79,7 +79,7 @@ static int gpio_init(struct gpio_conf *pin)
 		return res;
 
 failed_gpio_init:
-	pr_err("%s: failed to init gpio pin %d, error %d",
+	pr_err("%s: failed to init gpio pin %d, error %d\n",
 	       __func__, pin->pin_id, res);
 
 	gpio_free(pin->pin_id);
@@ -104,13 +104,12 @@ void gpio_debounce(struct timer_list *tm)
 
 	if (debounce_state == raw_state)
 		debounce_cnt = 5;
-	else if (!(--debounce_cnt))
-	{
+	else if (!(--debounce_cnt)) {
 		debounce_state = raw_state;
 		debounce_cnt = 5;
 		gpio_set_value(busy_led.pin_id, 1);
 
-		hrtimer_start( &g_hr_timer, hr_ktime, HRTIMER_MODE_REL);
+		hrtimer_start(&g_hr_timer, hr_ktime, HRTIMER_MODE_REL);
 	}
 
 	gpio_set_value(state_led.pin_id, 1 - debounce_state);

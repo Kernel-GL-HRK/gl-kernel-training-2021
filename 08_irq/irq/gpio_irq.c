@@ -54,7 +54,7 @@ static int gpio_init(struct gpio_conf *pin)
 
 	res = gpio_request(pin->pin_id, "Onboard user button");
 	if (res < 0) {
-		pr_err("%s: failed to request gpio pin: %d",
+		pr_err("%s: failed to request gpio pin: %d\n",
 		       __func__, pin->pin_id);
 		return res;
 	}
@@ -85,7 +85,7 @@ static int gpio_init(struct gpio_conf *pin)
 		return res;
 
 failed_gpio_init:
-	pr_err("%s: failed to init gpio pin %d, error %d",
+	pr_err("%s: failed to init gpio pin %d, error %d\n",
 	       __func__, pin->pin_id, res);
 
 	gpio_free(pin->pin_id);
@@ -122,7 +122,7 @@ static irqreturn_t btn_thread(int irq, void *prt)
 	msleep(simulate_busy);
 	gpio_set_value(busy_led.pin_id, 0);
 
-	pr_info("%s: button was hit %d time(s)", __func__, hit_counter);
+	pr_info("%s: button was hit %d time(s)\n", __func__, hit_counter);
 
 	return IRQ_HANDLED;
 }
