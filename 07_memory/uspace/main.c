@@ -12,8 +12,11 @@
 
 #define NSEC_PER_SEC 1000000000ll
 
-#define MEMTEST_ATEMPTS 16
+#define MEMTEST_ATEMPTS_POWER (4)
+#define MEMTEST_ATEMPTS (1<<MEMTEST_ATEMPTS_POWER)
+
 #define MEMTEST_SIZE(x) (1ll<<(x))
+#define MEMTEST_LINMIT	(64)
 
 enum {
 	MEMTS_MALLOC = 0,
@@ -52,7 +55,7 @@ static void update_stats(struct time_stats *stats, __uint64_t time_ns)
 
 static void process_stats(struct time_stats *stats, const char *msg)
 {
-	stats->average_ns >>= 4;
+	stats->average_ns >>= MEMTEST_ATEMPTS_POWER;
 
 	printf("%s: min [%lu ns], max [%lu ns], average [%lu ns]\n",
 		msg, stats->min_ns, stats->max_ns, stats->average_ns);
@@ -148,7 +151,7 @@ static void calibrate_time(void)
 		time_offset += delta_ns(&time_stamp[0], &time_stamp[1]);
 
 }
-	time_offset >>= 4;
+	time_offset >>= MEMTEST_ATEMPTS_POWER;
 
 	printf("%s, ktime dump call delta: %lu\n",
 		__func__, time_offset);
@@ -168,11 +171,14 @@ int main(void)
 
 	calibrate_time();
 
-	while (res == 0) {
-		for (funk_indx = MEMTS_MALLOC;
+	while (stage < MEMTEST_LINMIT) {
+		for (funk_indx = 0;
 		     funk_indx < MEMTS_MAX;
-		     funk_indx++)
+		     funk_indx++) {
 			res = memtest(stage, &memtest_func[funk_indx]);
+			if (res < 0)
+				return res;
+		}
 		stage++;
 	}
 
