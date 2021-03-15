@@ -185,11 +185,14 @@ static int memtest_module_init(void)
 
 	calibrate_ktime();
 
-	while (res == 0) {
+	while (stage < MEMTEST_LINMIT) {
 		for (funk_indx = 0;
 		     funk_indx < ARRAY_SIZE(memtest_func);
-		     funk_indx++)
+		     funk_indx++) {
 			res = memtest(stage, &memtest_func[funk_indx]);
+			if (res < 0)
+				return res;
+		}
 		stage++;
 	}
 
