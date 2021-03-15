@@ -1,0 +1,22 @@
+/usr # insmod data_list.ko 
+[   33.453313] data_list: loading out-of-tree module taints kernel.
+[   33.460353] === data_list module loaded ===
+/usr # cat /sys/kernel/hello/list 
+/usr # echo 'One' > /sys/kernel/hello/list 
+[   63.299715] Added item list: One
+/usr # echo 'Two' > /sys/kernel/hello/list 
+[   76.082411] Added item list: Two
+/usr # echo 'Three' > /sys/kernel/hello/list 
+[   90.910296] Added item list: Three
+/usr # echo '...' > /sys/kernel/hello/list 
+[   97.867158] Added item list: ...
+/usr # echo 'End' > /sys/kernel/hello/list 
+[  105.107872] Added item list: End
+/usr # cat /sys/kernel/hello/list 
+One
+Two
+Three
+...
+End
+/usr # 
+
