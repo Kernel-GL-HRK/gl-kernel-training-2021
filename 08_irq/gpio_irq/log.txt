@@ -1,0 +1,34 @@
+Press the button several times during the sleep, check module output.
+- Handler runs many times as button pressed 
+but thread just pend and runs only once after finich current thread.
+
+Try to remove the module just after button is pressed.
+- Blocked on irq free fun exit and wait for finich thread
+
+/workdir/irq # insmod gpio_irq.ko wait_ms=3000
+[ 2349.609246] Init Button GPIO72 OK
+[ 2349.612741] Init LED GPIO56 OK
+[ 2349.615937] Init LED GPIO54 OK
+/workdir/irq # [ 2354.616262] Counter: 1
+[ 2354.618774] Start waiting for 3000 ms
+[ 2357.697172] Finish waiting
+[ 2357.700018] Counter: 2
+[ 2357.702482] Start waiting for 3000 ms
+[ 2360.737170] Finish waiting
+[ 2473.462341] Counter: 3
+[ 2473.464821] Start waiting for 3000 ms
+[ 2476.497175] Finish waiting
+[ 2477.519527] Counter: 4
+[ 2477.521994] Start waiting for 3000 ms
+[ 2480.577168] Finish waiting
+[ 2482.887486] Counter: 5
+[ 2482.889954] Start waiting for 3000 ms
+[ 2485.937170] Finish waiting
+[ 2485.940001] Counter: 12
+[ 2485.942557] Start waiting for 3000 ms
+[ 2488.977176] Finish waiting
+/workdir/irq # rmmod gpio_irq.ko
+[ 2505.142433] Deinit Button GPIO72
+[ 2505.146209] LED at GPIO OFF
+/workdir/irq # 
+
