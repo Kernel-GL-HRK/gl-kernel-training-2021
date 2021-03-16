@@ -1,0 +1,27 @@
+From 6391035a5ffad08af9e810ec618de55ed6ddb971 Mon Sep 17 00:00:00 2001
+From: Oleh Yakymenko <o.yakymenko22@gmail.com>
+Date: Wed, 17 Mar 2021 00:40:21 +0200
+Subject: [PATCH 2/2] DTS: rewrite eeprom3(0x57) to AT24C32
+
+Signed-off-by: Oleh Yakymenko <o.yakymenko22@gmail.com>
+---
+ arch/arm/boot/dts/am335x-boneblack.dts | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack.dts b/arch/arm/boot/dts/am335x-boneblack.dts
+index c4b771392bdd..f13b3f2c12e6 100644
+--- a/arch/arm/boot/dts/am335x-boneblack.dts
++++ b/arch/arm/boot/dts/am335x-boneblack.dts
+@@ -34,3 +34,9 @@
+ 		reg = <0x68>;
+ 	};
+ };
++
++&i2c2 {
++	cape_eeprom3: cape_eeprom3@57 {
++		compatible = "atmel,24c32";
++	};
++};
+-- 
+2.25.1
+
