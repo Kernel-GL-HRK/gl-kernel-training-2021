@@ -1,0 +1,51 @@
+/mnt # uname -a
+Linux (none) 4.19.176 #4 SMP Tue Mar 16 12:55:37 EET 2021 armv7l GNU/Linux
+/mnt # lsmod
+/mnt # insmod msimplemodule.ko
+[  400.031994] simple module: iparam = -1
+insmod: can't insert 'msimplemodule.ko': Operation not permitted
+/mnt #
+/mnt #
+/mnt #
+/mnt # dmesg -c
+[  400.031994] simple module: iparam = -1
+/mnt #
+/mnt # lsmod
+/mnt #
+/mnt #
+/mnt # insmod msimplemodule.ko iparam=0
+[  477.652962] simple module: iparam = 0
+/mnt # dmesg -c
+[  477.652962] simple module: iparam = 0
+/mnt #
+/mnt #
+/mnt # lsmod
+msimplemodule 16384 0 - Live 0xbf020000 (O)
+/mnt # rmmod msimplemodule.ko
+/mnt # insmod msimplemodule.ko iparam=1
+[  498.952910] simple module: iparam = 1
+insmod: can't insert 'msimplemodule.ko': Operation not permitted
+/mnt #
+/mnt #
+/mnt #
+/mnt # lsmod
+/mnt # dmesg -c
+[  498.952910] simple module: iparam = 1
+/mnt # insmod msimplemodule.ko iparam=-1
+[  518.104298] simple module: iparam = -1
+insmod: can't insert 'msimplemodule.ko': Operation not permitted
+/mnt # dmesg -c
+[  518.104298] simple module: iparam = -1
+/mnt #
+/mnt #
+/mnt # lsmod
+/mnt # insmod msimplemodule.ko iparam=0
+[  531.005574] simple module: iparam = 0
+/mnt #
+/mnt #
+/mnt #
+/mnt # lsmod
+msimplemodule 16384 0 - Live 0xbf038000 (O)
+/mnt # dmesg
+[  531.005574] simple module: iparam = 0
+/mnt # rmmod msimplemodule.ko
