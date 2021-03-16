@@ -3,16 +3,21 @@
 #include <linux/init.h>	// Macros used to mark up functions  __init __exit
 #include <linux/module.h>	// Core header for loading LKMs into the kernel
 #include <linux/kernel.h>	// Contains types, macros, functions for the kernel
+#include <linux/moduleparam.h>
+
+static int iparam = -1;
+module_param(iparam, int, 0);
 
 static int __init hello_init(void)
 {
-	pr_debug("Hello, world!");
-	return 0;
+	pr_debug("loading started\n");
+	pr_info("iparam = %d\n", iparam);
+	return iparam;
 }
 
 static void __exit hello_exit(void)
 {
-	pr_debug("Goodbye, world!");
+	pr_debug("module exits\n");
 }
 
 
