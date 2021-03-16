@@ -12,6 +12,7 @@ static int __init hello_init(void)
 {
 	pr_debug("loading started\n");
 	pr_info("iparam = %d\n", iparam);
+	iparam = iparam > 0 ? -iparam : iparam;
 	return iparam;
 }
 
