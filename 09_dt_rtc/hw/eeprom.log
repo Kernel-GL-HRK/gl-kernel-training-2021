@@ -1,0 +1,56 @@
+/ # find /sys/firmware/devicetree/ | grep cape_eeprom3
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/compatible
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/cape_data@0
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/cape_data@0/reg
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/cape_data@0/name
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/#address-cells
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/#size-cells
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/reg
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/name
+
+/ # cat /sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/compatible
+atmel,24c256
+
+
+/ # echo "oleh" > /sys/bus/i2c/devices/2-0057/eeprom
+/ # cat /sys/bus/i2c/devices/2-0057/eeprom | hexdump -C
+00000000  6f 6c 65 68 0a ff ff ff  ff ff ff ff ff ff ff ff  |oleh............|
+00000010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00001000  6f 6c 65 68 0a ff ff ff  ff ff ff ff ff ff ff ff  |oleh............|
+00001010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00002000  6f 6c 65 68 0a ff ff ff  ff ff ff ff ff ff ff ff  |oleh............|
+00002010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00003000  6f 6c 65 68 0a ff ff ff  ff ff ff ff ff ff ff ff  |oleh............|
+00003010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00004000  6f 6c 65 68 0a ff ff ff  ff ff ff ff ff ff ff ff  |oleh............|
+00004010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00005000  6f 6c 65 68 0a ff ff ff  ff ff ff ff ff ff ff ff  |oleh............|
+00005010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00006000  6f 6c 65 68 0a ff ff ff  ff ff ff ff ff ff ff ff  |oleh............|
+00006010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00007000  6f 6c 65 68 0a ff ff ff  ff ff ff ff ff ff ff ff  |oleh............|
+00007010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00008000
+
+
+********************* CHANGE DEVICE TREE **************************
+
+/ # cat /sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/compatible
+atmel,24c32
+
+
+/ # cat /sys/bus/i2c/devices/2-0057/eeprom | hexdump -C
+00000000  6f 6c 65 68 0a ff ff ff  ff ff ff ff ff ff ff ff  |oleh............|
+00000010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00001000
+/ # 

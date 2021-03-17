@@ -1,0 +1,49 @@
+/ # i2cget 2 0x68 0x00
+0x52
+/ # i2cget 2 0x68 0x01
+0x18
+/ # i2cget 2 0x68 0x02
+0x00
+/ # date
+Sat Jan  1 00:19:24 UTC 2000
+/ # 
+
+
+********************* CHANGE DEVICE TREE **************************
+
+
+/ # dmesg | grep rtc
+[    2.092016] rtc-ds1307 2-0068: registered as rtc0
+[    2.174558] rtc-ds1307 2-0068: setting system clock to 2000-01-01 09:42:25 UTC (946719745)
+
+
+/ # find ./sys/firmware/devicetree/ | grep ds32
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/compatible
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/reg
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/name
+/ # cat ./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/name
+ds3231 
+/ # cat ./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/compatible 
+maxim,ds3231
+/ # 
+
+
+/ # date
+Sat Jan  1 11:19:24 UTC 2000
+/ # date -s "2021-03-17 00:30:00"  //change only internal bbb time NOT ds3231
+Wed Mar 17 00:30:00 UTC 2021
+/ # hwclock -w -f /dev/rtc0
+/ # date
+Wed Mar 17 00:30:24 UTC 2021
+/ # date
+Wed Mar 17 00:30:26 UTC 2021
+/ # reboot
+
+Please press Enter to activate this console. 
+/ # date
+Wed Mar 17 00:31:31 UTC 2021
+/ # 
+
+
+
