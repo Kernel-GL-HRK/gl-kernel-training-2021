@@ -1,0 +1,334 @@
+/ # insmod /komod/memory_task_mod.ko runs_num=8
+[ 9014.853412] GL Kernel Training 2021
+[ 9015.252376] insmod: vmalloc: allocation failure: 536870912 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[ 9015.262791] CPU: 0 PID: 291 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[ 9015.270539] Hardware name: Generic AM33XX (Flattened Device Tree)
+[ 9015.276960] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[ 9015.285091] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[ 9015.292668] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[ 9015.300315] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[ 9015.308954] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[ 9015.318951] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[ 9015.327786] [<c0461a14>] (vmalloc) from [<bf02732c>] (gl_memory_init+0x32c/0x1000 [memory_task_mod])
+[ 9015.337339] [<bf02732c>] (gl_memory_init [memory_task_mod]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[ 9015.347434] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[ 9015.355891] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[ 9015.364253] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[ 9015.372525] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[ 9015.380974] Exception stack(0xdb0bffa8 to 0xdb0bfff0)
+[ 9015.386252] ffa0:                   0011d1f8 b6f09950 0011d258 00002760 0011d1f8 00000000
+[ 9015.394796] ffc0: 0011d1f8 b6f09950 00002760 00000080 00000001 becf8e90 0010ad3d 000f629b
+[ 9015.403336] ffe0: becf8b48 becf8b38 0003ba90 b6dc31b0
+[ 9015.408662] Mem-Info:
+[ 9015.411050] active_anon:77 inactive_anon:0 isolated_anon:0
+[ 9015.411050]  active_file:482 inactive_file:113 isolated_file:0
+[ 9015.411050]  unevictable:0 dirty:0 writeback:0 unstable:0
+[ 9015.411050]  slab_reclaimable:1650 slab_unreclaimable:1823
+[ 9015.411050]  mapped:450 shmem:0 pagetables:27 bounce:0
+[ 9015.411050]  free:119089 free_pcp:170 free_cma:16318
+[ 9015.444866] Node 0 active_anon:308kB inactive_anon:0kB active_file:1928kB inactive_file:452kB unevictable:0kB isolato
+[ 9015.467934] DMA free:476356kB min:2816kB low:3520kB high:4224kB active_anon:308kB inactive_anon:0kB active_file:1928B
+[ 9015.496808] lowmem_reserve[]: 0 0 0 0
+[ 9015.500661] DMA: 44*4kB (UM) 51*8kB (UMEC) 33*16kB (UMEC) 34*32kB (UMEC) 33*64kB (UMC) 20*128kB (UMC) 20*256kB (U) 2B
+[ 9015.519832] 595 total pagecache pages
+[ 9015.523666] 0 pages in swap cache
+[ 9015.527134] Swap cache stats: add 0, delete 0, find 0/0
+[ 9015.532617] Free swap  = 0kB
+[ 9015.535629] Total swap = 0kB
+[ 9015.538655] 130560 pages RAM
+[ 9015.541667] 0 pages HighMem/MovableOnly
+[ 9015.545680] 6069 pages reserved
+[ 9015.548979] 16384 pages cma reserved
+[ 9015.753777] insmod: vmalloc: allocation failure: 536870912 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[ 9015.764197] CPU: 0 PID: 291 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[ 9015.771945] Hardware name: Generic AM33XX (Flattened Device Tree)
+[ 9015.778366] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[ 9015.786497] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[ 9015.794074] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[ 9015.801721] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[ 9015.810358] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[ 9015.820354] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[ 9015.829189] [<c0461a14>] (vmalloc) from [<bf02732c>] (gl_memory_init+0x32c/0x1000 [memory_task_mod])
+[ 9015.838743] [<bf02732c>] (gl_memory_init [memory_task_mod]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[ 9015.848840] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[ 9015.857295] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[ 9015.865658] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[ 9015.873929] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[ 9015.882379] Exception stack(0xdb0bffa8 to 0xdb0bfff0)
+[ 9015.887657] ffa0:                   0011d1f8 b6f09950 0011d258 00002760 0011d1f8 00000000
+[ 9015.896201] ffc0: 0011d1f8 b6f09950 00002760 00000080 00000001 becf8e90 0010ad3d 000f629b
+[ 9015.904741] ffe0: becf8b48 becf8b38 0003ba90 b6dc31b0
+[ 9016.111668] insmod: vmalloc: allocation failure: 536870912 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[ 9016.122079] CPU: 0 PID: 291 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[ 9016.129826] Hardware name: Generic AM33XX (Flattened Device Tree)
+[ 9016.136248] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[ 9016.144377] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[ 9016.151955] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[ 9016.159625] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[ 9016.168290] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[ 9016.178317] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[ 9016.187179] [<c0461a14>] (vmalloc) from [<bf02732c>] (gl_memory_init+0x32c/0x1000 [memory_task_mod])
+[ 9016.196764] [<bf02732c>] (gl_memory_init [memory_task_mod]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[ 9016.206891] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[ 9016.215372] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[ 9016.223734] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[ 9016.232007] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[ 9016.240456] Exception stack(0xdb0bffa8 to 0xdb0bfff0)
+[ 9016.245735] ffa0:                   0011d1f8 b6f09950 0011d258 00002760 0011d1f8 00000000
+[ 9016.254276] ffc0: 0011d1f8 b6f09950 00002760 00000080 00000001 becf8e90 0010ad3d 000f629b
+[ 9016.262816] ffe0: becf8b48 becf8b38 0003ba90 b6dc31b0
+[ 9016.469520] insmod: vmalloc: allocation failure: 536870912 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[ 9016.479925] CPU: 0 PID: 291 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[ 9016.487674] Hardware name: Generic AM33XX (Flattened Device Tree)
+[ 9016.494094] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[ 9016.502224] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[ 9016.509801] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[ 9016.517446] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[ 9016.526085] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[ 9016.536081] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[ 9016.544916] [<c0461a14>] (vmalloc) from [<bf02732c>] (gl_memory_init+0x32c/0x1000 [memory_task_mod])
+[ 9016.554468] [<bf02732c>] (gl_memory_init [memory_task_mod]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[ 9016.564564] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[ 9016.573019] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[ 9016.581381] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[ 9016.589650] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[ 9016.598097] Exception stack(0xdb0bffa8 to 0xdb0bfff0)
+[ 9016.603374] ffa0:                   0011d1f8 b6f09950 0011d258 00002760 0011d1f8 00000000
+[ 9016.611915] ffc0: 0011d1f8 b6f09950 00002760 00000080 00000001 becf8e90 0010ad3d 000f629b
+[ 9016.620454] ffe0: becf8b48 becf8b38 0003ba90 b6dc31b0
+[ 9016.625801] warn_alloc_show_mem: 2 callbacks suppressed
+[ 9016.625807] Mem-Info:
+[ 9016.633667] active_anon:77 inactive_anon:0 isolated_anon:0
+[ 9016.633667]  active_file:482 inactive_file:113 isolated_file:0
+[ 9016.633667]  unevictable:0 dirty:0 writeback:0 unstable:0
+[ 9016.633667]  slab_reclaimable:1650 slab_unreclaimable:1823
+[ 9016.633667]  mapped:450 shmem:0 pagetables:27 bounce:0
+[ 9016.633667]  free:119089 free_pcp:170 free_cma:16318
+[ 9016.667482] Node 0 active_anon:308kB inactive_anon:0kB active_file:1928kB inactive_file:452kB unevictable:0kB isolato
+[ 9016.690548] DMA free:476356kB min:2816kB low:3520kB high:4224kB active_anon:308kB inactive_anon:0kB active_file:1928B
+[ 9016.719426] lowmem_reserve[]: 0 0 0 0
+[ 9016.723266] DMA: 44*4kB (UM) 51*8kB (UMEC) 33*16kB (UMEC) 34*32kB (UMEC) 33*64kB (UMC) 20*128kB (UMC) 20*256kB (U) 2B
+[ 9016.742436] 595 total pagecache pages
+[ 9016.746270] 0 pages in swap cache
+[ 9016.749754] Swap cache stats: add 0, delete 0, find 0/0
+[ 9016.755223] Free swap  = 0kB
+[ 9016.758249] Total swap = 0kB
+[ 9016.761261] 130560 pages RAM
+[ 9016.764273] 0 pages HighMem/MovableOnly
+[ 9016.768300] 6069 pages reserved
+[ 9016.771585] 16384 pages cma reserved
+[ 9016.976369] insmod: vmalloc: allocation failure: 536870912 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[ 9016.986821] CPU: 0 PID: 291 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[ 9016.994570] Hardware name: Generic AM33XX (Flattened Device Tree)
+[ 9017.000991] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[ 9017.009122] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[ 9017.016699] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[ 9017.024345] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[ 9017.032983] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[ 9017.042978] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[ 9017.051811] [<c0461a14>] (vmalloc) from [<bf02732c>] (gl_memory_init+0x32c/0x1000 [memory_task_mod])
+[ 9017.061365] [<bf02732c>] (gl_memory_init [memory_task_mod]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[ 9017.071460] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[ 9017.079914] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[ 9017.088277] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[ 9017.096547] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[ 9017.104993] Exception stack(0xdb0bffa8 to 0xdb0bfff0)
+[ 9017.110269] ffa0:                   0011d1f8 b6f09950 0011d258 00002760 0011d1f8 00000000
+[ 9017.118811] ffc0: 0011d1f8 b6f09950 00002760 00000080 00000001 becf8e90 0010ad3d 000f629b
+[ 9017.127351] ffe0: becf8b48 becf8b38 0003ba90 b6dc31b0
+[ 9017.334037] insmod: vmalloc: allocation failure: 536870912 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[ 9017.344456] CPU: 0 PID: 291 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[ 9017.352204] Hardware name: Generic AM33XX (Flattened Device Tree)
+[ 9017.358625] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[ 9017.366756] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[ 9017.374334] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[ 9017.381977] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[ 9017.390613] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[ 9017.400606] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[ 9017.409438] [<c0461a14>] (vmalloc) from [<bf02732c>] (gl_memory_init+0x32c/0x1000 [memory_task_mod])
+[ 9017.418990] [<bf02732c>] (gl_memory_init [memory_task_mod]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[ 9017.429083] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[ 9017.437535] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[ 9017.445895] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[ 9017.454164] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[ 9017.462612] Exception stack(0xdb0bffa8 to 0xdb0bfff0)
+[ 9017.467889] ffa0:                   0011d1f8 b6f09950 0011d258 00002760 0011d1f8 00000000
+[ 9017.476430] ffc0: 0011d1f8 b6f09950 00002760 00000080 00000001 becf8e90 0010ad3d 000f629b
+[ 9017.484968] ffe0: becf8b48 becf8b38 0003ba90 b6dc31b0
+[ 9017.691434] insmod: vmalloc: allocation failure: 536870912 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[ 9017.701868] CPU: 0 PID: 291 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[ 9017.709617] Hardware name: Generic AM33XX (Flattened Device Tree)
+[ 9017.716037] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[ 9017.724168] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[ 9017.731745] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[ 9017.739416] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[ 9017.748081] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[ 9017.758108] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[ 9017.766971] [<c0461a14>] (vmalloc) from [<bf02732c>] (gl_memory_init+0x32c/0x1000 [memory_task_mod])
+[ 9017.776553] [<bf02732c>] (gl_memory_init [memory_task_mod]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[ 9017.786681] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[ 9017.795162] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[ 9017.803550] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[ 9017.811847] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[ 9017.820321] Exception stack(0xdb0bffa8 to 0xdb0bfff0)
+[ 9017.825615] ffa0:                   0011d1f8 b6f09950 0011d258 00002760 0011d1f8 00000000
+[ 9017.834185] ffc0: 0011d1f8 b6f09950 00002760 00000080 00000001 becf8e90 0010ad3d 000f629b
+[ 9017.842751] ffe0: becf8b48 becf8b38 0003ba90 b6dc31b0
+[ 9017.848098] warn_alloc_show_mem: 2 callbacks suppressed
+[ 9017.848104] Mem-Info:
+[ 9017.855963] active_anon:77 inactive_anon:0 isolated_anon:0
+[ 9017.855963]  active_file:482 inactive_file:113 isolated_file:0
+[ 9017.855963]  unevictable:0 dirty:0 writeback:0 unstable:0
+[ 9017.855963]  slab_reclaimable:1650 slab_unreclaimable:1823
+[ 9017.855963]  mapped:450 shmem:0 pagetables:27 bounce:0
+[ 9017.855963]  free:119089 free_pcp:170 free_cma:16318
+[ 9017.889781] Node 0 active_anon:308kB inactive_anon:0kB active_file:1928kB inactive_file:452kB unevictable:0kB isolato
+[ 9017.912847] DMA free:476356kB min:2816kB low:3520kB high:4224kB active_anon:308kB inactive_anon:0kB active_file:1928B
+[ 9017.941762] lowmem_reserve[]: 0 0 0 0
+[ 9017.945602] DMA: 44*4kB (UM) 51*8kB (UMEC) 33*16kB (UMEC) 34*32kB (UMEC) 33*64kB (UMC) 20*128kB (UMC) 20*256kB (U) 2B
+[ 9017.964784] 595 total pagecache pages
+[ 9017.968635] 0 pages in swap cache
+[ 9017.972104] Swap cache stats: add 0, delete 0, find 0/0
+[ 9017.977588] Free swap  = 0kB
+[ 9017.980600] Total swap = 0kB
+[ 9017.983612] 130560 pages RAM
+[ 9017.986624] 0 pages HighMem/MovableOnly
+[ 9017.990651] 6069 pages reserved
+[ 9017.993937] 16384 pages cma reserved
+[ 9018.198997] insmod: vmalloc: allocation failure: 536870912 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[ 9018.209405] CPU: 0 PID: 291 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[ 9018.217152] Hardware name: Generic AM33XX (Flattened Device Tree)
+[ 9018.223573] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[ 9018.231704] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[ 9018.239281] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[ 9018.246952] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[ 9018.255618] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[ 9018.265644] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[ 9018.274507] [<c0461a14>] (vmalloc) from [<bf02732c>] (gl_memory_init+0x32c/0x1000 [memory_task_mod])
+[ 9018.284090] [<bf02732c>] (gl_memory_init [memory_task_mod]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[ 9018.294217] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[ 9018.302671] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[ 9018.311031] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[ 9018.319297] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[ 9018.327743] Exception stack(0xdb0bffa8 to 0xdb0bfff0)
+[ 9018.333019] ffa0:                   0011d1f8 b6f09950 0011d258 00002760 0011d1f8 00000000
+[ 9018.341558] ffc0: 0011d1f8 b6f09950 00002760 00000080 00000001 becf8e90 0010ad3d 000f629b
+[ 9018.350096] ffe0: becf8b48 becf8b38 0003ba90 b6dc31b0
+[ 9018.376641] Test kmalloc, number of runs: 8
+[ 9018.381069]  size      alloc, max      alloc, min      alloc, avg       free, max       free, min       free, avg
+[ 9018.381082]  2^00        1.792 us        0.500 us        0.828 us        0.916 us        0.458 us        0.552 us
+[ 9018.399277]  2^01        0.709 us        0.417 us        0.495 us        0.459 us        0.417 us        0.448 us
+[ 9018.408373]  2^02        0.459 us        0.416 us        0.453 us        0.459 us        0.416 us        0.427 us
+[ 9018.417468]  2^03        0.875 us        0.625 us        0.656 us        0.459 us        0.416 us        0.427 us
+[ 9018.426549]  2^04        0.459 us        0.416 us        0.442 us        0.459 us        0.416 us        0.427 us
+[ 9018.435645]  2^05        0.458 us        0.417 us        0.442 us        0.459 us        0.416 us        0.427 us
+[ 9018.444739]  2^06        0.459 us        0.416 us        0.437 us        0.459 us        0.416 us        0.427 us
+[ 9018.453834]  2^07        1.042 us        0.500 us        0.692 us        0.666 us        0.417 us        0.520 us
+[ 9018.462928]  2^08        1.083 us        0.459 us        0.614 us        0.667 us        0.417 us        0.572 us
+[ 9018.472025]  2^09        0.916 us        0.458 us        0.646 us        1.083 us        0.416 us        0.526 us
+[ 9018.481125]  2^10        1.084 us        0.458 us        0.692 us        0.667 us        0.416 us        0.489 us
+[ 9018.490224]  2^11        1.375 us        0.625 us        0.932 us        0.833 us        0.417 us        0.604 us
+[ 9018.499357]  2^12        1.167 us        0.458 us        0.734 us        1.041 us        0.458 us        0.604 us
+[ 9018.508472]  2^13        9.791 us        0.458 us        1.994 us        0.834 us        0.417 us        0.640 us
+[ 9018.517570]  2^14        9.791 us        1.125 us        2.541 us        6.250 us        1.000 us        1.786 us
+[ 9018.526654]  2^15        2.209 us        1.125 us        1.500 us        1.459 us        1.083 us        1.223 us
+[ 9018.535754]  2^16        3.958 us        1.334 us        2.432 us        2.084 us        1.167 us        1.494 us
+[ 9018.544852]  2^17        5.041 us        1.792 us        2.812 us        2.000 us        1.417 us        1.604 us
+[ 9018.553950]  2^18        9.250 us        2.583 us        4.390 us        2.292 us        1.834 us        1.979 us
+[ 9018.563048]  2^19       17.375 us        4.708 us        8.088 us        3.209 us        2.875 us        3.015 us
+[ 9018.572148]  2^20      163.542 us       13.042 us       45.489 us       10.417 us        4.750 us        5.651 us
+[ 9018.581246]  2^21       80.208 us       67.500 us       75.963 us       12.250 us       11.209 us       11.708 us
+[ 9018.590344]  2^22      131.334 us       41.875 us       56.187 us       28.750 us       23.625 us       25.702 us
+[ 9018.599442]  2^23      268.583 us       74.125 us      108.109 us       89.375 us       65.250 us       69.442 us
+[ 9018.608535] Test kmalloc fails on 2^24 (16777216 bytes)
+[ 9018.613987] 
+[ 9018.615539] Test kzalloc, number of runs: 8
+[ 9018.619918]  size      alloc, max      alloc, min      alloc, avg       free, max       free, min       free, avg
+[ 9018.619927]  2^00        1.708 us        0.583 us        1.062 us        2.333 us        0.542 us        0.849 us
+[ 9018.638108]  2^01        0.541 us        0.458 us        0.494 us        0.542 us        0.500 us        0.531 us
+[ 9018.647190]  2^02        0.500 us        0.459 us        0.479 us        0.542 us        0.500 us        0.505 us
+[ 9018.656285]  2^03        0.667 us        0.458 us        0.588 us        0.542 us        0.500 us        0.510 us
+[ 9018.665381]  2^04        0.500 us        0.458 us        0.474 us        0.500 us        0.500 us        0.500 us
+[ 9018.674479]  2^05        0.500 us        0.458 us        0.468 us        0.542 us        0.500 us        0.526 us
+[ 9018.683575]  2^06        0.500 us        0.458 us        0.463 us        0.500 us        0.500 us        0.500 us
+[ 9018.692671]  2^07        1.000 us        0.583 us        0.661 us        0.791 us        0.583 us        0.614 us
+[ 9018.701767]  2^08        0.917 us        0.583 us        0.781 us        0.792 us        0.625 us        0.651 us
+[ 9018.710862]  2^09        0.917 us        0.708 us        0.770 us        0.750 us        0.750 us        0.750 us
+[ 9018.719958]  2^10        1.292 us        1.000 us        1.203 us        1.583 us        1.041 us        1.109 us
+[ 9018.729056]  2^11        2.167 us        1.666 us        1.880 us        2.500 us        1.667 us        1.854 us
+[ 9018.738152]  2^12        3.292 us        2.959 us        3.130 us        3.417 us        2.958 us        3.073 us
+[ 9018.747248]  2^13        6.542 us        5.125 us        5.562 us        5.833 us        4.833 us        5.380 us
+[ 9018.756331]  2^14       14.958 us       11.708 us       12.692 us       12.583 us       11.333 us       11.697 us
+[ 9018.765427]  2^15       40.167 us       21.959 us       24.484 us       23.417 us       21.916 us       22.484 us
+[ 9018.774522]  2^16       44.625 us       43.334 us       44.177 us       44.834 us       43.916 us       44.156 us
+[ 9018.783617]  2^17       88.042 us       86.541 us       86.989 us       87.958 us       87.125 us       87.536 us
+[ 9018.792712]  2^18      177.291 us      175.625 us      176.224 us      195.125 us      174.625 us      177.474 us
+[ 9018.801808]  2^19      353.459 us      350.042 us      351.031 us      351.708 us      350.625 us      351.098 us
+[ 9018.810903]  2^20      710.667 us      705.583 us      707.916 us      720.417 us      701.167 us      704.031 us
+[ 9018.820000]  2^21     1492.250 us     1463.541 us     1467.974 us     1428.500 us     1402.625 us     1406.370 us
+[ 9018.829097]  2^22     2919.083 us     2810.500 us     2834.390 us     2829.000 us     2804.792 us     2811.598 us
+[ 9018.838191]  2^23     5695.958 us     5623.083 us     5644.400 us     5633.625 us     5611.000 us     5622.364 us
+[ 9018.847283] Test kzalloc fails on 2^24 (16777216 bytes)
+[ 9018.852732] 
+[ 9018.854283] Test vmalloc, number of runs: 8
+[ 9018.858661]  size      alloc, max      alloc, min      alloc, avg       free, max       free, min       free, avg
+[ 9018.858670]  2^00      277.500 us       84.083 us      142.911 us       12.833 us        8.458 us       10.703 us
+[ 9018.876838]  2^01        8.125 us        4.459 us        5.963 us        2.583 us        2.209 us        2.333 us
+[ 9018.885932]  2^02        5.625 us        3.750 us        5.088 us        2.375 us        2.125 us        2.198 us
+[ 9018.895027]  2^03        2.667 us        2.292 us        2.416 us        2.209 us        2.042 us        2.104 us
+[ 9018.904122]  2^04        2.333 us        2.125 us        2.218 us        2.125 us        2.083 us        2.114 us
+[ 9018.913217]  2^05        2.417 us        2.125 us        2.203 us        2.125 us        2.083 us        2.109 us
+[ 9018.922314]  2^06        3.542 us        2.208 us        3.203 us        2.333 us        2.083 us        2.145 us
+[ 9018.931410]  2^07       27.417 us        2.125 us        5.359 us        4.000 us        2.083 us        2.374 us
+[ 9018.940505]  2^08        3.084 us        2.125 us        2.255 us        2.167 us        2.000 us        2.046 us
+[ 9018.949600]  2^09        3.042 us        2.333 us        2.515 us        2.417 us        2.042 us        2.140 us
+[ 9018.958695]  2^10        2.208 us        2.083 us        2.135 us        2.084 us        2.000 us        2.057 us
+[ 9018.967792]  2^11        2.500 us        2.208 us        2.369 us        2.084 us        2.041 us        2.051 us
+[ 9018.976871]  2^12        2.208 us        2.125 us        2.156 us        2.084 us        2.000 us        2.067 us
+[ 9018.985993]  2^13        3.125 us        2.875 us        3.062 us        2.709 us        2.583 us        2.609 us
+[ 9018.995090]  2^14        3.875 us        3.292 us        3.448 us        3.500 us        3.417 us        3.458 us
+[ 9019.004185]  2^15        5.583 us        4.792 us        5.078 us        5.000 us        4.958 us        4.989 us
+[ 9019.013280]  2^16        9.709 us        8.709 us        9.120 us        8.250 us        8.167 us        8.229 us
+[ 9019.022377]  2^17       16.167 us       14.750 us       15.437 us       48.541 us       14.708 us       19.135 us
+[ 9019.031472]  2^18       61.250 us       32.375 us       36.687 us       28.750 us       27.708 us       28.161 us
+[ 9019.040567]  2^19       85.250 us       57.625 us       62.223 us       55.709 us       53.542 us       54.359 us
+[ 9019.049663]  2^20      161.583 us      129.209 us      138.973 us      150.041 us      134.875 us      139.525 us
+[ 9019.058770]  2^21      309.958 us      282.583 us      289.150 us      324.333 us      308.125 us      320.359 us
+[ 9019.067867]  2^22      678.584 us      552.625 us      600.244 us      676.375 us      640.000 us      656.192 us
+[ 9019.076950]  2^23     1225.334 us     1168.292 us     1184.573 us     1535.166 us     1365.250 us     1426.916 us
+[ 9019.086043]  2^24     2526.500 us     2346.709 us     2432.802 us    12913.958 us     3800.750 us     5000.546 us
+[ 9019.095140]  2^25     5048.167 us     4857.125 us     4971.666 us     7267.458 us     6861.125 us     7138.875 us
+[ 9019.104235]  2^26    10707.708 us    10504.250 us    10582.510 us    14712.875 us    14410.208 us    14591.192 us
+[ 9019.113330]  2^27    21724.875 us    21562.375 us    21641.114 us    29130.792 us    29015.042 us    29069.698 us
+[ 9019.122425]  2^28    43933.917 us    43737.000 us    43834.979 us    57874.833 us    57577.125 us    57682.463 us
+[ 9019.131517] Test vmalloc fails on 2^29 (536870912 bytes)
+[ 9019.137055] 
+[ 9019.138622] Test get_free_pages, number of runs: 8
+[ 9019.143621]  size      alloc, max      alloc, min      alloc, avg       free, max       free, min       free, avg
+[ 9019.143629]  2^00        8.000 us        0.750 us        1.854 us        3.500 us        0.708 us        1.067 us
+[ 9019.161807]  2^01        1.041 us        0.625 us        0.708 us        0.791 us        0.666 us        0.692 us
+[ 9019.170899]  2^02        0.667 us        0.625 us        0.635 us        0.709 us        0.666 us        0.702 us
+[ 9019.179995]  2^03        0.834 us        0.625 us        0.765 us        0.709 us        0.666 us        0.697 us
+[ 9019.189091]  2^04        0.667 us        0.584 us        0.620 us        0.709 us        0.667 us        0.703 us
+[ 9019.198184]  2^05        0.666 us        0.625 us        0.630 us        0.750 us        0.667 us        0.698 us
+[ 9019.207278]  2^06        0.625 us        0.583 us        0.609 us        0.708 us        0.666 us        0.692 us
+[ 9019.216358]  2^07        0.667 us        0.583 us        0.625 us        0.709 us        0.667 us        0.698 us
+[ 9019.225450]  2^08        0.666 us        0.584 us        0.625 us        0.709 us        0.666 us        0.692 us
+[ 9019.234545]  2^09        0.667 us        0.584 us        0.625 us        0.709 us        0.667 us        0.698 us
+[ 9019.243638]  2^10        0.625 us        0.625 us        0.625 us        0.709 us        0.667 us        0.687 us
+[ 9019.252734]  2^11        0.917 us        0.625 us        0.770 us        0.709 us        0.708 us        0.708 us
+[ 9019.261830]  2^12        0.667 us        0.625 us        0.635 us        0.709 us        0.666 us        0.692 us
+[ 9019.270926]  2^13        6.791 us        0.916 us        1.765 us        8.125 us        1.041 us        1.953 us
+[ 9019.280022]  2^14        2.125 us        0.958 us        1.187 us        8.667 us        1.708 us        3.442 us
+[ 9019.289118]  2^15        2.625 us        1.000 us        1.765 us       10.000 us        3.041 us        6.515 us
+[ 9019.298217]  2^16        3.417 us        1.167 us        2.234 us       20.166 us        5.666 us        7.494 us
+[ 9019.307316]  2^17        5.834 us        1.708 us        3.255 us       19.458 us       17.958 us       18.260 us
+[ 9019.316399]  2^18        9.834 us        2.000 us        3.968 us       43.292 us       35.750 us       37.739 us
+[ 9019.325498]  2^19       19.458 us        4.292 us        8.036 us       85.000 us       71.792 us       76.135 us
+[ 9019.334594]  2^20       33.833 us        7.792 us       13.635 us      152.333 us      142.875 us      147.755 us
+[ 9019.343690]  2^21       77.583 us       14.958 us       30.479 us      297.666 us      285.708 us      288.213 us
+[ 9019.352788]  2^22      125.916 us       28.083 us       47.671 us      626.791 us      584.208 us      591.322 us
+[ 9019.361888]  2^23      339.791 us       56.000 us       99.411 us     1196.792 us     1165.667 us     1171.812 us
+[ 9019.370981] Test get_free_pages fails on 2^24 (16777216 bytes)
+[ 9019.377064] 
+/ # 
