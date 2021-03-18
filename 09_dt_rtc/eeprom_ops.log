@@ -1,0 +1,56 @@
+/ # 
+/ #  find /sys/firmware/devicetree/ | grep cape_eeprom3
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/compatible
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/cape_data@0
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/cape_data@0/reg
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/cape_data@0/name
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/#address-cells
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/#size-cells
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/reg
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/name
+/ #
+/ # cat /sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/compatible
+atmel,24c256
+/ #
+/ # cat /sys/bus/i2c/devices/2-0057/eeprom | hexdump -C
+00000000  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00008000
+/ #
+/ # / #  echo "some totaly randome text" > /sys/bus/i2c/devices/2-0057/eeprom
+/ # cat /sys/bus/i2c/devices/2-0057/eeprom | hexdump -C
+00000000  73 6f 6d 65 20 74 6f 74  61 6c 79 20 72 61 6e 64  |some totaly rand|
+00000010  6f 6d 65 20 74 65 78 74  0a ff ff ff ff ff ff ff  |ome text........|
+00000020  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00001000  73 6f 6d 65 20 74 6f 74  61 6c 79 20 72 61 6e 64  |some totaly rand|
+00001010  6f 6d 65 20 74 65 78 74  0a ff ff ff ff ff ff ff  |ome text........|
+00001020  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00002000  73 6f 6d 65 20 74 6f 74  61 6c 79 20 72 61 6e 64  |some totaly rand|
+00002010  6f 6d 65 20 74 65 78 74  0a ff ff ff ff ff ff ff  |ome text........|
+00002020  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00003000  73 6f 6d 65 20 74 6f 74  61 6c 79 20 72 61 6e 64  |some totaly rand|
+00003010  6f 6d 65 20 74 65 78 74  0a ff ff ff ff ff ff ff  |ome text........|
+00003020  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00004000  73 6f 6d 65 20 74 6f 74  61 6c 79 20 72 61 6e 64  |some totaly rand|
+00004010  6f 6d 65 20 74 65 78 74  0a ff ff ff ff ff ff ff  |ome text........|
+00004020  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00005000  73 6f 6d 65 20 74 6f 74  61 6c 79 20 72 61 6e 64  |some totaly rand|
+00005010  6f 6d 65 20 74 65 78 74  0a ff ff ff ff ff ff ff  |ome text........|
+00005020  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00006000  73 6f 6d 65 20 74 6f 74  61 6c 79 20 72 61 6e 64  |some totaly rand|
+00006010  6f 6d 65 20 74 65 78 74  0a ff ff ff ff ff ff ff  |ome text........|
+00006020  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00007000  73 6f 6d 65 20 74 6f 74  61 6c 79 20 72 61 6e 64  |some totaly rand|
+00007010  6f 6d 65 20 74 65 78 74  0a ff ff ff ff ff ff ff  |ome text........|
+00007020  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00008000
+/ # 
