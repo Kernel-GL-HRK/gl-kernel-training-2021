@@ -9,7 +9,7 @@ MODULE_AUTHOR("Vladyslav Andrishko <vladyslav.andrishko@globallogic.com>");
 MODULE_DESCRIPTION("Third Task in Linux Kernel Training Course");
 MODULE_LICENSE("Dual BSD/GPL");
 
-static int task;
+static int task = 1;
 module_param(task, int, 0);
 MODULE_PARM_DESC(task, "Task number");
 
@@ -21,21 +21,20 @@ static int __init kernel_init(void)
 {
 	if (user != NULL)
 		pr_warn("Hello, %s!\n", user);
-	else {
+	else
 		pr_info("Ops..., I don`t know who u are?");
-		return -EINVAL;
-	}
 	if (task == 3)
 		pr_info("Hmm, yeah this is third task in this course");
-	else
+	else {
 		pr_info("You work too much. You even don`t know what is it");
+		return -EINVAL;
+	}
 	return 0;
 }
 
 static void __exit kernel_exit(void)
 {
-	pr_info("Okay, congatulations. Task 03 done.\n");
-	pr_info("Byee...%s", user);
+	pr_info("Okay, congatulations. Task 03 done.Byee...%s", user);
 }
 
 module_init(kernel_init);
