@@ -8,6 +8,7 @@ else
 # kernel sources
 
 KDIR ?= $(HOME)/repos/linux-stable
+REMDIR ?= /srv/nfs/busybox/
 
 default:
 	$(MAKE) -C $(KDIR) M="$$PWD"
@@ -17,5 +18,8 @@ clean:
 
 %.i %.s : %.c
 	$(MAKE) -C $(KDIR) M=$$PWD $@
+
+deploy:
+	sudo cp *.ko $(REMDIR)
 
 endif
