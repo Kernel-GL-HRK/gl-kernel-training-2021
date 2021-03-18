@@ -1,0 +1,25 @@
+/tmp/03_module # ls
+Makefile        checkpatch.log  main.ko         main.o
+Module.symvers  kernel-log.sh   main.mod.c      modules.order
+README.md       main.c          main.mod.o
+/tmp/03_module # sh kernel-log.sh 
+[Hello it`s test for first Kernel module]
+ 
+[With parameters]
+[   16.580513] main: loading out-of-tree module taints kernel.
+[   16.590284] Hello, Vlad!
+[   16.590495] Hmm, yeah this is third task in this course
+ 
+[With bad parameters]
+[   16.703451] Okay, congatulations. Task 03 done.Byee...Vlad
+[   17.035403] Hello, Vlad!
+insmod: can't insert 'main.ko': invalid parameter
+rmmod: remove 'main': No such file or directory
+ 
+[Without parameters]
+[   17.036050] You work too much. You even don`t know what is it
+[   17.341656] Ops..., I don`t know who u are?
+insmod: can't insert 'main.ko': invalid parameter
+rmmod: remove 'main': No such file or directory
+/tmp/03_module # 
+
