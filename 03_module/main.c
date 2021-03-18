@@ -20,13 +20,13 @@ MODULE_PARM_DESC(user, "User name");
 static int __init kernel_init(void)
 {
 	if (user != NULL)
-		pr_warn("Hello, %s!\n", user);
+		pr_warn("\nHello, %s!\n", user);
 	else
-		pr_info("Ops..., I don`t know who u are?");
+		pr_info("\nOps..., I don`t know who u are?\n");
 	if (task == 3)
-		pr_info("Hmm, yeah this is third task in this course");
+		pr_info("\nHmm, yeah this is third task in this course\n");
 	else {
-		pr_info("You work too much. You even don`t know what is it");
+		pr_info("\nYou work too much. You even don`t know what is it\n");
 		return -EINVAL;
 	}
 	return 0;
@@ -34,7 +34,7 @@ static int __init kernel_init(void)
 
 static void __exit kernel_exit(void)
 {
-	pr_info("Okay, congatulations. Task 03 done.Byee...%s", user);
+	pr_info("\nOkay, congatulations. Task 03 done.Byee...%s\n", user);
 }
 
 module_init(kernel_init);
