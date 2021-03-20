@@ -1,0 +1,10 @@
+$sudo insmod lkm_example.ko
+$echo "HellO!" >> /sys/kernel/gl_procamp/list
+$echo "world!" >> /sys/kernel/gl_procamp/list
+$cat /sys/kernel/gl_procamp/list
+$sudo rmmod lkm_example.ko
+
+[18926.151696] ProCamp Module inited
+[19051.521815] HellO!
+[19051.521818] world!
+[19073.848575] ProCamp Module removed
