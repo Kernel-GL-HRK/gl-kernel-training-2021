@@ -1,0 +1,10 @@
+obj-target = gpio_poll_task
+obj-m += $(obj-target)_mod.o
+objects = ../gl_gpio/gl_gpio
+$(obj-target)_mod-objs := $(obj-target).o $(objects).o
+all:
+	@echo "Kernel: building target $(OBJ).ko..."
+	make -C ${BUILD_KERNEL} M=$(PWD) modules
+clean:
+	@echo "Kernel: cleaning..."
+	make -C ${BUILD_KERNEL} M=$(PWD) clean
