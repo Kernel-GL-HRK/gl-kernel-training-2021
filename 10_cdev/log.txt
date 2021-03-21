@@ -1,0 +1,53 @@
+/ # ./test_script.sh 
+[ 7578.060474] buffer size 2048
+[ 7578.064036] module loaded
+Total buffer size = 2048
+Used buffer size = 0
+
+Chardev statistics:
+Total calls open = 0
+Total calls read =  0
+Total calls write = 0
+Total calls close = 0
+Total char written = 0
+
+Creator: Hi, Now I test simple anonymous text messages
+Used buffer size = 55
+
+Creator: Hi, Now I test simple anonymous text messages
+Write can everyone!!!
+Used buffer size = 77
+
+Creator: Hi, Now I test simple anonymous text messages
+Write can everyone!!!
+everyone can read can the whole buffer at once!!!
+Used buffer size = 127
+
+Creator: Hi, Now I test simple anonymous text messages
+Write can everyone!!!
+everyone can read can the whole buffer at once!!!
+if your new message plus old messages be bigger than buffer size only your new message will stored. Else information go to the /dev/null
+Used buffer size = 264
+
+Creator: Hi, Now I test simple anonymous text messages
+Write can everyone!!!
+everyone can read can the whole buffer at once!!!
+if your new message plus old messages be bigger than buffer size only your new message will stored. Else information go to the /dev/null
+Just enjoy this perfect character device
+Used buffer size = 305
+
+Used buffer size = 305
+[ 7579.240373] Buffer cleaned
+
+Used buffer size = 0
+
+Now you can use it
+
+Chardev statistics:
+Total calls open = 13
+Total calls read =  13
+Total calls write = 6
+Total calls close = 13
+Total char written = 318
+[ 7581.317498] module exited
+
