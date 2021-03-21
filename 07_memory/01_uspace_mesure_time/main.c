@@ -62,7 +62,7 @@ static void *memory_alloc_check_time(unsigned long size, alloc_type_t type,
 	long nsec;
 	struct timespec spec, cmp_spec;
 
-	if (clock_gettime(CLOCK_REALTIME, &spec) == -1) {
+	if (clock_gettime(CLOCK_MONOTONIC, &spec) == -1) {
 		perror("The clock_gettime() function failed");
 		return NULL;
 	}
@@ -87,7 +87,7 @@ static void *memory_alloc_check_time(unsigned long size, alloc_type_t type,
 		return NULL;
 	}
 
-	if (clock_gettime(CLOCK_REALTIME, &cmp_spec) == -1) {
+	if (clock_gettime(CLOCK_MONOTONIC, &cmp_spec) == -1) {
 		perror("The clock_gettime() function failed");
 		if (type != ALLOCA_TYPE)
 			free(ptr);
@@ -112,7 +112,7 @@ static void memory_free_check_time(void *ptr, alloc_type_t type,
 	long nsec;
 	struct timespec spec, cmp_spec;
 
-	if (clock_gettime(CLOCK_REALTIME, &spec) == -1) {
+	if (clock_gettime(CLOCK_MONOTONIC, &spec) == -1) {
 		perror("The clock_gettime() function failed");
 		return;
 	}
@@ -129,7 +129,7 @@ static void memory_free_check_time(void *ptr, alloc_type_t type,
 		break;
 	}
 
-	if (clock_gettime(CLOCK_REALTIME, &cmp_spec) == -1) {
+	if (clock_gettime(CLOCK_MONOTONIC, &cmp_spec) == -1) {
 		perror("The clock_gettime() function failed");
 		return;
 	}
