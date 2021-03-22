@@ -7,7 +7,6 @@
 MODULE_DESCRIPTION("Basic module demo: init, deinit, printk");
 MODULE_AUTHOR("Anton Kotsiubailo");
 MODULE_VERSION("0.1");
-MODULE_LICENSE("GPL-2.0"); // this affects the kernel behavior
 
 static char *usrname;
 
