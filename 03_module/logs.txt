@@ -1,0 +1,15 @@
+/tmp # insmod firstmod.ko
+[39406.503653] username wasn`t passed as a parameter
+insmod: can't insert 'firstmod.ko': invalid parameter
+/tmp # insmod firstmod.ko Anton
+[39417.901401] firstmod: unknown parameter 'Anton' ignored
+[39417.901921] username wasn`t passed as a parameter
+insmod: can't insert 'firstmod.ko': invalid parameter
+/tmp # insmod firstmod.ko usrname=Anton
+[39699.139185] Hello, Anton!
+/tmp # rmmod firstmod.ko
+[39712.578467] Goodbye
+ 
+
+
+
