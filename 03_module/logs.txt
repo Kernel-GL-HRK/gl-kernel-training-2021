@@ -1,7 +1,11 @@
+
 /tmp # insmod firstmod.ko
-[178533.291320] username wasn`t passed as a parameter
-[178533.291470] Hello, $usrname!
+[38471.648460] username wasn`t passed as a parameter
+[38471.648611] Hello, $usrname!
+/tmp # rmmod insmod.ko
+rmmod: remove 'insmod': No such file or directory
 /tmp # rmmod firstmod.ko
-[178556.954845] Goodbye
+[38497.535629] Goodbye
+
 
 
