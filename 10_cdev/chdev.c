@@ -164,32 +164,35 @@ static ssize_t read_chdev(struct file *file, char __user *pbuf,
 static ssize_t write_chdev(struct file *file, const char __user *pbuf,
 			       size_t count, loff_t *ppos)
 {
-	ssize_t msg_size = 0;
+	ssize_t written_bytes = 0;
+	size_t ret = count;
 
-	total_calls_write++;
 	if (count > buffer_size) {
-		pr_err("Too large msg\n");
-		return -EINVAL;
+		pr_err("Error: Too large msg. Some data will not be written\n");
+		count = buffer_size;
+		ret = -EINVAL;
 	}
 
+	mutex_lock(&mutex_buffer_write);
 	if (buffer_write_cursor + count > buffer_size)
 		buffer_write_cursor = 0;
 
-
-	mutex_lock(&mutex_buffer_write);
-	msg_size = simple_write_to_buffer(buffer + buffer_write_cursor,
+	written_bytes = simple_write_to_buffer(buffer + buffer_write_cursor,
 			buffer_size - buffer_write_cursor, ppos, pbuf, count);
-	mutex_unlock(&mutex_buffer_write);
 
-	if (msg_size < 0) {
+	if (written_bytes < 0) {
 		pr_err("Can't copy your string\n");
-		return msg_size;
+		mutex_unlock(&mutex_buffer_write);
+		return written_bytes;
 	}
 
-	buffer_write_cursor += msg_size;
-	total_char_written += msg_size - 1;
+	buffer_write_cursor += written_bytes;
+	buffer[buffer_write_cursor - 1] = '\n';
+	total_char_written += written_bytes - 1;
+	total_calls_write++;
+	mutex_unlock(&mutex_buffer_write);
 
-	return msg_size;
+	return ret;
 }
 
 

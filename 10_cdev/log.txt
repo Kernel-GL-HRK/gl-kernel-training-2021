@@ -1,7 +1,7 @@
-/ # ./test_script.sh 
-[ 7578.060474] buffer size 2048
-[ 7578.064036] module loaded
-Total buffer size = 2048
+/workdir/10_chdev # /test.sh
+[ 6839.481707] buffer size 1200
+[ 6839.485259] module loaded
+Total buffer size = 1200
 Used buffer size = 0
 
 Chardev statistics:
@@ -11,43 +11,73 @@ Total calls write = 0
 Total calls close = 0
 Total char written = 0
 
-Creator: Hi, Now I test simple anonymous text messages
+Creator: Hi, Now I test anonymous text messages
 Used buffer size = 55
 
-Creator: Hi, Now I test simple anonymous text messages
+Creator: Hi, Now I test anonymous text messages
 Write can everyone!!!
 Used buffer size = 77
 
-Creator: Hi, Now I test simple anonymous text messages
+Creator: Hi, Now I test anonymous text messages
 Write can everyone!!!
 everyone can read can the whole buffer at once!!!
 Used buffer size = 127
 
-Creator: Hi, Now I test simple anonymous text messages
+Creator: Hi, Now I test anonymous text messages
 Write can everyone!!!
 everyone can read can the whole buffer at once!!!
-if your new message plus old messages be bigger than buffer size only your new message will stored. Else information go to the /dev/null
-Used buffer size = 264
+if your new message plus old messages be bigger
+        than buffer size only your new message will stored.
+        Else information go to the /dev/null
+Used buffer size = 269
 
-Creator: Hi, Now I test simple anonymous text messages
+Creator: Hi, Now I test anonymous text messages
 Write can everyone!!!
 everyone can read can the whole buffer at once!!!
-if your new message plus old messages be bigger than buffer size only your new message will stored. Else information go to the /dev/null
+if your new message plus old messages be bigger
+        than buffer size only your new message will stored.
+        Else information go to the /dev/null
 Just enjoy this perfect character device
-Used buffer size = 305
+Used buffer size = 310
 
-Used buffer size = 305
-[ 7579.240373] Buffer cleaned
+Used buffer size = 310
+[ 6840.663287] Buffer cleaned
 
 Used buffer size = 0
 
 Now you can use it
 
-Chardev statistics:
-Total calls open = 13
-Total calls read =  13
-Total calls write = 6
-Total calls close = 13
-Total char written = 318
-[ 7581.317498] module exited
+TEST with large text
 
+[ 6841.706240] Error: Too large msg. Some data will not be written
+ash: write error: Invalid argument
+
+Wikipedia is an online free-content encyclopedia project helping to create
+world in which everyone can freely share in the sum of all knowledge.
+It is supported by the Wikimedia Foundation and based on a model of freely
+editable content. The name Wikipedia is a blending of the words wiki
+(a technology for creating collaborative websites, from the Hawaiian word
+wiki, meaning quick) and encyclopedia. Wikipedia's articles provide links
+designed to guide the user to related pages with additional information.
+
+Wikipedia is written collaboratively by largely anonymous volunteers who write
+without pay. Anyone with Internet access can write and make changes to Wikipedia
+articles, except in limited cases where editing is restricted to prevent
+further disruption or vandalism.
+
+Since its creation on January 15, 2001, Wikipedia has grown into the world's
+largest reference website, attracting 1.7 billion unique visitors monthly as
+of November 2020. It currently has more than 56 million articles in more than
+300 languages, including 6,273,845 articles in English with 144,452 active
+contributors in the past month.
+
+The fundamental principles by which Wikipedia operates are the fiv
+
+Used buffer size = 1200
+Chardev statistics:
+Total calls open = 15
+Total calls read =  15
+Total calls write = 7
+Total calls close = 15
+Total char written = 1522
+[ 6842.764507] module exited
