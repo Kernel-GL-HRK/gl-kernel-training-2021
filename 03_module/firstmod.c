@@ -1,6 +1,5 @@
-// SPDX-License-Identifier: MIT and GPL-2.0
+// SPDX-License-Identifier: GPL-2.0
 #include <linux/init.h>
-#include <linux/jiffies.h>
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/moduleparam.h>
@@ -8,9 +7,8 @@
 MODULE_DESCRIPTION("Basic module demo: init, deinit, printk");
 MODULE_AUTHOR("Anton Kotsiubailo");
 MODULE_VERSION("0.1");
-MODULE_LICENSE("GPL"); // this affects the kernel behavior
+MODULE_LICENSE("GPL-2.0"); // this affects the kernel behavior
 
-static long count_start;
 static char *usrname;
 
 module_param(usrname, charp, 0);
@@ -21,7 +19,6 @@ static int __init firstmod_init(void)
 
 if (!usrname) {
 	pr_warn("username wasn`t passed as a parameter\n");
-	usrname = str;
 	return -EINVAL;
 }
 
