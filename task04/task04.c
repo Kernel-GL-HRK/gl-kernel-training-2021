@@ -13,52 +13,43 @@ MODULE_VERSION("0.1");
 MODULE_LICENSE("Dual MIT/GPL"); // this affects the kernel behavior
 
 #define LEN_MSG 160
+static char buf_msg[LEN_MSG + 1] = "Hello from module!\n";
 
 struct data {
   struct list_head head;
   char text[LEN_MSG];
 };
 
-LIST_HEAD(my_list);
 static struct data *tmp;
 
-#define IOFUNCS(name)                                                          \
-  static char buf_##name[LEN_MSG + 1] = "not initialized " #name "\n";         \
-  static ssize_t SHOW_##name(struct class *class,                              \
-			     struct class_attribute *attr, char *buf)          \
-{        								       \
-    strcpy(buf, buf_##name);                                                   \
-    printk("read %ld\n", (long)strlen(buf));                                   \
-    if (list_empty(&my_list)) {                                                \
-      sprintf(buf, "List is empty:(\n");                                       \
-    } else {                                                                   \
-      struct data *tmp;                                                        \
-      list_for_each_entry(tmp, &my_list, head) { pr_info("%s\n", tmp->text); } \
-      sprintf(buf, "List has printed successfuly:)\n");                        \
-    }                                                                          \
-    return strlen(buf);                                                        \
-  }                                                                            \
-  static ssize_t STORE_##name(struct class *class,                             \
-			      struct class_attribute *attr, const char *buf,   \
-			      size_t count) 				       \
-{                                  					       \
-    printk("write %ld\n", (long)count);                                        \
-    strncpy(buf_##name, buf, count);                                           \
-    buf_##name[count] = '\0';                                                  \
-    tmp = kzalloc(sizeof(*tmp), GFP_KERNEL);                                   \
-    strcpy(tmp->text, buf_##name);                                             \
-    list_add_tail(&(tmp->head), &my_list);                                     \
-    printk("String was wrote succesfully\n");                                  \
-    return count;                                                              \
+static ssize_t hello_show(struct class *class, struct class_attribute *attr,
+                      char *buf)
+{
+
+  strcpy(buf, buf_msg);
+  printk("read %ld\n", (long)strlen(buf));
+  return strlen(buf);
+}
+
+static ssize_t hello_store(struct class *class, struct class_attribute *attr,
+                       const char *buf, size_t count)
+{
+  static int i;
+  for (i = 0; buf_msg[i] != '\0'; i++) {
+    if (buf_msg[i] >= 'A' && buf_msg[i] <= 'Z')
+      buf_msg[i] = buf_msg[i] + 32;
   }
+  printk("write %ld\n", (long)count);
+  strncpy(buf_msg, buf, count);
+  buf_msg[count] = '\0';
+  return count;
+}
 
-IOFUNCS(hello);
+#define CLASS_ATTR(_name, _mode, _show, _store)                                \
+  struct class_attribute class_attr_##_name =                                  \
+      __ATTR(_name, _mode, _show, _store)
 
-#define OWN_CLASS_ATTR(name)                                                   \
-  struct class_attribute class_attr_##name =                                   \
-      __ATTR(name, (S_IWUSR | S_IRUGO), &SHOW_##name, &STORE_##name)
-
-static OWN_CLASS_ATTR(hello);
+CLASS_ATTR(hello, (S_IWUSR | S_IRUGO), &hello_show, &hello_store);
 
 static struct class *hello_class;
 

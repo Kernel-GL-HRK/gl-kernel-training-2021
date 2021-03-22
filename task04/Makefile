@@ -6,7 +6,7 @@ else
 
 obj-m   := task04.o
 default:
-	$(MAKE) -C $(BUILD_KERNEL) M=$(CURDIR) modules
+	$(MAKE) -C $(KDIR) M=$$PWD modules
 clean:
 	$(MAKE) -C $(KDIR) M=$$PWD clean
 endif
