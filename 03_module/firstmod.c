@@ -1,11 +1,11 @@
-// SPDX-License-Identifier: MIT and GPL
+// SPDX-License-Identifier: MIT and GPL-2.0
 #include <linux/init.h>
-#include <linux/jiffies.h> // where jiffies and its helpers reside
-#include <linux/kernel.h>  // required for sysinfo
-#include <linux/module.h>  // required by all modules
+#include <linux/jiffies.h>
+#include <linux/kernel.h>
+#include <linux/module.h>
 #include <linux/moduleparam.h>
 
-MODULE_DESCRIPTION("Basic module demo: init, deinit, printk, jiffies");
+MODULE_DESCRIPTION("Basic module demo: init, deinit, printk");
 MODULE_AUTHOR("Anton Kotsiubailo");
 MODULE_VERSION("0.1");
 MODULE_LICENSE("GPL"); // this affects the kernel behavior
@@ -18,11 +18,11 @@ MODULE_PARM_DESC(usrname, "user name");
 
 static int __init firstmod_init(void)
 {
-count_start = jiffies;
-char str[] = "$usrname";
+
 if (!usrname) {
 	pr_warn("username wasn`t passed as a parameter\n");
 	usrname = str;
+	return -EINVAL;
 }
 
 pr_warn("Hello, %s!\n", usrname);
