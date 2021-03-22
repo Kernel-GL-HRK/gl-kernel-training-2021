@@ -1,1 +1,0 @@
-cmd_/home/akotsiubailo/repos/gl_course/task04/task04_1.ko := arm-linux-gnueabihf-ld -r  -EL -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds  --build-id  -o /home/akotsiubailo/repos/gl_course/task04/task04_1.ko /home/akotsiubailo/repos/gl_course/task04/task04_1.o /home/akotsiubailo/repos/gl_course/task04/task04_1.mod.o ;  true
