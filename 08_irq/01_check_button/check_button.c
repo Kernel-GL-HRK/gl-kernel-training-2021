@@ -32,13 +32,13 @@ MODULE_VERSION("0.01");
  * connectors.
  */
 
-#define LED_SD  GPIO_NUMBER(1, 22)
 #define LED_MMC GPIO_NUMBER(1, 24)
-
-#define BUTTON  GPIO_NUMBER(2, 8)
-#define GPIO_LED 49
-#define GPIO_BUTTON 117
+#define GPIO_LED GPIO_NUMBER(1, 17)
+#define GPIO_BUTTON GPIO_NUMBER(3, 21)
 #define TIMER_DELAY 20
+#define DEBOUNCE_MASK 0x07
+#define IS_BUTTON_PRESSED(state) (((state) & DEBOUNCE_MASK) == DEBOUNCE_MASK)
+#define IS_BUTTON_NOTPRESSED(state) (((state) & DEBOUNCE_MASK) == 0)
 
 static int button_state;
 static struct timer_list simple_timer;
@@ -47,7 +47,7 @@ static unsigned long timer_interval_ns = 1e6;
 
 static enum hrtimer_restart hrtimer_handler(struct hrtimer *timer)
 {
-	gpio_direction_output(GPIO_LED, 0);
+	gpio_set_value(GPIO_LED, 0);
 	pr_info("HR Timer module calback\n");
 
 	return HRTIMER_NORESTART;
@@ -55,21 +55,30 @@ static enum hrtimer_restart hrtimer_handler(struct hrtimer *timer)
 
 void timer_handler(struct timer_list *timer)
 {
-	int state;
 	ktime_t interval;
+	static uint8_t state;
+	uint8_t filtered_state;
+	static uint8_t old_filtered_state;
 
 	mod_timer(timer, jiffies + (msecs_to_jiffies(TIMER_DELAY)));
 
-	state = gpio_get_value(GPIO_BUTTON);
+	state <<= 1;
+	state |= gpio_get_value(GPIO_BUTTON);
 
-	if (unlikely(button_state != state)) {
-		pr_info("Timerfunction, button state have changed\n");
-		gpio_direction_output(LED_MMC, state);
+	if (IS_BUTTON_PRESSED(state) || IS_BUTTON_NOTPRESSED(state)) {
+		filtered_state = (state & 1) ? 1 : 0;
 
-		gpio_direction_output(GPIO_LED, 1);
-		interval = ktime_set(0, timer_interval_ns);
-		hrtimer_start(&hr_timer, interval, HRTIMER_MODE_REL);
-		button_state = state;
+		if (filtered_state != old_filtered_state) {
+			pr_info("Timerfunction, button state have changed\n");
+			gpio_set_value(LED_MMC, state & 1);
+
+			gpio_set_value(GPIO_LED, 1);
+			interval = ktime_set(0, timer_interval_ns);
+			hrtimer_start(&hr_timer, interval, HRTIMER_MODE_REL);
+			button_state = state;
+
+			old_filtered_state = filtered_state;
+		}
 	}
 }
 
@@ -148,9 +157,12 @@ err_led:
 
 static void __exit check_button_exit(void)
 {
-	hrtimer_cancel(&hr_timer);
-	pr_info("HR timer cancel\n");
-	del_timer(&simple_timer);
+	int ret;
+
+	ret = hrtimer_cancel(&hr_timer);
+	pr_info("hr_timer was %s", ret ? "active -> cancelled" : "not active");
+
+	try_to_del_timer_sync(&simple_timer);
 	pr_info("Timer deleted\n");
 
 	gpio_free(GPIO_BUTTON);
