@@ -29,13 +29,10 @@ MODULE_VERSION("0.1");
  */
 
 
-#define LED_SD  GPIO_NUMBER(1, 22)
 #define LED_MMC GPIO_NUMBER(1, 24)
-
-#define BUTTON  GPIO_NUMBER(2, 8)
-#define GPIO_LED 49
-#define GPIO_BUTTON 117
-#define GPIO_DEBOUNCE_TIME 200
+#define GPIO_LED GPIO_NUMBER(1, 17)
+#define GPIO_BUTTON GPIO_NUMBER(3, 21)
+#define GPIO_DEBOUNCE_TIME 300
 #define TIMEOUT_SEC 5
 #define MSEC_IN_SEC 1000
 #define WAIT_QUEUE_SLEEP
@@ -100,7 +97,7 @@ irqreturn_t my_irq_thread(int irq, void *data)
 			simulate_busy);
 
 	if (simulate_busy) {
-		gpio_direction_output(LED_MMC, 1);
+		gpio_set_value(LED_MMC, 1);
 		pr_info("Simulate is busy, wait for work will be done...\n");
 #ifndef WAIT_QUEUE_SLEEP
 		msleep_interruptible(TIMEOUT_SEC * MSEC_IN_SEC);
@@ -108,7 +105,7 @@ irqreturn_t my_irq_thread(int irq, void *data)
 		wait_event_interruptible_timeout(my_queue, cond, HZ *
 				TIMEOUT_SEC);
 #endif //WAIT_QUEUE_SLEEP
-		gpio_direction_output(LED_MMC, 0);
+		gpio_set_value(LED_MMC, 0);
 		pr_info("Simulate have finished his work.\n");
 		simulate_busy = 0;
 	}
@@ -119,7 +116,7 @@ irqreturn_t my_irq_handler(int irq, void *data)
 {
 	pr_info("IRQ HW handler\n");
 	state_counter++;
-	gpio_direction_output(GPIO_LED, state_counter & 1);
+	gpio_set_value(GPIO_LED, state_counter & 1);
 
 	return IRQ_WAKE_THREAD;
 }
