@@ -51,11 +51,6 @@ return strlen(buf);
 static ssize_t hello_store(struct class *class, struct class_attribute *attr,
 			   const char *buf, size_t count)
 {
-static int i;
-for (i = 0; buf_msg[i] != '\0'; i++) {
-	if (buf_msg[i] >= 'A' && buf_msg[i] <= 'Z')
-		buf_msg[i] = buf_msg[i] + 32;
-}
 pr_info("write %ld\n", (long)count);
 strncpy(buf_msg, buf, count);
 buf_msg[count] = '\0';
