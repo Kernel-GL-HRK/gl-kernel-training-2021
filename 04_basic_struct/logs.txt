@@ -1,0 +1,19 @@
+/tmp # echo Hello /sys/class/hello-class/hello 
+Hello /sys/class/hello-class/hello
+/tmp # echo Hello > /sys/class/hello-class/hello 
+[  113.613054] write 6
+[  113.613251] String was written successfuly
+/tmp # echo Hello > /sys/class/hello-class/hello 
+[  116.792777] write 6
+[  116.793053] String was written successfuly
+/tmp # echo Hello > /sys/class/hello-class/hello 
+[  117.697433] write 6
+[  117.697723] String was written successfuly
+/tmp # cat /sys/class/hello-class/hello 
+[  126.034298] List has printed successfuly:)
+Hello
+
+Hello
+
+Hello
+
