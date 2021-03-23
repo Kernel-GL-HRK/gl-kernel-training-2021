@@ -1,0 +1,34 @@
+/tmp/04_basic_struct # insmod main.ko
+[ 5969.477142] Module initialized successfully
+/tmp/04_basic_struct # ls
+Makefile        checkpatch.log  main.mod        main.o
+Module.symvers  main.c          main.mod.c      modules.order
+README.md       main.ko         main.mod.o      test.sh
+/tmp/04_basic_struct # sh test.sh 
+insmod: can't insert 'main.ko': File exists
+Fill the list...
+[ 5979.453578] New item in list Vasya
+[ 5979.453578] 
+[ 5979.723816] New item in list Petya
+[ 5979.723816] 
+[ 5979.985631] New item in list Anton
+[ 5979.985631] 
+[ 5980.267357] New item in list Vlad
+[ 5980.267357] 
+[ 5980.337124] Try to read some info
+[ 5980.337692] Success
+[ 5980.337903] Try to read some info
+[ 5980.338115] Success
+[ 5980.338265] Try to read some info
+[ 5980.338471] Success
+[ 5980.338645] Try to read some info
+[ 5980.338851] Success
+Vlad
+Anton
+Petya
+Vasya
+[ 5980.377143] Task 04. Done!
+Try to read file after deleting
+cat: can't open '/sys/kernel/kobject_list/list': No such file or directory
+/tmp/04_basic_struct # 
+

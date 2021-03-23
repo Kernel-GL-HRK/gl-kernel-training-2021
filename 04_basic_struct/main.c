@@ -30,7 +30,8 @@ static ssize_t rw_show(struct kobject *kobj,
 
 	list_for_each_entry(item, &list, head) {
 		pr_info("Try to read some info\n");
-		state = sprintf(buf + offset, "%s", item->str);
+		state = snprintf(buf + offset, PAGE_SIZE - offset, "%s",
+				item->str);
 		if (state < 0) {
 			pr_info("Error\n");
 			return state;
@@ -62,7 +63,6 @@ static int mymodule_init(void)
 {
 	int state = 0;
 
-	pr_info("Module initialized successfully\n");
 	hello = kobject_create_and_add("kobject_list", kernel_kobj);
 	if (hello == NULL) {
 		pr_info("impossible to create Kobject!\n");
@@ -74,6 +74,7 @@ static int mymodule_init(void)
 			pr_info("impossible to create File!\n");
 		}
 	}
+	pr_info("Module initialized successfully\n");
 	return state;
 }
 
