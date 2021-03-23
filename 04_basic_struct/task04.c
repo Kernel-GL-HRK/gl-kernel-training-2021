@@ -53,7 +53,7 @@ static ssize_t hello_store(struct class *class, struct class_attribute *attr,
 {
 
 if (count > LEN_MSG) {
-	pr_err("Entered string is too long \n");
+	pr_err("Entered string is too long\n");
 	return -EINVAL;
 }
 pr_info("write %ld\n", (long)count);
