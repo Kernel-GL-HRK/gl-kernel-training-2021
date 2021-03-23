@@ -66,12 +66,13 @@ static int mymodule_init(void)
 	hello = kobject_create_and_add("kobject_list", kernel_kobj);
 	if (hello == NULL) {
 		pr_info("impossible to create Kobject!\n");
-		state = -EINVAL;
+		return -EINVAL;
 	} else {
 		state = sysfs_create_file(hello, &attr.attr);
 		if (state == -EINVAL) {
 			kobject_put(hello);
 			pr_info("impossible to create File!\n");
+			return state;
 		}
 	}
 	pr_info("Module initialized successfully\n");
