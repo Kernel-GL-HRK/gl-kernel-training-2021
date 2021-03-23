@@ -1,0 +1,5 @@
+vladyslav@vladyslav-Lenovo:~/gl-kernel-training-2021/04_basic_struct$ ~/repos/linux-stable/scripts/checkpatch.pl -f main.c
+total: 0 errors, 0 warnings, 100 lines checked
+
+main.c has no obvious style problems and is ready for submission.
+
