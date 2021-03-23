@@ -67,13 +67,12 @@ static int mymodule_init(void)
 	if (hello == NULL) {
 		pr_info("impossible to create Kobject!\n");
 		return -EINVAL;
-	} else {
-		state = sysfs_create_file(hello, &attr.attr);
-		if (state == -EINVAL) {
-			kobject_put(hello);
-			pr_info("impossible to create File!\n");
-			return state;
-		}
+	}
+	state = sysfs_create_file(hello, &attr.attr);
+	if (state == -EINVAL) {
+		kobject_put(hello);
+		pr_info("impossible to create File!\n");
+		return state;
 	}
 	pr_info("Module initialized successfully\n");
 	return state;

@@ -7,6 +7,8 @@ KDIR ?= /lib/modules/`uname -r`/build
 
 default:
 	$(MAKE) -C $(KDIR) M=$$PWD
+check:
+	$(KDIR)/scripts/checkpatch.pl -f main.c
 move:
 	cd ../ && sudo cp -r 04_basic_struct /srv/nfs/busybox/tmp/
 clean:
