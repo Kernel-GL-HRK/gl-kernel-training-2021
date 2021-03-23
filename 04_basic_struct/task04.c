@@ -15,7 +15,7 @@ MODULE_LICENSE("Dual MIT/GPL"); // this affects the kernel behavior
 
 #define LEN_MSG 160
 
-static char buf_msg[LEN_MSG + 1] = "Hello from module!\n";
+static char buf_msg[LEN_MSG + 1];
 
 static LIST_HEAD(my_list);
 
@@ -51,6 +51,11 @@ return strlen(buf);
 static ssize_t hello_store(struct class *class, struct class_attribute *attr,
 			   const char *buf, size_t count)
 {
+
+if (count > LEN_MSG) {
+	pr_err("Entered string is too long \n");
+	return -EINVAL;
+}
 pr_info("write %ld\n", (long)count);
 strncpy(buf_msg, buf, count);
 buf_msg[count] = '\0';
