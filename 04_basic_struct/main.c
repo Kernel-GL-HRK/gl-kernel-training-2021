@@ -69,7 +69,7 @@ static int mymodule_init(void)
 		return -EINVAL;
 	}
 	state = sysfs_create_file(hello, &attr.attr);
-	if (state == -EINVAL) {
+	if (state) {
 		kobject_put(hello);
 		pr_info("impossible to create File!\n");
 		return state;
