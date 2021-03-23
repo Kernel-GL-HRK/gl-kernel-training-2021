@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: GPL-2.0
-#include <asm/uaccess.h>
 #include <linux/cdev.h>
 #include <linux/fs.h>
 #include <linux/init.h>
@@ -17,14 +16,14 @@ MODULE_LICENSE("Dual MIT/GPL"); // this affects the kernel behavior
 
 static LIST_HEAD(my_list);
 
-const struct data {
+struct data {
 
-const struct list_head head;
+struct list_head head;
 char text[LEN_MSG];
 
 };
 
-const static struct data *tmp;
+static struct data *tmp;
 
 static ssize_t hello_show(struct class *class,
 			  struct class_attribute *attr, char *buf)
@@ -78,7 +77,7 @@ __ATTR(_name, _mode, _show, _store)
 
 CLASS_ATTR(hello, 0644, &hello_show, &hello_store);
 
-const static struct class *hello_class;
+static struct class *hello_class;
 
 int __init hello_init(void)
 {
@@ -93,7 +92,7 @@ return 0;
 
 void hello_cleanup(void)
 {
-const struct list_head *pos;
+struct list_head *pos;
 
 list_for_each(pos, &my_list) {
 	const struct data *tmp = list_entry(pos, struct data, head);
