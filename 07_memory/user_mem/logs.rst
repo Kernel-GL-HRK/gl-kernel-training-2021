@@ -1,531 +1,584 @@
 
 .. code-block:: bash
 
-    oshlikhta@kbp1-lhp-a10111:~/pro_camp/task_7/user_mem$ make build                                                                                                                                                                  
-    gcc -Wall -Werror -Wpedantic -O2 -std=gnu11 -I inc -c user_mem.c -o user_mem.o
-    gcc -o usermem user_mem.o 
-    oshlikhta@kbp1-lhp-a10111:~/pro_camp/task_7/user_mem$ ./usermem 
     ************************************************
     *****************MALLOC TESTING*****************
     ****************size = (2^x)+0******************
     ************************************************
     Iter No0
-    Start adress is 0x55da386e86b0
-    Alloc time = 605ns      Free time = 443ns
+    Start adress is 0x560a3b54d6b0
+    Alloc time = 138ns  Free time = 67ns
     Iter No1
-    Start adress is 0x55da386e86b0
-    Alloc time = 283ns      Free time = 154ns
+    Start adress is 0x560a3b54d6b0
+    Alloc time = 37ns   Free time = 25ns
     Iter No2
-    Start adress is 0x55da386e86b0
-    Alloc time = 105ns      Free time = 102ns
+    Start adress is 0x560a3b54d6b0
+    Alloc time = 20ns   Free time = 19ns
     Iter No3
-    Start adress is 0x55da386e86b0
-    Alloc time = 119ns      Free time = 103ns
+    Start adress is 0x560a3b54d6b0
+    Alloc time = 20ns   Free time = 19ns
     Iter No4
-    Start adress is 0x55da386e86b0
-    Alloc time = 259ns      Free time = 102ns
+    Start adress is 0x560a3b54d6b0
+    Alloc time = 38ns   Free time = 19ns
     Iter No5
-    Start adress is 0x55da386e86d0
-    Alloc time = 228ns      Free time = 101ns
+    Start adress is 0x560a3b54d6d0
+    Alloc time = 53ns   Free time = 19ns
     Iter No6
-    Start adress is 0x55da386e8700
-    Alloc time = 163ns      Free time = 111ns
+    Start adress is 0x560a3b54d700
+    Alloc time = 31ns   Free time = 25ns
     Iter No7
-    Start adress is 0x55da386e8750
-    Alloc time = 320ns      Free time = 104ns
+    Start adress is 0x560a3b54d750
+    Alloc time = 52ns   Free time = 19ns
     Iter No8
-    Start adress is 0x55da386e87e0
-    Alloc time = 390ns      Free time = 156ns
+    Start adress is 0x560a3b54d7e0
+    Alloc time = 33ns   Free time = 21ns
     Iter No9
-    Start adress is 0x55da386e88f0
-    Alloc time = 255ns      Free time = 105ns
+    Start adress is 0x560a3b54d8f0
+    Alloc time = 51ns   Free time = 19ns
     Iter No10
-    Start adress is 0x55da386e8b00
-    Alloc time = 541ns      Free time = 239ns
+    Start adress is 0x560a3b54db00
+    Alloc time = 151ns  Free time = 29ns
     Iter No11
-    Start adress is 0x55da386e8f10
-    Alloc time = 9986ns     Free time = 1033ns
+    Start adress is 0x560a3b54df10
+    Alloc time = 1562ns Free time = 258ns
     Iter No12
-    Start adress is 0x55da386e8f10
-    Alloc time = 396ns      Free time = 347ns
+    Start adress is 0x560a3b54df10
+    Alloc time = 62ns   Free time = 55ns
     Iter No13
-    Start adress is 0x55da386e8f10
-    Alloc time = 7143ns     Free time = 402ns
+    Start adress is 0x560a3b54df10
+    Alloc time = 1148ns Free time = 40ns
     Iter No14
-    Start adress is 0x55da386e8f10
-    Alloc time = 5378ns     Free time = 379ns
+    Start adress is 0x560a3b54df10
+    Alloc time = 970ns  Free time = 50ns
     Iter No15
-    Start adress is 0x55da386e8f10
-    Alloc time = 5124ns     Free time = 220ns
+    Start adress is 0x560a3b54df10
+    Alloc time = 996ns  Free time = 47ns
     Iter No16
-    Start adress is 0x55da386e8f10
-    Alloc time = 4019ns     Free time = 127ns
+    Start adress is 0x560a3b54df10
+    Alloc time = 940ns  Free time = 34ns
     Iter No17
-    Start adress is 0x55da386e8f10
-    Alloc time = 3867ns     Free time = 142ns
+    Start adress is 0x560a3b54df10
+    Alloc time = 724ns  Free time = 28ns
     Iter No18
-    Start adress is 0x7f726a8e8010
-    Alloc time = 13642ns    Free time = 18879ns
+    Start adress is 0x7f528d4ce010
+    Alloc time = 2344ns Free time = 3358ns
     Iter No19
-    Start adress is 0x7f726a8a8010
-    Alloc time = 6988ns     Free time = 6579ns
+    Start adress is 0x7f528d48e010
+    Alloc time = 1239ns Free time = 1149ns
     Iter No20
-    Start adress is 0x7f726a828010
-    Alloc time = 5667ns     Free time = 6337ns
+    Start adress is 0x7f528d40e010
+    Alloc time = 1376ns Free time = 1722ns
     Iter No21
-    Start adress is 0x7f726a12b010
-    Alloc time = 9286ns     Free time = 9949ns
+    Start adress is 0x7f528cd11010
+    Alloc time = 5849ns Free time = 2112ns
     Iter No22
-    Start adress is 0x7f7269f2b010
-    Alloc time = 7467ns     Free time = 7952ns
+    Start adress is 0x7f528cb11010
+    Alloc time = 1711ns Free time = 1508ns
     Iter No23
-    Start adress is 0x7f7269b2b010
-    Alloc time = 7485ns     Free time = 7512ns
+    Start adress is 0x7f528c711010
+    Alloc time = 2205ns Free time = 1639ns
     Iter No24
-    Start adress is 0x7f726932b010
-    Alloc time = 6824ns     Free time = 7490ns
+    Start adress is 0x7f528bf11010
+    Alloc time = 1941ns Free time = 2132ns
     Iter No25
-    Start adress is 0x7f726832b010
-    Alloc time = 6986ns     Free time = 7713ns
+    Start adress is 0x7f528af11010
+    Alloc time = 1927ns Free time = 1659ns
     Iter No26
-    Start adress is 0x7f726632b010
-    Alloc time = 6958ns     Free time = 8045ns
+    Start adress is 0x7f5288f11010
+    Alloc time = 1903ns Free time = 1670ns
     Iter No27
-    Start adress is 0x7f726232b010
-    Alloc time = 6757ns     Free time = 8786ns
+    Start adress is 0x7f5284f11010
+    Alloc time = 2138ns Free time = 1851ns
     Iter No28
-    Start adress is 0x7f725a32b010
-    Alloc time = 11768ns    Free time = 17774ns
+    Start adress is 0x7f527cf11010
+    Alloc time = 2150ns Free time = 2798ns
     Iter No29
-    Start adress is 0x7f724a32b010
-    Alloc time = 15740ns    Free time = 17250ns
+    Start adress is 0x7f526cf11010
+    Alloc time = 2068ns Free time = 3394ns
     Iter No30
-    Start adress is 0x7f722a32b010
-    Alloc time = 10529ns    Free time = 23359ns
+    Start adress is 0x7f524cf11010
+    Alloc time = 2118ns Free time = 4196ns
     Iter No31
-    Start adress is 0x7f71ea32b010
-    Alloc time = 9727ns     Free time = 22682ns
+    Start adress is 0x7f520cf11010
+    Alloc time = 1520ns Free time = 3979ns
     Iter No32
-    Start adress is 0x7f716a32b010
-    Alloc time = 9012ns     Free time = 22340ns
+    Start adress is 0x7f518cf11010
+    Alloc time = 1219ns Free time = 3998ns
     Iter No33
-    Start adress is 0x7f706a32b010
-    Alloc time = 8067ns     Free time = 21266ns
+    Start adress is 0x7f508cf11010
+    Alloc time = 1323ns Free time = 3868ns
     Iter No34
-    Start adress is 0x7f6e6a32b010
-    Alloc time = 9309ns     Free time = 22608ns
+    Start adress is 0x7f4e8cf11010
+    Alloc time = 1356ns Free time = 3956ns
     Iter No35
     Can't allocate:(
-    Aver allocating time is 3037ns  Aver freeing time is 3823ns
+    Aver allocating time is 647ns   Aver freeing time is 715ns
     ************************************************
     *****************CALLOC TESTING*****************
     ****************size = (2^x)+0******************
     ************************************************
     Iter No0
-    Start adress is 0x55da386e8f10
-    Alloc time = 1193ns     Free time = 278ns
+    Start adress is 0x560a3b54df10
+    Alloc time = 174ns  Free time = 40ns
     Iter No1
-    Start adress is 0x55da386e8f30
-    Alloc time = 249ns      Free time = 123ns
+    Start adress is 0x560a3b54df30
+    Alloc time = 37ns   Free time = 19ns
     Iter No2
-    Start adress is 0x55da386e8f50
-    Alloc time = 250ns      Free time = 108ns
+    Start adress is 0x560a3b54df50
+    Alloc time = 32ns   Free time = 19ns
     Iter No3
-    Start adress is 0x55da386e8f70
-    Alloc time = 171ns      Free time = 99ns
+    Start adress is 0x560a3b54df70
+    Alloc time = 32ns   Free time = 19ns
     Iter No4
-    Start adress is 0x55da386e8f90
-    Alloc time = 296ns      Free time = 138ns
+    Start adress is 0x560a3b54df90
+    Alloc time = 59ns   Free time = 18ns
     Iter No5
-    Start adress is 0x55da386e8fb0
-    Alloc time = 297ns      Free time = 103ns
+    Start adress is 0x560a3b54dfb0
+    Alloc time = 53ns   Free time = 19ns
     Iter No6
-    Start adress is 0x55da386e8fe0
-    Alloc time = 444ns      Free time = 197ns
+    Start adress is 0x560a3b54dfe0
+    Alloc time = 90ns   Free time = 30ns
     Iter No7
-    Start adress is 0x55da386e9030
-    Alloc time = 897ns      Free time = 101ns
+    Start adress is 0x560a3b54e030
+    Alloc time = 180ns  Free time = 19ns
     Iter No8
-    Start adress is 0x55da386e90c0
-    Alloc time = 391ns      Free time = 145ns
+    Start adress is 0x560a3b54e0c0
+    Alloc time = 113ns  Free time = 26ns
     Iter No9
-    Start adress is 0x55da386e91d0
-    Alloc time = 474ns      Free time = 158ns
+    Start adress is 0x560a3b54e1d0
+    Alloc time = 146ns  Free time = 18ns
     Iter No10
-    Start adress is 0x55da386e93e0
-    Alloc time = 495ns      Free time = 101ns
+    Start adress is 0x560a3b54e3e0
+    Alloc time = 126ns  Free time = 20ns
     Iter No11
-    Start adress is 0x55da386e97f0
-    Alloc time = 635ns      Free time = 549ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 152ns  Free time = 106ns
     Iter No12
-    Start adress is 0x55da386e97f0
-    Alloc time = 719ns      Free time = 121ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 222ns  Free time = 46ns
     Iter No13
-    Start adress is 0x55da386e97f0
-    Alloc time = 6092ns     Free time = 123ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 1182ns Free time = 22ns
     Iter No14
-    Start adress is 0x55da386e97f0
-    Alloc time = 5595ns     Free time = 188ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 1371ns Free time = 55ns
     Iter No15
-    Start adress is 0x55da386e97f0
-    Alloc time = 20141ns    Free time = 264ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 3370ns Free time = 35ns
     Iter No16
-    Start adress is 0x55da386e97f0
-    Alloc time = 39768ns    Free time = 264ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 7276ns Free time = 38ns
     Iter No17
-    Start adress is 0x55da386e97f0
-    Alloc time = 86828ns    Free time = 259ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 17555ns    Free time = 37ns
     Iter No18
-    Start adress is 0x55da386e97f0
-    Alloc time = 184787ns   Free time = 285ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 34332ns    Free time = 33ns
     Iter No19
-    Start adress is 0x55da386e97f0
-    Alloc time = 49129ns    Free time = 296ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 8317ns Free time = 33ns
     Iter No20
-    Start adress is 0x55da386e97f0
-    Alloc time = 522812ns   Free time = 304ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 94584ns    Free time = 50ns
     Iter No21
-    Start adress is 0x55da386e97f0
-    Alloc time = 755563ns   Free time = 379ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 146877ns   Free time = 62ns
     Iter No22
-    Start adress is 0x55da386e97f0
-    Alloc time = 1424759ns  Free time = 274ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 274701ns   Free time = 67ns
     Iter No23
-    Start adress is 0x55da386e97f0
-    Alloc time = 2848130ns  Free time = 595ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 559686ns   Free time = 134ns
     Iter No24
-    Start adress is 0x55da386e97f0
-    Alloc time = 5688293ns  Free time = 605ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 1143125ns  Free time = 210ns
     Iter No25
-    Start adress is 0x7f726832b010
-    Alloc time = 23816ns    Free time = 21348ns
+    Start adress is 0x7f528af11010
+    Alloc time = 5107ns Free time = 6220ns
     Iter No26
-    Start adress is 0x7f726632b010
-    Alloc time = 7948ns     Free time = 9389ns
+    Start adress is 0x7f5288f11010
+    Alloc time = 1545ns Free time = 1556ns
     Iter No27
-    Start adress is 0x7f726232b010
-    Alloc time = 7173ns     Free time = 8946ns
+    Start adress is 0x7f5284f11010
+    Alloc time = 1252ns Free time = 1591ns
     Iter No28
-    Start adress is 0x7f725a32b010
-    Alloc time = 7231ns     Free time = 12318ns
+    Start adress is 0x7f527cf11010
+    Alloc time = 1594ns Free time = 2265ns
     Iter No29
-    Start adress is 0x7f724a32b010
-    Alloc time = 11210ns    Free time = 15863ns
+    Start adress is 0x7f526cf11010
+    Alloc time = 1365ns Free time = 2609ns
     Iter No30
-    Start adress is 0x7f722a32b010
-    Alloc time = 13363ns    Free time = 23214ns
+    Start adress is 0x7f524cf11010
+    Alloc time = 1340ns Free time = 3881ns
     Iter No31
-    Start adress is 0x7f71ea32b010
-    Alloc time = 13455ns    Free time = 25643ns
+    Start adress is 0x7f520cf11010
+    Alloc time = 1765ns Free time = 3949ns
     Iter No32
-    Start adress is 0x7f716a32b010
-    Alloc time = 12600ns    Free time = 24615ns
+    Start adress is 0x7f518cf11010
+    Alloc time = 1498ns Free time = 3944ns
     Iter No33
-    Start adress is 0x7f706a32b010
-    Alloc time = 8625ns     Free time = 21592ns
+    Start adress is 0x7f508cf11010
+    Alloc time = 1338ns Free time = 3948ns
     Iter No34
-    Start adress is 0x7f6e6a32b010
-    Alloc time = 7645ns     Free time = 21546ns
+    Start adress is 0x7f4e8cf11010
+    Alloc time = 1441ns Free time = 3998ns
     Iter No35
     Can't allocate:(
-    Aver allocating time is 186531ns        Aver freeing time is 3024ns
+    Aver allocating time is 36125ns Aver freeing time is 549ns
     ************************************************
     *****************MALLOC TESTING*****************
     ****************size = (2^x)+1******************
     ************************************************
     Iter No0
-    Start adress is 0x55da386e8f70
-    Alloc time = 322ns      Free time = 163ns
+    Start adress is 0x560a3b54df70
+    Alloc time = 53ns   Free time = 27ns
     Iter No1
-    Start adress is 0x55da386e8f70
-    Alloc time = 208ns      Free time = 169ns
+    Start adress is 0x560a3b54df70
+    Alloc time = 28ns   Free time = 19ns
     Iter No2
-    Start adress is 0x55da386e8f70
-    Alloc time = 203ns      Free time = 99ns
+    Start adress is 0x560a3b54df70
+    Alloc time = 28ns   Free time = 19ns
     Iter No3
-    Start adress is 0x55da386e8f70
-    Alloc time = 179ns      Free time = 98ns
+    Start adress is 0x560a3b54df70
+    Alloc time = 28ns   Free time = 19ns
     Iter No4
-    Start adress is 0x55da386e8f70
-    Alloc time = 309ns      Free time = 102ns
+    Start adress is 0x560a3b54df70
+    Alloc time = 30ns   Free time = 19ns
     Iter No5
-    Start adress is 0x55da386e8fb0
-    Alloc time = 179ns      Free time = 104ns
+    Start adress is 0x560a3b54dfb0
+    Alloc time = 26ns   Free time = 19ns
     Iter No6
-    Start adress is 0x55da386e8fe0
-    Alloc time = 125ns      Free time = 103ns
+    Start adress is 0x560a3b54dfe0
+    Alloc time = 22ns   Free time = 19ns
     Iter No7
-    Start adress is 0x55da386e9030
-    Alloc time = 195ns      Free time = 102ns
+    Start adress is 0x560a3b54e030
+    Alloc time = 88ns   Free time = 19ns
     Iter No8
-    Start adress is 0x55da386e90c0
-    Alloc time = 143ns      Free time = 104ns
+    Start adress is 0x560a3b54e0c0
+    Alloc time = 24ns   Free time = 20ns
     Iter No9
-    Start adress is 0x55da386e91d0
-    Alloc time = 143ns      Free time = 103ns
+    Start adress is 0x560a3b54e1d0
+    Alloc time = 25ns   Free time = 18ns
     Iter No10
-    Start adress is 0x55da386e93e0
-    Alloc time = 300ns      Free time = 104ns
+    Start adress is 0x560a3b54e3e0
+    Alloc time = 93ns   Free time = 33ns
     Iter No11
-    Start adress is 0x55da386e97f0
-    Alloc time = 1498ns     Free time = 282ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 384ns  Free time = 48ns
     Iter No12
-    Start adress is 0x55da386e97f0
-    Alloc time = 357ns      Free time = 117ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 114ns  Free time = 39ns
     Iter No13
-    Start adress is 0x55da386e97f0
-    Alloc time = 435ns      Free time = 263ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 93ns   Free time = 22ns
     Iter No14
-    Start adress is 0x55da386e97f0
-    Alloc time = 412ns      Free time = 167ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 129ns  Free time = 42ns
     Iter No15
-    Start adress is 0x55da386e97f0
-    Alloc time = 408ns      Free time = 125ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 99ns   Free time = 39ns
     Iter No16
-    Start adress is 0x55da386e97f0
-    Alloc time = 264ns      Free time = 120ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 70ns   Free time = 37ns
     Iter No17
-    Start adress is 0x55da386e97f0
-    Alloc time = 305ns      Free time = 118ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 123ns  Free time = 43ns
     Iter No18
-    Start adress is 0x55da386e97f0
-    Alloc time = 323ns      Free time = 115ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 54ns   Free time = 37ns
     Iter No19
-    Start adress is 0x55da386e97f0
-    Alloc time = 230ns      Free time = 115ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 43ns   Free time = 34ns
     Iter No20
-    Start adress is 0x55da386e97f0
-    Alloc time = 218ns      Free time = 115ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 156ns  Free time = 25ns
     Iter No21
-    Start adress is 0x55da386e97f0
-    Alloc time = 430ns      Free time = 120ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 55ns   Free time = 38ns
     Iter No22
-    Start adress is 0x55da386e97f0
-    Alloc time = 283ns      Free time = 236ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 110ns  Free time = 32ns
     Iter No23
-    Start adress is 0x55da386e97f0
-    Alloc time = 249ns      Free time = 122ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 102ns  Free time = 26ns
     Iter No24
-    Start adress is 0x55da386e97f0
-    Alloc time = 358ns      Free time = 199ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 170ns  Free time = 26ns
     Iter No25
-    Start adress is 0x7f726832b010
-    Alloc time = 12011ns    Free time = 10309ns
+    Start adress is 0x7f528af11010
+    Alloc time = 2390ns Free time = 2104ns
     Iter No26
-    Start adress is 0x7f726632b010
-    Alloc time = 10843ns    Free time = 9781ns
+    Start adress is 0x7f5288f11010
+    Alloc time = 1493ns Free time = 1514ns
     Iter No27
-    Start adress is 0x7f726232b010
-    Alloc time = 7368ns     Free time = 9027ns
+    Start adress is 0x7f5284f11010
+    Alloc time = 1271ns Free time = 1768ns
     Iter No28
-    Start adress is 0x7f725a32b010
-    Alloc time = 6801ns     Free time = 10532ns
+    Start adress is 0x7f527cf11010
+    Alloc time = 1421ns Free time = 2035ns
     Iter No29
-    Start adress is 0x7f724a32b010
-    Alloc time = 6946ns     Free time = 13870ns
+    Start adress is 0x7f526cf11010
+    Alloc time = 1364ns Free time = 2643ns
     Iter No30
-    Start adress is 0x7f722a32b010
-    Alloc time = 7935ns     Free time = 21585ns
+    Start adress is 0x7f524cf11010
+    Alloc time = 1403ns Free time = 3870ns
     Iter No31
-    Start adress is 0x7f71ea32b010
-    Alloc time = 7970ns     Free time = 21280ns
+    Start adress is 0x7f520cf11010
+    Alloc time = 1403ns Free time = 3913ns
     Iter No32
-    Start adress is 0x7f716a32b010
-    Alloc time = 13320ns    Free time = 24270ns
+    Start adress is 0x7f518cf11010
+    Alloc time = 1373ns Free time = 3951ns
     Iter No33
-    Start adress is 0x7f706a32b010
-    Alloc time = 7932ns     Free time = 21910ns
+    Start adress is 0x7f508cf11010
+    Alloc time = 1316ns Free time = 3982ns
     Iter No34
-    Start adress is 0x7f6e6a32b010
-    Alloc time = 8017ns     Free time = 21297ns
+    Start adress is 0x7f4e8cf11010
+    Alloc time = 1392ns Free time = 3960ns
     Iter No35
     Can't allocate:(
-    Aver allocating time is 1543ns  Aver freeing time is 2655ns
+    Aver allocating time is 265ns   Aver freeing time is 475ns
     ************************************************
     *****************CALLOC TESTING*****************
     ****************size = (2^x)+1******************
     ************************************************
     Iter No0
-    Start adress is 0x55da386e8260
-    Alloc time = 853ns      Free time = 202ns
+    Start adress is 0x560a3b54d260
+    Alloc time = 185ns  Free time = 32ns
     Iter No1
-    Start adress is 0x55da386e97f0
-    Alloc time = 557ns      Free time = 148ns
+    Start adress is 0x560a3b54e7f0
+    Alloc time = 99ns   Free time = 34ns
     Iter No2
-    Start adress is 0x55da386e9810
-    Alloc time = 380ns      Free time = 309ns
+    Start adress is 0x560a3b54e810
+    Alloc time = 63ns   Free time = 81ns
     Iter No3
-    Start adress is 0x55da386e9810
-    Alloc time = 478ns      Free time = 233ns
+    Start adress is 0x560a3b54e810
+    Alloc time = 60ns   Free time = 41ns
     Iter No4
-    Start adress is 0x55da386e9810
-    Alloc time = 457ns      Free time = 219ns
+    Start adress is 0x560a3b54e810
+    Alloc time = 45ns   Free time = 27ns
     Iter No5
-    Start adress is 0x55da386e9830
-    Alloc time = 595ns      Free time = 286ns
+    Start adress is 0x560a3b54e830
+    Alloc time = 82ns   Free time = 33ns
     Iter No6
-    Start adress is 0x55da386e9860
-    Alloc time = 420ns      Free time = 236ns
+    Start adress is 0x560a3b54e860
+    Alloc time = 124ns  Free time = 32ns
     Iter No7
-    Start adress is 0x55da386e98b0
-    Alloc time = 1038ns     Free time = 174ns
+    Start adress is 0x560a3b54e8b0
+    Alloc time = 249ns  Free time = 43ns
     Iter No8
-    Start adress is 0x55da386e9940
-    Alloc time = 677ns      Free time = 186ns
+    Start adress is 0x560a3b54e940
+    Alloc time = 172ns  Free time = 31ns
     Iter No9
-    Start adress is 0x55da386e9a50
-    Alloc time = 571ns      Free time = 260ns
+    Start adress is 0x560a3b54ea50
+    Alloc time = 148ns  Free time = 34ns
     Iter No10
-    Start adress is 0x55da386e9c60
-    Alloc time = 1311ns     Free time = 113ns
+    Start adress is 0x560a3b54ec60
+    Alloc time = 256ns  Free time = 19ns
     Iter No11
-    Start adress is 0x55da386ea070
-    Alloc time = 634ns      Free time = 246ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 142ns  Free time = 49ns
     Iter No12
-    Start adress is 0x55da386ea070
-    Alloc time = 848ns      Free time = 176ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 202ns  Free time = 53ns
     Iter No13
-    Start adress is 0x55da386ea070
-    Alloc time = 1449ns     Free time = 187ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 299ns  Free time = 44ns
     Iter No14
-    Start adress is 0x55da386ea070
-    Alloc time = 2024ns     Free time = 181ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 542ns  Free time = 48ns
     Iter No15
-    Start adress is 0x55da386ea070
-    Alloc time = 3637ns     Free time = 198ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 708ns  Free time = 42ns
     Iter No16
-    Start adress is 0x55da386ea070
-    Alloc time = 8598ns     Free time = 175ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 1621ns Free time = 42ns
     Iter No17
-    Start adress is 0x55da386ea070
-    Alloc time = 16735ns    Free time = 140ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 9451ns Free time = 43ns
     Iter No18
-    Start adress is 0x55da386ea070
-    Alloc time = 35000ns    Free time = 182ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 6018ns Free time = 35ns
     Iter No19
-    Start adress is 0x55da386ea070
-    Alloc time = 65441ns    Free time = 175ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 12716ns    Free time = 85ns
     Iter No20
-    Start adress is 0x55da386ea070
-    Alloc time = 138779ns   Free time = 153ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 24915ns    Free time = 30ns
     Iter No21
-    Start adress is 0x55da386ea070
-    Alloc time = 267413ns   Free time = 145ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 45614ns    Free time = 1002ns
     Iter No22
-    Start adress is 0x55da386ea070
-    Alloc time = 569569ns   Free time = 244ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 97024ns    Free time = 36ns
     Iter No23
-    Start adress is 0x55da386ea070
-    Alloc time = 1252329ns  Free time = 619ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 217818ns   Free time = 551ns
     Iter No24
-    Start adress is 0x55da386ea070
-    Alloc time = 12690595ns Free time = 858ns
+    Start adress is 0x560a3b54f070
+    Alloc time = 2658782ns  Free time = 303ns
     Iter No25
-    Start adress is 0x7f726832b010
-    Alloc time = 22497ns    Free time = 35295ns
+    Start adress is 0x7f528af11010
+    Alloc time = 7652ns Free time = 6660ns
     Iter No26
-    Start adress is 0x7f726632b010
-    Alloc time = 10502ns    Free time = 10393ns
+    Start adress is 0x7f5288f11010
+    Alloc time = 2200ns Free time = 1795ns
     Iter No27
-    Start adress is 0x7f726232b010
-    Alloc time = 9991ns     Free time = 9548ns
+    Start adress is 0x7f5284f11010
+    Alloc time = 2482ns Free time = 2642ns
     Iter No28
-    Start adress is 0x7f725a32b010
-    Alloc time = 6490ns     Free time = 7815ns
+    Start adress is 0x7f527cf11010
+    Alloc time = 4650ns Free time = 2905ns
     Iter No29
-    Start adress is 0x7f724a32b010
-    Alloc time = 7304ns     Free time = 13522ns
+    Start adress is 0x7f526cf11010
+    Alloc time = 2076ns Free time = 2785ns
     Iter No30
-    Start adress is 0x7f722a32b010
-    Alloc time = 9814ns     Free time = 22757ns
+    Start adress is 0x7f524cf11010
+    Alloc time = 1466ns Free time = 3931ns
     Iter No31
-    Start adress is 0x7f71ea32b010
-    Alloc time = 6229ns     Free time = 14941ns
+    Start adress is 0x7f520cf11010
+    Alloc time = 6718ns Free time = 3980ns
     Iter No32
-    Start adress is 0x7f716a32b010
-    Alloc time = 5457ns     Free time = 14139ns
+    Start adress is 0x7f518cf11010
+    Alloc time = 1614ns Free time = 3985ns
     Iter No33
-    Start adress is 0x7f706a32b010
-    Alloc time = 4822ns     Free time = 14107ns
+    Start adress is 0x7f508cf11010
+    Alloc time = 2198ns Free time = 4093ns
     Iter No34
-    Start adress is 0x7f6e6a32b010
-    Alloc time = 4940ns     Free time = 14118ns
+    Start adress is 0x7f4e8cf11010
+    Alloc time = 1875ns Free time = 9578ns
     Iter No35
     Can't allocate:(
-    Aver allocating time is 240451ns        Aver freeing time is 2582ns
+    Aver allocating time is 48597ns Aver freeing time is 705ns
     ************************************************
     *****************ALLOCA TESTING*****************
     ****************size = (2^x)+0******************
     ************************************************
     Iter No0
-    Start adress is 0x7fffb2149340
-    Alloc time = 139ns      Free time = 0ns
+    Alloc time = 38ns   Free time = 0ns
     Iter No1
-    Start adress is 0x7fffb2149330
-    Alloc time = 74ns       Free time = 0ns
+    Alloc time = 21ns   Free time = 0ns
     Iter No2
-    Start adress is 0x7fffb2149330
-    Alloc time = 71ns       Free time = 0ns
+    Alloc time = 20ns   Free time = 0ns
     Iter No3
-    Start adress is 0x7fffb2149330
-    Alloc time = 71ns       Free time = 0ns
+    Alloc time = 15ns   Free time = 0ns
     Iter No4
-    Start adress is 0x7fffb2149330
-    Alloc time = 53ns       Free time = 0ns
+    Alloc time = 20ns   Free time = 0ns
     Iter No5
-    Start adress is 0x7fffb2149320
-    Alloc time = 53ns       Free time = 0ns
+    Alloc time = 17ns   Free time = 0ns
     Iter No6
-    Start adress is 0x7fffb2149300
-    Alloc time = 53ns       Free time = 0ns
+    Alloc time = 15ns   Free time = 0ns
     Iter No7
-    Start adress is 0x7fffb21492c0
-    Alloc time = 57ns       Free time = 0ns
+    Alloc time = 18ns   Free time = 0ns
     Iter No8
-    Start adress is 0x7fffb2149240
-    Alloc time = 54ns       Free time = 0ns
+    Alloc time = 14ns   Free time = 0ns
     Iter No9
-    Start adress is 0x7fffb2149140
-    Alloc time = 54ns       Free time = 0ns
+    Alloc time = 15ns   Free time = 0ns
     Iter No10
-    Start adress is 0x7fffb2148f40
-    Alloc time = 53ns       Free time = 0ns
+    Alloc time = 15ns   Free time = 0ns
     Iter No11
-    Start adress is 0x7fffb2148b40
-    Alloc time = 54ns       Free time = 0ns
+    Alloc time = 15ns   Free time = 0ns
     Iter No12
-    Start adress is 0x7fffb2148340
-    Alloc time = 60ns       Free time = 0ns
+    Alloc time = 18ns   Free time = 0ns
     Iter No13
-    Start adress is 0x7fffb2147340
-    Alloc time = 5153ns     Free time = 0ns
+    Alloc time = 20ns   Free time = 0ns
     Iter No14
-    Start adress is 0x7fffb2145340
-    Alloc time = 2554ns     Free time = 0ns
+    Alloc time = 17ns   Free time = 0ns
     Iter No15
-    Start adress is 0x7fffb2141340
-    Alloc time = 4066ns     Free time = 0ns
+    Alloc time = 19ns   Free time = 0ns
     Iter No16
-    Start adress is 0x7fffb2139340
-    Alloc time = 3576ns     Free time = 0ns
+    Alloc time = 21ns   Free time = 0ns
     Iter No17
-    Start adress is 0x7fffb2129340
-    Alloc time = 5675ns     Free time = 0ns
+    Alloc time = 15ns   Free time = 0ns
     Iter No18
-    Start adress is 0x7fffb2109340
-    Alloc time = 3462ns     Free time = 0ns
+    Alloc time = 15ns   Free time = 0ns
     Iter No19
-    Start adress is 0x7fffb20c9340
-    Alloc time = 3277ns     Free time = 0ns
+    Alloc time = 14ns   Free time = 0ns
     Iter No20
-    Start adress is 0x7fffb2049340
-    Alloc time = 3231ns     Free time = 0ns
+    Alloc time = 14ns   Free time = 0ns
     Iter No21
-    Start adress is 0x7fffb1f49340
-    Alloc time = 4879ns     Free time = 0ns
+    Alloc time = 15ns   Free time = 0ns
     Iter No22
-    Start adress is 0x7fffb1d49340
-    Alloc time = 3527ns     Free time = 0ns
+    Alloc time = 14ns   Free time = 0ns
     Iter No23
-    Segmentation fault (core dumped)
-    oshlikhta@kbp1-lhp-a10111:~/pro_camp/task_7/user_mem$ 
+    Alloc time = 14ns   Free time = 0ns
+    Iter No24
+    Alloc time = 16ns   Free time = 0ns
+    Iter No25
+    Alloc time = 15ns   Free time = 0ns
+    Iter No26
+    Alloc time = 15ns   Free time = 0ns
+    Iter No27
+    Alloc time = 15ns   Free time = 0ns
+    Iter No28
+    Alloc time = 15ns   Free time = 0ns
+    Iter No29
+    Alloc time = 15ns   Free time = 0ns
+    Iter No30
+    Alloc time = 16ns   Free time = 0ns
+    Iter No31
+    Alloc time = 16ns   Free time = 0ns
+    Iter No32
+    Alloc time = 15ns   Free time = 0ns
+    Iter No33
+    Alloc time = 15ns   Free time = 0ns
+    Iter No34
+    Alloc time = 15ns   Free time = 0ns
+    Iter No35
+    Alloc time = 16ns   Free time = 0ns
+    Iter No36
+    Alloc time = 14ns   Free time = 0ns
+    Iter No37
+    Alloc time = 15ns   Free time = 0ns
+    Iter No38
+    Alloc time = 14ns   Free time = 0ns
+    Iter No39
+    Alloc time = 16ns   Free time = 0ns
+    Iter No40
+    Alloc time = 15ns   Free time = 0ns
+    Iter No41
+    Alloc time = 15ns   Free time = 0ns
+    Iter No42
+    Alloc time = 14ns   Free time = 0ns
+    Iter No43
+    Alloc time = 16ns   Free time = 0ns
+    Iter No44
+    Alloc time = 15ns   Free time = 0ns
+    Iter No45
+    Alloc time = 14ns   Free time = 0ns
+    Iter No46
+    Alloc time = 14ns   Free time = 0ns
+    Iter No47
+    Alloc time = 15ns   Free time = 0ns
+    Iter No48
+    Alloc time = 14ns   Free time = 0ns
+    Iter No49
+    Alloc time = 15ns   Free time = 0ns
+    Iter No50
+    Alloc time = 14ns   Free time = 0ns
+    Iter No51
+    Alloc time = 14ns   Free time = 0ns
+    Iter No52
+    Alloc time = 15ns   Free time = 0ns
+    Iter No53
+    Alloc time = 15ns   Free time = 0ns
+    Iter No54
+    Alloc time = 15ns   Free time = 0ns
+    Iter No55
+    Alloc time = 16ns   Free time = 0ns
+    Iter No56
+    Alloc time = 14ns   Free time = 0ns
+    Iter No57
+    Alloc time = 15ns   Free time = 0ns
+    Iter No58
+    Alloc time = 15ns   Free time = 0ns
+    Iter No59
+    Alloc time = 21ns   Free time = 0ns
+    Iter No60
+    Alloc time = 15ns   Free time = 0ns
+    Iter No61
+    Alloc time = 14ns   Free time = 0ns
+    Iter No62
+    Alloc time = 16ns   Free time = 0ns
+    Iter No63
+    Alloc time = 13ns   Free time = 0ns
+    Aver allocating time is 15ns    Aver freeing time is 0ns

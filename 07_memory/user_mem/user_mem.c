@@ -37,6 +37,24 @@ enum mem_func {
 	ALLOCA_F
 };
 
+bool check_alloca_time(uint64_t size, struct alloc_free_time *t)
+{
+	uint8_t *tmp;
+	struct timespec t1, t2;
+	t->free_time = 0;
+
+	clock_gettime(CLOCK_REALTIME, &t2);
+	tmp = alloca(size * sizeof(*tmp));
+	clock_gettime(CLOCK_REALTIME, &t1);
+	t->alloc_time = get_diff(t1, t2);
+
+	if (tmp == NULL)
+		return false;
+
+	return true;
+}
+
+
 bool check_time(uint64_t size, struct alloc_free_time *t, enum mem_func func)
 {
 	uint8_t *tmp;
@@ -47,7 +65,6 @@ bool check_time(uint64_t size, struct alloc_free_time *t, enum mem_func func)
 	switch(func) {
 		case MALLOC_F: tmp = malloc(size * sizeof(*tmp));   break;
 		case CALLOC_F: tmp = calloc(size, sizeof(*tmp));    break;
-		case ALLOCA_F: tmp = alloca(sizeof(*tmp) * size);   break;
 		default: tmp = NULL;                                break;
 	}
 
@@ -55,22 +72,16 @@ bool check_time(uint64_t size, struct alloc_free_time *t, enum mem_func func)
 
 	t->ptr = tmp;
 
-	if (tmp == NULL)
-		return false;
-
 	t->alloc_time = get_diff(t1, t2);
 
-	if (func == ALLOCA_F) {
-		t->free_time = 0;
-		goto ret;    
-	}
+	if (tmp == NULL)
+		return false;
 
 	clock_gettime(CLOCK_REALTIME, &t2);
 	free(tmp);
 	clock_gettime(CLOCK_REALTIME, &t1);
 	t->free_time = get_diff(t1, t2);
 
-ret:
 	return true;
 }
 
@@ -98,9 +109,12 @@ void test_and_print(char *text, uint8_t adding, enum mem_func func)
 
 		size = POW2(i);
 
-		flag = check_time(size, t, func);
+		if (func == ALLOCA_F)
+			flag = check_alloca_time(size, t);
+		else
+			flag = check_time(size, t, func);
 
-		if(flag == false) {
+		if (flag == false) {
 			printf("Can't allocate:(\n");
 			break;
 		}
@@ -108,7 +122,9 @@ void test_and_print(char *text, uint8_t adding, enum mem_func func)
 		t_aver->alloc_time += t->alloc_time;
 		t_aver->free_time += t->free_time;
 
-		printf("Start adress is %p\n", t->ptr);
+		if (func != ALLOCA_F)
+			printf("Start adress is %p\n", t->ptr);
+		
 		printf("Alloc time = %ldns\t", t->alloc_time);
 		printf("Free time = %ldns\n", t->free_time);
 	}
