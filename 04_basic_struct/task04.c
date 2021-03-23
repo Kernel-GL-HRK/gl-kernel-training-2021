@@ -30,16 +30,25 @@ static ssize_t hello_show(struct class *class,
 			  struct class_attribute *attr, char *buf)
 {
 
+int x;
+int n;
+
 if (list_empty(&my_list)) {
-	sprintf(buf, "List is empty:(\n");
+	pr_info("List is empty:(\n");
 } else {
 	struct data *tmp;
 
+	x = 0;
+	n = 0;
 	list_for_each_entry(tmp, &my_list, head) {
-		pr_info("%s\n", tmp->text);
+
+		n = snprintf(buf + x, PAGE_SIZE - x, "%s\n", tmp->text);
+		if (n < 0)
+			return -EINVAL;
+		x = x + n;
 	}
 
-	sprintf(buf, "List has printed successfuly:)\n");
+	pr_info("List has printed successfuly:)\n");
 
 	}
 
@@ -58,7 +67,7 @@ pr_info("write %ld\n", (long)count);
 tmp = kzalloc(sizeof(*tmp), GFP_KERNEL);
 strncpy(tmp->text, buf, LEN_MSG);
 list_add_tail(&(tmp->head), &my_list);
-pr_info("String was written successfuly\n", buf_msg);
+pr_info("String was written successfuly\n");
 
 return count;
 }
