@@ -83,9 +83,16 @@ int __init hello_init(void)
 {
 int res;
 hello_class = class_create(THIS_MODULE, "hello-class");
-if (IS_ERR(hello_class))
+if (IS_ERR(hello_class)) {
 	pr_err("bad class create\n");
+	return -EINVAL;
+}
 res = class_create_file(hello_class, &class_attr_hello);
+if (res == NULL) {
+	pr_err("bad class create\n");
+	class_destroy(hello_class);
+	return -EINVAL;
+}
 pr_info("'hello' module initialized\n");
 return 0;
 }
