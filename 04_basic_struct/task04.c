@@ -15,8 +15,6 @@ MODULE_LICENSE("Dual MIT/GPL"); // this affects the kernel behavior
 
 #define LEN_MSG 160
 
-static char buf_msg[LEN_MSG + 1];
-
 static LIST_HEAD(my_list);
 
 const struct data {
@@ -57,10 +55,8 @@ if (count > LEN_MSG) {
 	return -EINVAL;
 }
 pr_info("write %ld\n", (long)count);
-strncpy(buf_msg, buf, count);
-buf_msg[count] = '\0';
 tmp = kzalloc(sizeof(*tmp), GFP_KERNEL);
-strcpy(tmp->text, buf_msg);
+strncpy(tmp->text, buf, LEN_MSG);
 list_add_tail(&(tmp->head), &my_list);
 pr_info("String was written successfuly\n", buf_msg);
 
