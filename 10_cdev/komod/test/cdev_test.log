@@ -1,0 +1,46 @@
+/home # sh cdev_test.sh 
+GL Kernel Training 2021
+10_cdev task character device demo
+Enter chrdev buffer size (enter to default 1K): 
+2048
+Setting buffer size to 2048...
+[ 5810.716712] Exit from 10_cdev module
+[ 5810.761872] GL Kernel Training 2021
+w - write msg
+r - read msg
+c - clear buffer
+s - get buffer size
+v - get buffer volume
+d - print debug info
+h - print help
+q - quit
+w
+Enter message: 
+hello!
+Message written!
+
+r
+hello!
+
+s
+Buffer size: 2048 bytes
+
+v
+Buffer volume: 7 bytes
+
+d
+bytes_read      7
+bytes_written   7
+clean_count     0
+c
+Buffer has been cleaned!
+
+d
+bytes_read      7
+bytes_written   7
+clean_count     1
+r
+[ 5857.405058] GL Buffer is empty!
+
+q                                                                                           
+[ 5924.685192] Exit from 10_cdev module 
