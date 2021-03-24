@@ -11,7 +11,7 @@
 
 
 MODULE_AUTHOR("Vitalii Irkha <vitalii.o.irkha@globallogic.com");
-MODULE_DESCRIPTION("Memory managenent in Linux Kernel Training");
+MODULE_DESCRIPTION("Interrupt handling in Linux Kernel Training");
 MODULE_LICENSE("Dual BSD/GPL");
 MODULE_VERSION("0.1");
 
