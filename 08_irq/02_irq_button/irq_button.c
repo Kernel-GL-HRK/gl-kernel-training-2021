@@ -177,6 +177,7 @@ static void __exit irq_button_exit(void)
 
 	disable_irq(irq);
 	free_irq(irq, &my_id);
+	gpio_set_debounce(GPIO_BUTTON, 0);
 	gpio_free(GPIO_BUTTON);
 	gpio_free(GPIO_LED);
 	pr_info("Deinit GPIO\n");
