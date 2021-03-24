@@ -1,0 +1,26 @@
+From 004470bf5bd07e25783104aac9b1e765c3532fda Mon Sep 17 00:00:00 2001
+From: Vadym Kharchuk <vadimkharchuk@gmail.com>
+Date: Wed, 17 Mar 2021 00:13:01 +0200
+Subject: [PATCH 2/2] 09_dt_rtc: Change default eeprom3 to AT24C32
+
+Signed-off-by: Vadym Kharchuk <vadimkharchuk@gmail.com>
+---
+ arch/arm/boot/dts/am335x-boneblack.dts | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack.dts b/arch/arm/boot/dts/am335x-boneblack.dts
+index 90dad696c3e6..7ab55f7b396e 100644
+--- a/arch/arm/boot/dts/am335x-boneblack.dts
++++ b/arch/arm/boot/dts/am335x-boneblack.dts
+@@ -32,4 +32,8 @@
+ 		compatible = "maxim,ds3231";
+ 		reg = <0x68>;
+ 	};
++
++	cape_eeprom3: cape_eeprom3@57 {
++		compatible = "atmel,24c32";
++	};
+ };
+-- 
+2.25.1
+

@@ -1,0 +1,28 @@
+From b1ffa9c3dafad82e91bd50ba88a972cb013f204f Mon Sep 17 00:00:00 2001
+From: Vadym Kharchuk <vadimkharchuk@gmail.com>
+Date: Wed, 17 Mar 2021 00:09:14 +0200
+Subject: [PATCH 1/2] 09_dt_rtc: Add ds3231 support
+
+Signed-off-by: Vadym Kharchuk <vadimkharchuk@gmail.com>
+---
+ arch/arm/boot/dts/am335x-boneblack.dts | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack.dts b/arch/arm/boot/dts/am335x-boneblack.dts
+index d154d3133c16..90dad696c3e6 100644
+--- a/arch/arm/boot/dts/am335x-boneblack.dts
++++ b/arch/arm/boot/dts/am335x-boneblack.dts
+@@ -26,3 +26,10 @@
+ 		opp-supported-hw = <0x06 0x0100>;
+ 	};
+ };
++
++&i2c2 {
++	rtc0: ds3231@0 {
++		compatible = "maxim,ds3231";
++		reg = <0x68>;
++	};
++};
+-- 
+2.25.1
+

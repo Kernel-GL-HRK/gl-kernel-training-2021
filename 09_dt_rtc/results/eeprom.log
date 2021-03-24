@@ -1,0 +1,12 @@
+/ # echo 255 > /sys/bus/i2c/devices/2-0057/eeprom
+/ #
+
+/ #
+/ # cat /sys/bus/i2c/devices/2-0057/eeprom | hexdump -C
+00000000  32 35 35 0a ff ff ff ff  ff ff ff ff ff ff ff ff  |255.............|
+00000010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00001000
+/ #
+/ #
+
