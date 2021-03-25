@@ -1,0 +1,33 @@
+/ # 
+/ # 
+/ # dmesg | grep 'rtc'
+[    2.079035] rtc-ds1307 2-0068: registered as rtc0
+[    2.161474] rtc-ds1307 2-0068: setting system clock to 2021-03-18 14:49:21 UTC (1616078961)
+/ # 
+/ # 
+/ # date -s "2021-03-18 14:50:00" 
+Thu Mar 18 14:50:00 UTC 2021
+/ # hwclock -w -f /dev/rtc0 
+/ # hwclock
+Thu Mar 18 14:50:23 2021  0.000000 seconds
+/ # 
+/ # reboot
+...
+
+Please press Enter to activate this console. 
+
+/ # 
+/ # dmesg | grep 'rtc'
+[    2.089514] rtc-ds1307 2-0068: registered as rtc0
+[    2.172047] rtc-ds1307 2-0068: setting system clock to 2021-03-18 14:51:20 UTC (1616079080)
+/ # hwclock
+Thu Mar 18 14:51:32 2021  0.000000 seconds
+/ # date
+Thu Mar 18 14:51:39 UTC 2021
+/ # 
+/ # find ./sys/firmware/devicetree/ | grep ds32
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/compatible
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/reg
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/name
+/ #
