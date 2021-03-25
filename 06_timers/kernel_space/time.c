@@ -15,32 +15,31 @@ MODULE_VERSION("0.1");
 MODULE_LICENSE("Dual MIT/GPL"); // this affects the kernel behavior
 
 #define LEN_MSG 160
-#define CLASS_ATTR(_name, _mode, _show, _store)                                \
-struct class_attribute class_attr_##_name =                                  \
+#define CLASS_ATTR(_name, _mode, _show, _store)				\
+struct class_attribute class_attr_##_name =				\
 __ATTR(_name, _mode, _show, _store)
 
 static char buf_msg[LEN_MSG + 1] = "Hello from module!\n";
 static ktime_t currtime;
 static ktime_t pasttime;
-static long prev;
+static ktime_t prev;
 
 static ssize_t x_show(struct class *class, struct class_attribute *attr,
 			char *buf)
 {
-struct timespec cur, past;
+	struct timespec time;
 
-currtime = ktime_get();
-cur = ktime_to_timespec(currtime);
-past = ktime_to_timespec(pasttime);
-strcpy(buf, buf_msg);
+	currtime = ktime_get();
+	time = ktime_to_timespec(currtime - pasttime);
+	strcpy(buf, buf_msg);
+	pr_info("read %ld\n", (long)strlen(buf));
+	pr_info("time: %d.%09ld sec\n", time.tv_sec, time.tv_nsec);
+	time = ktime_to_timespec(prev);
+	pr_info("previous time: %d.%09ld sec\n", time.tv_sec, time.tv_nsec);
+	prev = currtime - pasttime;
+	pasttime = currtime;
 
-pr_info("read %ld\n", (long)strlen(buf));
-pr_info("time: %ld\n", cur.tv_nsec - past.tv_nsec);
-pr_info("previous time: %ld\n", prev);
-prev = cur.tv_nsec - past.tv_nsec;
-pasttime = currtime;
-
-return strlen(buf);
+	return strlen(buf);
 }
 
 
@@ -50,22 +49,22 @@ static struct class *x_class;
 
 int __init x_init(void)
 {
-int res;
-x_class = class_create(THIS_MODULE, "x-class");
-if (IS_ERR(x_class))
-	pr_err("bad class create\n");
-res = class_create_file(x_class, &class_attr_xxx);
-pr_info("'xxx' module initialized\n");
+	int res;
 
-return res;
+	x_class = class_create(THIS_MODULE, "x-class");
+	if (IS_ERR(x_class)) {
+		pr_err("bad class create\n");
+	}
+	res = class_create_file(x_class, &class_attr_xxx);
+	pr_info("'xxx' module initialized\n");
+
+	return res;
 }
 
-void x_cleanup(void)
+void __exit x_cleanup(void)
 {
-
-class_remove_file(x_class, &class_attr_xxx);
-class_destroy(x_class);
-return;
+	class_remove_file(x_class, &class_attr_xxx);
+	class_destroy(x_class);
 }
 
 module_init(x_init);
