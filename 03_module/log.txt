@@ -1,0 +1,20 @@
+$ ./scripts/checkpatch.pl -f ~/Kernel_Pro/03_module/simple_module.c
+
+>> total: 0 errors, 0 warnings, 35 lines checked
+>> /home/nazar/Kernel_Pro/03_module/simple_module.c has no obvious style problems and is ready for submission.
+
+/ # insmod simple_module.ko param=-1
+[ 3244.004451] Simple module init error - -1
+
+/ # insmod simple_module.ko
+insmod: can't insert 'simple_module.ko': File exists
+
+/ # rmmod simple_module
+[ 4162.020005] Simple module exit!
+
+/ # insmod simple_module.ko param=0
+[ 4127.784477] Simple module init success!
+
+/ # insmod simple_module.ko
+[ 4176.183817] Simple module init success!
+
