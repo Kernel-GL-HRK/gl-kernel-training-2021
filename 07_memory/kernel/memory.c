@@ -15,7 +15,7 @@ MODULE_VERSION("0.1");
 MODULE_LICENSE("Dual MIT/GPL"); // this affects the kernel behavior
 
 #define NSEC_IN_SEC     1000000000LL
-#define MAX_BUF_SIZE    64
+#define MAX_BUF_SIZE		64
 #define NUM_OF_REPETITION	10
 #define TIME_PR_TEMPLATE "\t%5u.%03u us"
 
@@ -122,52 +122,52 @@ void test_and_print(char *text, enum mem_func func)
 		2, "", "alloc, avg", 3, "", "free, max",
 		3, "", "free, min", 3, "", "free, avg");
 
-	for (i = 0; i < MAX_BUF_SIZE; i++) {
+		for (i = 0; i < MAX_BUF_SIZE; i++) {
 
-		uint8_t iter = NUM_OF_REPETITION;
+			uint8_t iter = NUM_OF_REPETITION;
 
-		flag = check_time(i, t, func);
+			flag = check_time(i, t, func);
 
-		if (flag == false) {
-			pr_warn("Can't allocate:(\n");
-			break;
-		}
+			if (flag == false) {
+				pr_warn("Can't allocate:(\n");
+				break;
+			}
 
-		t_max->alloc_time = t->alloc_time;
-		t_max->free_time = t->free_time;
-		t_min->alloc_time = t->alloc_time;
-		t_min->free_time = t->free_time;
+			t_max->alloc_time = t->alloc_time;
+			t_max->free_time = t->free_time;
+			t_min->alloc_time = t->alloc_time;
+			t_min->free_time = t->free_time;
 
-		iter--;
+			iter--;
 
-		do {
+			do {
 
-			t_aver->alloc_time += t->alloc_time;
-			t_aver->free_time += t->free_time;
+				t_aver->alloc_time += t->alloc_time;
+				t_aver->free_time += t->free_time;
 
-			check_time(i, t, func);
+				check_time(i, t, func);
 
-			t_max->alloc_time = max(t_max->alloc_time,
-						t->alloc_time);
-			t_max->free_time = max(t_max->free_time,
-						t->free_time);
-			t_min->alloc_time = max(t_min->alloc_time,
-						t->alloc_time);
-			t_min->free_time = max(t_min->free_time,
-						t->free_time);
+				t_max->alloc_time = max(t_max->alloc_time,
+							t->alloc_time);
+				t_max->free_time = max(t_max->free_time,
+							t->free_time);
+				t_min->alloc_time = min(t_min->alloc_time,
+							t->alloc_time);
+				t_min->free_time = min(t_min->free_time,
+							t->free_time);
+			} while (--iter);
 
-
-		} while (--iter);
-	pr_info("\t2^%02d"
-		TIME_PR_TEMPLATE TIME_PR_TEMPLATE
-		TIME_PR_TEMPLATE TIME_PR_TEMPLATE
-		TIME_PR_TEMPLATE TIME_PR_TEMPLATE
-		"\n",
-		i,
-		t_max->alloc_time, (uint32_t)t_aver->alloc_time / MAX_BUF_SIZE,
-		t_min->alloc_time, t_max->free_time,
-		(uint32_t)t_aver->free_time / MAX_BUF_SIZE, t_min->free_time);
-
+			pr_info("\t2^%02d"
+			TIME_PR_TEMPLATE TIME_PR_TEMPLATE
+			TIME_PR_TEMPLATE TIME_PR_TEMPLATE
+			TIME_PR_TEMPLATE TIME_PR_TEMPLATE
+			"\n",
+			i,
+			t_max->alloc_time,
+			(uint32_t)t_aver->alloc_time / MAX_BUF_SIZE,
+			t_min->alloc_time, t_max->free_time,
+			(uint32_t)t_aver->free_time / MAX_BUF_SIZE,
+			t_min->free_time);
 		}
 
 	pr_info("\n");
@@ -191,8 +191,7 @@ int __init mod_init(void)
 	return 0;
 }
 
-
-void mod_cleanup(void)
+void __exit mod_cleanup(void)
 {
 	pr_info("'task_05' module released\n");
 }
