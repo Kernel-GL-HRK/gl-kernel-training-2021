@@ -14,6 +14,7 @@ MODULE_VERSION("0.1");
 MODULE_LICENSE("Dual MIT/GPL"); // this affects the kernel behavior
 
 #define LEN_MSG 160
+
 #define CLASS_ATTR(_name, _mode, _show, _store)	\
 struct class_attribute class_attr_##_name =	\
 __ATTR(_name, _mode, _show, _store)
@@ -27,19 +28,25 @@ static ssize_t x_show(struct class *class, struct class_attribute *attr,
 			char *buf)
 {
 strcpy(buf, buf_msg);
+
 pr_info("read %ld\n", (long)strlen(buf));
+
 total_calls++;
+
 return strlen(buf);
+
 }
 
 static ssize_t x_store(struct class *class, struct class_attribute *attr,
 			const char *buf, size_t count)
 {
 int i;
+
 if (count > LEN_MSG) {
 	pr_err("Entered string is too long\n");
 	return -EINVAL;
 }
+
 strncpy(buf_msg, buf, count);
 
 for (i = 0; buf_msg[i] != '\0'; i++) {
@@ -48,9 +55,13 @@ for (i = 0; buf_msg[i] != '\0'; i++) {
 		characters_converted++;
 	}
 }
+
 total_characters_processed = count;
+
 pr_info("write %ld\n", (long)count);
+
 buf_msg[count] = '\0';
+
 return count;
 
 }
@@ -77,9 +88,12 @@ static ssize_t total_calls_show(struct class *class,
 }
 
 CLASS_ATTR(xxx, 0644, &x_show, &x_store);
+
 CLASS_ATTR(total_characters_processed, 0444,
 		&total_characters_processed_show, NULL);
+
 CLASS_ATTR(total_calls, 0444, &total_calls_show, NULL);
+
 CLASS_ATTR(characters_converted, 0444, &characters_converted_show, NULL);
 
 static struct class *x_class;
@@ -87,12 +101,16 @@ static struct class *x_class;
 int __init x_init(void)
 {
 int res;
+
 x_class = class_create(THIS_MODULE, "x-class");
+
 if (IS_ERR(x_class)) {
 	pr_err("bad class create\n");
 	return -EINVAL;
 }
+
 res = class_create_file(x_class, &class_attr_xxx);
+
 if (res != 0) {
 	pr_err("bad xxx class file create\n");
 	class_destroy(x_class);
@@ -116,8 +134,10 @@ if (res != 0) {
 	pr_err("bad file 'characters_converted' create\n");
 	return -EINVAL;
 }
+
 pr_info("'xxx' module initialized\n");
 return res;
+
 }
 
 void x_cleanup(void)

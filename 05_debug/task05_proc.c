@@ -25,6 +25,7 @@ static struct proc_dir_entry *proc_file;
 
 static int proc_read(struct file *file_p, char __user *buffer, size_t length,
 		     loff_t *offset);
+
 static int proc_write(struct file *file_p, const char __user *buffer,
 			size_t length, loff_t *offset);
 
@@ -32,14 +33,19 @@ static struct file_operations proc_fops = {
 	.read = proc_read, .write = proc_write,
 };
 
+
 static int create_buffer(void)
 {
 proc_buffer = kmalloc(BUFFER_SIZE, GFP_KERNEL);
+
 if (proc_buffer == NULL)
 	return -ENOMEM;
+
 proc_msg_length = 0;
+
 return 0;
 }
+
 
 static void cleanup_buffer(void)
 {
@@ -50,14 +56,17 @@ proc_msg_length = 0;
 
 }
 
+
 static int create_proc_dir(void)
 {
 proc_dir = proc_mkdir(PROC_DIRECTORY, NULL);
+
 if (proc_dir == NULL)
 	return -EFAULT;
 
 proc_file = proc_create(PROC_FILENAME, S_IFREG | 0666, proc_dir,
 			&proc_fops);
+
 if (proc_file == NULL)
 	return -EFAULT;
 
@@ -66,10 +75,12 @@ return 0;
 
 static void cleanup_proc(void)
 {
+
 if (proc_file) {
 	remove_proc_entry(PROC_FILENAME, proc_dir);
 	proc_file = NULL;
 }
+
 if (proc_dir) {
 	remove_proc_entry(PROC_DIRECTORY, NULL);
 	proc_dir = NULL;
@@ -77,9 +88,11 @@ if (proc_dir) {
 
 }
 
+
 static int proc_read(struct file *file_p, char __user *buffer, size_t length,
 		     loff_t *offset)
 {
+
 size_t left;
 int i;
 
@@ -87,6 +100,7 @@ if (length > (proc_msg_length - proc_msg_read_pos))
 	length = (proc_msg_length - proc_msg_read_pos);
 
 left = copy_to_user(buffer, &proc_buffer[proc_msg_read_pos], length);
+
 for (i = 0; buffer[i] != '\0'; i++) {
 	if (buffer[i] >= 'a' && buffer[i] <= 'z')
 		buffer[i] = buffer[i] - 32;
@@ -113,6 +127,7 @@ if (length > BUFFER_SIZE) {
 	pr_warn(MODULE_TAG "reduse message length from %u to %u chars\n",
 		length, BUFFER_SIZE);
 		msg_length = BUFFER_SIZE;
+
 } else
 	msg_length = length;
 
@@ -124,10 +139,12 @@ proc_msg_read_pos = 0;
 if (left)
 	pr_notice(MODULE_TAG "failed to write %u from %u chars\n", left,
 		msg_length);
+
 else
 	pr_notice(MODULE_TAG "written %u chars\n", msg_length);
 
 return length;
+
 }
 
 static int __init proc_init(void)
