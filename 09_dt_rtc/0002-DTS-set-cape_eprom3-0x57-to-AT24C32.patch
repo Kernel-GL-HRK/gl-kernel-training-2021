@@ -1,0 +1,27 @@
+From 972827d49f177bfb4698b23472beacf04c6c1837 Mon Sep 17 00:00:00 2001
+From: ASynenko <andriysinenko@gmail.com>
+Date: Thu, 18 Mar 2021 14:12:14 +0200
+Subject: [PATCH 2/2] DTS: set cape_eprom3(0x57) to AT24C32
+
+Signed-off-by: ASynenko <andriysinenko@gmail.com>
+---
+ arch/arm/boot/dts/am335x-boneblack.dts | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack.dts b/arch/arm/boot/dts/am335x-boneblack.dts
+index 0fb549d7b4f8..a7a318d6681e 100644
+--- a/arch/arm/boot/dts/am335x-boneblack.dts
++++ b/arch/arm/boot/dts/am335x-boneblack.dts
+@@ -34,3 +34,9 @@
+ 	};
+ };
+ 
++&i2c2 {
++	cape_eeprom3: cape_eeprom3@57 {
++		compatible = "atmel,24c32";
++		reg = <0x57>;
++	};
++};
+-- 
+2.25.1
+

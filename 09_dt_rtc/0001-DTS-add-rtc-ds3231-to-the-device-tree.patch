@@ -1,7 +1,7 @@
-From 5d943d92cc60f4a3316caa4f58b39344d52059a7 Mon Sep 17 00:00:00 2001
+From 2588bfc1caef7b3989cfa785310f6c53c8d7df52 Mon Sep 17 00:00:00 2001
 From: ASynenko <andriysinenko@gmail.com>
 Date: Thu, 18 Mar 2021 14:10:09 +0200
-Subject: [PATCH 1/2] [PATCH] DTS: add ds3231 to the device tree
+Subject: [PATCH 1/2] DTS: add rtc ds3231 to the device tree
 
 Signed-off-by: ASynenko <andriysinenko@gmail.com>
 ---
