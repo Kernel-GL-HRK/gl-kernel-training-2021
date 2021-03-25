@@ -15,12 +15,17 @@ MODULE_AUTHOR("Andrii Synenko");
 MODULE_DESCRIPTION("ds3231 driver for Linux Kernel ProCamp");
 MODULE_LICENSE("Dual BSD/GPL");
 
+#define DS3231_TIME_REGS 7
+#define DS3231_COFG_REGS 2
+
 static const struct i2c_device_id ds3231x_id[] = {
-	{"ds3231x"}, {}
+	{"ds3231x"},
+	{}
 };
 MODULE_DEVICE_TABLE(i2c, ds3231x_id);
 static const struct of_device_id ds3231x_of_match[] = {
-	{.compatible = "maxim,ds3231x" }, {}
+	{.compatible = "maxim,ds3231x" },
+	{}
 };
 MODULE_DEVICE_TABLE(of, ds3231x_of_match);
 
@@ -33,7 +38,7 @@ struct ds3231x {
 static int ds3231x_read_time(struct device *dev, struct rtc_time *time)
 {
 	struct ds3231x *ds3231 = dev_get_drvdata(dev);
-	u8 regs[7];
+	u8 regs[DS3231_TIME_REGS];
 	int ret;
 
 	ret = regmap_bulk_read(ds3231->regmap, DS3231_REG_SECS, regs,
@@ -75,7 +80,7 @@ static int ds3231x_set_time(struct device *dev, struct rtc_time *time)
 {
 	struct ds3231x	*ds3231 = dev_get_drvdata(dev);
 	int		ret;
-	u8		regs[7];
+	u8		regs[DS3231_TIME_REGS];
 
 	dev_info(dev, "%s, time to write: secs=%d, mins=%d, hours=%d, mday=%d, mon=%d, year=%d, wday=%d\n",
 		__func__, time->tm_sec, time->tm_min,
@@ -117,10 +122,10 @@ static const struct rtc_class_ops ds3231_rtc_ops = {
 static int ds3231x_rtc_startup(struct device *dev)
 {
 	struct ds3231x *ds3231 = dev_get_drvdata(dev);
-	u8 ctl[2] = {0};
+	u8 ctl[DS3231_COFG_REGS] = {0};
 	int ret = 0;
 
-	ret = regmap_bulk_read(ds3231->regmap, DS3231_REG_CONTROL, ctl, 2);
+	ret = regmap_bulk_read(ds3231->regmap, DS3231_REG_CONTROL, ctl, sizeof(ctl));
 	if (ret)
 		return ret;
 
@@ -129,10 +134,10 @@ static int ds3231x_rtc_startup(struct device *dev)
 
 	ctl[1] &= ~(DS3231_BIT_OSF | DS3231_BIT_A1I | DS3231_BIT_A2I);
 
-	ctl[0] &= ~(DS3231_BIT_A1IE | DS3231_BIT_A2IE);
+	ctl[0] &= ~(DS3231_BIT_nEOSC | DS3231_BIT_A1IE | DS3231_BIT_A2IE);
 	ctl[0] |= DS3231_BIT_INTCN;
 
-	ret = regmap_bulk_write(ds3231->regmap, DS3231_REG_CONTROL, ctl, 2);
+	ret = regmap_bulk_write(ds3231->regmap, DS3231_REG_CONTROL, ctl, sizeof(ctl));
 
 	return ret;
 }
@@ -186,7 +191,6 @@ static struct i2c_driver ds3231x_driver = {
 	.driver = {
 		.name = "ds3231x",
 		.of_match_table = ds3231x_of_match,
-
 },
 	.probe = ds3231x_probe,
 	.id_table = ds3231x_id,
