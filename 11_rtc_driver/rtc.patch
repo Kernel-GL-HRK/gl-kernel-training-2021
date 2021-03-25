@@ -1,0 +1,29 @@
+From d731e8b294216937a1f373e01eb405439a871347 Mon Sep 17 00:00:00 2001
+From: Oleh Yakymenko <o.yakymenko22@gmail.com>
+Date: Tue, 23 Mar 2021 23:11:44 +0200
+Subject: [PATCH] DTS: add rtc ds3231x to the tree
+
+Signed-off-by: Oleh Yakymenko <o.yakymenko22@gmail.com>
+---
+ arch/arm/boot/dts/am335x-boneblack.dts | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack.dts b/arch/arm/boot/dts/am335x-boneblack.dts
+index d154d3133c16..c4b771392bdd 100644
+--- a/arch/arm/boot/dts/am335x-boneblack.dts
++++ b/arch/arm/boot/dts/am335x-boneblack.dts
+@@ -26,3 +26,11 @@
+ 		opp-supported-hw = <0x06 0x0100>;
+ 	};
+ };
++
++
++&i2c2 {
++	ds3231: ds3231@68 {
++		compatible = "maxim,ds3231x";
++		reg = <0x68>;
++	};
++};
+-- 
+2.25.1
+
