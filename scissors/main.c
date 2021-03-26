@@ -4,57 +4,58 @@
 #include <stdlib.h>
 #include <time.h>
 
-//TODO: reformat code;
-//      ask if wanna play again;
-//      convert everything either to digits or to numbers
+enum result {ERROR = -1, TIE, USR_LOSE, USR_WIN};
 
-/* 0 tie, 1 machine wins, 2 user wins */
-int play(void)
+enum result play(void)
 {
+	enum optn {ROCK, PAPER, SCISSORS};
+	enum optn usr_optn;
+	enum optn mchn_optn = rand()%3;
+	char usr_optn_input;
+	enum result res;
+
 	fflush(stdin);
-	/* 0 == rock, 1 == paper, 2 == scissors */
-	int mchn_optn = rand()%3;
-	char usr_optn;
-
 	printf("Please choose: 0 (rock) or 1 (paper) or 2 (scissors)\n");
-	scanf(" %c", &usr_optn);
+	scanf(" %c", &usr_optn_input);
 
-	if (usr_optn != '0' && usr_optn != '1' && usr_optn != '2') {
+	if (usr_optn_input != '0' && usr_optn_input != '1'
+			&& usr_optn_input != '2') {
 		printf("Wrong input! Error\n");
 		return -1;
 	}
 
-	printf("You chose %c, I chose %d\n", usr_optn, mchn_optn);
+	usr_optn =(int) usr_optn_input - '0';
 
-	if (atoi(&usr_optn) == mchn_optn)
-		return 0;
+	printf("You chose %d, I chose %d\n", usr_optn, mchn_optn);
+
+	if (usr_optn == mchn_optn)
+		return res = TIE;
 
 	switch (mchn_optn) {
-	case 0:
-		if (usr_optn == '1')
-			return 2;
+	case ROCK:
+		if (usr_optn == PAPER)
+			res = USR_WIN;
 		else
-			return 1;
+			res = USR_LOSE;
 		break;
-	case 1:
-		if (usr_optn == '0')
-			return 1;
+	case PAPER:
+		if (usr_optn == ROCK)
+			res = USR_LOSE;
 		else
-			return 2;
+			res = USR_WIN;
 		break;
-	case 2:
-		if (usr_optn == '0')
-			return 2;
+	case SCISSORS:
+		if (usr_optn == ROCK)
+			res = USR_WIN;
 		else
-			return 1;
-
+			res = USR_LOSE;
 		break;
 	default:
 		printf("Error generating machine option. Exiting...\n");
-		return -1;
+		res = ERROR;
 	}
 
-	return 0;
+	return res;
 }
 
 int invite_to_play(void)
@@ -71,10 +72,11 @@ int invite_to_play(void)
 	case 'Y':
 		return 1;
 	default:
-		return 0;
+		printf("Any option except 'y' is interpreted as 'no'\n");
+		break;
 	}
 
-	return -1;
+	return 0;
 }
 
 int main(void)
@@ -83,18 +85,16 @@ int main(void)
 	int dcsn = invite_to_play();
 
 	if (dcsn == 1) {
-		int result = play();
+		enum result res  = play();
 
-		if (result == -1)
-			return result;
-		else if (result == 0)
+		if (res == ERROR)
+			return -1;
+		else if (res == TIE)
 			printf("It's a tie\n");
-		else if (result == 1)
+		else if (res == USR_LOSE)
 			printf("You lost =(\n");
 		else
 			printf("You won!\n");
-	} else if (dcsn == -1) {
-		printf("Unknown option. Error\n");
 	} else {
 		printf("Game over\n");
 	}
