@@ -16,8 +16,8 @@
 #include <linux/ctype.h>
 
 static struct kobject *hello;
-static size_t try_sysfs_read = 0;
-static size_t try_procfs_read = 0;
+static size_t try_sysfs_read;
+static size_t try_procfs_read;
 
 static LIST_HEAD(procfs_list);
 static LIST_HEAD(sysfs_list);
@@ -31,29 +31,29 @@ static ssize_t rw_show(struct kobject *kobj,
 				struct kobj_attribute *attr, char *buf)
 {
 	struct hello_node *item = NULL;
-        int offset = 0;
-        int state = 0;
+	int offset = 0;
+	int state = 0;
 
 	try_sysfs_read++;
-        list_for_each_entry(item, &sysfs_list, head) {
-                        state = snprintf(buf + offset, PAGE_SIZE - offset, "%s",
-                                        item->string_fs);
-                        if (state < 0) {
-                                pr_err("mymodule : error reading\n");
-                                return state;
-                        }
-                        pr_info("mymodule : success reading\n");
-                        offset += state;
-      }
-      return offset;
-
+	list_for_each_entry(item, &sysfs_list, head) {
+		state = snprintf(buf + offset, PAGE_SIZE - offset, "%s",
+				item->string_fs);
+		if (state < 0) {
+			pr_err("mymodule : error reading\n");
+			return state;
+		}
+		pr_info("mymodule : success reading\n");
+		offset += state;
+	}
+	return offset;
 }
 
 static ssize_t rw_store(struct kobject *kobj,
 		struct kobj_attribute *attr, const char *buf, size_t count)
 {
-struct hello_node *item = kzalloc(sizeof(*item), GFP_KERNEL);
+	struct hello_node *item = kzalloc(sizeof(*item), GFP_KERNEL);
 	size_t i = 0;
+
 	if (strlen(buf) != count)
 		return -EINVAL;
 	item->string_fs = kmalloc_array(count, sizeof(char), GFP_KERNEL);
@@ -75,67 +75,66 @@ static int mysysfs_init(void)
 
 	hello = kobject_create_and_add("kobject_list", kernel_kobj);
 	if (hello == NULL) {
-                pr_info("impossible to create Kobject!\n");
-                return -EINVAL;
-        }
-        state = sysfs_create_file(hello, &attr.attr);
-        if (state) {
-                kobject_put(hello);
-                pr_info("impossible to create File!\n");
-                return state;
-        }
+		pr_info("impossible to create Kobject!\n");
+		return -EINVAL;
+	}
+	state = sysfs_create_file(hello, &attr.attr);
+	if (state) {
+		kobject_put(hello);
+		pr_info("impossible to create File!\n");
+		return state;
+	}
 	return state;
 }
 
-static ssize_t rw_write(struct file *file, const char __user *pbuf, size_t count, loff_t *ppos)
+static ssize_t rw_write(struct file *file, const char __user *pbuf,
+		size_t count, loff_t *ppos)
 {
 	struct hello_node *item = kzalloc(sizeof(*item), GFP_KERNEL);
 	size_t i = 0;
 
-        item->string_fs = kmalloc_array(count, sizeof(char), GFP_KERNEL);
-       	copy_from_user(item->string_fs, pbuf, count);	
+	item->string_fs = kmalloc_array(count, sizeof(char), GFP_KERNEL);
+	copy_from_user(item->string_fs, pbuf, count);
 	pr_info("mymodule: new item in list procfs %s\n", item->string_fs);
 	while (i < count) {
 		item->string_fs[i] = toupper(item->string_fs[i]);
 		i++;
 	}
-        list_add(&item->head, &procfs_list);
-        return count;
+	list_add(&item->head, &procfs_list);
+	return count;
 }
 
 static ssize_t l = PAGE_SIZE + 1;
 
 static ssize_t rw_read(struct file *file, char __user *pbuf, size_t count,
-	       	loff_t *ppos)
+		loff_t *ppos)
 {
 	size_t min = 0;
 	struct hello_node *item = NULL;
 	int offset = 0;
-        int state = 0;
+	int state = 0;
 
 	min = min_t(ssize_t, count, l);
 	try_procfs_read++;
 	if (min) {
 		l = 0;
 		list_for_each_entry(item, &procfs_list, head) {
-                        state = snprintf(pbuf + offset, PAGE_SIZE - offset, "%s",
-                                        item->string_fs);
-                        if (state < 0) {
-                                pr_err("mymodule : error reading\n");
-                                return state;
-                        }
-                        pr_info("mymodule : success reading\n");
-                        offset += state;
-      }
-      }
-      return offset;
-
+			state = snprintf(pbuf + offset, PAGE_SIZE - offset,
+					"%s", item->string_fs);
+			if (state < 0) {
+				pr_err("mymodule : error reading\n");
+				return state;
+			}
+			pr_info("mymodule : success reading\n");
+			offset += state;
+		}
+	}
+	return offset;
 }
 
 static struct proc_dir_entry *entry;
 static struct proc_dir_entry *dir;
-static struct file_operations oper =
-{
+static const struct file_operations oper = {
 	.owner = THIS_MODULE,
 	.read = rw_read,
 	.write = rw_write,
@@ -173,8 +172,10 @@ static void mymodule_exit(void)
 	struct hello_node *item = NULL;
 	struct hello_node *tmp = NULL;
 
-	pr_info("Total cat call for /sys/kernel/kobject_list/list: %d",try_sysfs_read);
-	pr_info("Total cat call for /proc/procfs_list/list: %d",try_procfs_read - 2);
+	pr_info("Total cat call for /sys/kernel/kobject_list/list: %d",
+			try_sysfs_read);
+	pr_info("Total cat call for /proc/procfs_list/list: %d",
+			try_procfs_read - 2);
 	list_for_each_entry_safe(item, tmp, &sysfs_list, head) {
 		list_del(&item->head);
 		kfree(item->string_fs);
