@@ -1,0 +1,35 @@
+/ # date -s "2021-03-25 11:34:00"
+Thu Mar 25 11:34:00 UTC 2021
+
+
+/ # insmod /workdir/11_rtc/rtc_drv.ko 
+[10889.596051] ds3231x 2-0068: year = 133, month = 2, mday = 25, hours = 15, min = 42, sec = 32
+[10889.605316] ds3231x 2-0068: registered as rtc0
+[10889.610044] ds3231x 2-0068: device probed
+
+/ # ls /dev/rtc*
+/dev/rtc0
+
+/ # hwclock -r -f /dev/rtc0
+[10896.033483] ds3231x 2-0068: year = 133, month = 2, mday = 25, hours = 15, min = 42, sec = 39
+Fri Mar 25 15:42:39 2033  0.000000 seconds
+
+/ # hwclock -w -f /dev/rtc0
+[10905.091854] ds3231x 2-0068: time has been written
+[10905.097884] ds3231x 2-0068: year = 121, month = 2, mday = 25, hours = 11, min = 34, sec = 32
+
+/ # hwclock -r -f /dev/rtc0
+[10906.660954] ds3231x 2-0068: year = 121, month = 2, mday = 25, hours = 11, min = 34, sec = 33
+Thu Mar 25 11:34:33 2021  0.000000 seconds
+
+/ # hwclock -s -f /dev/rtc0
+[11079.062480] ds3231x 2-0068: year = 121, month = 2, mday = 25, hours = 11, min = 37, sec = 25
+/ # date
+Thu Mar 25 11:37:27 UTC 2021
+
+
+/ # rmmod rtc_drv.ko 
+[10976.829790] ds3231x 2-0068: device removed
+
+/ # ls /dev/rtc*
+ls: /dev/rtc*: No such file or directory
