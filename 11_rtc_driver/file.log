@@ -1,0 +1,28 @@
+/tmp # ./test.sh 
+Testing rtc moudule
+[18503.512325] Probe start...
+[18503.516367] Read time mtime: sec - 0x10, min - 0x1, hour - 0x19, wday - 0x3, mday - 0x23, mon - 0x83, year - 0x21
+[18503.527225] Read time rtime: sec - 10, min - 1, hour - 19, wday - 2, mday - 23, mon - 2, year - 121, yday - 81
+[18503.538098] ds3231x 2-0068: registered as rtc0
+[18503.542759] Probe successful
+
+Set date...
+Sun Mar 23 11:23:00 UTC 1980
+
+Set hw clock...
+[18503.599807] Set time rtime: sec - 0, min - 23, hour - 11, wday - 0, mday - 23, mon - 2, year - 80, yday - 82
+[18503.610309] Set time mtime: sec - 0x0, min - 0x23, hour - 0x11, wday - 0x1, mday - 0x23, mon - 0x3, year - 0x80
+[18503.621818] Set time successful
+[18503.626183] Read time mtime: sec - 0x0, min - 0x23, hour - 0x11, wday - 0x1, mday - 0x23, mon - 0x3, year - 0x80
+[18503.636923] Read time rtime: sec - 0, min - 23, hour - 11, wday - 0, mday - 23, mon - 2, year - 80, yday - 82
+
+Set date...
+Tue Mar 23 18:49:00 UTC 2021
+
+Set hw clock...
+[18503.667147] Set time rtime: sec - 0, min - 49, hour - 18, wday - 2, mday - 23, mon - 2, year - 121, yday - 81
+[18503.677680] Set time mtime: sec - 0x0, min - 0x49, hour - 0x18, wday - 0x3, mday - 0x23, mon - 0x83, year - 0x21
+[18503.689276] Set time successful
+[18503.693650] Read time mtime: sec - 0x0, min - 0x49, hour - 0x18, wday - 0x3, mday - 0x23, mon - 0x83, year - 0x21
+[18503.704478] Read time rtime: sec - 0, min - 49, hour - 18, wday - 2, mday - 23, mon - 2, year - 121, yday - 81
+[18503.935332] Release device
