@@ -1,0 +1,50 @@
+home # ./test.sh 
+[ Insert Module ]
+[ 3204.992431] Registered device with 511:0
+[ 3204.996534] khmod: loaded!
+Opened - 0, Released - 0, Read - 0, Write - 0
+Used buffer volume - 0, Buffersize - 1024
+[ CHDEV WRITE ]
+FIRST_DEMO
+[ CHDEV READ ]
+FIRST_DEMO
+
+[ CHDEV WRITE ]
+FIRST_DEMO
+[ CHDEV READ ]
+FIRST_DEMO
+
+FIRST_DEMO
+
+[ 3205.191318] khmod: removed!
+[ 3205.230408] Registered device with 511:0
+[ 3205.234511] khmod: loaded!
+[ NEW ITER ]
+[ CHDEV WRITE ]
+Short
+[ CHDEV READ ]
+Short
+
+
+[ NEW ITER ]
+[ CHDEV WRITE ]
+should_clean[ 3205.273573] Buffer crowded, old data overwritten
+
+[ CHDEV READ ]
+should_clean
+
+
+[ NEW ITER ]
+[ CHDEV WRITE ]
+to_loooong_str[ 3205.292889] Message to large
+ing
+ash: write error: Invalid argument
+[ CHDEV READ ]
+should_clean
+
+
+Opened - 6, Released - 6, Read - 6, Write - 3
+Used buffer volume - 0, Buffersize - 16
+[ Remove Module ]
+[ 3205.341492] khmod: removed!
+/home # 
