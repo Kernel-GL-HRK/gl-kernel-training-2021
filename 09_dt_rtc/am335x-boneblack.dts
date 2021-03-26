@@ -26,3 +26,16 @@
 		opp-supported-hw = <0x06 0x0100>;
 	};
 };
+
+&i2c2 {
+	ds3231: ds3231@68 {
+		compatible = "maxim,ds3231";
+		reg = <0x68>;
+	};
+};
+
+&i2c2 {
+	cape_eeprom3: cape_eeprom3@57 {
+		compatible = "atmel,24c32";
+	};
+};
