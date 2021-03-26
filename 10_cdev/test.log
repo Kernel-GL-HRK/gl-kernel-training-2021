@@ -1,0 +1,108 @@
+/tmp # ./test.sh
+[ 6619.994914] procfs_entry: init success!
+[ 6619.999192] sysfs_entry: init success
+[ 6620.003044] chrdev: register_chrdev ok, major = 511
+[ 6620.008210] chrdev: device class created successfully
+[ 6620.014455] chrdev: device node created successfully
+[ 6620.019806] chrdev: module loaded
+Total calls - 0, total write chars - 0, total read chars - 0!
+Total buffer len - 32, chars int buffer - 0, free buffer space - 32!
+Testing chdev_mod.ko moudule
+insmod: can't insert 'chdev_mod.ko': File exists
+Print debug info
+Total calls - 0, total write chars - 0, total read chars - 0!
+Read buffer info
+Total buffer len - 32, chars int buffer - 0, free buffer space - 32!
+
+Test too large string
+Write data to converter: abcdefghigklmnopqrstuvwxyz0123456789></.,][{}
+[ 6620.328995] chrdev: device opened
+[ 6620.332581] chrdev: write to file chrdev0
+[ 6620.336863] chrdev: write to device 511:0
+[ 6620.341089] chrdev: write to file chrdev0
+[ 6620.345272] chrdev: write to device 511:0
+[ 6620.349479] chdev_mod: buffer is full
+sh: write error: Operation not permitted[ 6620.353565] chrdev: device closed
+
+Read data from device
+[ 6620.369113] chrdev: device opened
+[ 6620.372670] chrdev: read from file chrdev0
+[ 6620.377075] chrdev: read from device 511:0
+abcdefghigklmnopqrstuvwxyz012345[ 6620.381529] chrdev: read from file chrdev0
+[ 6620.388563] chrdev: read from device 511:0
+[ 6620.392889] chrdev: device closed
+
+Print debug info
+Total calls - 4, total write chars - 32, total read chars - 32!
+
+Test for cycling buffer
+Write data to co[ 6620.517187] chrdev: device opened
+nverter: abcdefghigklmnopqrs 
+[ 6620.524136] chrdev: write to file chrdev0
+[ 6620.530924] chrdev: write to device 511:0
+[ 6620.535175] chrdev: device closed
+Read data from device
+[ 6620.547623] chrdev: device opened
+[ 6620.551167] chrdev: read from file chrdev0
+[ 6620.555456] chrdev: read from device 511:0
+abcdefghigklmnopqrs
+[ 6620.560018] chrdev: read from file chrdev0
+[ 6620.566026] chrdev: read from device 511:0
+[ 6620.570409] chrdev: device closed
+Print debug info
+Total calls - 7, total write chars - 52, total read chars - 52!
+
+Test for cycling buffer
+Write data to converter: abcdefghigklmnopqrs
+[ 6620.912770] chrdev: device opened
+[ 6620.916318] chrdev: write to file chrdev0
+[ 6620.920596] chrdev: write to device 511:0
+[ 6620.924842] chrdev: device closed
+Read data from device
+[ 6620.936922] chrdev: device opened
+[ 6620.940512] chrdev: read from file chrdev0
+[ 6620.944788] chrdev: read from device 511:0
+abcdefghigklmnopqrs
+[ 6620.949277] chrdev: read from file chrdev0
+[ 6620.955293] chrdev: read from device 511:0
+[ 6620.959672] chrdev: device closed
+Print debug info
+Total calls - 10, total write chars - 72, total read chars - 72!
+
+Test for cycling buffer
+Write data to converter: abcdefghigklmnopqrs
+[ 6621.303961] chrdev: device opened
+[ 6621.307639] chrdev: write to file chrdev0
+[ 6621.311823] chrdev: write to device 511:0
+[ 6621.316031] chrdev: device closed
+Read data from device
+[ 6621.328880] chrdev: device opened
+[ 6621.332419] chrdev: read from file chrdev0
+[ 6621.336819] chrdev: read from device 511:0
+abcdefghigklmnopqrs
+[ 6621.341280] chrdev: read from file chrdev0
+[ 6621.347340] chrdev: read from device 511:0
+[ 6621.351669] chrdev: device closed
+Print debug info
+Total calls - 13, total write chars - 92, total read chars - 92!
+
+Test for cleaning buffer
+Write data to converter: abcdefghigklmnopqrs
+[ 6621.694557] chrdev: device opened
+[ 6621.698251] chrdev: write to file chrdev0
+[ 6621.702438] chrdev: write to device 511:0
+[ 6621.706703] chrdev: device closed
+Print debug info
+Total calls - 14, total write chars - 112, total read chars - 92!
+Read buffer info
+Total buffer len - 32, chars int buffer - 20, free buffer space - 12!
+Clean buffer
+[ 6621.840730] sysfs_entry: clean buffer
+Print debug info
+Total calls - 14, total write chars - 112, total read chars - 92!
+Read buffer info
+Total buffer len - 32, chars int buffer - 0, free buffer space - 32!
+[ 6621.875575] start release module...
+[ 6621.879889] sysfs_entry: release!
+[ 6621.883377] procfs_entry: release!
+[ 6621.887017] chrdev: module exited
