@@ -191,7 +191,7 @@ static struct i2c_driver ds3231x_driver = {
 	.driver = {
 		.name = "ds3231x",
 		.of_match_table = ds3231x_of_match,
-},
+	},
 	.probe = ds3231x_probe,
 	.id_table = ds3231x_id,
 };
