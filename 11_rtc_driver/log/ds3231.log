@@ -1,0 +1,19 @@
+/ # insmod /home/khmod.ko
+[    9.987872] khmod: loading out-of-tree module taints kernel.
+[    9.996423] ds3231x 2-0068: registered as rtc1
+[   10.001180] ds3231x 2-0068: connected
+/ # date
+Sat Jan  1 00:01:03 UTC 2000
+/ # hwclock -f /dev/rtc1
+Fri May  5 13:22:42 2000  0.000000 seconds
+/ # hwclock -s -f /dev/rtc1
+/ # date
+Fri May  5 13:22:54 UTC 2000
+/ #
+/ # date -s "2015-05-05 13:11"
+Tue May  5 13:11:00 UTC 2015
+/ # hwclock -w -f /dev/rtc1
+/ # hwclock -f /dev/rtc1
+Tue May  5 13:11:17 2015  0.000000 seconds
+/ # 
+
