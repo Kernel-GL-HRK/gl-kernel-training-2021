@@ -1,0 +1,73 @@
+>
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+
+U-Boot 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+
+CPU  : AM335X-GP rev 2.1
+Model: TI AM335x BeagleBone Black
+DRAM:  512 MiB
+MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+
+.
+.
+.
+
+[    5.588227] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+/ # dmesg | grep rtc
+[    2.099510] rtc-ds1307 2-0068: SET TIME!
+[    2.105977] rtc-ds1307 2-0068: registered as rtc0
+[    2.188613] rtc-ds1307 2-0068: setting system clock to 2015-03-20 00:36:08 UTC (1426811768)
+
+/ # find ./sys/firmware/devicetree/ | grep ds32
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/compatible
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/reg
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/name
+
+/ # cat ./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/compatible 
+maxim,ds3231
+
+/ # date
+Fri Mar 20 00:37:30 UTC 2015
+
+/ # i2cget 2 0x68 0x04
+i2cset: can't set address to 0x68: Device or resource busy
+
+/ # date -s "2021-03-26 10:38:00"
+Fri Mar 26 10:38:00 UTC 2021
+
+/ # hwclock -w -f /dev/rtc0
+
+/ # date
+Fri Mar 26 10:38:09 UTC 2021
+
+
+>>>>> Power off <<<<<
+
+/ # >
+U-Boot SPL 2021.01-00002-gc17010150c (Feb 20 2021 - 12:45:37 +0200)
+Trying to boot from MMC1
+
+.
+.
+.
+
+[    5.588202] Run /sbin/init as init process
+ProCamp: rcS executed
+
+Please press Enter to activate this console. 
+
+/ # date
+Fri Mar 26 10:38:38 UTC 2021
+
+/ # cat /sys/bus/i2c/devices/2-0057/eeprom | hexdump -C
+00000000  74 65 78 74 54 45 58 54  74 65 78 74 0a ff ff ff  |textTEXTtext....|
+00000010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00001000
+/ # 
