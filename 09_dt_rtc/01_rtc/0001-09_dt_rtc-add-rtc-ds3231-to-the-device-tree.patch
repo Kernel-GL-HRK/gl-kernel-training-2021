@@ -1,0 +1,30 @@
+From ab22eba0d1aea5a967fedab3e8ff7330e3ad98f4 Mon Sep 17 00:00:00 2001
+From: olyuboch <lyubochko.leha@gmail.com>
+Date: Wed, 24 Mar 2021 09:56:31 +0200
+Subject: [PATCH] 09_dt_rtc: add rtc ds3231 to the device tree
+
+Signed-off-by: olyuboch <lyubochko.leha@gmail.com>
+---
+ arch/arm/boot/dts/am335x-boneblack.dts | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack.dts b/arch/arm/boot/dts/am335x-boneblack.dts
+index d154d31..2f6fc96 100644
+--- a/arch/arm/boot/dts/am335x-boneblack.dts
++++ b/arch/arm/boot/dts/am335x-boneblack.dts
+@@ -26,3 +26,12 @@
+ 		opp-supported-hw = <0x06 0x0100>;
+ 	};
+ };
++
++&i2c2 {
++	/* the real time clock defined as child of the i2c3 bus */
++	rtc0: ds3231@0001 {
++		compatible = "dallas,ds1307";
++		reg = <0x68>;
++	};
++};
++
+-- 
+2.7.4
+

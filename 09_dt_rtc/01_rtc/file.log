@@ -1,0 +1,55 @@
+/ # i2cdetect -r 2
+i2cdetect: WARNING! This program can confuse your I2C bus
+Continue? [y/N] y
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- UU -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- 68 -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- -- 
+/ # i2cdump -r 0-8 2 0x68
+i2cdump: WARNING! This program can confuse your I2C bus
+Continue? [y/N] y
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+00: 58 53 06 03 03 01 00 00 00                         XS????...
+/ # i2cget 2 0x68 5
+i2cget: WARNING! This program can confuse your I2C bus
+Continue? [y/N] y
+0x01
+/ # i2cset 2 0x68 5 0x0b
+i2cset: WARNING! This program can confuse your I2C bus
+Continue? [y/N] y
+/ # i2cget 2 0x68 5
+i2cget: WARNING! This program can confuse your I2C bus
+Continue? [y/N] y
+0x0b
+/ # i2cdump -r 0-8 2 0x68
+i2cdump: WARNING! This program can confuse your I2C bus
+Continue? [y/N] y
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+00: 26 57 06 03 03 0b 00 00 00                         &W????...
+/ #
+/ # date
+Fri Nov  3 07:17:43 UTC 2000 
+/ # date -s "2021-03-23 18:49:00"
+Tue Mar 23 18:49:00 UTC 2021
+/ # hwclock --systohc
+/ # date
+Tue Mar 23 18:50:03 UTC 2021
+/ # 
+
+
+Please press Enter to activate this console. 
+/ # 
+/ # date
+Tue Mar 23 18:50:48 UTC 2021
+/ # 
+
+/ # dmesg | grep rtc
+[    2.091885] rtc-ds1307 2-0068: registered as rtc0
+[    2.173651] rtc-ds1307 2-0068: setting system clock to 2021-03-24 08:59:04 UTC (1616576344)
+/ # find /sys/ -name "*ds3231*"
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@0001
