@@ -1,0 +1,66 @@
+/usr # insmod gpio_irq.ko 
+[  179.120175] gpio_irq: loading out-of-tree module taints kernel.
+[  179.127082] Init Button GPIO72 OK
+[  179.130696] Init LED GPIO56 OK
+[  179.133894] Init LED GPIO54 OK
+/usr # 
+[  190.563854] Counter value: 1
+[  191.329058] Counter value: 2
+[  202.687318] Counter value: 3
+[  202.924481] Counter value: 4
+[  204.212690] Counter value: 5
+[  204.347268] Counter value: 6
+[  211.280521] Counter value: 7
+[  211.457837] Counter value: 8
+[  213.698024] Counter value: 9
+[  213.877942] Counter value: 10
+[  217.664820] Counter value: 11
+[  217.858503] Counter value: 12
+[  218.832229] Counter value: 13
+[  220.362868] Counter value: 14
+[  224.792111] Counter value: 15
+/usr # rmmod gpio_irq.ko [  265.676505] Counter value: 16
+
+[  265.988181] Deinit Button GPIO72
+[  265.991896] LED at GPIO OFF
+usr # insmod gpio_irq.ko simulate_busy=1
+[  350.234234] Init Button GPIO72 OK
+[  350.237859] Init LED GPIO56 OK
+[  350.241057] Init LED GPIO54 OK
+/usr # 
+[  359.833080] Counter value: 1
+[  359.836115] Going to sleep for 3000(ms)
+[  362.897370] Waking up!
+[  362.899846] Counter value: 2
+[  362.902857] Going to sleep for 3000(ms)
+[  365.937402] Waking up!
+[  372.883580] Counter value: 3
+[  372.886597] Going to sleep for 3000(ms)
+[  375.937369] Waking up!
+[  375.939841] Counter value: 4
+[  375.942851] Going to sleep for 3000(ms)
+[  378.977370] Waking up!
+[  384.984649] Counter value: 5
+[  384.987684] Going to sleep for 3000(ms)
+[  388.017367] Waking up!
+[  388.019838] Counter value: 6
+[  388.022850] Going to sleep for 3000(ms)
+[  391.057379] Waking up!
+[  404.058471] Counter value: 7
+[  404.061487] Going to sleep for 3000(ms)
+[  407.137364] Waking up!
+[  407.139836] Counter value: 8
+[  407.142848] Going to sleep for 3000(ms)
+[  410.177370] Waking up!
+[  455.449740] Counter value: 9
+[  455.452758] Going to sleep for 3000(ms)
+[  458.497366] Waking up!
+[  458.499839] Counter value: 10
+[  458.502942] Going to sleep for 3000(ms)
+[  461.537373] Waking up!
+/usr # rmmod gpio_irq.ko[  556.905980] Counter value: 11
+[  556.909128] Going to sleep for 3000(ms)
+
+[  558.621954] Deinit Button GPIO72
+[  559.937384] Waking up!
+[  559.940014] LED at GPIO OFF
