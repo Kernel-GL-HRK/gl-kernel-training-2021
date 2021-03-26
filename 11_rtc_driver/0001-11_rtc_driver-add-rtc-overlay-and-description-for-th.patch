@@ -1,0 +1,42 @@
+From 3d0d84abe882b1d72dafaab68f37bdc89fd1af01 Mon Sep 17 00:00:00 2001
+From: olyuboch <lyubochko.leha@gmail.com>
+Date: Fri, 26 Mar 2021 16:42:03 +0200
+Subject: [PATCH] 11_rtc_driver: add rtc overlay and description for the rtc
+ driver
+
+Signed-off-by: olyuboch <lyubochko.leha@gmail.com>
+---
+ Documentation/devicetree/bindings/rtc/rtc-ds1307.txt | 1 +
+ arch/arm/boot/dts/am335x-boneblack.dts               | 7 +++++++
+ 2 files changed, 8 insertions(+)
+
+diff --git a/Documentation/devicetree/bindings/rtc/rtc-ds1307.txt b/Documentation/devicetree/bindings/rtc/rtc-ds1307.txt
+index eebfbe0..26b21e4 100644
+--- a/Documentation/devicetree/bindings/rtc/rtc-ds1307.txt
++++ b/Documentation/devicetree/bindings/rtc/rtc-ds1307.txt
+@@ -11,6 +11,7 @@ Required properties:
+ 	"dallas,ds1340",
+ 	"dallas,ds1341",
+ 	"maxim,ds3231",
++	"maxim,ds3231x",
+ 	"st,m41t0",
+ 	"st,m41t00",
+ 	"st,m41t11",
+diff --git a/arch/arm/boot/dts/am335x-boneblack.dts b/arch/arm/boot/dts/am335x-boneblack.dts
+index d154d31..5d6a2a4 100644
+--- a/arch/arm/boot/dts/am335x-boneblack.dts
++++ b/arch/arm/boot/dts/am335x-boneblack.dts
+@@ -26,3 +26,10 @@
+ 		opp-supported-hw = <0x06 0x0100>;
+ 	};
+ };
++
++&i2c2 {
++	rtc_ds3231x: ds3231x@68 {
++		compatible = "maxim,ds3231x";
++		reg = <0x68>;
++	};
++};
+-- 
+2.7.4
+
