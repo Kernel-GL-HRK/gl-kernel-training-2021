@@ -23,7 +23,7 @@ export PATH := /opt/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf/bin/:$(
 export CROSS_COMPILE := arm-none-linux-gnueabihf-
 #export ARCH := arm	
 
-.PHONY: modules clean tidy run module_deploy test_deploy check_patch set_env format build_and_deploy
+.PHONY: modules clean tidy run module_deploy test_deploy check_patch format build_and_deploy
 
 # recur to the original kernel Makefile with some additions
 modules: tidy
@@ -42,18 +42,10 @@ clean:
 	-rm -f $(addsuffix .cmd,$(addprefix .,$(obj-m:.o=.mod.o)))
 
 module_deploy:
-	sudo rm -f $(REMDIR)/$(TARGET).ko
 	sudo cp $(TARGET).ko $(REMDIR)
 
 test_deploy:
-	sudo rm -f $(REMDIR)/$(TEST_FILE)
 	sudo cp $(TEST_FILE) $(REMDIR)
-
-
-set_env:
-	export PATH=/opt/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf/bin/:$$PATH
-	export CROSS_COMPILE=arm-none-linux-gnueabihf-
-	export ARCH=arm	
 
 
 check_patch:
