@@ -5,22 +5,29 @@
 #include <malloc.h>
 #include <stdbool.h>
 
-#define NSEC_IN_SEC     1000000000LL
+#define NSEC_IN_SEC     1e9
 #define MAX_BUF_SIZE    64
+#define NUM_OF_ITER 	10
 
 #define POW2(x)     (1LL << (x))
 
+#define MIN(x, y) x > y ? y : x
+#define MAX(x, y) x > y ? x : y
+
 uint64_t get_diff(struct timespec t1, struct timespec t2)
 {
-	if (t1.tv_sec == t2.tv_sec)
-		return (t1.tv_nsec - t2.tv_nsec);
+	uint64_t sec_diff;
+	uint64_t nsec_diff;
 
-	uint64_t tmp_nsec = (NSEC_IN_SEC + t1.tv_nsec) - t2.tv_nsec;
+	sec_diff = t1.tv_sec - t2.tv_sec;
+	nsec_diff = t1.tv_nsec - t2.tv_nsec;
 
-	uint64_t tmp_sec = tmp_nsec / NSEC_IN_SEC;
-	tmp_sec += (t1.tv_sec - t2.tv_sec - 1);
+	if (nsec_diff < 0) {
+		nsec_diff += NSEC_IN_SEC;
+		sec_diff--;
+	}
 
-	return (tmp_sec * NSEC_IN_SEC) + (tmp_nsec % NSEC_IN_SEC);
+	return (sec_diff * NSEC_IN_SEC) + nsec_diff;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -28,7 +35,6 @@ uint64_t get_diff(struct timespec t1, struct timespec t2)
 struct alloc_free_time {
 	uint64_t alloc_time;
 	uint64_t free_time;
-	uint8_t *ptr;
 };
 
 enum mem_func {
@@ -37,6 +43,11 @@ enum mem_func {
 	ALLOCA_F
 };
 
+static void *alloca_test(size_t size)
+{
+	return alloca(size);
+}
+
 bool check_alloca_time(uint64_t size, struct alloc_free_time *t)
 {
 	uint8_t *tmp;
@@ -44,7 +55,7 @@ bool check_alloca_time(uint64_t size, struct alloc_free_time *t)
 	t->free_time = 0;
 
 	clock_gettime(CLOCK_REALTIME, &t2);
-	tmp = alloca(size * sizeof(*tmp));
+	tmp = (uint8_t*)alloca_test(size);
 	clock_gettime(CLOCK_REALTIME, &t1);
 	t->alloc_time = get_diff(t1, t2);
 
@@ -70,8 +81,6 @@ bool check_time(uint64_t size, struct alloc_free_time *t, enum mem_func func)
 
 	clock_gettime(CLOCK_REALTIME, &t1);
 
-	t->ptr = tmp;
-
 	t->alloc_time = get_diff(t1, t2);
 
 	if (tmp == NULL)
@@ -90,24 +99,29 @@ bool check_time(uint64_t size, struct alloc_free_time *t, enum mem_func func)
 void test_and_print(char *text, uint8_t adding, enum mem_func func)
 {
 	struct alloc_free_time *t = malloc(sizeof(*t));
+	struct alloc_free_time *t_min = malloc(sizeof(*t));
+	struct alloc_free_time *t_max = malloc(sizeof(*t));
 	struct alloc_free_time *t_aver = malloc(sizeof(*t_aver));
 	uint64_t size;
 	bool flag;
 
+	t_min->alloc_time = 0;
+	t_min->free_time = 0;
 	t_aver->alloc_time = 0;
 	t_aver->free_time = 0;
+	t_max->alloc_time = 0;
+	t_max->free_time = 0;
 
 	printf("************************************************\n");
 	printf("*****************%s*****************\n", text);
 	printf("****************size = (2^x)+%d******************\n", adding);
 	printf("************************************************\n");
-
+	printf("iter\tmin_alloc(ns)\taver_alloc(ns)\tmax_alloc(ns)\t|\tmin_free(ns)\taver_free(ns)\tmax_free(ns)\tsize(bytes)\n");
 
 	for (uint8_t i = 0; i < MAX_BUF_SIZE; i++) {
-		
-		printf("Iter No%d\n", i);
 
 		size = POW2(i);
+
 
 		if (func == ALLOCA_F)
 			flag = check_alloca_time(size, t);
@@ -119,21 +133,42 @@ void test_and_print(char *text, uint8_t adding, enum mem_func func)
 			break;
 		}
 
+		t_min->alloc_time = MIN(t_min->alloc_time, t->alloc_time);
+		t_min->free_time = MIN(t_min->free_time, t->free_time);
 		t_aver->alloc_time += t->alloc_time;
 		t_aver->free_time += t->free_time;
+		t_max->alloc_time = MAX(t_max->alloc_time, t->alloc_time);
+		t_max->free_time = MAX(t_max->free_time, t->free_time);
 
-		if (func != ALLOCA_F)
-			printf("Start adress is %p\n", t->ptr);
+		uint8_t j = NUM_OF_ITER;
+		while(j--) {
+			if (func == ALLOCA_F)
+				flag = check_alloca_time(size, t);
+			else
+				flag = check_time(size, t, func);
+
+			t_min->alloc_time = MIN(t_min->alloc_time, t->alloc_time);
+			t_min->free_time = MIN(t_min->free_time, t->free_time);
+			t_aver->alloc_time += t->alloc_time;
+			t_aver->free_time += t->free_time;
+			t_max->alloc_time = MAX(t_max->alloc_time, t->alloc_time);
+			t_max->free_time = MAX(t_max->free_time, t->free_time);
+		}
+
+		t_aver->free_time /= NUM_OF_ITER;
+		t_aver->alloc_time /= NUM_OF_ITER;
+
 		
-		printf("Alloc time = %ldns\t", t->alloc_time);
-		printf("Free time = %ldns\n", t->free_time);
-	}
+		printf("%d\t%ld\t\t%ld\t\t%ld\t\t|\t%ld\t\t%ld\t\t%ld\t\t%lu\n", i, 
+					t_min->alloc_time, t_aver->alloc_time, t_max->alloc_time, 
+					t_min->free_time, t_aver->free_time, t_max->free_time, size);
 
-	printf("Aver allocating time is %ldns\t", t_aver->alloc_time / MAX_BUF_SIZE);
-	printf("Aver freeing time is %ldns\n", t_aver->free_time / MAX_BUF_SIZE);
+	}
 
 	free(t);
 	free(t_aver);
+	free(t_max);
+	free(t_min);
 }
 
 int main(void) 

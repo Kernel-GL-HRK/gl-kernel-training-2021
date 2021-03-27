@@ -1,584 +1,237 @@
 
 .. code-block:: bash
 
-    ************************************************
-    *****************MALLOC TESTING*****************
-    ****************size = (2^x)+0******************
-    ************************************************
-    Iter No0
-    Start adress is 0x560a3b54d6b0
-    Alloc time = 138ns  Free time = 67ns
-    Iter No1
-    Start adress is 0x560a3b54d6b0
-    Alloc time = 37ns   Free time = 25ns
-    Iter No2
-    Start adress is 0x560a3b54d6b0
-    Alloc time = 20ns   Free time = 19ns
-    Iter No3
-    Start adress is 0x560a3b54d6b0
-    Alloc time = 20ns   Free time = 19ns
-    Iter No4
-    Start adress is 0x560a3b54d6b0
-    Alloc time = 38ns   Free time = 19ns
-    Iter No5
-    Start adress is 0x560a3b54d6d0
-    Alloc time = 53ns   Free time = 19ns
-    Iter No6
-    Start adress is 0x560a3b54d700
-    Alloc time = 31ns   Free time = 25ns
-    Iter No7
-    Start adress is 0x560a3b54d750
-    Alloc time = 52ns   Free time = 19ns
-    Iter No8
-    Start adress is 0x560a3b54d7e0
-    Alloc time = 33ns   Free time = 21ns
-    Iter No9
-    Start adress is 0x560a3b54d8f0
-    Alloc time = 51ns   Free time = 19ns
-    Iter No10
-    Start adress is 0x560a3b54db00
-    Alloc time = 151ns  Free time = 29ns
-    Iter No11
-    Start adress is 0x560a3b54df10
-    Alloc time = 1562ns Free time = 258ns
-    Iter No12
-    Start adress is 0x560a3b54df10
-    Alloc time = 62ns   Free time = 55ns
-    Iter No13
-    Start adress is 0x560a3b54df10
-    Alloc time = 1148ns Free time = 40ns
-    Iter No14
-    Start adress is 0x560a3b54df10
-    Alloc time = 970ns  Free time = 50ns
-    Iter No15
-    Start adress is 0x560a3b54df10
-    Alloc time = 996ns  Free time = 47ns
-    Iter No16
-    Start adress is 0x560a3b54df10
-    Alloc time = 940ns  Free time = 34ns
-    Iter No17
-    Start adress is 0x560a3b54df10
-    Alloc time = 724ns  Free time = 28ns
-    Iter No18
-    Start adress is 0x7f528d4ce010
-    Alloc time = 2344ns Free time = 3358ns
-    Iter No19
-    Start adress is 0x7f528d48e010
-    Alloc time = 1239ns Free time = 1149ns
-    Iter No20
-    Start adress is 0x7f528d40e010
-    Alloc time = 1376ns Free time = 1722ns
-    Iter No21
-    Start adress is 0x7f528cd11010
-    Alloc time = 5849ns Free time = 2112ns
-    Iter No22
-    Start adress is 0x7f528cb11010
-    Alloc time = 1711ns Free time = 1508ns
-    Iter No23
-    Start adress is 0x7f528c711010
-    Alloc time = 2205ns Free time = 1639ns
-    Iter No24
-    Start adress is 0x7f528bf11010
-    Alloc time = 1941ns Free time = 2132ns
-    Iter No25
-    Start adress is 0x7f528af11010
-    Alloc time = 1927ns Free time = 1659ns
-    Iter No26
-    Start adress is 0x7f5288f11010
-    Alloc time = 1903ns Free time = 1670ns
-    Iter No27
-    Start adress is 0x7f5284f11010
-    Alloc time = 2138ns Free time = 1851ns
-    Iter No28
-    Start adress is 0x7f527cf11010
-    Alloc time = 2150ns Free time = 2798ns
-    Iter No29
-    Start adress is 0x7f526cf11010
-    Alloc time = 2068ns Free time = 3394ns
-    Iter No30
-    Start adress is 0x7f524cf11010
-    Alloc time = 2118ns Free time = 4196ns
-    Iter No31
-    Start adress is 0x7f520cf11010
-    Alloc time = 1520ns Free time = 3979ns
-    Iter No32
-    Start adress is 0x7f518cf11010
-    Alloc time = 1219ns Free time = 3998ns
-    Iter No33
-    Start adress is 0x7f508cf11010
-    Alloc time = 1323ns Free time = 3868ns
-    Iter No34
-    Start adress is 0x7f4e8cf11010
-    Alloc time = 1356ns Free time = 3956ns
-    Iter No35
-    Can't allocate:(
-    Aver allocating time is 647ns   Aver freeing time is 715ns
-    ************************************************
-    *****************CALLOC TESTING*****************
-    ****************size = (2^x)+0******************
-    ************************************************
-    Iter No0
-    Start adress is 0x560a3b54df10
-    Alloc time = 174ns  Free time = 40ns
-    Iter No1
-    Start adress is 0x560a3b54df30
-    Alloc time = 37ns   Free time = 19ns
-    Iter No2
-    Start adress is 0x560a3b54df50
-    Alloc time = 32ns   Free time = 19ns
-    Iter No3
-    Start adress is 0x560a3b54df70
-    Alloc time = 32ns   Free time = 19ns
-    Iter No4
-    Start adress is 0x560a3b54df90
-    Alloc time = 59ns   Free time = 18ns
-    Iter No5
-    Start adress is 0x560a3b54dfb0
-    Alloc time = 53ns   Free time = 19ns
-    Iter No6
-    Start adress is 0x560a3b54dfe0
-    Alloc time = 90ns   Free time = 30ns
-    Iter No7
-    Start adress is 0x560a3b54e030
-    Alloc time = 180ns  Free time = 19ns
-    Iter No8
-    Start adress is 0x560a3b54e0c0
-    Alloc time = 113ns  Free time = 26ns
-    Iter No9
-    Start adress is 0x560a3b54e1d0
-    Alloc time = 146ns  Free time = 18ns
-    Iter No10
-    Start adress is 0x560a3b54e3e0
-    Alloc time = 126ns  Free time = 20ns
-    Iter No11
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 152ns  Free time = 106ns
-    Iter No12
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 222ns  Free time = 46ns
-    Iter No13
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 1182ns Free time = 22ns
-    Iter No14
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 1371ns Free time = 55ns
-    Iter No15
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 3370ns Free time = 35ns
-    Iter No16
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 7276ns Free time = 38ns
-    Iter No17
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 17555ns    Free time = 37ns
-    Iter No18
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 34332ns    Free time = 33ns
-    Iter No19
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 8317ns Free time = 33ns
-    Iter No20
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 94584ns    Free time = 50ns
-    Iter No21
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 146877ns   Free time = 62ns
-    Iter No22
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 274701ns   Free time = 67ns
-    Iter No23
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 559686ns   Free time = 134ns
-    Iter No24
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 1143125ns  Free time = 210ns
-    Iter No25
-    Start adress is 0x7f528af11010
-    Alloc time = 5107ns Free time = 6220ns
-    Iter No26
-    Start adress is 0x7f5288f11010
-    Alloc time = 1545ns Free time = 1556ns
-    Iter No27
-    Start adress is 0x7f5284f11010
-    Alloc time = 1252ns Free time = 1591ns
-    Iter No28
-    Start adress is 0x7f527cf11010
-    Alloc time = 1594ns Free time = 2265ns
-    Iter No29
-    Start adress is 0x7f526cf11010
-    Alloc time = 1365ns Free time = 2609ns
-    Iter No30
-    Start adress is 0x7f524cf11010
-    Alloc time = 1340ns Free time = 3881ns
-    Iter No31
-    Start adress is 0x7f520cf11010
-    Alloc time = 1765ns Free time = 3949ns
-    Iter No32
-    Start adress is 0x7f518cf11010
-    Alloc time = 1498ns Free time = 3944ns
-    Iter No33
-    Start adress is 0x7f508cf11010
-    Alloc time = 1338ns Free time = 3948ns
-    Iter No34
-    Start adress is 0x7f4e8cf11010
-    Alloc time = 1441ns Free time = 3998ns
-    Iter No35
-    Can't allocate:(
-    Aver allocating time is 36125ns Aver freeing time is 549ns
-    ************************************************
-    *****************MALLOC TESTING*****************
-    ****************size = (2^x)+1******************
-    ************************************************
-    Iter No0
-    Start adress is 0x560a3b54df70
-    Alloc time = 53ns   Free time = 27ns
-    Iter No1
-    Start adress is 0x560a3b54df70
-    Alloc time = 28ns   Free time = 19ns
-    Iter No2
-    Start adress is 0x560a3b54df70
-    Alloc time = 28ns   Free time = 19ns
-    Iter No3
-    Start adress is 0x560a3b54df70
-    Alloc time = 28ns   Free time = 19ns
-    Iter No4
-    Start adress is 0x560a3b54df70
-    Alloc time = 30ns   Free time = 19ns
-    Iter No5
-    Start adress is 0x560a3b54dfb0
-    Alloc time = 26ns   Free time = 19ns
-    Iter No6
-    Start adress is 0x560a3b54dfe0
-    Alloc time = 22ns   Free time = 19ns
-    Iter No7
-    Start adress is 0x560a3b54e030
-    Alloc time = 88ns   Free time = 19ns
-    Iter No8
-    Start adress is 0x560a3b54e0c0
-    Alloc time = 24ns   Free time = 20ns
-    Iter No9
-    Start adress is 0x560a3b54e1d0
-    Alloc time = 25ns   Free time = 18ns
-    Iter No10
-    Start adress is 0x560a3b54e3e0
-    Alloc time = 93ns   Free time = 33ns
-    Iter No11
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 384ns  Free time = 48ns
-    Iter No12
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 114ns  Free time = 39ns
-    Iter No13
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 93ns   Free time = 22ns
-    Iter No14
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 129ns  Free time = 42ns
-    Iter No15
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 99ns   Free time = 39ns
-    Iter No16
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 70ns   Free time = 37ns
-    Iter No17
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 123ns  Free time = 43ns
-    Iter No18
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 54ns   Free time = 37ns
-    Iter No19
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 43ns   Free time = 34ns
-    Iter No20
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 156ns  Free time = 25ns
-    Iter No21
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 55ns   Free time = 38ns
-    Iter No22
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 110ns  Free time = 32ns
-    Iter No23
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 102ns  Free time = 26ns
-    Iter No24
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 170ns  Free time = 26ns
-    Iter No25
-    Start adress is 0x7f528af11010
-    Alloc time = 2390ns Free time = 2104ns
-    Iter No26
-    Start adress is 0x7f5288f11010
-    Alloc time = 1493ns Free time = 1514ns
-    Iter No27
-    Start adress is 0x7f5284f11010
-    Alloc time = 1271ns Free time = 1768ns
-    Iter No28
-    Start adress is 0x7f527cf11010
-    Alloc time = 1421ns Free time = 2035ns
-    Iter No29
-    Start adress is 0x7f526cf11010
-    Alloc time = 1364ns Free time = 2643ns
-    Iter No30
-    Start adress is 0x7f524cf11010
-    Alloc time = 1403ns Free time = 3870ns
-    Iter No31
-    Start adress is 0x7f520cf11010
-    Alloc time = 1403ns Free time = 3913ns
-    Iter No32
-    Start adress is 0x7f518cf11010
-    Alloc time = 1373ns Free time = 3951ns
-    Iter No33
-    Start adress is 0x7f508cf11010
-    Alloc time = 1316ns Free time = 3982ns
-    Iter No34
-    Start adress is 0x7f4e8cf11010
-    Alloc time = 1392ns Free time = 3960ns
-    Iter No35
-    Can't allocate:(
-    Aver allocating time is 265ns   Aver freeing time is 475ns
-    ************************************************
-    *****************CALLOC TESTING*****************
-    ****************size = (2^x)+1******************
-    ************************************************
-    Iter No0
-    Start adress is 0x560a3b54d260
-    Alloc time = 185ns  Free time = 32ns
-    Iter No1
-    Start adress is 0x560a3b54e7f0
-    Alloc time = 99ns   Free time = 34ns
-    Iter No2
-    Start adress is 0x560a3b54e810
-    Alloc time = 63ns   Free time = 81ns
-    Iter No3
-    Start adress is 0x560a3b54e810
-    Alloc time = 60ns   Free time = 41ns
-    Iter No4
-    Start adress is 0x560a3b54e810
-    Alloc time = 45ns   Free time = 27ns
-    Iter No5
-    Start adress is 0x560a3b54e830
-    Alloc time = 82ns   Free time = 33ns
-    Iter No6
-    Start adress is 0x560a3b54e860
-    Alloc time = 124ns  Free time = 32ns
-    Iter No7
-    Start adress is 0x560a3b54e8b0
-    Alloc time = 249ns  Free time = 43ns
-    Iter No8
-    Start adress is 0x560a3b54e940
-    Alloc time = 172ns  Free time = 31ns
-    Iter No9
-    Start adress is 0x560a3b54ea50
-    Alloc time = 148ns  Free time = 34ns
-    Iter No10
-    Start adress is 0x560a3b54ec60
-    Alloc time = 256ns  Free time = 19ns
-    Iter No11
-    Start adress is 0x560a3b54f070
-    Alloc time = 142ns  Free time = 49ns
-    Iter No12
-    Start adress is 0x560a3b54f070
-    Alloc time = 202ns  Free time = 53ns
-    Iter No13
-    Start adress is 0x560a3b54f070
-    Alloc time = 299ns  Free time = 44ns
-    Iter No14
-    Start adress is 0x560a3b54f070
-    Alloc time = 542ns  Free time = 48ns
-    Iter No15
-    Start adress is 0x560a3b54f070
-    Alloc time = 708ns  Free time = 42ns
-    Iter No16
-    Start adress is 0x560a3b54f070
-    Alloc time = 1621ns Free time = 42ns
-    Iter No17
-    Start adress is 0x560a3b54f070
-    Alloc time = 9451ns Free time = 43ns
-    Iter No18
-    Start adress is 0x560a3b54f070
-    Alloc time = 6018ns Free time = 35ns
-    Iter No19
-    Start adress is 0x560a3b54f070
-    Alloc time = 12716ns    Free time = 85ns
-    Iter No20
-    Start adress is 0x560a3b54f070
-    Alloc time = 24915ns    Free time = 30ns
-    Iter No21
-    Start adress is 0x560a3b54f070
-    Alloc time = 45614ns    Free time = 1002ns
-    Iter No22
-    Start adress is 0x560a3b54f070
-    Alloc time = 97024ns    Free time = 36ns
-    Iter No23
-    Start adress is 0x560a3b54f070
-    Alloc time = 217818ns   Free time = 551ns
-    Iter No24
-    Start adress is 0x560a3b54f070
-    Alloc time = 2658782ns  Free time = 303ns
-    Iter No25
-    Start adress is 0x7f528af11010
-    Alloc time = 7652ns Free time = 6660ns
-    Iter No26
-    Start adress is 0x7f5288f11010
-    Alloc time = 2200ns Free time = 1795ns
-    Iter No27
-    Start adress is 0x7f5284f11010
-    Alloc time = 2482ns Free time = 2642ns
-    Iter No28
-    Start adress is 0x7f527cf11010
-    Alloc time = 4650ns Free time = 2905ns
-    Iter No29
-    Start adress is 0x7f526cf11010
-    Alloc time = 2076ns Free time = 2785ns
-    Iter No30
-    Start adress is 0x7f524cf11010
-    Alloc time = 1466ns Free time = 3931ns
-    Iter No31
-    Start adress is 0x7f520cf11010
-    Alloc time = 6718ns Free time = 3980ns
-    Iter No32
-    Start adress is 0x7f518cf11010
-    Alloc time = 1614ns Free time = 3985ns
-    Iter No33
-    Start adress is 0x7f508cf11010
-    Alloc time = 2198ns Free time = 4093ns
-    Iter No34
-    Start adress is 0x7f4e8cf11010
-    Alloc time = 1875ns Free time = 9578ns
-    Iter No35
-    Can't allocate:(
-    Aver allocating time is 48597ns Aver freeing time is 705ns
-    ************************************************
-    *****************ALLOCA TESTING*****************
-    ****************size = (2^x)+0******************
-    ************************************************
-    Iter No0
-    Alloc time = 38ns   Free time = 0ns
-    Iter No1
-    Alloc time = 21ns   Free time = 0ns
-    Iter No2
-    Alloc time = 20ns   Free time = 0ns
-    Iter No3
-    Alloc time = 15ns   Free time = 0ns
-    Iter No4
-    Alloc time = 20ns   Free time = 0ns
-    Iter No5
-    Alloc time = 17ns   Free time = 0ns
-    Iter No6
-    Alloc time = 15ns   Free time = 0ns
-    Iter No7
-    Alloc time = 18ns   Free time = 0ns
-    Iter No8
-    Alloc time = 14ns   Free time = 0ns
-    Iter No9
-    Alloc time = 15ns   Free time = 0ns
-    Iter No10
-    Alloc time = 15ns   Free time = 0ns
-    Iter No11
-    Alloc time = 15ns   Free time = 0ns
-    Iter No12
-    Alloc time = 18ns   Free time = 0ns
-    Iter No13
-    Alloc time = 20ns   Free time = 0ns
-    Iter No14
-    Alloc time = 17ns   Free time = 0ns
-    Iter No15
-    Alloc time = 19ns   Free time = 0ns
-    Iter No16
-    Alloc time = 21ns   Free time = 0ns
-    Iter No17
-    Alloc time = 15ns   Free time = 0ns
-    Iter No18
-    Alloc time = 15ns   Free time = 0ns
-    Iter No19
-    Alloc time = 14ns   Free time = 0ns
-    Iter No20
-    Alloc time = 14ns   Free time = 0ns
-    Iter No21
-    Alloc time = 15ns   Free time = 0ns
-    Iter No22
-    Alloc time = 14ns   Free time = 0ns
-    Iter No23
-    Alloc time = 14ns   Free time = 0ns
-    Iter No24
-    Alloc time = 16ns   Free time = 0ns
-    Iter No25
-    Alloc time = 15ns   Free time = 0ns
-    Iter No26
-    Alloc time = 15ns   Free time = 0ns
-    Iter No27
-    Alloc time = 15ns   Free time = 0ns
-    Iter No28
-    Alloc time = 15ns   Free time = 0ns
-    Iter No29
-    Alloc time = 15ns   Free time = 0ns
-    Iter No30
-    Alloc time = 16ns   Free time = 0ns
-    Iter No31
-    Alloc time = 16ns   Free time = 0ns
-    Iter No32
-    Alloc time = 15ns   Free time = 0ns
-    Iter No33
-    Alloc time = 15ns   Free time = 0ns
-    Iter No34
-    Alloc time = 15ns   Free time = 0ns
-    Iter No35
-    Alloc time = 16ns   Free time = 0ns
-    Iter No36
-    Alloc time = 14ns   Free time = 0ns
-    Iter No37
-    Alloc time = 15ns   Free time = 0ns
-    Iter No38
-    Alloc time = 14ns   Free time = 0ns
-    Iter No39
-    Alloc time = 16ns   Free time = 0ns
-    Iter No40
-    Alloc time = 15ns   Free time = 0ns
-    Iter No41
-    Alloc time = 15ns   Free time = 0ns
-    Iter No42
-    Alloc time = 14ns   Free time = 0ns
-    Iter No43
-    Alloc time = 16ns   Free time = 0ns
-    Iter No44
-    Alloc time = 15ns   Free time = 0ns
-    Iter No45
-    Alloc time = 14ns   Free time = 0ns
-    Iter No46
-    Alloc time = 14ns   Free time = 0ns
-    Iter No47
-    Alloc time = 15ns   Free time = 0ns
-    Iter No48
-    Alloc time = 14ns   Free time = 0ns
-    Iter No49
-    Alloc time = 15ns   Free time = 0ns
-    Iter No50
-    Alloc time = 14ns   Free time = 0ns
-    Iter No51
-    Alloc time = 14ns   Free time = 0ns
-    Iter No52
-    Alloc time = 15ns   Free time = 0ns
-    Iter No53
-    Alloc time = 15ns   Free time = 0ns
-    Iter No54
-    Alloc time = 15ns   Free time = 0ns
-    Iter No55
-    Alloc time = 16ns   Free time = 0ns
-    Iter No56
-    Alloc time = 14ns   Free time = 0ns
-    Iter No57
-    Alloc time = 15ns   Free time = 0ns
-    Iter No58
-    Alloc time = 15ns   Free time = 0ns
-    Iter No59
-    Alloc time = 21ns   Free time = 0ns
-    Iter No60
-    Alloc time = 15ns   Free time = 0ns
-    Iter No61
-    Alloc time = 14ns   Free time = 0ns
-    Iter No62
-    Alloc time = 16ns   Free time = 0ns
-    Iter No63
-    Alloc time = 13ns   Free time = 0ns
-    Aver allocating time is 15ns    Aver freeing time is 0ns
+        oshlikhta@kbp1-lhp-a10111:~/pro_camp/gl-kernel-training-2021/07_memory/user_mem$ ./usermem 
+        ************************************************
+        *****************MALLOC TESTING*****************
+        ****************size = (2^x)+0******************
+        ************************************************
+        iter    min_alloc(ns)   aver_alloc(ns)  max_alloc(ns)   |       min_free(ns)    aver_free(ns)   max_free(ns)    size(bytes)
+        0       0               214             885             |       0               149             467             1
+        1       0               179             885             |       0               192             467             2
+        2       0               168             885             |       0               186             467             4
+        3       0               166             885             |       0               193             467             8
+        4       0               161             885             |       0               151             467             16
+        5       0               205             885             |       0               181             467             32
+        6       0               190             885             |       0               185             467             64
+        7       0               154             885             |       0               132             467             128
+        8       0               140             885             |       0               126             467             256
+        9       0               174             885             |       0               149             467             512
+        10      0               191             885             |       0               186             467             1024
+        11      0               1094            8500            |       0               317             1478            2048
+        12      0               377             8500            |       0               248             1478            4096
+        13      0               776             8500            |       0               179             1478            8192
+        14      0               629             8500            |       0               172             1478            16384
+        15      0               776             8500            |       0               224             1478            32768
+        16      0               1015            8500            |       0               260             1478            65536
+        17      0               742             8500            |       0               179             1478            131072
+        18      0               2818            13490           |       0               2493            22568           262144
+        19      0               2149            13490           |       0               1502            22568           524288
+        20      0               2435            13490           |       0               1561            22568           1048576
+        21      0               2735            16946           |       0               1596            22568           2097152
+        22      0               1848            16946           |       0               1169            22568           4194304
+        23      0               1806            16946           |       0               1121            22568           8388608
+        24      0               1738            16946           |       0               1124            22568           16777216
+        25      0               6916            16946           |       0               7719            22568           33554432
+        26      0               7175            16946           |       0               8806            22568           67108864
+        27      0               7294            16946           |       0               9879            22568           134217728
+        28      0               8130            16946           |       0               12409           22568           268435456
+        29      0               8103            16946           |       0               16215           22568           536870912
+        30      0               8067            16946           |       0               24069           22568           1073741824
+        31      0               8085            16946           |       0               24870           22568           2147483648
+        32      0               8171            16946           |       0               25028           22568           4294967296
+        33      0               3471            16946           |       0               10714           22568           8589934592
+        34      0               2982            16946           |       0               9335            22568           17179869184
+        Can't allocate:(
+        ************************************************
+        *****************CALLOC TESTING*****************
+        ****************size = (2^x)+0******************
+        ************************************************
+        iter    min_alloc(ns)   aver_alloc(ns)  max_alloc(ns)   |       min_free(ns)    aver_free(ns)   max_free(ns)    size(bytes)
+        0       0               111             366             |       0               48              77              1
+        1       0               67              366             |       0               46              77              2
+        2       0               60              366             |       0               47              77              4
+        3       0               57              366             |       0               47              77              8
+        4       0               62              366             |       0               47              77              16
+        5       0               85              366             |       0               53              77              32
+        6       0               81              366             |       0               54              77              64
+        7       0               120             366             |       0               94              394             128
+        8       0               95              366             |       0               57              394             256
+        9       0               101             366             |       0               53              394             512
+        10      0               268             1586            |       0               52              394             1024
+        11      0               160             1586            |       0               54              394             2048
+        12      0               355             1731            |       0               54              394             4096
+        13      0               472             1733            |       0               52              394             8192
+        14      0               730             2250            |       0               53              394             16384
+        15      0               1706            7013            |       0               62              394             32768
+        16      0               4029            14801           |       0               63              394             65536
+        17      0               9746            44709           |       0               67              394             131072
+        18      0               16415           59928           |       0               70              394             262144
+        19      0               33104           124918          |       0               69              394             524288
+        20      0               66809           251935          |       0               69              394             1048576
+        21      0               130544          503800          |       0               72              394             2097152
+        22      0               256158          978962          |       0               68              394             4194304
+        23      0               770895          2057812         |       0               344             753             8388608
+        24      0               1628208         3614033         |       0               1486            9688            16777216
+        25      0               168015          3614033         |       0               7603            56006           33554432
+        26      0               18568           3614033         |       0               2908            56006           67108864
+        27      0               3622            3614033         |       0               2645            56006           134217728
+        28      0               2385            3614033         |       0               3295            56006           268435456
+        29      0               2179            3614033         |       0               4330            56006           536870912
+        30      0               2926            3614033         |       0               6476            56006           1073741824
+        31      0               2330            3614033         |       0               6737            56006           2147483648
+        32      0               2834            3614033         |       0               6822            56006           4294967296
+        33      0               2776            3614033         |       0               7354            56006           8589934592
+        34      0               2785            3614033         |       0               7737            56006           17179869184
+        Can't allocate:(
+        ************************************************
+        *****************MALLOC TESTING*****************
+        ****************size = (2^x)+1******************
+        ************************************************
+        iter    min_alloc(ns)   aver_alloc(ns)  max_alloc(ns)   |       min_free(ns)    aver_free(ns)   max_free(ns)    size(bytes)
+        0       0               36              77              |       0               39              104             1
+        1       0               33              77              |       0               34              104             2
+        2       0               34              77              |       0               33              104             4
+        3       0               34              77              |       0               34              104             8
+        4       0               38              77              |       0               34              104             16
+        5       0               45              139             |       0               33              104             32
+        6       0               45              139             |       0               33              104             64
+        7       0               309             2769            |       0               143             1137            128
+        8       0               154             2769            |       0               43              1137            256
+        9       0               58              2769            |       0               34              1137            512
+        10      0               56              2769            |       0               33              1137            1024
+        11      0               132             2769            |       0               49              1137            2048
+        12      0               111             2769            |       0               45              1137            4096
+        13      0               106             2769            |       0               59              1137            8192
+        14      0               76              2769            |       0               62              1137            16384
+        15      0               65              2769            |       0               40              1137            32768
+        16      0               86              2769            |       0               38              1137            65536
+        17      0               61              2769            |       0               38              1137            131072
+        18      0               57              2769            |       0               38              1137            262144
+        19      0               62              2769            |       0               38              1137            524288
+        20      0               74              2769            |       0               49              1137            1048576
+        21      0               64              2769            |       0               39              1137            2097152
+        22      0               78              2769            |       0               38              1137            4194304
+        23      0               147             2769            |       0               49              1137            8388608
+        24      0               173             2769            |       0               46              1137            16777216
+        25      0               3756            21086           |       0               2948            11425           33554432
+        26      0               2188            21086           |       0               2380            11425           67108864
+        27      0               2134            21086           |       0               2865            11425           134217728
+        28      0               3026            21086           |       0               4483            11425           268435456
+        29      0               3142            21086           |       0               5634            11425           536870912
+        30      0               2834            21086           |       0               7743            11425           1073741824
+        31      0               3033            21086           |       0               6836            11425           2147483648
+        32      0               2272            21086           |       0               6717            11425           4294967296
+        33      0               2218            21086           |       0               6851            11425           8589934592
+        34      0               2181            21086           |       0               6810            11425           17179869184
+        Can't allocate:(
+        ************************************************
+        *****************CALLOC TESTING*****************
+        ****************size = (2^x)+1******************
+        ************************************************
+        iter    min_alloc(ns)   aver_alloc(ns)  max_alloc(ns)   |       min_free(ns)    aver_free(ns)   max_free(ns)    size(bytes)
+        0       0               132             290             |       0               39              59              1
+        1       0               73              290             |       0               45              65              2
+        2       0               65              290             |       0               45              65              4
+        3       0               67              290             |       0               51              65              8
+        4       0               67              290             |       0               47              65              16
+        5       0               67              290             |       0               49              65              32
+        6       0               81              290             |       0               41              65              64
+        7       0               102             314             |       0               81              416             128
+        8       0               85              314             |       0               54              416             256
+        9       0               92              314             |       0               62              416             512
+        10      0               110             314             |       0               54              416             1024
+        11      0               131             314             |       0               48              416             2048
+        12      0               159             314             |       0               39              416             4096
+        13      0               486             2768            |       0               38              416             8192
+        14      0               444             2768            |       0               38              416             16384
+        15      0               823             2768            |       0               45              416             32768
+        16      0               2103            2768            |       0               50              416             65536
+        17      0               4297            5489            |       0               51              416             131072
+        18      0               8429            9567            |       0               49              416             262144
+        19      0               16853           18504           |       0               57              416             524288
+        20      0               33401           37759           |       0               54              416             1048576
+        21      0               66307           70966           |       0               62              416             2097152
+        22      0               135240          164857          |       0               77              416             4194304
+        23      0               362990          349926          |       0               254             492             8388608
+        24      0               1065059         1174682         |       0               477             744             16777216
+        25      0               109392          1174682         |       0               2471            7895            33554432
+        26      0               12566           1174682         |       0               2158            7895            67108864
+        27      0               2980            1174682         |       0               2364            7895            134217728
+        28      0               2104            1174682         |       0               2953            7895            268435456
+        29      0               1969            1174682         |       0               3894            7895            536870912
+        30      0               1926            1174682         |       0               5802            7895            1073741824
+        31      0               1933            1174682         |       0               6021            7895            2147483648
+        32      0               1965            1174682         |       0               6040            7895            4294967296
+        33      0               1935            1174682         |       0               6077            7895            8589934592
+        34      0               1961            1174682         |       0               6126            7895            17179869184
+        Can't allocate:(
+        ************************************************
+        *****************ALLOCA TESTING*****************
+        ****************size = (2^x)+0******************
+        ************************************************
+        iter    min_alloc(ns)   aver_alloc(ns)  max_alloc(ns)   |       min_free(ns)    aver_free(ns)   max_free(ns)    size(bytes)
+        0       0               42              56              |       0               0               0               1
+        1       0               40              56              |       0               0               0               2
+        2       0               40              56              |       0               0               0               4
+        3       0               40              56              |       0               0               0               8
+        4       0               40              56              |       0               0               0               16
+        5       0               40              56              |       0               0               0               32
+        6       0               40              56              |       0               0               0               64
+        7       0               41              56              |       0               0               0               128
+        8       0               40              56              |       0               0               0               256
+        9       0               41              56              |       0               0               0               512
+        10      0               40              56              |       0               0               0               1024
+        11      0               40              56              |       0               0               0               2048
+        12      0               40              56              |       0               0               0               4096
+        13      0               40              56              |       0               0               0               8192
+        14      0               40              56              |       0               0               0               16384
+        15      0               40              56              |       0               0               0               32768
+        16      0               40              56              |       0               0               0               65536
+        17      0               40              56              |       0               0               0               131072
+        18      0               40              56              |       0               0               0               262144
+        19      0               40              56              |       0               0               0               524288
+        20      0               40              56              |       0               0               0               1048576
+        21      0               40              56              |       0               0               0               2097152
+        22      0               41              56              |       0               0               0               4194304
+        23      0               40              56              |       0               0               0               8388608
+        24      0               40              56              |       0               0               0               16777216
+        25      0               40              56              |       0               0               0               33554432
+        26      0               40              56              |       0               0               0               67108864
+        27      0               40              56              |       0               0               0               134217728
+        28      0               41              56              |       0               0               0               268435456
+        29      0               40              56              |       0               0               0               536870912
+        30      0               40              56              |       0               0               0               1073741824
+        31      0               40              56              |       0               0               0               2147483648
+        32      0               41              56              |       0               0               0               4294967296
+        33      0               41              56              |       0               0               0               8589934592
+        34      0               40              56              |       0               0               0               17179869184
+        35      0               40              56              |       0               0               0               34359738368
+        36      0               41              56              |       0               0               0               68719476736
+        37      0               40              56              |       0               0               0               137438953472
+        38      0               41              56              |       0               0               0               274877906944
+        39      0               40              56              |       0               0               0               549755813888
+        40      0               40              56              |       0               0               0               1099511627776
+        41      0               40              56              |       0               0               0               2199023255552
+        42      0               41              56              |       0               0               0               4398046511104
+        43      0               40              56              |       0               0               0               8796093022208
+        44      0               40              56              |       0               0               0               17592186044416
+        45      0               40              56              |       0               0               0               35184372088832
+        46      0               40              56              |       0               0               0               70368744177664
+        47      0               41              56              |       0               0               0               140737488355328
+        48      0               40              56              |       0               0               0               281474976710656
+        49      0               41              56              |       0               0               0               562949953421312
+        50      0               40              56              |       0               0               0               1125899906842624
+        51      0               40              56              |       0               0               0               2251799813685248
+        52      0               40              56              |       0               0               0               4503599627370496
+        53      0               41              56              |       0               0               0               9007199254740992
+        54      0               40              56              |       0               0               0               18014398509481984
+        55      0               41              56              |       0               0               0               36028797018963968
+        56      0               40              56              |       0               0               0               72057594037927936
+        57      0               40              56              |       0               0               0               144115188075855872
+        58      0               41              56              |       0               0               0               288230376151711744
+        59      0               40              56              |       0               0               0               576460752303423488
+        60      0               40              56              |       0               0               0               1152921504606846976
+        61      0               40              56              |       0               0               0               2305843009213693952
+        62      0               41              56              |       0               0               0               4611686018427387904
+        63      0               40              56              |       0               0               0               9223372036854775808
