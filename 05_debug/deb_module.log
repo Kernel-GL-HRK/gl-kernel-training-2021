@@ -1,0 +1,20 @@
+/tmp # insmod deb_module.ko
+[    9.381292] deb_module: loading out-of-tree module taints kernel.
+[    9.386553] ProCamp Debug Module inserted
+/tmp # echo "HeLlO sYsFs!" > /sys/kernel/sysfs_gl/conv
+/tmp # cat /sys/kernel/sysfs_gl/conv
+[   18.428523] hello sysfs!
+/tmp # echo "HeLlO PrOcFs" >  /proc/procfs_gl
+/tmp # cat /proc/procfs_gl
+[   51.365926] HELLO PROCFS
+[   51.365926] 
+/tmp # echo "PrOcFs Is Better?" >  /proc/procfs_gl
+/tmp # cat /proc/procfs_gl
+[   91.177612] PROCFS IS BETTER?
+[   91.177612] 
+/tmp # echo "I DONT THINK SO!" > /sys/kernel/sysfs_gl/conv
+/tmp # cat /sys/kernel/sysfs_gl/conv
+[  126.662284] i dont think so!
+/tmp # rmmod deb_module.ko
+[  148.384703] ProCamp Debug Module removed
+/tmp # 
