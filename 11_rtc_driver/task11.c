@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT and GPL
-
 #include <linux/init.h>
 #include <linux/module.h>
 #include <linux/err.h>
@@ -12,13 +11,14 @@
 #include <linux/device.h>
 
 #include "ds3231.h"
+#define REG_NUM	 7
 
 MODULE_DESCRIPTION("RTC driver");
-MODULE_AUTHOR("vadym.kharchuk@globallogic.com");
+MODULE_AUTHOR("Anton Kotsiubailo");
 MODULE_VERSION("0.1");
 MODULE_LICENSE("Dual MIT/GPL");
 
-static uint8_t data_buff[REG_NUM];
+static uint8_t buff[REG_NUM];
 static struct rtc_device *rtc;
 
 int ds3231x_read_time(struct device *dev, struct rtc_time *t)
@@ -26,26 +26,23 @@ int ds3231x_read_time(struct device *dev, struct rtc_time *t)
 	int ret;
 
 	ret = i2c_smbus_read_i2c_block_data(
-			to_i2c_client(dev), DS3231_SEC_REG, REG_NUM, data_buff);
+			to_i2c_client(dev), DS3231_SEC_REG, REG_NUM, buff);
 	if (ret < REG_NUM) {
 		pr_err("%s: Time read error\n", THIS_MODULE->name);
 		return ret;
 	}
 
-	t->tm_sec = bcd2bin(data_buff[DS3231_SEC_REG] & 0x7f);
-	t->tm_min = bcd2bin(data_buff[DS3231_MIN_REG] & 0x7f);
+	t->tm_sec = bcd2bin(buff[DS3231_SEC_REG] & 0x7f);
+	t->tm_min = bcd2bin(buff[DS3231_MIN_REG] & 0x7f);
+	t->tm_hour = bcd2bin(buff[DS3231_HOUR_REG] & 0x3f);
+	t->tm_mday = bcd2bin(buff[DS3231_DATE_REG] & 0x3f);
+	t->tm_mon = bcd2bin(buff[DS3231_MONTH_REG] & 0x7f) - 1;
+	t->tm_year = bcd2bin(buff[DS3231_YEAR_REG]);
 
-	t->tm_hour = bcd2bin(data_buff[DS3231_HOUR_REG] & 0x3f);
-	t->tm_mday = bcd2bin(data_buff[DS3231_DATE_REG] & 0x3f);
-
-	t->tm_mon = bcd2bin(data_buff[DS3231_MONTH_REG] & 0x7f) - 1;
-
-	t->tm_year = bcd2bin(data_buff[DS3231_YEAR_REG]);
-
-	if (data_buff[DS3231_MONTH_REG] & (1 << 7))
+	if (buff[DS3231_MONTH_REG] & (1 << 7))
 		t->tm_year += 100;
 
-	t->tm_wday = bcd2bin(data_buff[DS3231_DAY_REG] & 0x07);
+	t->tm_wday = bcd2bin(buff[DS3231_DAY_REG] & 0x07);
 	t->tm_yday = rtc_year_days(t->tm_mday, t->tm_mon, t->tm_year);
 
 	return 0;
@@ -53,22 +50,21 @@ int ds3231x_read_time(struct device *dev, struct rtc_time *t)
 
 int ds3231x_write_time(struct device *dev, struct rtc_time *t)
 {
-	data_buff[DS3231_SEC_REG] = bin2bcd(t->tm_sec);
-	data_buff[DS3231_MIN_REG] = bin2bcd(t->tm_min);
-	data_buff[DS3231_HOUR_REG] = bin2bcd(t->tm_hour);
-	data_buff[DS3231_DATE_REG] = bin2bcd(t->tm_mday);
-
-	data_buff[DS3231_MONTH_REG] = bin2bcd(t->tm_mon) + 1;
-	data_buff[DS3231_DAY_REG] = bin2bcd(t->tm_wday);
+	buff[DS3231_SEC_REG] = bin2bcd(t->tm_sec);
+	buff[DS3231_MIN_REG] = bin2bcd(t->tm_min);
+	buff[DS3231_HOUR_REG] = bin2bcd(t->tm_hour);
+	buff[DS3231_DATE_REG] = bin2bcd(t->tm_mday);
+	buff[DS3231_MONTH_REG] = bin2bcd(t->tm_mon) + 1;
+	buff[DS3231_DAY_REG] = bin2bcd(t->tm_wday);
 
 	if (t->tm_year > 100) {
 		t->tm_year -= 100;
-		data_buff[DS3231_MONTH_REG] |= (1 << 7);
+		buff[DS3231_MONTH_REG] |= (1 << 7);
 	}
-	data_buff[DS3231_YEAR_REG] = bin2bcd(t->tm_year);
+	buff[DS3231_YEAR_REG] = bin2bcd(t->tm_year);
 
 	return i2c_smbus_write_i2c_block_data(
-		to_i2c_client(dev), DS3231_SEC_REG, REG_NUM, data_buff);
+		to_i2c_client(dev), DS3231_SEC_REG, REG_NUM, buff);
 }
 
 const struct rtc_class_ops ds3231x_ops = {
@@ -100,6 +96,13 @@ int ds3231x_probe(struct i2c_client *client, const struct i2c_device_id *id)
 	return 0;
 }
 
+int ds3231x_remove(struct i2c_client *drv_client)
+{
+	dev_info(&drv_client->dev, "disconnected\n");
+
+	return 0;
+}
+
 static const struct i2c_device_id ds3231x_id[] = { { "maxim,ds3231x", 0 }, {} };
 MODULE_DEVICE_TABLE(i2c, ds3231x_id);
 
@@ -115,6 +118,7 @@ static struct i2c_driver ds3231x_driver = {
 			.of_match_table = ds3231x_of_match,
 	},
 	.probe = ds3231x_probe,
+	.remove = ds3231x_remove,
 	.id_table = ds3231x_id,
 };
 

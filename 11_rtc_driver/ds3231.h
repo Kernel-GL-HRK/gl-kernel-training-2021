@@ -1,7 +1,7 @@
+// SPDX-License-Identifier: MIT and GPL
 #ifndef _DS3231_H_
 #define _DS3231_H_
 
-#define REG_NUM	7
 
 #define DS3231_SEC_REG		0x00
 #define DS3231_MIN_REG		0x01
@@ -11,4 +11,5 @@
 #define DS3231_MONTH_REG	0x05
 #define DS3231_YEAR_REG		0x06
 
+/*_DS3231_H_*/
 #endif
