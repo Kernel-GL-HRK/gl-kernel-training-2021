@@ -1,0 +1,13 @@
+/ # date
+Sat Jan  1 00:12:21 UTC 1970
+/ # hwclock -f /dev/rtc1
+Fri May  1 13:22:42 2000  0.000000 seconds
+/ # hwclock -s -f /dev/rtc1
+/ # date
+Fri May  5 13:22:54 UTC 2000
+/ #
+/ # date -s "2021-05-21 15:16"
+Tue May  21 15:16:00 UTC 2021
+/ # hwclock -w -f /dev/rtc1
+/ # hwclock -f /dev/rtc1
+Tue May   15:16:18 2021  0.000000 seconds
