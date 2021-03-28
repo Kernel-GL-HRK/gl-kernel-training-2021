@@ -9,5 +9,5 @@ Homeworks:
 
 
 Please refer to wiki for details.
-=======
+
 >>>>>>> kernel: Added code for task05

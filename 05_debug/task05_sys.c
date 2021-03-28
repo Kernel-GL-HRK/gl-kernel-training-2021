@@ -117,18 +117,22 @@ int __init x_init(void)
 				&class_attr_total_characters_processed);
 	if (res != 0) {
 		pr_err("bad file 'total_characters_processed' create\n");
+		class_remove_file(x_class,
+				&class_attr_total_characters_processed);
 		return -EINVAL;
 	}
 
 	res = class_create_file(x_class, &class_attr_total_calls);
 	if (res != 0) {
 		pr_err("bad file 'total_calls' create\n");
+		class_remove_file(x_class, &class_attr_total_calls);
 		return -EINVAL;
 	}
 
 	res = class_create_file(x_class, &class_attr_characters_converted);
 	if (res != 0) {
 		pr_err("bad file 'characters_converted' create\n");
+		class_remove_file(x_class, &class_attr_characters_converted);
 		return -EINVAL;
 	}
 

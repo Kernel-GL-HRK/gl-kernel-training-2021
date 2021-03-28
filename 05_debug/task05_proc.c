@@ -124,8 +124,9 @@ static int proc_write(struct file *file_p, const char __user *buffer,
 			length, BUFFER_SIZE);
 			msg_length = BUFFER_SIZE;
 
-	} else
+	} else {
 		msg_length = length;
+	}
 
 	left = copy_from_user(proc_buffer, buffer, msg_length);
 
