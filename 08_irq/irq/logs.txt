@@ -1,0 +1,20 @@
+                             
+/tmp # insmod gpio_irq.ko simulate_busy=1                                       
+[ 6796.648146] GL Simulation busy is ON                                         
+[ 6796.651992] Init GPIO117 OK                                                  
+[ 6796.655529] 'gpio_irq' module initialized                                    
+/tmp # [ 6801.463983] GPIO_TEST: Interrupt! (button state is 1)                 
+[ 6802.424350] sched: RT throttling activated                                   
+[ 6803.468157] GL Button IRQ counter: 1                                         
+[ 6804.190531] GPIO_TEST: Interrupt! (button state is 1)                        
+[ 6806.190317] GL Button IRQ counter: 2                                         
+[ 6809.980411] GPIO_TEST: Interrupt! (button state is 1)                        
+[ 6811.980174] GL Button IRQ counter: 3                                         
+[ 6819.040412] GPIO_TEST: Interrupt! (button state is 1)                        
+[ 6821.040177] GL Button IRQ counter: 4                                         
+[ 6822.554597] GPIO_TEST: Interrupt! (button state is 1)                        
+[ 6824.554354] GL Button IRQ counter: 5                                         
+[ 6827.026338] GPIO_TEST: Interrupt! (button state is 1)                        
+[ 6829.026121] GL Button IRQ counter: 6                                         
+[ 6831.546294] GPIO_TEST: Interrupt! (button state is 1)                        
+[ 6833.546082] GL Button IRQ counter: 7 
