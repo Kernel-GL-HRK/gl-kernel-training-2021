@@ -4,6 +4,9 @@
 #include <stdlib.h>
 #include <malloc.h>
 #include <stdbool.h>
+#include <sys/time.h>
+#include <sys/resource.h>
+#include <unistd.h>
 
 #define NSEC_IN_SEC     1e9
 #define MAX_BUF_SIZE    64
@@ -43,19 +46,20 @@ enum mem_func {
 	ALLOCA_F
 };
 
-static void *alloca_test(size_t size)
-{
-	return alloca(size);
-}
-
 bool check_alloca_time(uint64_t size, struct alloc_free_time *t)
 {
 	uint8_t *tmp;
 	struct timespec t1, t2;
+	struct rlimit stack_size;
 	t->free_time = 0;
 
+	getrlimit(RLIMIT_STACK, &stack_size);
+
+	if(stack_size.rlim_cur < size)
+		return false;
+
 	clock_gettime(CLOCK_REALTIME, &t2);
-	tmp = (uint8_t*)alloca_test(size);
+	tmp = (uint8_t*)alloca(size);
 	clock_gettime(CLOCK_REALTIME, &t1);
 	t->alloc_time = get_diff(t1, t2);
 
