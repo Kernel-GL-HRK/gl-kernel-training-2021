@@ -1,0 +1,104 @@
+From 822cec0e07eaece5e126b71611afab91dc87252e Mon Sep 17 00:00:00 2001
+From: alexposukhov <33048624+alexposukhov@users.noreply.github.com>
+Date: Mon, 15 Mar 2021 09:16:23 +0200
+Subject: [PATCH] task09: Done
+
+Signed-off-by: Anton Kotsiubailo <antohakotsubailo@gmail.com>
+---
+ 09_dt_rtc/README.md | Bin 0 -> 4065 bytes
+ 09_dt_rtc/log.txt   | Bin 0 -> 7948 bytes
+ scissors/README.md  | Bin 481 -> 0 bytes
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 09_dt_rtc/README.md
+ create mode 100644 09_dt_rtc/log.txt
+ delete mode 100644 scissors/README.md
+
+diff --git a/09_dt_rtc/README.md b/09_dt_rtc/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..bf4193ea2d5e7109e34ae2b88cbae3c3f93aa4a0
+GIT binary patch
+literal 4065
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/09_dt_rtc/log.txt b/09_dt_rtc/log.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..2122684cb1ccf9747b68a9be4118e7b500e69909
+GIT binary patch
+literal 7948
+zcmeH}OK;jh5XbNS6n~|+MuvUbz^z2R^rcD-Qm&5K2-GA**hw0R58qkyFf!OR$wcy@
+zs|79l__I6no1Oi6>ypgjVd=6ApYL<GM7}_h=JTf{cgSb+4C&%NTim)HT9lxV516ZT
+z>T;Ln2$u+7pjs@fn-UZQ0+8@J8ZdwbA|M6^zz|4)Yaj)tfCFyow2J;fh*3Eq4AG{R
+z3l3X>B*8W!`*RLu%AP=R3u<mb!!2mJ1)~PR$>g}dN*5fqg1ABOaQeS{ib$FIAY&@Q
+zuO!Ep<lcu0F)jxqqcOR>fD(e@=k!wUFwAhKgp#4qp|X%88J(T3hv0Jdi0{b~q#?Y>
+zh&Hy~p`!3Uy_7pVeeKZ|hdb0;8@^$Ov*+}7k^VmVkEeE4ysYF%n~jG>j~wlNojJO)
+zr&&Ac!iL)&hR^L5HO+co!KQz1J684bU?hfQL+{}?*sz-QUKMkjBmB>LA?j}F)@ihw
+z^(avG*B)&*Ar!nz)@yUj{jE0cuqo^9i|n@>1%1|w#c{heEvy?WE{Bv7RrZqguOG8M
+zMNNO|p602``XUs<ioSCX%f%g5n7KdG$GZoF7j<#~J?GYio`DIh1zp(A!ARfmmEMX*
+z!BAHUYoLX%lo{z8tKLNSK51>oKfYZGaUoVaK}o|}ftb-GH7qnphAKTZy@=d&-P~YT
+zu~J43$K&x=A;;q$l~PcV;BI22Q9rQqBKyS)eylggt4209wEoCj3z6N{$5+?>tc59y
+zQ~TeA4gEL0#aD)$rp&q2LY|W=OnKyJBdD<!Av3NuExp_6bF`A6K9@sfuC}EVBogaQ
+zRk7*rCwaM2-pz)R&d<uB6wDk-(RB_bT>-2dO2N#b6kX?V{o-f54;43u^xEopEGupf
+z6*q^f^BijK`;c;sza04TvhF;Gnwvw-&7tl*hxA0@&C7<HL(_Q<4L65|n?uui4lOr_
+zmYYM{c@8Z%hnAZ|+j$NnZVn@E4x`R<7;$qLadQ}Tp2L`%!<d`Hxbqyw+#JT-9LAmJ
+JaNs!%{sO^NuDbvL
+
+literal 0
+HcmV?d00001
+
+diff --git a/scissors/README.md b/scissors/README.md
+deleted file mode 100644
+index 1182c39e1fe12661c537582fc27381c3cfed8059..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 481
+zcmXw0J#WJx5Z(C|Cv}J;HTKlSLzk*UrdCy#P6@#mo7!;b4jT2}_i*C@#DjYucRax8
+zGfWilMm(DrMw<~VFuD1VY(hSW^CH9oj-t?lFxr5o;j*B>lyj24>oB%AKl_A(w=MD5
+zRn&c`%4t<OZ7O?XKBs>TkcrANzy(2kNDDqfu1{na@B*2@ZE<SI#Pp3W!_DWZ0?nq8
+zLeMATL4l0}Nao^lVQk^G9oycV&u8-t?+aQ%a1)VWzjg-=@8JMzI%rZoZyBMHy^>hh
+z7nM6}B|XA%gDX)hjv6TTcb$ulPu9xS_-<>50e-14h;B}&=A$-urKP6cZLT|G-ct4y
+ywf$^m?xFG$Yq5_bgyBi8(all<(6zRnN=Dx4$4ulM>Kw1c2vZ3*>TRGOY|S68wx?16
+
+-- 
+2.7.4
+
