@@ -1,0 +1,65 @@
+rmmod: remove 'chardev': No such file or directory
++ insmod chardev.ko
+[  632.048552] Initializing task10 module
+[  632.049124] Registered correctly with major number 511
+[  632.049550] Device class registered correctly
+[  632.050771] Buffer size is 1024
+[  632.050965]  Char device class created correctly
+[  632.051309] Procfs volume and size loaded
+[  632.051737] sys_char class in sysfs initialized
+[  632.057681] Device has been opened 1 times
++ echo Hello Anton
+[  632.062149] Received 12 characters from the user
+[  632.062685] Device successfully closed
++ cat /dev/char_dev
+[  632.234358] Device has been opened 2 times
+Hello Anton
+[  632.235394] Device successfully closed
++ cat /proc/proc_chdev/buf_volume
+[  632.454154] Read 4 chars, 1024�O���H�۠H�ۀH��`H��@H�� H��
+1024+ cat /proc/proc_chdev/buf_size
+[  632.553114] Read 2 chars, 12
+12+ cat /sys/class/sys_char/numop
+[  632.627791] 2
+[  632.627821] read 1
+2+ echo 1
+[  632.642913] Device has been opened 3 times
++ echo -n 'It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire. During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….'
+[  632.648771] Received 504 characters from the user
+[  632.650473] Device successfully closed
++ sleep 0.1
++ cat /dev/char_dev
+[  632.916251] Device has been opened 4 times
+It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire. During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy….[  632.918580] Device successfully closed
++ cat /proc/proc_chdev/buf_volume
+[  633.000161] Read 4 chars, 1024
+1024+ cat /proc/proc_chdev/buf_size
+[  633.079677] Read 3 chars, 504
+504+ cat /sys/class/sys_char/numop
+[  633.165136] 4
+[  633.165164] read 1
+4+ echo 1
++ sleep 0.1
++ rmmod chardev.ko
+[  633.470717] ------------[ cut here ]------------
+[  633.471009] WARNING: CPU: 0 PID: 131 at fs/proc/generic.c:683 remove_proc_entry+0x184/0x190
+[  633.471280] remove_proc_entry: removing non-empty directory '/proc/proc_chdev', leaking at least 'buf_volume'
+[  633.471787] Modules linked in: chardev(O-) [last unloaded: chardev]
+[  633.472082] CPU: 0 PID: 131 Comm: rmmod Tainted: G        W  O      4.19.166 #1
+[  633.472426] Hardware name: Generic DT based system
+[  633.472685] [<c031225c>] (unwind_backtrace) from [<c030c9e8>] (show_stack+0x10/0x14)
+[  633.473065] [<c030c9e8>] (show_stack) from [<c0e7943c>] (dump_stack+0xc0/0xd4)
+[  633.473407] [<c0e7943c>] (dump_stack) from [<c0346344>] (__warn.part.3+0xbc/0xd8)
+[  633.473747] [<c0346344>] (__warn.part.3) from [<c03463c8>] (warn_slowpath_fmt+0x68/0x8c)
+[  633.474097] [<c03463c8>] (warn_slowpath_fmt) from [<c04e68d4>] (remove_proc_entry+0x184/0x190)
+[  633.474504] [<c04e68d4>] (remove_proc_entry) from [<bf010554>] (cleanup_proc+0x70/0x7c [chardev])
+[  633.474903] [<bf010554>] (cleanup_proc [chardev]) from [<bf0105b0>] (char_exit+0x50/0xaa0 [chardev])
+[  633.475307] [<bf0105b0>] (char_exit [chardev]) from [<c03d2970>] (sys_delete_module+0x168/0x1ec)
+[  633.475829] [<c03d2970>] (sys_delete_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[  633.476169] Exception stack(0xdb0abfa8 to 0xdb0abff0)
+[  633.476517] bfa0:                   00766564 00000000 beffcad8 00000880 00000007 72616863
+[  633.477036] bfc0: 00766564 00000000 00000000 00000081 00000001 0011ad10 b6fc8000 0011a784
+[  633.477508] bfe0: beffcad8 beffcac8 0003a61c b6e7f1b0
+[  633.477794] ---[ end trace 8775f322ecf1d9f8 ]---
+[  633.478268] Bye!
+
