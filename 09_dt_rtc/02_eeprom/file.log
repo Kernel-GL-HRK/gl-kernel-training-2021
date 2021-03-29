@@ -1,0 +1,52 @@
+/tmp # find /sys/firmware/devicetree/ | grep cape_eeprom3
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/compatible
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/cape_data@0
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/cape_data@0/reg
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/cape_data@0/name
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/#address-cells
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/#size-cells
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/reg
+/sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/name
+/tmp # cat /sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/compat
+ible
+atmel,24c256/tmp # echo test > /sys/bus/i2c/devices/2-0057/eeprom
+/tmp # cat /sys/bus/i2c/devices/2-0057/eeprom | hexdump -C
+00000000  74 65 73 74 0a ff ff ff  ff ff ff ff ff ff ff ff  |test............|
+00000010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00001000  74 65 73 74 0a ff ff ff  ff ff ff ff ff ff ff ff  |test............|
+00001010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00002000  74 65 73 74 0a ff ff ff  ff ff ff ff ff ff ff ff  |test............|
+00002010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00003000  74 65 73 74 0a ff ff ff  ff ff ff ff ff ff ff ff  |test............|
+00003010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00004000  74 65 73 74 0a ff ff ff  ff ff ff ff ff ff ff ff  |test............|
+00004010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00005000  74 65 73 74 0a ff ff ff  ff ff ff ff ff ff ff ff  |test............|
+00005010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00006000  74 65 73 74 0a ff ff ff  ff ff ff ff ff ff ff ff  |test............|
+00006010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00007000  74 65 73 74 0a ff ff ff  ff ff ff ff ff ff ff ff  |test............|
+00007010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00008000
+/tmp # 
+
+
+Please press Enter to activate this console. 
+/ # 
+/ # cat /sys/bus/i2c/devices/2-0057/eeprom | hexdump -C
+00000000  74 65 73 74 0a ff ff ff  ff ff ff ff ff ff ff ff  |test............|
+00000010  ff ff ff ff ff ff ff ff  ff ff ff ff ff ff ff ff  |................|
+*
+00001000
+/ # cat /sys/firmware/devicetree/base/ocp/i2c@4819c000/cape_eeprom3@57/compatibl
+e
+atmel,24c32/ # 

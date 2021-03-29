@@ -1,0 +1,25 @@
+/tmp # insmod check_button.ko 
+[ 1402.369274] check_button: my_gpio_led_init: Init My GPIO49 OK
+[ 1402.375376] check_button: my_gpio_button_init: Init GPIO117 OK
+[ 1402.381602] check_button: check_button_init: HR Timer module init
+[ 1402.388018] check_button: check_button_init: Timer inited
+/tmp # [ 1404.757306] check_button: timer_handler: Timerfunction, button state have changed
+[ 1404.766140] check_button: hrtimer_handler: HR Timer module calback
+[ 1405.327293] check_button: timer_handler: Timerfunction, button state have changed
+[ 1405.336108] check_button: hrtimer_handler: HR Timer module calback
+[ 1406.557297] check_button: timer_handler: Timerfunction, button state have changed
+[ 1406.566147] check_button: hrtimer_handler: HR Timer module calback
+[ 1407.697293] check_button: timer_handler: Timerfunction, button state have changed
+[ 1407.706143] check_button: hrtimer_handler: HR Timer module calback
+[ 1411.297294] check_button: timer_handler: Timerfunction, button state have changed
+[ 1411.306105] check_button: hrtimer_handler: HR Timer module calback
+[ 1411.417291] check_button: timer_handler: Timerfunction, button state have changed
+[ 1411.426100] check_button: hrtimer_handler: HR Timer module calback
+[ 1411.597292] check_button: timer_handler: Timerfunction, button state have changed
+[ 1411.606100] check_button: hrtimer_handler: HR Timer module calback
+[ 1411.687292] check_button: timer_handler: Timerfunction, button state have changed
+[ 1411.696106] check_button: hrtimer_handler: HR Timer module calback
+/tmp # rmmod check_button.ko 
+[ 1419.669322] check_button: check_button_exit: HR timer cancel
+[ 1419.675255] check_button: check_button_exit: Timer deleted
+[ 1419.681130] check_button: check_button_exit: Deinit GPIO

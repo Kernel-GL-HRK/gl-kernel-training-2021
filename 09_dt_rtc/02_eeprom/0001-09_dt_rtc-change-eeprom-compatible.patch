@@ -1,0 +1,37 @@
+From 07da57fe17e328a204c246e6d8057a0215965a33 Mon Sep 17 00:00:00 2001
+From: olyuboch <lyubochko.leha@gmail.com>
+Date: Wed, 24 Mar 2021 10:10:12 +0200
+Subject: [PATCH] 09_dt_rtc: change eeprom compatible
+
+Signed-off-by: olyuboch <lyubochko.leha@gmail.com>
+---
+ arch/arm/boot/dts/am335x-boneblack.dts | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack.dts b/arch/arm/boot/dts/am335x-boneblack.dts
+index d154d31..a727faf 100644
+--- a/arch/arm/boot/dts/am335x-boneblack.dts
++++ b/arch/arm/boot/dts/am335x-boneblack.dts
+@@ -26,3 +26,19 @@
+ 		opp-supported-hw = <0x06 0x0100>;
+ 	};
+ };
++
++&cape_eeprom0 {
++	compatible = "atmel,24c32";
++};
++
++&cape_eeprom1 {
++	compatible = "atmel,24c32";
++};
++
++&cape_eeprom2 {
++	compatible = "atmel,24c32";
++};
++
++&cape_eeprom3 {
++	compatible = "atmel,24c32";
++};
+-- 
+2.7.4
+

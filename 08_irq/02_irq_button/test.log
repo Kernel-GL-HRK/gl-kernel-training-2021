@@ -1,0 +1,54 @@
+/tmp # insmod irq_button.ko 
+[ 1178.780352] irq_button: my_gpio_led_init: Init My GPIO49 OK
+[ 1178.786277] irq_button: my_gpio_button_init: Init GPIO117 OK
+[ 1178.792666] irq_button: irq_button_init: irq - 63
+/tmp # [ 1181.623492] irq_button: my_irq_handler: IRQ HW handler
+[ 1181.628947] irq_button: my_irq_thread: IRQ thread, counter - 1, sim_busy - 0
+[ 1182.059330] irq_button: my_irq_handler: IRQ HW handler
+[ 1182.064718] irq_button: my_irq_thread: IRQ thread, counter - 2, sim_busy - 0
+[ 1182.983982] irq_button: my_irq_handler: IRQ HW handler
+[ 1182.989382] irq_button: my_irq_thread: IRQ thread, counter - 3, sim_busy - 0
+[ 1183.234926] irq_button: my_irq_handler: IRQ HW handler
+[ 1183.240307] irq_button: my_irq_thread: IRQ thread, counter - 4, sim_busy - 0
+/tmp # echo 1 > /sys/module/irq_button/parameters/simulate_busy 
+/tmp # [ 1190.161272] irq_button: my_irq_handler: IRQ HW handler
+[ 1190.166722] irq_button: my_irq_thread: IRQ thread, counter - 5, sim_busy - 1
+[ 1190.174111] irq_button: my_irq_thread: Simulate is busy, wait for work will be done...
+[ 1190.324680] irq_button: my_irq_handler: IRQ HW handler
+[ 1191.672215] irq_button: my_irq_handler: IRQ HW handler
+[ 1191.846832] irq_button: my_irq_handler: IRQ HW handler
+[ 1192.114565] irq_button: my_irq_handler: IRQ HW handler
+[ 1192.237612] irq_button: my_irq_handler: IRQ HW handler
+[ 1195.217331] irq_button: my_irq_thread: Simulate have finished his work.
+[ 1195.224239] irq_button: my_irq_thread: IRQ thread, counter - 10, sim_busy - 0
+[ 1219.789708] irq_button: my_irq_handler: IRQ HW handler
+[ 1219.795119] irq_button: my_irq_thread: IRQ thread, counter - 11, sim_busy - 0
+[ 1219.962953] irq_button: my_irq_handler: IRQ HW handler
+[ 1219.968336] irq_button: my_irq_thread: IRQ thread, counter - 12, sim_busy - 0
+/tmp # rmmod irq_button.ko 
+[ 1223.194018] irq_button: irq_button_exit: Deinit GPIO
+
+
+
+
+/tmp # insmod irq_button.ko 
+[ 1328.565095] irq_button: my_gpio_led_init: Init My GPIO49 OK
+[ 1328.571153] irq_button: my_gpio_button_init: Init GPIO117 OK
+[ 1328.577499] irq_button: irq_button_init: irq - 63
+/tmp # [ 1332.300952] irq_button: my_irq_handler: IRQ HW handler
+[ 1332.306400] irq_button: my_irq_thread: IRQ thread, counter - 1, sim_busy - 0
+[ 1332.447024] irq_button: my_irq_handler: IRQ HW handler
+[ 1332.452407] irq_button: my_irq_thread: IRQ thread, counter - 2, sim_busy - 0
+[ 1332.636445] irq_button: my_irq_handler: IRQ HW handler
+[ 1332.641831] irq_button: my_irq_thread: IRQ thread, counter - 3, sim_busy - 0
+[ 1332.778841] irq_button: my_irq_handler: IRQ HW handler
+[ 1332.784221] irq_button: my_irq_thread: IRQ thread, counter - 4, sim_busy - 0
+/tmp # echo 1 > /sys/module/irq_button/parameters/simulate_busy 
+/tmp # [ 1338.921189] irq_button: my_irq_handler: IRQ HW handler
+[ 1338.926636] irq_button: my_irq_thread: IRQ thread, counter - 5, sim_busy - 1
+[ 1338.934027] irq_button: my_irq_thread: Simulate is busy, wait for work will be done...
+[ 1339.074159] irq_button: my_irq_handler: IRQ HW handler
+/tmp # rmmod irq_button.ko 
+[ 1340.624222] irq_button: my_irq_thread: Simulate have finished his work.
+[ 1340.631265] irq_button: my_irq_thread: IRQ thread, counter - 6, sim_busy - 0
+[ 1340.638887] irq_button: irq_button_exit: Deinit GPIO
