@@ -1,0 +1,4 @@
+/home/ivan/repos/linux-stable/scripts/checkpatch.pl --no-tree -f main.c
+total: 0 errors, 0 warnings, 34 lines checked
+
+main.c has no obvious style problems and is ready for submission.

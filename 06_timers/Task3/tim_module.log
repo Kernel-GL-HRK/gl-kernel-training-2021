@@ -1,0 +1,11 @@
+/tmp # insmod tim_module.ko
+[44912.985766] ProCamp Timer Module inserted
+/tmp # cat /sys/kernel/sysfs_gl/time3
+[44929.939152] Timer started
+/tmp # cat /sys/kernel/sysfs_gl/time3
+[44940.409843] Time elapsed 10.470671408
+/tmp # cat /sys/kernel/sysfs_gl/time3
+[44951.144230] Time elapsed 10.734398816
+/tmp # rmmod tim_module
+[44957.185768] ProCamp Timer Module removed
+/tmp # 
