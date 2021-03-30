@@ -137,12 +137,12 @@ void test_and_print(char *text, uint8_t adding, enum mem_func func)
 			break;
 		}
 
-		t_min->alloc_time = MIN(t_min->alloc_time, t->alloc_time);
-		t_min->free_time = MIN(t_min->free_time, t->free_time);
+		t_min->alloc_time = t->alloc_time;
+		t_min->free_time = t->free_time;
 		t_aver->alloc_time += t->alloc_time;
 		t_aver->free_time += t->free_time;
-		t_max->alloc_time = MAX(t_max->alloc_time, t->alloc_time);
-		t_max->free_time = MAX(t_max->free_time, t->free_time);
+		t_max->alloc_time = t->alloc_time;
+		t_max->free_time = t->free_time;
 
 		uint8_t j = NUM_OF_ITER;
 		while(j--) {
