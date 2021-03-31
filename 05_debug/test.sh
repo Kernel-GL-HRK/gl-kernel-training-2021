@@ -14,16 +14,20 @@ insmod main.ko
 	echo "VlaD" > /proc/procfs_list/list
 
 	echo "Now we call 3 times cat for sysfs"
-	echo "And 4 times for procfs"
-	sleep 1s
+	sleep 0.1s
 	cat  /sys/kernel/kobject_list/list
 	cat  /sys/kernel/kobject_list/list
 	cat  /sys/kernel/kobject_list/list
-	sleep 1s
+	echo "Now we call 4 times cat for sysfs"
+	sleep 0.1s
 	cat /proc/procfs_list/list
 	cat /proc/procfs_list/list
 	cat /proc/procfs_list/list
         cat /proc/procfs_list/list
+	echo "Statistics"
+	sleep 0.1s
+	cat /proc/procfs_list/stat
+	cat /sys/kernel/kobject_list/statistics
 
 
 rmmod main.ko
