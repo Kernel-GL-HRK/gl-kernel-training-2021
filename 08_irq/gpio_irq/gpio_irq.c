@@ -4,6 +4,7 @@
 #include <linux/module.h>
 #include <linux/gpio.h>
 #include <linux/interrupt.h>
+#include <linux/delay.h>
 
 #define GPIO_NUMBER(port, bit) (32 * (port) + (bit))
 
@@ -14,7 +15,7 @@
  */
 
 #define LED_BUTTON_ON GPIO_NUMBER(1, 22)
-#define LED_BUTTON_CH GPIO_NUMBER(1, 24)
+#define LED_LONGWORK GPIO_NUMBER(1, 24)
 #define BUTTON GPIO_NUMBER(2, 8)
 
 static int led1_gpio = -1;
@@ -23,8 +24,12 @@ static int btn_gpio = -1;
 static int btn_irq;
 
 static struct btn_irq_data_t {
+	int busy_delay_sec;
 	u32 btn_cnt;
 } btn_irq_data;
+
+static int simulate_busy;
+module_param(simulate_busy, int, 0);
 
 static irqreturn_t btn_irq_handler(int irq, void *data)
 {
@@ -40,6 +45,10 @@ static irqreturn_t button_threaded_irq(int irq, void *data)
 	struct btn_irq_data_t  *ptr = (struct btn_irq_data_t *)data;
 
 	pr_info("Button IRQ threaded counter: %u\n", ptr->btn_cnt);
+	gpio_set_value(LED_LONGWORK, 1);
+	msleep_interruptible(ptr->busy_delay_sec*1000);
+	gpio_set_value(LED_LONGWORK, 0);
+	pr_info("I`m still alive...\n");
 	return IRQ_HANDLED;
 }
 
@@ -105,13 +114,14 @@ static int __init gpio_irq_init(void)
 
 	gpio_set_value(led1_gpio, 0);
 
-	res = led_gpio_init(LED_BUTTON_CH, &led3_gpio);
+	res = led_gpio_init(LED_LONGWORK, &led3_gpio);
 	if (res != 0) {
-		pr_err("Can't set GPIO%d for output\n", LED_BUTTON_CH);
+		pr_err("Can't set GPIO%d for output\n", LED_LONGWORK);
 		goto err_ret;
 	}
 	gpio_set_value(led3_gpio, 0);
 
+	btn_irq_data.busy_delay_sec = (simulate_busy > 0) ? simulate_busy : 0;
 	res = request_threaded_irq(btn_irq, btn_irq_handler,
 		button_threaded_irq, IRQF_TRIGGER_RISING | IRQF_TRIGGER_FALLING,
 		"button_interrupt", &btn_irq_data);
