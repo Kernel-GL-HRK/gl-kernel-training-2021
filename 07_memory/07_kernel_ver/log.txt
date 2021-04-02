@@ -1,0 +1,479 @@
+/usr # insmod krnl_mem_test.ko 
+[   43.192237] krnl_mem_test: loading out-of-tree module taints kernel.
+[   43.199639] === krnl_mem_test module loaded! ===
+[   43.204485] ====== Run memory test allocation! ============================
+[   43.211872] |
+[   43.213520] | function call: kmalloc
+[   43.217253] | test case:     2^x
+[   43.220644] |
+[   43.222289] ===============================================================
+[   43.229581] | x: 0
+[   43.229608] | alloc time:  min: 417(ns) average: 520(ns) max: 1166(ns)       | free time:  min: 416(ns) average: 4294967816(ns) max: 1375(ns)
+[   43.231712] | x: 1
+[   43.244496] | alloc time:  min: 416(ns) average: 462(ns) max: 625(ns)        | free time:  min: 416(ns) average: 4294967721(ns) max: 500(ns)
+[   43.246599] | x: 2
+[   43.259201] | alloc time:  min: 416(ns) average: 458(ns) max: 625(ns)        | free time:  min: 416(ns) average: 4294967721(ns) max: 458(ns)
+[   43.261303] | x: 3
+[   43.273903] | alloc time:  min: 416(ns) average: 458(ns) max: 583(ns)        | free time:  min: 416(ns) average: 4294967725(ns) max: 459(ns)
+[   43.276006] | x: 4
+[   43.288606] | alloc time:  min: 416(ns) average: 462(ns) max: 625(ns)        | free time:  min: 416(ns) average: 4294967725(ns) max: 500(ns)
+[   43.290708] | x: 5
+[   43.303309] | alloc time:  min: 416(ns) average: 483(ns) max: 833(ns)        | free time:  min: 416(ns) average: 4294967733(ns) max: 500(ns)
+[   43.305411] | x: 6
+[   43.318011] | alloc time:  min: 416(ns) average: 462(ns) max: 625(ns)        | free time:  min: 416(ns) average: 4294967721(ns) max: 500(ns)
+[   43.320114] | x: 7
+[   43.332714] | alloc time:  min: 416(ns) average: 512(ns) max: 1166(ns)       | free time:  min: 416(ns) average: 4294967720(ns) max: 458(ns)
+[   43.334817] | x: 8
+[   43.347509] | alloc time:  min: 417(ns) average: 504(ns) max: 1167(ns)       | free time:  min: 416(ns) average: 4294967750(ns) max: 708(ns)
+[   43.349611] | x: 9
+[   43.362302] | alloc time:  min: 417(ns) average: 462(ns) max: 792(ns)        | free time:  min: 416(ns) average: 4294967758(ns) max: 875(ns)
+[   43.364405] | x: 10
+[   43.377014] | alloc time:  min: 417(ns) average: 483(ns) max: 1042(ns)       | free time:  min: 417(ns) average: 4294967725(ns) max: 541(ns)
+[   43.379222] | x: 11
+[   43.391914] | alloc time:  min: 416(ns) average: 520(ns) max: 1208(ns)       | free time:  min: 416(ns) average: 4294967766(ns) max: 875(ns)
+[   43.394108] | x: 12
+[   43.406799] | alloc time:  min: 417(ns) average: 525(ns) max: 1167(ns)       | free time:  min: 417(ns) average: 4294967775(ns) max: 875(ns)
+[   43.409006] | x: 13
+[   43.421698] | alloc time:  min: 416(ns) average: 504(ns) max: 1250(ns)       | free time:  min: 416(ns) average: 4294967762(ns) max: 917(ns)
+[   43.423892] | x: 14
+[   43.436602] | alloc time:  min: 916(ns) average: 1395(ns) max: 5250(ns)      | free time:  min: 916(ns) average: 4294968774(ns) max: 6292(ns)
+[   43.438810] | x: 15
+[   43.451700] | alloc time:  min: 1041(ns) average: 1329(ns) max: 3625(ns)     | free time:  min: 1000(ns) average: 4294968462(ns) max: 2458(ns)
+[   43.453894] | x: 16
+[   43.466966] | alloc time:  min: 1208(ns) average: 1404(ns) max: 2917(ns)     | free time:  min: 1125(ns) average: 4294968496(ns) max: 1500(ns)
+[   43.469174] | x: 17
+[   43.482253] | alloc time:  min: 1458(ns) average: 1854(ns) max: 5209(ns)     | free time:  min: 1333(ns) average: 4294968741(ns) max: 2125(ns)
+[   43.484447] | x: 18
+[   43.497547] | alloc time:  min: 2208(ns) average: 3133(ns) max: 10875(ns)    | free time:  min: 1875(ns) average: 4294969337(ns) max: 3208(ns)
+[   43.499740] | x: 19
+[   43.512948] | alloc time:  min: 3208(ns) average: 4012(ns) max: 10875(ns)    | free time:  min: 2750(ns) average: 4294970083(ns) max: 3083(ns)
+[   43.515142] | x: 20
+[   43.528394] | alloc time:  min: 5375(ns) average: 6783(ns) max: 19375(ns)    | free time:  min: 4500(ns) average: 4294971862(ns) max: 4875(ns)
+[   43.530587] | x: 21
+[   43.543966] | alloc time:  min: 9708(ns) average: 15458(ns) max: 66792(ns)   | free time:  min: 8125(ns) average: 4294975704(ns) max: 10583(ns)
+[   43.546158] | x: 22
+[   43.559904] | alloc time:  min: 19250(ns) average: 25520(ns) max: 76834(ns)  | free time:  min: 17000(ns) average: 4294986150(ns) max: 29375(ns)
+[   43.562095] | x: 23
+[   43.576954] | alloc time:  min: 49083(ns) average: 73129(ns) max: 274417(ns) | free time:  min: 53958(ns) average: 4295030550(ns) max: 94500(ns)
+[   43.579186] | x: 24
+[   43.592751] ------------[ cut here ]------------
+[   43.599803] WARNING: CPU: 0 PID: 80 at mm/page_alloc.c:4387 __alloc_pages_nodemask+0x174/0xfc0
+[   43.608823] Modules linked in: krnl_mem_test(O+)
+[   43.613664] CPU: 0 PID: 80 Comm: insmod Tainted: G           O      4.19.176 #1
+[   43.621303] Hardware name: Generic AM33XX (Flattened Device Tree)
+[   43.627706] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[   43.635821] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[   43.643380] [<c0e8de18>] (dump_stack) from [<c0e866fc>] (__warn.part.3+0xbc/0xd8)
+[   43.651208] [<c0e866fc>] (__warn.part.3) from [<c0e86878>] (warn_slowpath_null+0x44/0x50)
+[   43.659764] [<c0e86878>] (warn_slowpath_null) from [<c0429c44>] (__alloc_pages_nodemask+0x174/0xfc0)
+[   43.669321] [<c0429c44>] (__alloc_pages_nodemask) from [<c0448394>] (kmalloc_order+0x18/0x28)
+[   43.678239] [<c0448394>] (kmalloc_order) from [<c04483c0>] (kmalloc_order_trace+0x1c/0xc0)
+[   43.686897] [<c04483c0>] (kmalloc_order_trace) from [<bf000118>] (get_time+0x118/0x16c [krnl_mem_test])
+[   43.696729] [<bf000118>] (get_time [krnl_mem_test]) from [<bf000288>] (run_test_mem+0x11c/0x200 [krnl_mem_test])
+[   43.707379] [<bf000288>] (run_test_mem [krnl_mem_test]) from [<bf005024>] (mod_init+0x24/0x1000 [krnl_mem_test])
+[   43.718029] [<bf005024>] (mod_init [krnl_mem_test]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[   43.727410] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[   43.735874] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[   43.744247] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[   43.752528] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[   43.760987] Exception stack(0xda2cdfa8 to 0xda2cdff0)
+[   43.766271] dfa0:                   b6f2038c b6f3f950 0011b1d8 00001b90 001086c4 00000000
+[   43.774824] dfc0: b6f2038c b6f3f950 00001b90 00000080 00000001 bea0ae8c 001086c4 000f411e
+[   43.783375] dfe0: bea0ab48 bea0ab38 0003b270 b6df91b0
+[   43.788685] ---[ end trace 29676b2b0df90677 ]---
+[   43.793511] | ### Memory cannot be allocated!
+[   43.798078] ====== Run memory test allocation! ============================
+[   43.805356] |
+[   43.807000] | function call: kzalloc
+[   43.810747] | test case:     2^x
+[   43.814117] |
+[   43.815760] ===============================================================
+[   43.823048] | x: 0
+[   43.823074] | alloc time:  min: 458(ns) average: 708(ns) max: 2750(ns)       | free time:  min: 416(ns) average: 4294967854(ns) max: 1792(ns)
+[   43.825176] | x: 1
+[   43.837959] | alloc time:  min: 458(ns) average: 495(ns) max: 667(ns)        | free time:  min: 416(ns) average: 4294967721(ns) max: 500(ns)
+[   43.840062] | x: 2
+[   43.852663] | alloc time:  min: 458(ns) average: 529(ns) max: 917(ns)        | free time:  min: 416(ns) average: 4294967725(ns) max: 500(ns)
+[   43.854766] | x: 3
+[   43.867374] | alloc time:  min: 458(ns) average: 500(ns) max: 791(ns)        | free time:  min: 416(ns) average: 4294967725(ns) max: 459(ns)
+[   43.869476] | x: 4
+[   43.882076] | alloc time:  min: 458(ns) average: 491(ns) max: 666(ns)        | free time:  min: 416(ns) average: 4294967725(ns) max: 459(ns)
+[   43.884179] | x: 5
+[   43.896778] | alloc time:  min: 458(ns) average: 491(ns) max: 625(ns)        | free time:  min: 416(ns) average: 4294967721(ns) max: 458(ns)
+[   43.898894] | x: 6
+[   43.911495] | alloc time:  min: 458(ns) average: 504(ns) max: 792(ns)        | free time:  min: 416(ns) average: 4294967721(ns) max: 458(ns)
+[   43.913597] | x: 7
+[   43.926198] | alloc time:  min: 500(ns) average: 583(ns) max: 1208(ns)       | free time:  min: 416(ns) average: 4294967741(ns) max: 667(ns)
+[   43.928314] | x: 8
+[   43.941007] | alloc time:  min: 541(ns) average: 612(ns) max: 1083(ns)       | free time:  min: 417(ns) average: 4294967746(ns) max: 708(ns)
+[   43.943109] | x: 9
+[   43.955803] | alloc time:  min: 667(ns) average: 721(ns) max: 1166(ns)       | free time:  min: 417(ns) average: 4294967717(ns) max: 458(ns)
+[   43.957918] | x: 10
+[   43.970615] | alloc time:  min: 958(ns) average: 1087(ns) max: 1958(ns)      | free time:  min: 417(ns) average: 4294967729(ns) max: 500(ns)
+[   43.972809] | x: 11
+[   43.985602] | alloc time:  min: 1625(ns) average: 1649(ns) max: 1833(ns)     | free time:  min: 416(ns) average: 4294967746(ns) max: 667(ns)
+[   43.987809] | x: 12
+[   44.000707] | alloc time:  min: 2875(ns) average: 2962(ns) max: 3416(ns)     | free time:  min: 416(ns) average: 4294967754(ns) max: 833(ns)
+[   44.002901] | x: 13
+[   44.015825] | alloc time:  min: 5458(ns) average: 5529(ns) max: 6125(ns)     | free time:  min: 416(ns) average: 4294967750(ns) max: 709(ns)
+[   44.018034] | x: 14
+[   44.031030] | alloc time:  min: 11166(ns) average: 11829(ns) max: 16750(ns)  | free time:  min: 916(ns) average: 4294968491(ns) max: 3542(ns)
+[   44.033224] | x: 15
+[   44.046687] | alloc time:  min: 21875(ns) average: 22125(ns) max: 23834(ns)  | free time:  min: 1083(ns) average: 4294968466(ns) max: 1709(ns)
+[   44.048896] | x: 16
+[   44.062672] | alloc time:  min: 44042(ns) average: 44258(ns) max: 45625(ns)  | free time:  min: 1125(ns) average: 4294968529(ns) max: 1791(ns)
+[   44.064866] | x: 17
+[   44.079077] | alloc time:  min: 86250(ns) average: 87433(ns) max: 90584(ns)  | free time:  min: 1416(ns) average: 4294968829(ns) max: 2458(ns)
+[   44.081267] | x: 18
+[   44.096336] | alloc time:  min: 173625(ns) average: 174441(ns) max: 181167(ns)       | free time:  min: 2583(ns) average: 4294969946(ns) max: 3167(ns)
+[   44.098547] | x: 19
+[   44.115666] | alloc time:  min: 348625(ns) average: 349050(ns) max: 351792(ns)       | free time:  min: 3459(ns) average: 4294970854(ns) max: 3875(ns)
+[   44.117873] | x: 20
+[   44.138512] | alloc time:  min: 697000(ns) average: 699312(ns) max: 709792(ns)       | free time:  min: 7583(ns) average: 4294974933(ns) max: 8042(ns)
+[   44.140702] | x: 21
+[   44.168426] | alloc time:  min: 1394125(ns) average: 1399529(ns) max: 1419458(ns)    | free time:  min: 15875(ns) average: 4294983279(ns) max: 16375(ns)
+[   44.170617] | x: 22
+[   44.212953] | alloc time:  min: 2788709(ns) average: 2797695(ns) max: 2847833(ns)    | free time:  min: 32708(ns) average: 4295000275(ns) max: 33917(ns)
+[   44.215145] | x: 23
+[   44.285927] | alloc time:  min: 5588750(ns) average: 5606637(ns) max: 5680500(ns)    | free time:  min: 67875(ns) average: 4295035771(ns) max: 70000(ns)
+[   44.288138] | x: 24
+[   44.302156] | ### Memory cannot be allocated!
+[   44.308908] ====== Run memory test allocation! ============================
+[   44.316186] |
+[   44.317845] | function call: vmalloc
+[   44.321579] | test case:     2^x
+[   44.324948] |
+[   44.326591] ===============================================================
+[   44.333880] | x: 0
+[   44.334446] | alloc time:  min: 2083(ns) average: 51187(ns) max: 483959(ns)  | free time:  min: 2041(ns) average: 4294970350(ns) max: 11625(ns)
+[   44.336589] | x: 1
+[   44.350101] | alloc time:  min: 2125(ns) average: 5312(ns) max: 31291(ns)    | free time:  min: 2042(ns) average: 4294969621(ns) max: 4125(ns)
+[   44.352222] | x: 2
+[   44.365429] | alloc time:  min: 2125(ns) average: 4145(ns) max: 20167(ns)    | free time:  min: 2042(ns) average: 4294969550(ns) max: 3167(ns)
+[   44.367556] | x: 3
+[   44.380766] | alloc time:  min: 2166(ns) average: 4379(ns) max: 20208(ns)    | free time:  min: 2083(ns) average: 4294969741(ns) max: 3750(ns)
+[   44.382870] | x: 4
+[   44.396068] | alloc time:  min: 2125(ns) average: 3241(ns) max: 11417(ns)    | free time:  min: 2042(ns) average: 4294969579(ns) max: 3417(ns)
+[   44.398187] | x: 5
+[   44.411373] | alloc time:  min: 2125(ns) average: 2399(ns) max: 4125(ns)     | free time:  min: 2083(ns) average: 4294969621(ns) max: 3333(ns)
+[   44.413476] | x: 6
+[   44.426578] | alloc time:  min: 2125(ns) average: 2429(ns) max: 3833(ns)     | free time:  min: 2125(ns) average: 4294969616(ns) max: 2959(ns)
+[   44.428697] | x: 7
+[   44.441793] | alloc time:  min: 2125(ns) average: 2495(ns) max: 4584(ns)     | free time:  min: 2125(ns) average: 4294969558(ns) max: 3083(ns)
+[   44.443896] | x: 8
+[   44.456991] | alloc time:  min: 2125(ns) average: 2354(ns) max: 3292(ns)     | free time:  min: 2125(ns) average: 4294969579(ns) max: 2875(ns)
+[   44.459111] | x: 9
+[   44.472206] | alloc time:  min: 2166(ns) average: 2375(ns) max: 3667(ns)     | free time:  min: 2083(ns) average: 4294969567(ns) max: 3042(ns)
+[   44.474309] | x: 10
+[   44.487474] | alloc time:  min: 2166(ns) average: 7216(ns) max: 45959(ns)    | free time:  min: 2125(ns) average: 4294969766(ns) max: 3500(ns)
+[   44.489669] | x: 11
+[   44.502860] | alloc time:  min: 2167(ns) average: 2362(ns) max: 3542(ns)     | free time:  min: 2125(ns) average: 4294969571(ns) max: 2917(ns)
+[   44.505054] | x: 12
+[   44.518151] | alloc time:  min: 2125(ns) average: 2437(ns) max: 4333(ns)     | free time:  min: 2125(ns) average: 4294969575(ns) max: 2917(ns)
+[   44.520345] | x: 13
+[   44.533448] | alloc time:  min: 2500(ns) average: 2766(ns) max: 4041(ns)     | free time:  min: 2583(ns) average: 4294970004(ns) max: 3375(ns)
+[   44.535642] | x: 14
+[   44.548762] | alloc time:  min: 3292(ns) average: 3600(ns) max: 5125(ns)     | free time:  min: 3417(ns) average: 4294970862(ns) max: 4291(ns)
+[   44.550956] | x: 15
+[   44.564115] | alloc time:  min: 4709(ns) average: 5799(ns) max: 11833(ns)    | free time:  min: 5042(ns) average: 4294972471(ns) max: 5791(ns)
+[   44.566310] | x: 16
+[   44.579832] | alloc time:  min: 7791(ns) average: 10470(ns) max: 25417(ns)   | free time:  min: 8250(ns) average: 4294982187(ns) max: 70292(ns)
+[   44.582031] | x: 17
+[   44.595666] | alloc time:  min: 13958(ns) average: 14812(ns) max: 19417(ns)  | free time:  min: 14750(ns) average: 4294982225(ns) max: 16042(ns)
+[   44.597873] | x: 18
+[   44.611907] | alloc time:  min: 25833(ns) average: 27516(ns) max: 36250(ns)  | free time:  min: 27667(ns) average: 4294995125(ns) max: 28792(ns)
+[   44.614101] | x: 19
+[   44.628731] | alloc time:  min: 49791(ns) average: 53395(ns) max: 66292(ns)  | free time:  min: 53500(ns) average: 4295026091(ns) max: 84125(ns)
+[   44.630927] | x: 20
+[   44.646838] | alloc time:  min: 105792(ns) average: 111520(ns) max: 140500(ns)       | free time:  min: 124834(ns) average: 4295095646(ns) max: 151750(ns)
+[   44.649058] | x: 21
+[   44.669427] | alloc time:  min: 222750(ns) average: 243733(ns) max: 318625(ns)       | free time:  min: 291792(ns) average: 4295363754(ns) max: 1317042(ns)
+[   44.671623] | x: 22
+[   44.697435] | alloc time:  min: 461291(ns) average: 489400(ns) max: 606000(ns)       | free time:  min: 618834(ns) average: 4295653217(ns) max: 1160167(ns)
+[   44.699633] | x: 23
+[   44.739445] | alloc time:  min: 958833(ns) average: 987608(ns) max: 1111542(ns)      | free time:  min: 1288458(ns) average: 4296556183(ns) max: 2296875(ns)
+[   44.741647] | x: 24
+[   44.808250] | alloc time:  min: 1982791(ns) average: 2086029(ns) max: 2339667(ns)    | free time:  min: 2663250(ns) average: 4298116108(ns) max: 3623458(ns)
+[   44.810461] | x: 25
+[   44.943394] | alloc time:  min: 4785500(ns) average: 4866883(ns) max: 5199791(ns)    | free time:  min: 6864792(ns) average: 4301947487(ns) max: 7068584(ns)
+[   44.945612] | x: 26
+[   45.211218] | alloc time:  min: 10501041(ns) average: 10644908(ns) max: 10704166(ns) | free time:  min: 14369208(ns) average: 4309428454(ns) max: 14565000(ns)
+[   45.213435] | x: 27
+[   45.736169] | alloc time:  min: 21823917(ns) average: 21904566(ns) max: 22013458(ns) | free time:  min: 28653417(ns) average: 4323840221(ns) max: 29146792(ns)
+[   45.738476] | x: 28
+[   46.767671] | alloc time:  min: 43730666(ns) average: 43824233(ns) max: 44005375(ns) | free time:  min: 57494167(ns) average: 4352572183(ns) max: 57862584(ns)
+[   46.769893] | x: 29
+[   46.784813] insmod: vmalloc: allocation failure: 536870912 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[   46.797347] CPU: 0 PID: 80 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[   46.805003] Hardware name: Generic AM33XX (Flattened Device Tree)
+[   46.811424] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[   46.819553] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[   46.827130] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[   46.834801] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[   46.843466] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[   46.853493] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[   46.862353] [<c0461a14>] (vmalloc) from [<bf00006c>] (get_time+0x6c/0x16c [krnl_mem_test])
+[   46.871023] [<bf00006c>] (get_time [krnl_mem_test]) from [<bf000288>] (run_test_mem+0x11c/0x200 [krnl_mem_test])
+[   46.881671] [<bf000288>] (run_test_mem [krnl_mem_test]) from [<bf005024>] (mod_init+0x24/0x1000 [krnl_mem_test])
+[   46.892320] [<bf005024>] (mod_init [krnl_mem_test]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[   46.901699] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[   46.910164] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[   46.918535] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[   46.926816] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[   46.935272] Exception stack(0xda2cdfa8 to 0xda2cdff0)
+[   46.940555] dfa0:                   b6f2038c b6f3f950 0011b1d8 00001b90 001086c4 00000000
+[   46.949108] dfc0: b6f2038c b6f3f950 00001b90 00000080 00000001 bea0ae8c 001086c4 000f411e
+[   46.957658] dfe0: bea0ab48 bea0ab38 0003b270 b6df91b0
+[   46.963043] Mem-Info:
+[   46.965432] active_anon:79 inactive_anon:0 isolated_anon:0
+[   46.965432]  active_file:465 inactive_file:131 isolated_file:0
+[   46.965432]  unevictable:0 dirty:0 writeback:0 unstable:0
+[   46.965432]  slab_reclaimable:1735 slab_unreclaimable:1816
+[   46.965432]  mapped:423 shmem:0 pagetables:26 bounce:0
+[   46.965432]  free:118996 free_pcp:174 free_cma:16318
+[   46.999253] Node 0 active_anon:316kB inactive_anon:0kB active_file:1860kB inactive_file:524kB unevictable:0kB isolated(anon):0kB isolated(file):0kB mapped:1692kB dirty:0kB writeback:0kB o
+[   47.022323] DMA free:475984kB min:2816kB low:3520kB high:4224kB active_anon:316kB inactive_anon:0kB active_file:1860kB inactive_file:524kB unevictable:0kB writepending:0kB present:522240B
+[   47.051202] lowmem_reserve[]: 0 0 0 0
+[   47.055040] DMA: 39*4kB (UME) 43*8kB (UMC) 39*16kB (UMEC) 32*32kB (UMEC) 22*64kB (UC) 19*128kB (UMEC) 8*256kB (U) 12*512kB (UC) 13*1024kB (UMEC) 13*2048kB (UMC) 9*4096kB (UMC) 47*8192kB B
+[   47.073940] 598 total pagecache pages
+[   47.077788] 0 pages in swap cache
+[   47.081257] Swap cache stats: add 0, delete 0, find 0/0
+[   47.086726] Free swap  = 0kB
+[   47.089753] Total swap = 0kB
+[   47.092766] 130560 pages RAM
+[   47.095777] 0 pages HighMem/MovableOnly
+[   47.099804] 6069 pages reserved
+[   47.103089] 16384 pages cma reserved
+[   47.106829] | ### Memory cannot be allocated!
+[   47.111403] ====== Run memory test allocation! ============================
+[   47.118706] |
+[   47.120355] | function call: GFP
+[   47.123730] | test case:     2^x
+[   47.127105] |
+[   47.128765] ===============================================================
+[   47.136055] | x: 0
+[   47.136058] | ### Memory cannot be allocated!
+[   47.142759] ====== Run memory test allocation! ============================
+[   47.150051] |
+[   47.151696] | function call: kmalloc
+[   47.155428] | test case:     2^x + 1
+[   47.159173] |
+[   47.160816] ===============================================================
+[   47.168102] | x: 0
+[   47.168129] | alloc time:  min: 416(ns) average: 833(ns) max: 4375(ns)       | free time:  min: 416(ns) average: 4294967816(ns) max: 1458(ns)
+[   47.170232] | x: 1
+[   47.183014] | alloc time:  min: 416(ns) average: 483(ns) max: 833(ns)        | free time:  min: 416(ns) average: 4294967725(ns) max: 459(ns)
+[   47.185117] | x: 2
+[   47.197717] | alloc time:  min: 416(ns) average: 454(ns) max: 625(ns)        | free time:  min: 416(ns) average: 4294967725(ns) max: 459(ns)
+[   47.199819] | x: 3
+[   47.212419] | alloc time:  min: 416(ns) average: 450(ns) max: 584(ns)        | free time:  min: 416(ns) average: 4294967716(ns) max: 459(ns)
+[   47.214522] | x: 4
+[   47.227121] | alloc time:  min: 416(ns) average: 454(ns) max: 583(ns)        | free time:  min: 416(ns) average: 4294967725(ns) max: 459(ns)
+[   47.229236] | x: 5
+[   47.241835] | alloc time:  min: 416(ns) average: 454(ns) max: 584(ns)        | free time:  min: 416(ns) average: 4294967729(ns) max: 500(ns)
+[   47.243938] | x: 6
+[   47.256538] | alloc time:  min: 416(ns) average: 524(ns) max: 1292(ns)       | free time:  min: 416(ns) average: 4294967745(ns) max: 708(ns)
+[   47.258654] | x: 7
+[   47.271345] | alloc time:  min: 416(ns) average: 525(ns) max: 1333(ns)       | free time:  min: 416(ns) average: 4294967737(ns) max: 666(ns)
+[   47.273447] | x: 8
+[   47.286139] | alloc time:  min: 416(ns) average: 512(ns) max: 1250(ns)       | free time:  min: 416(ns) average: 4294967737(ns) max: 667(ns)
+[   47.288254] | x: 9
+[   47.300945] | alloc time:  min: 416(ns) average: 532(ns) max: 1500(ns)       | free time:  min: 416(ns) average: 4294967750(ns) max: 708(ns)
+[   47.303047] | x: 10
+[   47.315739] | alloc time:  min: 416(ns) average: 512(ns) max: 1250(ns)       | free time:  min: 417(ns) average: 4294967758(ns) max: 875(ns)
+[   47.317945] | x: 11
+[   47.330637] | alloc time:  min: 416(ns) average: 512(ns) max: 1208(ns)       | free time:  min: 416(ns) average: 4294967775(ns) max: 917(ns)
+[   47.332831] | x: 12
+[   47.345522] | alloc time:  min: 416(ns) average: 517(ns) max: 1208(ns)       | free time:  min: 416(ns) average: 4294967762(ns) max: 917(ns)
+[   47.347729] | x: 13
+[   47.360449] | alloc time:  min: 916(ns) average: 2041(ns) max: 11833(ns)     | free time:  min: 917(ns) average: 4294968945(ns) max: 7833(ns)
+[   47.362643] | x: 14
+[   47.375622] | alloc time:  min: 1000(ns) average: 1133(ns) max: 2125(ns)     | free time:  min: 959(ns) average: 4294968350(ns) max: 1583(ns)
+[   47.377830] | x: 15
+[   47.390812] | alloc time:  min: 1208(ns) average: 1491(ns) max: 3875(ns)     | free time:  min: 1125(ns) average: 4294968546(ns) max: 2042(ns)
+[   47.393006] | x: 16
+[   47.406087] | alloc time:  min: 1459(ns) average: 1929(ns) max: 5792(ns)     | free time:  min: 1375(ns) average: 4294968771(ns) max: 2333(ns)
+[   47.408296] | x: 17
+[   47.421412] | alloc time:  min: 2000(ns) average: 7012(ns) max: 11291(ns)    | free time:  min: 1791(ns) average: 4294969562(ns) max: 3333(ns)
+[   47.423606] | x: 18
+[   47.436815] | alloc time:  min: 3083(ns) average: 4020(ns) max: 12167(ns)    | free time:  min: 2708(ns) average: 4294970125(ns) max: 3792(ns)
+[   47.439026] | x: 19
+[   47.452562] | alloc time:  min: 19917(ns) average: 34408(ns) max: 39084(ns)  | free time:  min: 4750(ns) average: 4294972350(ns) max: 5875(ns)
+[   47.454758] | x: 20
+[   47.468556] | alloc time:  min: 9708(ns) average: 35991(ns) max: 77833(ns)   | free time:  min: 8084(ns) average: 4294976766(ns) max: 11833(ns)
+[   47.470752] | x: 21
+[   47.484600] | alloc time:  min: 19250(ns) average: 33487(ns) max: 156542(ns) | free time:  min: 17083(ns) average: 4294986496(ns) max: 31084(ns)
+[   47.486794] | x: 22
+[   47.501725] | alloc time:  min: 49542(ns) average: 71246(ns) max: 254875(ns) | free time:  min: 54875(ns) average: 4295030367(ns) max: 89084(ns)
+[   47.503920] | x: 23
+[   47.517498] | ### Memory cannot be allocated!
+[   47.524238] ====== Run memory test allocation! ============================
+[   47.531527] |
+[   47.533174] | function call: kzalloc
+[   47.536907] | test case:     2^x + 1
+[   47.540655] |
+[   47.542299] ===============================================================
+[   47.549587] | x: 0
+[   47.549612] | alloc time:  min: 458(ns) average: 750(ns) max: 3125(ns)       | free time:  min: 416(ns) average: 4294967783(ns) max: 1041(ns)
+[   47.551715] | x: 1
+[   47.564498] | alloc time:  min: 458(ns) average: 525(ns) max: 959(ns)        | free time:  min: 416(ns) average: 4294967725(ns) max: 458(ns)
+[   47.566601] | x: 2
+[   47.579203] | alloc time:  min: 458(ns) average: 500(ns) max: 667(ns)        | free time:  min: 416(ns) average: 4294967720(ns) max: 458(ns)
+[   47.581305] | x: 3
+[   47.593905] | alloc time:  min: 458(ns) average: 491(ns) max: 708(ns)        | free time:  min: 416(ns) average: 4294967721(ns) max: 459(ns)
+[   47.596007] | x: 4
+[   47.608607] | alloc time:  min: 458(ns) average: 508(ns) max: 708(ns)        | free time:  min: 416(ns) average: 4294967746(ns) max: 708(ns)
+[   47.610710] | x: 5
+[   47.623309] | alloc time:  min: 458(ns) average: 495(ns) max: 667(ns)        | free time:  min: 416(ns) average: 4294967725(ns) max: 500(ns)
+[   47.625412] | x: 6
+[   47.638013] | alloc time:  min: 500(ns) average: 591(ns) max: 1375(ns)       | free time:  min: 416(ns) average: 4294967741(ns) max: 708(ns)
+[   47.640115] | x: 7
+[   47.652808] | alloc time:  min: 500(ns) average: 608(ns) max: 1333(ns)       | free time:  min: 416(ns) average: 4294967745(ns) max: 708(ns)
+[   47.654910] | x: 8
+[   47.667604] | alloc time:  min: 666(ns) average: 749(ns) max: 1375(ns)       | free time:  min: 416(ns) average: 4294967762(ns) max: 667(ns)
+[   47.669706] | x: 9
+[   47.682403] | alloc time:  min: 958(ns) average: 1070(ns) max: 1708(ns)      | free time:  min: 416(ns) average: 4294967742(ns) max: 708(ns)
+[   47.684506] | x: 10
+[   47.697300] | alloc time:  min: 1584(ns) average: 1671(ns) max: 2084(ns)     | free time:  min: 416(ns) average: 4294967771(ns) max: 875(ns)
+[   47.699507] | x: 11
+[   47.712406] | alloc time:  min: 2875(ns) average: 2966(ns) max: 3541(ns)     | free time:  min: 416(ns) average: 4294967766(ns) max: 916(ns)
+[   47.714599] | x: 12
+[   47.727523] | alloc time:  min: 5458(ns) average: 5550(ns) max: 6167(ns)     | free time:  min: 416(ns) average: 4294967762(ns) max: 875(ns)
+[   47.729717] | x: 13
+[   47.742710] | alloc time:  min: 11167(ns) average: 11824(ns) max: 16833(ns)  | free time:  min: 916(ns) average: 4294968375(ns) max: 2417(ns)
+[   47.744904] | x: 14
+[   47.758373] | alloc time:  min: 21875(ns) average: 22195(ns) max: 24916(ns)  | free time:  min: 1000(ns) average: 4294968387(ns) max: 1583(ns)
+[   47.760568] | x: 15
+[   47.774344] | alloc time:  min: 43000(ns) average: 44270(ns) max: 46916(ns)  | free time:  min: 1166(ns) average: 4294968525(ns) max: 1541(ns)
+[   47.776538] | x: 16
+[   47.790750] | alloc time:  min: 86209(ns) average: 87433(ns) max: 91250(ns)  | free time:  min: 1416(ns) average: 4294968821(ns) max: 2417(ns)
+[   47.792944] | x: 17
+[   47.808056] | alloc time:  min: 173917(ns) average: 176908(ns) max: 189791(ns)       | free time:  min: 1916(ns) average: 4294969296(ns) max: 2584(ns)
+[   47.810247] | x: 18
+[   47.827372] | alloc time:  min: 348625(ns) average: 351404(ns) max: 362042(ns)       | free time:  min: 4166(ns) average: 4294971596(ns) max: 4917(ns)
+[   47.829562] | x: 19
+[   47.850426] | alloc time:  min: 699667(ns) average: 720654(ns) max: 737917(ns)       | free time:  min: 7959(ns) average: 4294975946(ns) max: 9458(ns)
+[   47.852618] | x: 20
+[   47.880382] | alloc time:  min: 1393958(ns) average: 1400937(ns) max: 1447875(ns)    | free time:  min: 17083(ns) average: 4294984525(ns) max: 18167(ns)
+[   47.882575] | x: 21
+[   47.924954] | alloc time:  min: 2788708(ns) average: 2800849(ns) max: 2878833(ns)    | free time:  min: 34000(ns) average: 4295001483(ns) max: 34750(ns)
+[   47.927148] | x: 22
+[   47.997946] | alloc time:  min: 5587750(ns) average: 5608333(ns) max: 5696666(ns)    | free time:  min: 67833(ns) average: 4295035562(ns) max: 69166(ns)
+[   48.000140] | x: 23
+[   48.014156] | ### Memory cannot be allocated!
+[   48.020909] ====== Run memory test allocation! ============================
+[   48.028198] |
+[   48.029844] | function call: vmalloc
+[   48.033576] | test case:     2^x + 1
+[   48.037307] |
+[   48.038964] ===============================================================
+[   48.046239] | x: 0
+[   48.046759] | alloc time:  min: 2083(ns) average: 46233(ns) max: 432958(ns)  | free time:  min: 2000(ns) average: 4294970579(ns) max: 14250(ns)
+[   48.048950] | x: 1
+[   48.062470] | alloc time:  min: 2084(ns) average: 7416(ns) max: 53125(ns)    | free time:  min: 1958(ns) average: 4294969754(ns) max: 5875(ns)
+[   48.064590] | x: 2
+[   48.077817] | alloc time:  min: 2125(ns) average: 4720(ns) max: 26083(ns)    | free time:  min: 2000(ns) average: 4294969504(ns) max: 3125(ns)
+[   48.079935] | x: 3
+[   48.093140] | alloc time:  min: 2083(ns) average: 3991(ns) max: 19333(ns)    | free time:  min: 2042(ns) average: 4294969533(ns) max: 3334(ns)
+[   48.095244] | x: 4
+[   48.108437] | alloc time:  min: 2125(ns) average: 2391(ns) max: 3792(ns)     | free time:  min: 2042(ns) average: 4294969516(ns) max: 3083(ns)
+[   48.110540] | x: 5
+[   48.123643] | alloc time:  min: 2083(ns) average: 2416(ns) max: 4459(ns)     | free time:  min: 2041(ns) average: 4294969579(ns) max: 3250(ns)
+[   48.125746] | x: 6
+[   48.138855] | alloc time:  min: 2083(ns) average: 3120(ns) max: 5041(ns)     | free time:  min: 2041(ns) average: 4294970166(ns) max: 7000(ns)
+[   48.140958] | x: 7
+[   48.154065] | alloc time:  min: 2167(ns) average: 3079(ns) max: 4833(ns)     | free time:  min: 2042(ns) average: 4294969821(ns) max: 3375(ns)
+[   48.156169] | x: 8
+[   48.169277] | alloc time:  min: 2167(ns) average: 3041(ns) max: 5167(ns)     | free time:  min: 2041(ns) average: 4294969770(ns) max: 2959(ns)
+[   48.171381] | x: 9
+[   48.184477] | alloc time:  min: 2084(ns) average: 2404(ns) max: 3500(ns)     | free time:  min: 2083(ns) average: 4294969529(ns) max: 2917(ns)
+[   48.186580] | x: 10
+[   48.199756] | alloc time:  min: 2125(ns) average: 9304(ns) max: 72041(ns)    | free time:  min: 2084(ns) average: 4294969575(ns) max: 3334(ns)
+[   48.201951] | x: 11
+[   48.215142] | alloc time:  min: 2125(ns) average: 2371(ns) max: 3709(ns)     | free time:  min: 2125(ns) average: 4294969533(ns) max: 3000(ns)
+[   48.217336] | x: 12
+[   48.230455] | alloc time:  min: 2541(ns) average: 2845(ns) max: 3959(ns)     | free time:  min: 2500(ns) average: 4294969991(ns) max: 3417(ns)
+[   48.232649] | x: 13
+[   48.245760] | alloc time:  min: 2875(ns) average: 3175(ns) max: 4708(ns)     | free time:  min: 2958(ns) average: 4294970391(ns) max: 3750(ns)
+[   48.247969] | x: 14
+[   48.261098] | alloc time:  min: 3625(ns) average: 4045(ns) max: 6083(ns)     | free time:  min: 3792(ns) average: 4294971446(ns) max: 5084(ns)
+[   48.263292] | x: 15
+[   48.276454] | alloc time:  min: 5041(ns) average: 5641(ns) max: 8542(ns)     | free time:  min: 5375(ns) average: 4294972929(ns) max: 7167(ns)
+[   48.278664] | x: 16
+[   48.291863] | alloc time:  min: 8375(ns) average: 8829(ns) max: 11959(ns)    | free time:  min: 8625(ns) average: 4294976087(ns) max: 9542(ns)
+[   48.294057] | x: 17
+[   48.307515] | alloc time:  min: 14333(ns) average: 15000(ns) max: 18792(ns)  | free time:  min: 15125(ns) average: 4294984021(ns) max: 29292(ns)
+[   48.309710] | x: 18
+[   48.323769] | alloc time:  min: 26333(ns) average: 27308(ns) max: 34125(ns)  | free time:  min: 28083(ns) average: 4294995587(ns) max: 29667(ns)
+[   48.325963] | x: 19
+[   48.340530] | alloc time:  min: 50458(ns) average: 51903(ns) max: 63167(ns)  | free time:  min: 53917(ns) average: 4295021508(ns) max: 55250(ns)
+[   48.342724] | x: 20
+[   48.358649] | alloc time:  min: 105834(ns) average: 111208(ns) max: 138209(ns)       | free time:  min: 123833(ns) average: 4295097004(ns) max: 153584(ns)
+[   48.360846] | x: 21
+[   48.381087] | alloc time:  min: 220625(ns) average: 234545(ns) max: 260041(ns)       | free time:  min: 283750(ns) average: 4295359945(ns) max: 1301208(ns)
+[   48.383285] | x: 22
+[   48.409587] | alloc time:  min: 469083(ns) average: 499554(ns) max: 592125(ns)       | free time:  min: 622375(ns) average: 4295685945(ns) max: 1515333(ns)
+[   48.411787] | x: 23
+[   48.452276] | alloc time:  min: 970708(ns) average: 1051783(ns) max: 1390917(ns)     | free time:  min: 1292833(ns) average: 4296553500(ns) max: 2211792(ns)
+[   48.454481] | x: 24
+[   48.522130] | alloc time:  min: 2028500(ns) average: 2126279(ns) max: 2287583(ns)    | free time:  min: 2676666(ns) average: 4298166416(ns) max: 3759125(ns)
+[   48.524346] | x: 25
+[   48.655194] | alloc time:  min: 4658250(ns) average: 4708866(ns) max: 4798542(ns)    | free time:  min: 6813417(ns) average: 4301892666(ns) max: 7011458(ns)
+[   48.657530] | x: 26
+[   48.922608] | alloc time:  min: 10345792(ns) average: 10654975(ns) max: 10728667(ns) | free time:  min: 14092375(ns) average: 4309374187(ns) max: 14561292(ns)
+[   48.924828] | x: 27
+[   49.447177] | alloc time:  min: 21845917(ns) average: 21940395(ns) max: 22155667(ns) | free time:  min: 28576583(ns) average: 4323761187(ns) max: 28941917(ns)
+[   49.449488] | x: 28
+[   50.477044] | alloc time:  min: 43727917(ns) average: 43805937(ns) max: 43967625(ns) | free time:  min: 57389625(ns) average: 4352426475(ns) max: 57665542(ns)
+[   50.479345] | x: 29
+[   50.494217] insmod: vmalloc: allocation failure: 536870913 bytes, mode:0x6000c0(GFP_KERNEL), nodemask=(null)
+[   50.506786] CPU: 0 PID: 80 Comm: insmod Tainted: G        W  O      4.19.176 #1
+[   50.514442] Hardware name: Generic AM33XX (Flattened Device Tree)
+[   50.520862] [<c0311bfc>] (unwind_backtrace) from [<c030c860>] (show_stack+0x10/0x14)
+[   50.528991] [<c030c860>] (show_stack) from [<c0e8de18>] (dump_stack+0xc0/0xd4)
+[   50.536569] [<c0e8de18>] (dump_stack) from [<c0429990>] (warn_alloc+0xbc/0x160)
+[   50.544239] [<c0429990>] (warn_alloc) from [<c0461558>] (__vmalloc_node_range+0x190/0x250)
+[   50.552904] [<c0461558>] (__vmalloc_node_range) from [<c0461978>] (__vmalloc_node.constprop.13+0x48/0x50)
+[   50.562931] [<c0461978>] (__vmalloc_node.constprop.13) from [<c0461a14>] (vmalloc+0x2c/0x34)
+[   50.571791] [<c0461a14>] (vmalloc) from [<bf00006c>] (get_time+0x6c/0x16c [krnl_mem_test])
+[   50.580461] [<bf00006c>] (get_time [krnl_mem_test]) from [<bf000288>] (run_test_mem+0x11c/0x200 [krnl_mem_test])
+[   50.591131] [<bf000288>] (run_test_mem [krnl_mem_test]) from [<bf005040>] (mod_init+0x40/0x1000 [krnl_mem_test])
+[   50.601801] [<bf005040>] (mod_init [krnl_mem_test]) from [<c0302d4c>] (do_one_initcall+0x54/0x208)
+[   50.611200] [<c0302d4c>] (do_one_initcall) from [<c03d0b30>] (do_init_module+0x64/0x224)
+[   50.619681] [<c03d0b30>] (do_init_module) from [<c03d2ebc>] (load_module+0x2164/0x2450)
+[   50.628068] [<c03d2ebc>] (load_module) from [<c03d3300>] (sys_init_module+0x158/0x18c)
+[   50.636365] [<c03d3300>] (sys_init_module) from [<c0301000>] (ret_fast_syscall+0x0/0x54)
+[   50.644840] Exception stack(0xda2cdfa8 to 0xda2cdff0)
+[   50.650134] dfa0:                   b6f2038c b6f3f950 0011b1d8 00001b90 001086c4 00000000
+[   50.658703] dfc0: b6f2038c b6f3f950 00001b90 00000080 00000001 bea0ae8c 001086c4 000f411e
+[   50.667269] dfe0: bea0ab48 bea0ab38 0003b270 b6df91b0
+[   50.672625] Mem-Info:
+[   50.675019] active_anon:79 inactive_anon:0 isolated_anon:0
+[   50.675019]  active_file:465 inactive_file:131 isolated_file:0
+[   50.675019]  unevictable:0 dirty:0 writeback:0 unstable:0
+[   50.675019]  slab_reclaimable:1735 slab_unreclaimable:1816
+[   50.675019]  mapped:423 shmem:0 pagetables:26 bounce:0
+[   50.675019]  free:118996 free_pcp:174 free_cma:16318
+[   50.708836] Node 0 active_anon:316kB inactive_anon:0kB active_file:1860kB inactive_file:524kB unevictable:0kB isolated(anon):0kB isolated(file):0kB mapped:1692kB dirty:0kB writeback:0kB o
+[   50.731900] DMA free:475984kB min:2816kB low:3520kB high:4224kB active_anon:316kB inactive_anon:0kB active_file:1860kB inactive_file:524kB unevictable:0kB writepending:0kB present:522240B
+[   50.760782] lowmem_reserve[]: 0 0 0 0
+[   50.764621] DMA: 43*4kB (UME) 35*8kB (UMC) 44*16kB (UMEC) 33*32kB (UMEC) 25*64kB (UC) 17*128kB (UMEC) 10*256kB (U) 11*512kB (UC) 13*1024kB (UMEC) 11*2048kB (UMC) 8*4096kB (UMC) 48*8192kBB
+[   50.783611] 598 total pagecache pages
+[   50.787460] 0 pages in swap cache
+[   50.790929] Swap cache stats: add 0, delete 0, find 0/0
+[   50.796398] Free swap  = 0kB
+[   50.799424] Total swap = 0kB
+[   50.802437] 130560 pages RAM
+[   50.805448] 0 pages HighMem/MovableOnly
+[   50.809475] 6069 pages reserved
+[   50.812761] 16384 pages cma reserved
+[   50.816501] | ### Memory cannot be allocated!
+[   50.821075] ====== Run memory test allocation! ============================
+[   50.828379] |
+[   50.830027] | function call: GFP
+[   50.833403] | test case:     2^x + 1
+[   50.837142] |
+[   50.838802] ===============================================================
+[   50.846091] | x: 0
+[   50.846094] | ### Memory cannot be allocated!
+/usr # 
