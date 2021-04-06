@@ -1,0 +1,13 @@
+/ # insmod mnt/hello.ko
+/ # echo > /sys/kernel/hello/list Have a nice day
+/ # echo > /sys/kernel/hello/list Nice to meet you again
+/ # 
+/ # cat /sys/kernel/hello/list
+Node 1: Have a nice day
+Node 2: Nice to meet you again
+/ # 
+/ # rmmod hello
+[ 8968.964594] hello: remove node: Have a nice day
+[ 8968.969476] hello: remove node: Nice to meet you again
+[ 8968.974845] hello: module exited
+
