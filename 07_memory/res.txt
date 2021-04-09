@@ -1,0 +1,1566 @@
+
+MALLOC TABLE
+======================================================
+ORDER: 2^0  BUF_SIZE: 1                   
+ALLOC_TIME (nsec): MAX = 1047                 AVG = 306                  MIN = 111                 
+FREE_TIME  (nsec): MAX = 357                  AVG = 161                  MIN = 111                 
+======================================================
+ORDER: 2^0  BUF_SIZE: 2                   
+ALLOC_TIME (nsec): MAX = 317                  AVG = 156                  MIN = 111                 
+FREE_TIME  (nsec): MAX = 119                  AVG = 115                  MIN = 111                 
+======================================================
+ORDER: 2^1  BUF_SIZE: 2                   
+ALLOC_TIME (nsec): MAX = 212                  AVG = 155                  MIN = 114                 
+FREE_TIME  (nsec): MAX = 124                  AVG = 116                  MIN = 113                 
+======================================================
+ORDER: 2^1  BUF_SIZE: 3                   
+ALLOC_TIME (nsec): MAX = 227                  AVG = 154                  MIN = 123                 
+FREE_TIME  (nsec): MAX = 116                  AVG = 113                  MIN = 107                 
+======================================================
+ORDER: 2^2  BUF_SIZE: 4                   
+ALLOC_TIME (nsec): MAX = 165                  AVG = 138                  MIN = 120                 
+FREE_TIME  (nsec): MAX = 115                  AVG = 114                  MIN = 113                 
+======================================================
+ORDER: 2^2  BUF_SIZE: 5                   
+ALLOC_TIME (nsec): MAX = 125                  AVG = 123                  MIN = 120                 
+FREE_TIME  (nsec): MAX = 118                  AVG = 115                  MIN = 112                 
+======================================================
+ORDER: 2^3  BUF_SIZE: 8                   
+ALLOC_TIME (nsec): MAX = 509                  AVG = 200                  MIN = 121                 
+FREE_TIME  (nsec): MAX = 118                  AVG = 113                  MIN = 109                 
+======================================================
+ORDER: 2^3  BUF_SIZE: 9                   
+ALLOC_TIME (nsec): MAX = 164                  AVG = 131                  MIN = 122                 
+FREE_TIME  (nsec): MAX = 116                  AVG = 113                  MIN = 107                 
+======================================================
+ORDER: 2^4  BUF_SIZE: 16                  
+ALLOC_TIME (nsec): MAX = 269                  AVG = 153                  MIN = 122                 
+FREE_TIME  (nsec): MAX = 118                  AVG = 115                  MIN = 114                 
+======================================================
+ORDER: 2^4  BUF_SIZE: 17                  
+ALLOC_TIME (nsec): MAX = 127                  AVG = 125                  MIN = 123                 
+FREE_TIME  (nsec): MAX = 116                  AVG = 112                  MIN = 108                 
+======================================================
+ORDER: 2^5  BUF_SIZE: 32                  
+ALLOC_TIME (nsec): MAX = 305                  AVG = 161                  MIN = 123                 
+FREE_TIME  (nsec): MAX = 167                  AVG = 124                  MIN = 111                 
+======================================================
+ORDER: 2^5  BUF_SIZE: 33                  
+ALLOC_TIME (nsec): MAX = 127                  AVG = 124                  MIN = 120                 
+FREE_TIME  (nsec): MAX = 117                  AVG = 114                  MIN = 111                 
+======================================================
+ORDER: 2^6  BUF_SIZE: 64                  
+ALLOC_TIME (nsec): MAX = 233                  AVG = 145                  MIN = 123                 
+FREE_TIME  (nsec): MAX = 116                  AVG = 114                  MIN = 112                 
+======================================================
+ORDER: 2^6  BUF_SIZE: 65                  
+ALLOC_TIME (nsec): MAX = 125                  AVG = 123                  MIN = 120                 
+FREE_TIME  (nsec): MAX = 116                  AVG = 114                  MIN = 112                 
+======================================================
+ORDER: 2^7  BUF_SIZE: 128                 
+ALLOC_TIME (nsec): MAX = 298                  AVG = 160                  MIN = 124                 
+FREE_TIME  (nsec): MAX = 162                  AVG = 121                  MIN = 108                 
+======================================================
+ORDER: 2^7  BUF_SIZE: 129                 
+ALLOC_TIME (nsec): MAX = 130                  AVG = 126                  MIN = 121                 
+FREE_TIME  (nsec): MAX = 119                  AVG = 113                  MIN = 108                 
+======================================================
+ORDER: 2^8  BUF_SIZE: 256                 
+ALLOC_TIME (nsec): MAX = 385                  AVG = 178                  MIN = 124                 
+FREE_TIME  (nsec): MAX = 117                  AVG = 115                  MIN = 113                 
+======================================================
+ORDER: 2^8  BUF_SIZE: 257                 
+ALLOC_TIME (nsec): MAX = 129                  AVG = 125                  MIN = 123                 
+FREE_TIME  (nsec): MAX = 117                  AVG = 114                  MIN = 111                 
+======================================================
+ORDER: 2^9  BUF_SIZE: 512                 
+ALLOC_TIME (nsec): MAX = 343                  AVG = 209                  MIN = 163                 
+FREE_TIME  (nsec): MAX = 286                  AVG = 172                  MIN = 139                 
+======================================================
+ORDER: 2^9  BUF_SIZE: 513                 
+ALLOC_TIME (nsec): MAX = 194                  AVG = 167                  MIN = 158                 
+FREE_TIME  (nsec): MAX = 155                  AVG = 146                  MIN = 139                 
+======================================================
+ORDER: 2^10 BUF_SIZE: 1024                
+ALLOC_TIME (nsec): MAX = 226                  AVG = 175                  MIN = 159                 
+FREE_TIME  (nsec): MAX = 151                  AVG = 147                  MIN = 144                 
+======================================================
+ORDER: 2^10 BUF_SIZE: 1025                
+ALLOC_TIME (nsec): MAX = 192                  AVG = 166                  MIN = 156                 
+FREE_TIME  (nsec): MAX = 152                  AVG = 146                  MIN = 141                 
+======================================================
+ORDER: 2^11 BUF_SIZE: 2048                
+ALLOC_TIME (nsec): MAX = 8314                 AVG = 1792                 MIN = 157                 
+FREE_TIME  (nsec): MAX = 151                  AVG = 147                  MIN = 138                 
+======================================================
+ORDER: 2^11 BUF_SIZE: 2049                
+ALLOC_TIME (nsec): MAX = 162                  AVG = 160                  MIN = 159                 
+FREE_TIME  (nsec): MAX = 155                  AVG = 146                  MIN = 135                 
+======================================================
+ORDER: 2^12 BUF_SIZE: 4096                
+ALLOC_TIME (nsec): MAX = 5006                 AVG = 1131                 MIN = 156                 
+FREE_TIME  (nsec): MAX = 154                  AVG = 149                  MIN = 144                 
+======================================================
+ORDER: 2^12 BUF_SIZE: 4097                
+ALLOC_TIME (nsec): MAX = 188                  AVG = 167                  MIN = 157                 
+FREE_TIME  (nsec): MAX = 153                  AVG = 147                  MIN = 139                 
+======================================================
+ORDER: 2^13 BUF_SIZE: 8192                
+ALLOC_TIME (nsec): MAX = 4841                 AVG = 1098                 MIN = 157                 
+FREE_TIME  (nsec): MAX = 156                  AVG = 150                  MIN = 145                 
+======================================================
+ORDER: 2^13 BUF_SIZE: 8193                
+ALLOC_TIME (nsec): MAX = 163                  AVG = 160                  MIN = 157                 
+FREE_TIME  (nsec): MAX = 151                  AVG = 147                  MIN = 144                 
+======================================================
+ORDER: 2^14 BUF_SIZE: 16384               
+ALLOC_TIME (nsec): MAX = 4587                 AVG = 1051                 MIN = 160                 
+FREE_TIME  (nsec): MAX = 155                  AVG = 150                  MIN = 142                 
+======================================================
+ORDER: 2^14 BUF_SIZE: 16385               
+ALLOC_TIME (nsec): MAX = 231                  AVG = 177                  MIN = 160                 
+FREE_TIME  (nsec): MAX = 155                  AVG = 148                  MIN = 139                 
+======================================================
+ORDER: 2^15 BUF_SIZE: 32768               
+ALLOC_TIME (nsec): MAX = 5172                 AVG = 1165                 MIN = 162                 
+FREE_TIME  (nsec): MAX = 148                  AVG = 145                  MIN = 139                 
+======================================================
+ORDER: 2^15 BUF_SIZE: 32769               
+ALLOC_TIME (nsec): MAX = 171                  AVG = 165                  MIN = 158                 
+FREE_TIME  (nsec): MAX = 152                  AVG = 147                  MIN = 140                 
+======================================================
+ORDER: 2^16 BUF_SIZE: 65536               
+ALLOC_TIME (nsec): MAX = 19919                AVG = 4122                 MIN = 158                 
+FREE_TIME  (nsec): MAX = 16295                AVG = 3365                 MIN = 123                 
+======================================================
+ORDER: 2^16 BUF_SIZE: 65537               
+ALLOC_TIME (nsec): MAX = 7232                 AVG = 1583                 MIN = 160                 
+FREE_TIME  (nsec): MAX = 269                  AVG = 156                  MIN = 120                 
+======================================================
+ORDER: 2^17 BUF_SIZE: 131072              
+ALLOC_TIME (nsec): MAX = 10966                AVG = 2324                 MIN = 160                 
+FREE_TIME  (nsec): MAX = 12107                AVG = 2528                 MIN = 128                 
+======================================================
+ORDER: 2^17 BUF_SIZE: 131073              
+ALLOC_TIME (nsec): MAX = 5778                 AVG = 1288                 MIN = 163                 
+FREE_TIME  (nsec): MAX = 288                  AVG = 162                  MIN = 128                 
+======================================================
+ORDER: 2^18 BUF_SIZE: 262144              
+ALLOC_TIME (nsec): MAX = 9587                 AVG = 2049                 MIN = 162                 
+FREE_TIME  (nsec): MAX = 9714                 AVG = 2048                 MIN = 124                 
+======================================================
+ORDER: 2^18 BUF_SIZE: 262145              
+ALLOC_TIME (nsec): MAX = 5164                 AVG = 1163                 MIN = 160                 
+FREE_TIME  (nsec): MAX = 218                  AVG = 149                  MIN = 127                 
+======================================================
+ORDER: 2^19 BUF_SIZE: 524288              
+ALLOC_TIME (nsec): MAX = 9306                 AVG = 1990                 MIN = 158                 
+FREE_TIME  (nsec): MAX = 9421                 AVG = 1989                 MIN = 129                 
+======================================================
+ORDER: 2^19 BUF_SIZE: 524289              
+ALLOC_TIME (nsec): MAX = 6336                 AVG = 1395                 MIN = 154                 
+FREE_TIME  (nsec): MAX = 231                  AVG = 150                  MIN = 127                 
+======================================================
+ORDER: 2^20 BUF_SIZE: 1048576             
+ALLOC_TIME (nsec): MAX = 9143                 AVG = 1959                 MIN = 159                 
+FREE_TIME  (nsec): MAX = 9851                 AVG = 2076                 MIN = 125                 
+======================================================
+ORDER: 2^20 BUF_SIZE: 1048577             
+ALLOC_TIME (nsec): MAX = 6453                 AVG = 1422                 MIN = 163                 
+FREE_TIME  (nsec): MAX = 244                  AVG = 155                  MIN = 127                 
+======================================================
+ORDER: 2^21 BUF_SIZE: 2097152             
+ALLOC_TIME (nsec): MAX = 10100                AVG = 2150                 MIN = 160                 
+FREE_TIME  (nsec): MAX = 11291                AVG = 2364                 MIN = 127                 
+======================================================
+ORDER: 2^21 BUF_SIZE: 2097153             
+ALLOC_TIME (nsec): MAX = 6196                 AVG = 1370                 MIN = 158                 
+FREE_TIME  (nsec): MAX = 237                  AVG = 153                  MIN = 124                 
+======================================================
+ORDER: 2^22 BUF_SIZE: 4194304             
+ALLOC_TIME (nsec): MAX = 10101                AVG = 2152                 MIN = 160                 
+FREE_TIME  (nsec): MAX = 10172                AVG = 2140                 MIN = 124                 
+======================================================
+ORDER: 2^22 BUF_SIZE: 4194305             
+ALLOC_TIME (nsec): MAX = 7059                 AVG = 1545                 MIN = 160                 
+FREE_TIME  (nsec): MAX = 217                  AVG = 147                  MIN = 127                 
+======================================================
+ORDER: 2^23 BUF_SIZE: 8388608             
+ALLOC_TIME (nsec): MAX = 9971                 AVG = 6542                 MIN = 5319                
+FREE_TIME  (nsec): MAX = 10529                AVG = 7611                 MIN = 6754                
+======================================================
+ORDER: 2^23 BUF_SIZE: 8388609             
+ALLOC_TIME (nsec): MAX = 6047                 AVG = 5661                 MIN = 5482                
+FREE_TIME  (nsec): MAX = 7375                 AVG = 6988                 MIN = 6667                
+======================================================
+ORDER: 2^24 BUF_SIZE: 16777216            
+ALLOC_TIME (nsec): MAX = 8858                 AVG = 6225                 MIN = 5178                
+FREE_TIME  (nsec): MAX = 9971                 AVG = 7834                 MIN = 7158                
+======================================================
+ORDER: 2^24 BUF_SIZE: 16777217            
+ALLOC_TIME (nsec): MAX = 5955                 AVG = 5647                 MIN = 5431                
+FREE_TIME  (nsec): MAX = 7455                 AVG = 7198                 MIN = 6993                
+======================================================
+ORDER: 2^25 BUF_SIZE: 33554432            
+ALLOC_TIME (nsec): MAX = 9243                 AVG = 6273                 MIN = 5273                
+FREE_TIME  (nsec): MAX = 10722                AVG = 8566                 MIN = 7893                
+======================================================
+ORDER: 2^25 BUF_SIZE: 33554433            
+ALLOC_TIME (nsec): MAX = 5676                 AVG = 5579                 MIN = 5306                
+FREE_TIME  (nsec): MAX = 8151                 AVG = 7982                 MIN = 7895                
+======================================================
+ORDER: 2^26 BUF_SIZE: 67108864            
+ALLOC_TIME (nsec): MAX = 8636                 AVG = 6123                 MIN = 5186                
+FREE_TIME  (nsec): MAX = 12519                AVG = 10136                MIN = 9404                
+======================================================
+ORDER: 2^26 BUF_SIZE: 67108865            
+ALLOC_TIME (nsec): MAX = 6077                 AVG = 5596                 MIN = 5317                
+FREE_TIME  (nsec): MAX = 9907                 AVG = 9508                 MIN = 9337                
+======================================================
+ORDER: 2^27 BUF_SIZE: 134217728           
+ALLOC_TIME (nsec): MAX = 8878                 AVG = 6277                 MIN = 5171                
+FREE_TIME  (nsec): MAX = 15514                AVG = 13337                MIN = 12649               
+======================================================
+ORDER: 2^27 BUF_SIZE: 134217729           
+ALLOC_TIME (nsec): MAX = 6163                 AVG = 5723                 MIN = 5388                
+FREE_TIME  (nsec): MAX = 12754                AVG = 12578                MIN = 12469               
+======================================================
+ORDER: 2^28 BUF_SIZE: 268435456           
+ALLOC_TIME (nsec): MAX = 11557                AVG = 7603                 MIN = 6174                
+FREE_TIME  (nsec): MAX = 39871                AVG = 24550                MIN = 19380               
+======================================================
+ORDER: 2^28 BUF_SIZE: 268435457           
+ALLOC_TIME (nsec): MAX = 8769                 AVG = 7008                 MIN = 6326                
+FREE_TIME  (nsec): MAX = 29313                AVG = 21771                MIN = 19285               
+======================================================
+ORDER: 2^29 BUF_SIZE: 536870912           
+ALLOC_TIME (nsec): MAX = 3213                 AVG = 2425                 MIN = 2101                
+FREE_TIME  (nsec): MAX = 7355                 AVG = 6649                 MIN = 6425                
+======================================================
+ORDER: 2^29 BUF_SIZE: 536870913           
+ALLOC_TIME (nsec): MAX = 2411                 AVG = 2296                 MIN = 2102                
+FREE_TIME  (nsec): MAX = 6568                 AVG = 6471                 MIN = 6402                
+======================================================
+ORDER: 2^30 BUF_SIZE: 1073741824          
+ALLOC_TIME (nsec): MAX = 3291                 AVG = 2382                 MIN = 2101                
+FREE_TIME  (nsec): MAX = 7418                 AVG = 6696                 MIN = 6431                
+======================================================
+ORDER: 2^30 BUF_SIZE: 1073741825          
+ALLOC_TIME (nsec): MAX = 2329                 AVG = 2224                 MIN = 2072                
+FREE_TIME  (nsec): MAX = 7927                 AVG = 6856                 MIN = 6415                
+======================================================
+ORDER: 2^31 BUF_SIZE: 2147483648          
+ALLOC_TIME (nsec): MAX = 3168                 AVG = 2380                 MIN = 2089                
+FREE_TIME  (nsec): MAX = 7407                 AVG = 6688                 MIN = 6489                
+======================================================
+ORDER: 2^31 BUF_SIZE: 2147483649          
+ALLOC_TIME (nsec): MAX = 2427                 AVG = 2230                 MIN = 2073                
+FREE_TIME  (nsec): MAX = 6670                 AVG = 6532                 MIN = 6448                
+======================================================
+ORDER: 2^32 BUF_SIZE: 4294967296          
+ALLOC_TIME (nsec): MAX = 3286                 AVG = 2381                 MIN = 2049                
+FREE_TIME  (nsec): MAX = 7453                 AVG = 6731                 MIN = 6536                
+======================================================
+ORDER: 2^32 BUF_SIZE: 4294967297          
+ALLOC_TIME (nsec): MAX = 2320                 AVG = 2215                 MIN = 2064                
+FREE_TIME  (nsec): MAX = 6827                 AVG = 6647                 MIN = 6538                
+======================================================
+ORDER: 2^33 BUF_SIZE: 8589934592          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^33 BUF_SIZE: 8589934593          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^34 BUF_SIZE: 17179869184         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^34 BUF_SIZE: 17179869185         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^35 BUF_SIZE: 34359738368         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^35 BUF_SIZE: 34359738369         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^36 BUF_SIZE: 68719476736         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^36 BUF_SIZE: 68719476737         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^37 BUF_SIZE: 137438953472        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^37 BUF_SIZE: 137438953473        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^38 BUF_SIZE: 274877906944        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^38 BUF_SIZE: 274877906945        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^39 BUF_SIZE: 549755813888        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^39 BUF_SIZE: 549755813889        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^40 BUF_SIZE: 1099511627776       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^40 BUF_SIZE: 1099511627777       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^41 BUF_SIZE: 2199023255552       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^41 BUF_SIZE: 2199023255553       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^42 BUF_SIZE: 4398046511104       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^42 BUF_SIZE: 4398046511105       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^43 BUF_SIZE: 8796093022208       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^43 BUF_SIZE: 8796093022209       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^44 BUF_SIZE: 17592186044416      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^44 BUF_SIZE: 17592186044417      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^45 BUF_SIZE: 35184372088832      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^45 BUF_SIZE: 35184372088833      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^46 BUF_SIZE: 70368744177664      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^46 BUF_SIZE: 70368744177665      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^47 BUF_SIZE: 140737488355328     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^47 BUF_SIZE: 140737488355329     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^48 BUF_SIZE: 281474976710656     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^48 BUF_SIZE: 281474976710657     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^49 BUF_SIZE: 562949953421312     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^49 BUF_SIZE: 562949953421313     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^50 BUF_SIZE: 1125899906842624    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^50 BUF_SIZE: 1125899906842625    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^51 BUF_SIZE: 2251799813685248    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^51 BUF_SIZE: 2251799813685249    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^52 BUF_SIZE: 4503599627370496    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^52 BUF_SIZE: 4503599627370497    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^53 BUF_SIZE: 9007199254740992    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^53 BUF_SIZE: 9007199254740992    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^54 BUF_SIZE: 18014398509481984   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^54 BUF_SIZE: 18014398509481984   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^55 BUF_SIZE: 36028797018963968   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^55 BUF_SIZE: 36028797018963968   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^56 BUF_SIZE: 72057594037927936   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^56 BUF_SIZE: 72057594037927936   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^57 BUF_SIZE: 144115188075855872  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^57 BUF_SIZE: 144115188075855872  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^58 BUF_SIZE: 288230376151711744  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^58 BUF_SIZE: 288230376151711744  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^59 BUF_SIZE: 576460752303423488  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^59 BUF_SIZE: 576460752303423488  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^60 BUF_SIZE: 1152921504606846976 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^60 BUF_SIZE: 1152921504606846976 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^61 BUF_SIZE: 2305843009213693952 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^61 BUF_SIZE: 2305843009213693952 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^62 BUF_SIZE: 4611686018427387904 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^62 BUF_SIZE: 4611686018427387904 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^63 BUF_SIZE: 9223372036854775808 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^63 BUF_SIZE: 9223372036854775808 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^64 BUF_SIZE: 18446744073709551616
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^64 BUF_SIZE: 18446744073709551616
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+
+CALLOC TABLE
+======================================================
+ORDER: 2^0  BUF_SIZE: 1                   
+ALLOC_TIME (nsec): MAX = 310                  AVG = 112                  MIN = 60                  
+FREE_TIME  (nsec): MAX = 129                  AVG = 73                   MIN = 43                  
+======================================================
+ORDER: 2^0  BUF_SIZE: 2                   
+ALLOC_TIME (nsec): MAX = 136                  AVG = 84                   MIN = 52                  
+FREE_TIME  (nsec): MAX = 57                   AVG = 47                   MIN = 43                  
+======================================================
+ORDER: 2^1  BUF_SIZE: 2                   
+ALLOC_TIME (nsec): MAX = 84                   AVG = 65                   MIN = 53                  
+FREE_TIME  (nsec): MAX = 73                   AVG = 51                   MIN = 44                  
+======================================================
+ORDER: 2^1  BUF_SIZE: 3                   
+ALLOC_TIME (nsec): MAX = 104                  AVG = 68                   MIN = 54                  
+FREE_TIME  (nsec): MAX = 45                   AVG = 45                   MIN = 44                  
+======================================================
+ORDER: 2^2  BUF_SIZE: 4                   
+ALLOC_TIME (nsec): MAX = 111                  AVG = 76                   MIN = 53                  
+FREE_TIME  (nsec): MAX = 46                   AVG = 45                   MIN = 44                  
+======================================================
+ORDER: 2^2  BUF_SIZE: 5                   
+ALLOC_TIME (nsec): MAX = 56                   AVG = 54                   MIN = 53                  
+FREE_TIME  (nsec): MAX = 47                   AVG = 46                   MIN = 45                  
+======================================================
+ORDER: 2^3  BUF_SIZE: 8                   
+ALLOC_TIME (nsec): MAX = 139                  AVG = 85                   MIN = 55                  
+FREE_TIME  (nsec): MAX = 71                   AVG = 56                   MIN = 43                  
+======================================================
+ORDER: 2^3  BUF_SIZE: 9                   
+ALLOC_TIME (nsec): MAX = 101                  AVG = 80                   MIN = 61                  
+FREE_TIME  (nsec): MAX = 61                   AVG = 48                   MIN = 43                  
+======================================================
+ORDER: 2^4  BUF_SIZE: 16                  
+ALLOC_TIME (nsec): MAX = 143                  AVG = 83                   MIN = 61                  
+FREE_TIME  (nsec): MAX = 64                   AVG = 52                   MIN = 44                  
+======================================================
+ORDER: 2^4  BUF_SIZE: 17                  
+ALLOC_TIME (nsec): MAX = 99                   AVG = 77                   MIN = 61                  
+FREE_TIME  (nsec): MAX = 263                  AVG = 91                   MIN = 43                  
+======================================================
+ORDER: 2^5  BUF_SIZE: 32                  
+ALLOC_TIME (nsec): MAX = 222                  AVG = 98                   MIN = 62                  
+FREE_TIME  (nsec): MAX = 94                   AVG = 62                   MIN = 44                  
+======================================================
+ORDER: 2^5  BUF_SIZE: 33                  
+ALLOC_TIME (nsec): MAX = 84                   AVG = 70                   MIN = 62                  
+FREE_TIME  (nsec): MAX = 75                   AVG = 54                   MIN = 43                  
+======================================================
+ORDER: 2^6  BUF_SIZE: 64                  
+ALLOC_TIME (nsec): MAX = 123                  AVG = 83                   MIN = 63                  
+FREE_TIME  (nsec): MAX = 78                   AVG = 62                   MIN = 43                  
+======================================================
+ORDER: 2^6  BUF_SIZE: 65                  
+ALLOC_TIME (nsec): MAX = 87                   AVG = 72                   MIN = 63                  
+FREE_TIME  (nsec): MAX = 68                   AVG = 51                   MIN = 44                  
+======================================================
+ORDER: 2^7  BUF_SIZE: 128                 
+ALLOC_TIME (nsec): MAX = 139                  AVG = 85                   MIN = 65                  
+FREE_TIME  (nsec): MAX = 67                   AVG = 50                   MIN = 43                  
+======================================================
+ORDER: 2^7  BUF_SIZE: 129                 
+ALLOC_TIME (nsec): MAX = 91                   AVG = 76                   MIN = 68                  
+FREE_TIME  (nsec): MAX = 69                   AVG = 50                   MIN = 43                  
+======================================================
+ORDER: 2^8  BUF_SIZE: 256                 
+ALLOC_TIME (nsec): MAX = 197                  AVG = 101                  MIN = 73                  
+FREE_TIME  (nsec): MAX = 68                   AVG = 52                   MIN = 42                  
+======================================================
+ORDER: 2^8  BUF_SIZE: 257                 
+ALLOC_TIME (nsec): MAX = 115                  AVG = 86                   MIN = 71                  
+FREE_TIME  (nsec): MAX = 68                   AVG = 50                   MIN = 44                  
+======================================================
+ORDER: 2^9  BUF_SIZE: 512                 
+ALLOC_TIME (nsec): MAX = 129                  AVG = 107                  MIN = 100                 
+FREE_TIME  (nsec): MAX = 65                   AVG = 55                   MIN = 48                  
+======================================================
+ORDER: 2^9  BUF_SIZE: 513                 
+ALLOC_TIME (nsec): MAX = 101                  AVG = 100                  MIN = 98                  
+FREE_TIME  (nsec): MAX = 65                   AVG = 55                   MIN = 48                  
+======================================================
+ORDER: 2^10 BUF_SIZE: 1024                
+ALLOC_TIME (nsec): MAX = 161                  AVG = 137                  MIN = 127                 
+FREE_TIME  (nsec): MAX = 52                   AVG = 51                   MIN = 49                  
+======================================================
+ORDER: 2^10 BUF_SIZE: 1025                
+ALLOC_TIME (nsec): MAX = 142                  AVG = 133                  MIN = 126                 
+FREE_TIME  (nsec): MAX = 53                   AVG = 50                   MIN = 48                  
+======================================================
+ORDER: 2^11 BUF_SIZE: 2048                
+ALLOC_TIME (nsec): MAX = 1800                 AVG = 506                  MIN = 181                 
+FREE_TIME  (nsec): MAX = 52                   AVG = 50                   MIN = 48                  
+======================================================
+ORDER: 2^11 BUF_SIZE: 2049                
+ALLOC_TIME (nsec): MAX = 183                  AVG = 181                  MIN = 180                 
+FREE_TIME  (nsec): MAX = 52                   AVG = 50                   MIN = 49                  
+======================================================
+ORDER: 2^12 BUF_SIZE: 4096                
+ALLOC_TIME (nsec): MAX = 3555                 AVG = 941                  MIN = 287                 
+FREE_TIME  (nsec): MAX = 53                   AVG = 52                   MIN = 51                  
+======================================================
+ORDER: 2^12 BUF_SIZE: 4097                
+ALLOC_TIME (nsec): MAX = 321                  AVG = 295                  MIN = 288                 
+FREE_TIME  (nsec): MAX = 53                   AVG = 51                   MIN = 49                  
+======================================================
+ORDER: 2^13 BUF_SIZE: 8192                
+ALLOC_TIME (nsec): MAX = 5291                 AVG = 1543                 MIN = 594                 
+FREE_TIME  (nsec): MAX = 67                   AVG = 56                   MIN = 52                  
+======================================================
+ORDER: 2^13 BUF_SIZE: 8193                
+ALLOC_TIME (nsec): MAX = 796                  AVG = 641                  MIN = 587                 
+FREE_TIME  (nsec): MAX = 55                   AVG = 53                   MIN = 51                  
+======================================================
+ORDER: 2^14 BUF_SIZE: 16384               
+ALLOC_TIME (nsec): MAX = 13817                AVG = 4385                 MIN = 2006                
+FREE_TIME  (nsec): MAX = 63                   AVG = 55                   MIN = 52                  
+======================================================
+ORDER: 2^14 BUF_SIZE: 16385               
+ALLOC_TIME (nsec): MAX = 2041                 AVG = 2032                 MIN = 2019                
+FREE_TIME  (nsec): MAX = 55                   AVG = 53                   MIN = 52                  
+======================================================
+ORDER: 2^15 BUF_SIZE: 32768               
+ALLOC_TIME (nsec): MAX = 26955                AVG = 8567                 MIN = 3963                
+FREE_TIME  (nsec): MAX = 66                   AVG = 56                   MIN = 51                  
+======================================================
+ORDER: 2^15 BUF_SIZE: 32769               
+ALLOC_TIME (nsec): MAX = 3980                 AVG = 3964                 MIN = 3951                
+FREE_TIME  (nsec): MAX = 59                   AVG = 53                   MIN = 49                  
+======================================================
+ORDER: 2^16 BUF_SIZE: 65536               
+ALLOC_TIME (nsec): MAX = 53746                AVG = 17144                MIN = 7972                
+FREE_TIME  (nsec): MAX = 65                   AVG = 59                   MIN = 54                  
+======================================================
+ORDER: 2^16 BUF_SIZE: 65537               
+ALLOC_TIME (nsec): MAX = 8020                 AVG = 7984                 MIN = 7956                
+FREE_TIME  (nsec): MAX = 57                   AVG = 56                   MIN = 55                  
+======================================================
+ORDER: 2^17 BUF_SIZE: 131072              
+ALLOC_TIME (nsec): MAX = 108968               AVG = 34724                MIN = 16061               
+FREE_TIME  (nsec): MAX = 115                  AVG = 70                   MIN = 57                  
+======================================================
+ORDER: 2^17 BUF_SIZE: 131073              
+ALLOC_TIME (nsec): MAX = 16165                AVG = 16115                MIN = 16052               
+FREE_TIME  (nsec): MAX = 65                   AVG = 58                   MIN = 54                  
+======================================================
+ORDER: 2^18 BUF_SIZE: 262144              
+ALLOC_TIME (nsec): MAX = 218345               AVG = 69507                MIN = 32287               
+FREE_TIME  (nsec): MAX = 125                  AVG = 71                   MIN = 55                  
+======================================================
+ORDER: 2^18 BUF_SIZE: 262145              
+ALLOC_TIME (nsec): MAX = 32409                AVG = 32321                MIN = 32281               
+FREE_TIME  (nsec): MAX = 57                   AVG = 56                   MIN = 55                  
+======================================================
+ORDER: 2^19 BUF_SIZE: 524288              
+ALLOC_TIME (nsec): MAX = 473675               AVG = 146583               MIN = 64707               
+FREE_TIME  (nsec): MAX = 133                  AVG = 73                   MIN = 56                  
+======================================================
+ORDER: 2^19 BUF_SIZE: 524289              
+ALLOC_TIME (nsec): MAX = 66418                AVG = 65087                MIN = 64625               
+FREE_TIME  (nsec): MAX = 59                   AVG = 57                   MIN = 56                  
+======================================================
+ORDER: 2^20 BUF_SIZE: 1048576             
+ALLOC_TIME (nsec): MAX = 940166               AVG = 294859               MIN = 127591              
+FREE_TIME  (nsec): MAX = 327                  AVG = 172                  MIN = 54                  
+======================================================
+ORDER: 2^20 BUF_SIZE: 1048577             
+ALLOC_TIME (nsec): MAX = 152476               AVG = 137223               MIN = 128609              
+FREE_TIME  (nsec): MAX = 179                  AVG = 143                  MIN = 115                 
+======================================================
+ORDER: 2^21 BUF_SIZE: 2097152             
+ALLOC_TIME (nsec): MAX = 1955664              AVG = 765275               MIN = 442201              
+FREE_TIME  (nsec): MAX = 552                  AVG = 462                  MIN = 299                 
+======================================================
+ORDER: 2^21 BUF_SIZE: 2097153             
+ALLOC_TIME (nsec): MAX = 786683               AVG = 497161               MIN = 354930              
+FREE_TIME  (nsec): MAX = 707                  AVG = 497                  MIN = 254                 
+======================================================
+ORDER: 2^22 BUF_SIZE: 4194304             
+ALLOC_TIME (nsec): MAX = 4125827              AVG = 1839868              MIN = 902510              
+FREE_TIME  (nsec): MAX = 1652                 AVG = 664                  MIN = 286                 
+======================================================
+ORDER: 2^22 BUF_SIZE: 4194305             
+ALLOC_TIME (nsec): MAX = 2505692              AVG = 1586320              MIN = 1052230             
+FREE_TIME  (nsec): MAX = 981                  AVG = 639                  MIN = 373                 
+======================================================
+ORDER: 2^23 BUF_SIZE: 8388608             
+ALLOC_TIME (nsec): MAX = 52210                AVG = 11685                MIN = 1449                
+FREE_TIME  (nsec): MAX = 27201                AVG = 6979                 MIN = 1874                
+======================================================
+ORDER: 2^23 BUF_SIZE: 8388609             
+ALLOC_TIME (nsec): MAX = 4652                 AVG = 2302                 MIN = 1544                
+FREE_TIME  (nsec): MAX = 2284                 AVG = 1980                 MIN = 1876                
+======================================================
+ORDER: 2^24 BUF_SIZE: 16777216            
+ALLOC_TIME (nsec): MAX = 3181                 AVG = 1863                 MIN = 1518                
+FREE_TIME  (nsec): MAX = 3076                 AVG = 2293                 MIN = 1988                
+======================================================
+ORDER: 2^24 BUF_SIZE: 16777217            
+ALLOC_TIME (nsec): MAX = 2240                 AVG = 1701                 MIN = 1517                
+FREE_TIME  (nsec): MAX = 3974                 AVG = 2398                 MIN = 1970                
+======================================================
+ORDER: 2^25 BUF_SIZE: 33554432            
+ALLOC_TIME (nsec): MAX = 4649                 AVG = 2168                 MIN = 1480                
+FREE_TIME  (nsec): MAX = 3949                 AVG = 2618                 MIN = 2212                
+======================================================
+ORDER: 2^25 BUF_SIZE: 33554433            
+ALLOC_TIME (nsec): MAX = 2764                 AVG = 1827                 MIN = 1536                
+FREE_TIME  (nsec): MAX = 2382                 AVG = 2282                 MIN = 2160                
+======================================================
+ORDER: 2^26 BUF_SIZE: 67108864            
+ALLOC_TIME (nsec): MAX = 3678                 AVG = 2118                 MIN = 1598                
+FREE_TIME  (nsec): MAX = 4559                 AVG = 3038                 MIN = 2620                
+======================================================
+ORDER: 2^26 BUF_SIZE: 67108865            
+ALLOC_TIME (nsec): MAX = 1875                 AVG = 1767                 MIN = 1575                
+FREE_TIME  (nsec): MAX = 2728                 AVG = 2667                 MIN = 2611                
+======================================================
+ORDER: 2^27 BUF_SIZE: 134217728           
+ALLOC_TIME (nsec): MAX = 2901                 AVG = 1960                 MIN = 1509                
+FREE_TIME  (nsec): MAX = 5315                 AVG = 3971                 MIN = 3541                
+======================================================
+ORDER: 2^27 BUF_SIZE: 134217729           
+ALLOC_TIME (nsec): MAX = 3215                 AVG = 1975                 MIN = 1572                
+FREE_TIME  (nsec): MAX = 3762                 AVG = 3615                 MIN = 3492                
+======================================================
+ORDER: 2^28 BUF_SIZE: 268435456           
+ALLOC_TIME (nsec): MAX = 3858                 AVG = 2278                 MIN = 1860                
+FREE_TIME  (nsec): MAX = 6602                 AVG = 5731                 MIN = 5370                
+======================================================
+ORDER: 2^28 BUF_SIZE: 268435457           
+ALLOC_TIME (nsec): MAX = 2137                 AVG = 1976                 MIN = 1876                
+FREE_TIME  (nsec): MAX = 5781                 AVG = 5468                 MIN = 5333                
+======================================================
+ORDER: 2^29 BUF_SIZE: 536870912           
+ALLOC_TIME (nsec): MAX = 2550                 AVG = 2053                 MIN = 1795                
+FREE_TIME  (nsec): MAX = 6386                 AVG = 5943                 MIN = 5605                
+======================================================
+ORDER: 2^29 BUF_SIZE: 536870913           
+ALLOC_TIME (nsec): MAX = 2312                 AVG = 2046                 MIN = 1805                
+FREE_TIME  (nsec): MAX = 6345                 AVG = 5678                 MIN = 5358                
+======================================================
+ORDER: 2^30 BUF_SIZE: 1073741824          
+ALLOC_TIME (nsec): MAX = 4671                 AVG = 2448                 MIN = 1764                
+FREE_TIME  (nsec): MAX = 6906                 AVG = 5930                 MIN = 5578                
+======================================================
+ORDER: 2^30 BUF_SIZE: 1073741825          
+ALLOC_TIME (nsec): MAX = 4521                 AVG = 2517                 MIN = 1969                
+FREE_TIME  (nsec): MAX = 7691                 AVG = 5999                 MIN = 5381                
+======================================================
+ORDER: 2^31 BUF_SIZE: 2147483648          
+ALLOC_TIME (nsec): MAX = 3386                 AVG = 2370                 MIN = 1926                
+FREE_TIME  (nsec): MAX = 6865                 AVG = 5872                 MIN = 5474                
+======================================================
+ORDER: 2^31 BUF_SIZE: 2147483649          
+ALLOC_TIME (nsec): MAX = 2289                 AVG = 2019                 MIN = 1803                
+FREE_TIME  (nsec): MAX = 6550                 AVG = 5926                 MIN = 5552                
+======================================================
+ORDER: 2^32 BUF_SIZE: 4294967296          
+ALLOC_TIME (nsec): MAX = 3567                 AVG = 2210                 MIN = 1767                
+FREE_TIME  (nsec): MAX = 7209                 AVG = 5980                 MIN = 5482                
+======================================================
+ORDER: 2^32 BUF_SIZE: 4294967297          
+ALLOC_TIME (nsec): MAX = 2242                 AVG = 1971                 MIN = 1770                
+FREE_TIME  (nsec): MAX = 6262                 AVG = 5884                 MIN = 5586                
+======================================================
+ORDER: 2^33 BUF_SIZE: 8589934592          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^33 BUF_SIZE: 8589934593          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^34 BUF_SIZE: 17179869184         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^34 BUF_SIZE: 17179869185         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^35 BUF_SIZE: 34359738368         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^35 BUF_SIZE: 34359738369         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^36 BUF_SIZE: 68719476736         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^36 BUF_SIZE: 68719476737         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^37 BUF_SIZE: 137438953472        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^37 BUF_SIZE: 137438953473        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^38 BUF_SIZE: 274877906944        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^38 BUF_SIZE: 274877906945        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^39 BUF_SIZE: 549755813888        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^39 BUF_SIZE: 549755813889        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^40 BUF_SIZE: 1099511627776       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^40 BUF_SIZE: 1099511627777       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^41 BUF_SIZE: 2199023255552       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^41 BUF_SIZE: 2199023255553       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^42 BUF_SIZE: 4398046511104       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^42 BUF_SIZE: 4398046511105       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^43 BUF_SIZE: 8796093022208       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^43 BUF_SIZE: 8796093022209       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^44 BUF_SIZE: 17592186044416      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^44 BUF_SIZE: 17592186044417      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^45 BUF_SIZE: 35184372088832      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^45 BUF_SIZE: 35184372088833      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^46 BUF_SIZE: 70368744177664      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^46 BUF_SIZE: 70368744177665      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^47 BUF_SIZE: 140737488355328     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^47 BUF_SIZE: 140737488355329     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^48 BUF_SIZE: 281474976710656     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^48 BUF_SIZE: 281474976710657     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^49 BUF_SIZE: 562949953421312     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^49 BUF_SIZE: 562949953421313     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^50 BUF_SIZE: 1125899906842624    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^50 BUF_SIZE: 1125899906842625    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^51 BUF_SIZE: 2251799813685248    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^51 BUF_SIZE: 2251799813685249    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^52 BUF_SIZE: 4503599627370496    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^52 BUF_SIZE: 4503599627370497    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^53 BUF_SIZE: 9007199254740992    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^53 BUF_SIZE: 9007199254740992    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^54 BUF_SIZE: 18014398509481984   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^54 BUF_SIZE: 18014398509481984   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^55 BUF_SIZE: 36028797018963968   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^55 BUF_SIZE: 36028797018963968   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^56 BUF_SIZE: 72057594037927936   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^56 BUF_SIZE: 72057594037927936   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^57 BUF_SIZE: 144115188075855872  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^57 BUF_SIZE: 144115188075855872  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^58 BUF_SIZE: 288230376151711744  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^58 BUF_SIZE: 288230376151711744  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^59 BUF_SIZE: 576460752303423488  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^59 BUF_SIZE: 576460752303423488  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^60 BUF_SIZE: 1152921504606846976 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^60 BUF_SIZE: 1152921504606846976 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^61 BUF_SIZE: 2305843009213693952 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^61 BUF_SIZE: 2305843009213693952 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^62 BUF_SIZE: 4611686018427387904 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^62 BUF_SIZE: 4611686018427387904 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^63 BUF_SIZE: 9223372036854775808 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^63 BUF_SIZE: 9223372036854775808 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^64 BUF_SIZE: 18446744073709551616
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^64 BUF_SIZE: 18446744073709551616
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+
+ALLOCA TABLE
+======================================================
+ORDER: 2^0  BUF_SIZE: 1                   
+ALLOC_TIME (nsec): MAX = 108                  AVG = 63                   MIN = 51                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^0  BUF_SIZE: 2                   
+ALLOC_TIME (nsec): MAX = 64                   AVG = 54                   MIN = 51                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^1  BUF_SIZE: 2                   
+ALLOC_TIME (nsec): MAX = 53                   AVG = 51                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^1  BUF_SIZE: 3                   
+ALLOC_TIME (nsec): MAX = 53                   AVG = 52                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^2  BUF_SIZE: 4                   
+ALLOC_TIME (nsec): MAX = 51                   AVG = 50                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^2  BUF_SIZE: 5                   
+ALLOC_TIME (nsec): MAX = 52                   AVG = 51                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^3  BUF_SIZE: 8                   
+ALLOC_TIME (nsec): MAX = 51                   AVG = 51                   MIN = 51                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^3  BUF_SIZE: 9                   
+ALLOC_TIME (nsec): MAX = 53                   AVG = 51                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^4  BUF_SIZE: 16                  
+ALLOC_TIME (nsec): MAX = 52                   AVG = 51                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^4  BUF_SIZE: 17                  
+ALLOC_TIME (nsec): MAX = 52                   AVG = 51                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^5  BUF_SIZE: 32                  
+ALLOC_TIME (nsec): MAX = 53                   AVG = 51                   MIN = 49                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^5  BUF_SIZE: 33                  
+ALLOC_TIME (nsec): MAX = 51                   AVG = 51                   MIN = 49                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^6  BUF_SIZE: 64                  
+ALLOC_TIME (nsec): MAX = 112                  AVG = 64                   MIN = 51                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^6  BUF_SIZE: 65                  
+ALLOC_TIME (nsec): MAX = 54                   AVG = 51                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^7  BUF_SIZE: 128                 
+ALLOC_TIME (nsec): MAX = 52                   AVG = 51                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^7  BUF_SIZE: 129                 
+ALLOC_TIME (nsec): MAX = 52                   AVG = 50                   MIN = 49                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^8  BUF_SIZE: 256                 
+ALLOC_TIME (nsec): MAX = 51                   AVG = 50                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^8  BUF_SIZE: 257                 
+ALLOC_TIME (nsec): MAX = 53                   AVG = 51                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^9  BUF_SIZE: 512                 
+ALLOC_TIME (nsec): MAX = 51                   AVG = 51                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^9  BUF_SIZE: 513                 
+ALLOC_TIME (nsec): MAX = 51                   AVG = 51                   MIN = 50                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^10 BUF_SIZE: 1024                
+ALLOC_TIME (nsec): MAX = 141                  AVG = 70                   MIN = 51                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^10 BUF_SIZE: 1025                
+ALLOC_TIME (nsec): MAX = 54                   AVG = 53                   MIN = 51                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^11 BUF_SIZE: 2048                
+ALLOC_TIME (nsec): MAX = 3584                 AVG = 760                  MIN = 53                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^11 BUF_SIZE: 2049                
+ALLOC_TIME (nsec): MAX = 54                   AVG = 53                   MIN = 52                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^12 BUF_SIZE: 4096                
+ALLOC_TIME (nsec): MAX = 2473                 AVG = 540                  MIN = 56                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^12 BUF_SIZE: 4097                
+ALLOC_TIME (nsec): MAX = 64                   AVG = 58                   MIN = 56                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^13 BUF_SIZE: 8192                
+ALLOC_TIME (nsec): MAX = 11419                AVG = 2332                 MIN = 59                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^13 BUF_SIZE: 8193                
+ALLOC_TIME (nsec): MAX = 80                   AVG = 68                   MIN = 60                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^14 BUF_SIZE: 16384               
+ALLOC_TIME (nsec): MAX = 19102                AVG = 3890                 MIN = 84                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^14 BUF_SIZE: 16385               
+ALLOC_TIME (nsec): MAX = 172                  AVG = 105                  MIN = 86                  
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^15 BUF_SIZE: 32768               
+ALLOC_TIME (nsec): MAX = 33761                AVG = 6861                 MIN = 130                 
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^15 BUF_SIZE: 32769               
+ALLOC_TIME (nsec): MAX = 183                  AVG = 151                  MIN = 134                 
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^16 BUF_SIZE: 65536               
+ALLOC_TIME (nsec): MAX = 56515                AVG = 11583                MIN = 326                 
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^16 BUF_SIZE: 65537               
+ALLOC_TIME (nsec): MAX = 443                  AVG = 360                  MIN = 313                 
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^17 BUF_SIZE: 131072              
+ALLOC_TIME (nsec): MAX = 88772                AVG = 18289                MIN = 657                 
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^17 BUF_SIZE: 131073              
+ALLOC_TIME (nsec): MAX = 685                  AVG = 663                  MIN = 628                 
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^18 BUF_SIZE: 262144              
+ALLOC_TIME (nsec): MAX = 199531               AVG = 41000                MIN = 1319                
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^18 BUF_SIZE: 262145              
+ALLOC_TIME (nsec): MAX = 1417                 AVG = 1388                 MIN = 1344                
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^19 BUF_SIZE: 524288              
+ALLOC_TIME (nsec): MAX = 327791               AVG = 67754                MIN = 2593                
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^19 BUF_SIZE: 524289              
+ALLOC_TIME (nsec): MAX = 2977                 AVG = 2727                 MIN = 2643                
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^20 BUF_SIZE: 1048576             
+ALLOC_TIME (nsec): MAX = 581508               AVG = 120733               MIN = 5463                
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^20 BUF_SIZE: 1048577             
+ALLOC_TIME (nsec): MAX = 6044                 AVG = 5607                 MIN = 5335                
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^21 BUF_SIZE: 2097152             
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^21 BUF_SIZE: 2097153             
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^22 BUF_SIZE: 4194304             
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^22 BUF_SIZE: 4194305             
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^23 BUF_SIZE: 8388608             
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^23 BUF_SIZE: 8388609             
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^24 BUF_SIZE: 16777216            
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^24 BUF_SIZE: 16777217            
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^25 BUF_SIZE: 33554432            
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^25 BUF_SIZE: 33554433            
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^26 BUF_SIZE: 67108864            
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^26 BUF_SIZE: 67108865            
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^27 BUF_SIZE: 134217728           
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^27 BUF_SIZE: 134217729           
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^28 BUF_SIZE: 268435456           
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^28 BUF_SIZE: 268435457           
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^29 BUF_SIZE: 536870912           
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^29 BUF_SIZE: 536870913           
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^30 BUF_SIZE: 1073741824          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^30 BUF_SIZE: 1073741825          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^31 BUF_SIZE: 2147483648          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^31 BUF_SIZE: 2147483649          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^32 BUF_SIZE: 4294967296          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^32 BUF_SIZE: 4294967297          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^33 BUF_SIZE: 8589934592          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^33 BUF_SIZE: 8589934593          
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^34 BUF_SIZE: 17179869184         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^34 BUF_SIZE: 17179869185         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^35 BUF_SIZE: 34359738368         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^35 BUF_SIZE: 34359738369         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^36 BUF_SIZE: 68719476736         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^36 BUF_SIZE: 68719476737         
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^37 BUF_SIZE: 137438953472        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^37 BUF_SIZE: 137438953473        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^38 BUF_SIZE: 274877906944        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^38 BUF_SIZE: 274877906945        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^39 BUF_SIZE: 549755813888        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^39 BUF_SIZE: 549755813889        
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^40 BUF_SIZE: 1099511627776       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^40 BUF_SIZE: 1099511627777       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^41 BUF_SIZE: 2199023255552       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^41 BUF_SIZE: 2199023255553       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^42 BUF_SIZE: 4398046511104       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^42 BUF_SIZE: 4398046511105       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^43 BUF_SIZE: 8796093022208       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^43 BUF_SIZE: 8796093022209       
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^44 BUF_SIZE: 17592186044416      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^44 BUF_SIZE: 17592186044417      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^45 BUF_SIZE: 35184372088832      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^45 BUF_SIZE: 35184372088833      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^46 BUF_SIZE: 70368744177664      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^46 BUF_SIZE: 70368744177665      
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^47 BUF_SIZE: 140737488355328     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^47 BUF_SIZE: 140737488355329     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^48 BUF_SIZE: 281474976710656     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^48 BUF_SIZE: 281474976710657     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^49 BUF_SIZE: 562949953421312     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^49 BUF_SIZE: 562949953421313     
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^50 BUF_SIZE: 1125899906842624    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^50 BUF_SIZE: 1125899906842625    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^51 BUF_SIZE: 2251799813685248    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^51 BUF_SIZE: 2251799813685249    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^52 BUF_SIZE: 4503599627370496    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^52 BUF_SIZE: 4503599627370497    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^53 BUF_SIZE: 9007199254740992    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^53 BUF_SIZE: 9007199254740992    
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^54 BUF_SIZE: 18014398509481984   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^54 BUF_SIZE: 18014398509481984   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^55 BUF_SIZE: 36028797018963968   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^55 BUF_SIZE: 36028797018963968   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^56 BUF_SIZE: 72057594037927936   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^56 BUF_SIZE: 72057594037927936   
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^57 BUF_SIZE: 144115188075855872  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^57 BUF_SIZE: 144115188075855872  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^58 BUF_SIZE: 288230376151711744  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^58 BUF_SIZE: 288230376151711744  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^59 BUF_SIZE: 576460752303423488  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^59 BUF_SIZE: 576460752303423488  
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^60 BUF_SIZE: 1152921504606846976 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^60 BUF_SIZE: 1152921504606846976 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^61 BUF_SIZE: 2305843009213693952 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^61 BUF_SIZE: 2305843009213693952 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^62 BUF_SIZE: 4611686018427387904 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^62 BUF_SIZE: 4611686018427387904 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^63 BUF_SIZE: 9223372036854775808 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^63 BUF_SIZE: 9223372036854775808 
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^64 BUF_SIZE: 18446744073709551616
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+======================================================
+ORDER: 2^64 BUF_SIZE: 18446744073709551616
+ALLOC_TIME (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
+FREE_TIME  (nsec): MAX = 0                    AVG = 0                    MIN = 0                   
