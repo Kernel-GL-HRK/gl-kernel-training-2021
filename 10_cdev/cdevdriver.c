@@ -63,6 +63,19 @@ static const struct file_operations stat_ops = {
 static struct proc_dir_entry *dir;
 static struct proc_dir_entry *proc_stat;
 
+static ssize_t clear_buffer_show(struct class *class,
+	struct class_attribute *attr, char *buf)
+{
+	strcpy(buf, "Buffer has been cleaned\n");
+	/* check the correctness of all values in the fifo */
+	while (!kfifo_is_empty(&test))
+		kfifo_skip(&test);
+	data_size = 0; /* eof for cat */
+	return strlen(buf);
+}
+
+CLASS_ATTR_RO(clear_buffer);
+
 static int dev_open(struct inode *inodep, struct file *filep)
 {
 	if (is_open) {
@@ -192,9 +205,16 @@ static int chrdev_init(void)
 		goto init_exit4;
 	}
 
+	ret = class_create_file(pclass, &class_attr_clear_buffer);
+	if (ret)
+		goto init_exit5;
+
 	pr_info("module loaded\n");
 	return 0;
 
+init_exit5:
+	pr_err("error creating sysfs stat\n");
+	remove_proc_entry(PROCFS_NODE, dir);
 init_exit4:
 	remove_proc_entry(DEVICE_NAME, NULL);
 init_exit3:
@@ -210,6 +230,7 @@ init_exit0:
 
 static void chrdev_exit(void)
 {
+	class_remove_file(pclass, &class_attr_clear_buffer);
 	proc_remove(dir);
 	device_destroy(pclass, MKDEV(major, 0));
 	class_destroy(pclass);
