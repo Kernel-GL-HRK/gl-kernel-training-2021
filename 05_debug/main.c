@@ -14,7 +14,7 @@
 #include <linux/slab.h>
 #include <linux/string.h>
 #include <linux/ctype.h>
-
+#define BUFF_SIZE 255
 static struct kobject *sys_data;
 
 static LIST_HEAD(procfs_list);
@@ -171,21 +171,13 @@ static ssize_t rw_read(struct file *file, char __user *pbuf, size_t count,
 static ssize_t stat_read(struct file *file, char __user *pbuf, size_t count,
 		loff_t *ppos)
 {
-	int offset = 0;
 	int state = 0;
+	char stat_buff[BUFF_SIZE];
 
-	if (*ppos != 0)
-		return 0;
-	try_procfs_read++;
-	state = snprintf(pbuf + offset, PAGE_SIZE - offset,
+	state = snprintf(stat_buff, BUFF_SIZE,
 			"\nUsing 'cat' for procfs %d\nTotal read bytes: %d\nTotal converted character: %d\n\n",
 			try_procfs_read, procfs_count, pconv_ch);
-	if (state < 0) {
-		pr_err("mymodule : error reading\n");
-		return state;
-	}
-	offset += state;
-	return offset;
+	return simple_read_from_buffer(pbuf, count, ppos, stat_buff, state);
 }
 
 static struct proc_dir_entry *entry;
@@ -257,7 +249,7 @@ module_init(mymodule_init);
 module_exit(mymodule_exit);
 
 MODULE_AUTHOR("Vladyslav Andrishko <v.andrishko.v333@gmail.com>");
-MODULE_DESCRIPTION("Kernel module example with list structure");
+MODULE_DESCRIPTION("Kernel module example with upper/lowercase convertor");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("0.1");
 
