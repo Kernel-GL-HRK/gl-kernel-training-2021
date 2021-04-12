@@ -1,0 +1,88 @@
+/tmp/05_debug # sh test.sh 
+[ 3664.961436] Module initialized successfully
+Fill the list...
+[ 3665.018721] mymodule: new item in list sysfs VaSyA
+[ 3665.024794] mymodule: new item in list procfs VaSyA
+[ 3665.024794] 
+[ 3665.322123] mymodule: new item in list sysfs PeTyA
+[ 3665.330267] mymodule: new item in list procfs PeTyA
+[ 3665.330267] 
+[ 3665.648062] mymodule: new item in list sysfs AnToN
+[ 3665.654327] mymodule: new item in list procfs AnToN
+[ 3665.654327] 
+[ 3665.994581] mymodule: new item in list sysfs VlaD
+[ 3666.003032] mymodule: new item in list procfs VlaD
+[ 3666.003032] 
+Now we call 3 times cat for sysfs
+[ 3666.342746] mymodule : success reading
+[ 3666.343015] mymodule : success reading
+[ 3666.343244] mymodule : success reading
+[ 3666.343498] mymodule : success reading
+vlad
+anton
+petya
+vasya
+[ 3666.413266] mymodule : success reading
+[ 3666.413508] mymodule : success reading
+[ 3666.413715] mymodule : success reading
+[ 3666.413909] mymodule : success reading
+vlad
+anton
+petya
+vasya
+[ 3666.480709] mymodule : success reading
+[ 3666.480987] mymodule : success reading
+[ 3666.481254] mymodule : success reading
+[ 3666.481636] mymodule : success reading
+vlad
+anton
+petya
+vasya
+Now we call 4 times cat for sysfs
+[ 3666.740211] mymodule : success reading
+[ 3666.740466] mymodule : success reading
+[ 3666.740692] mymodule : success reading
+[ 3666.740906] mymodule : success reading
+VLAD
+ANTON
+PETYA
+VASYA
+[ 3666.801943] mymodule : success reading
+[ 3666.802467] mymodule : success reading
+[ 3666.803027] mymodule : success reading
+[ 3666.803510] mymodule : success reading
+VLAD
+ANTON
+PETYA
+VASYA
+[ 3666.872316] mymodule : success reading
+[ 3666.872563] mymodule : success reading
+[ 3666.872808] mymodule : success reading
+[ 3666.873066] mymodule : success reading
+VLAD
+ANTON
+PETYA
+VASYA
+[ 3666.927977] mymodule : success reading
+[ 3666.928216] mymodule : success reading
+[ 3666.928523] mymodule : success reading
+[ 3666.928780] mymodule : success reading
+VLAD
+ANTON
+PETYA
+VASYA
+Statistics
+
+Using 'cat' for procfs 4
+Total read bytes: 23
+Total converted character: 8
+
+
+Using 'cat' for sysfs: 3
+Total read bytes: 23
+Total converted character: 11
+
+[ 3667.281739] Task 05. Done!
+Try to read file after deleting
+cat: can't open '/sys/kernel/kobject_list/list': No such file or directory
+cat: can't open '/proc/procfs_list/list': No such file or directory
