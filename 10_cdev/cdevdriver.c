@@ -8,6 +8,7 @@
 #include <linux/slab.h>
 #include <linux/proc_fs.h>
 #include <linux/kfifo.h>
+#include <linux/ctype.h>
 
 #define CLASS_NAME	"chat_dev"
 #define DEVICE_NAME	"users_chat_dev"
@@ -120,6 +121,19 @@ static ssize_t dev_write(struct file *filep, const char *buffer,
 {
 	int ret;
 	unsigned int copied;
+	char *tmp_buf;
+	int i;
+
+	tmp_buf = kmalloc(len, GFP_ATOMIC);
+	if (tmp_buf == NULL)
+		return -ENOMEM;
+	ret = simple_write_to_buffer(tmp_buf, len, offset, buffer, len);
+	for (i = 0; i < len; i++)
+		if (!isascii(tmp_buf[i])) {
+			pr_info("is not ascii %c, skipped\n", tmp_buf[i]);
+			kfree(tmp_buf);
+			return len;
+		}
 
 	pr_info("write to file %s\n", filep->f_path.dentry->d_iname);
 	pr_info("write to device %d:%d\n", imajor(filep->f_inode),
@@ -137,6 +151,7 @@ static ssize_t dev_write(struct file *filep, const char *buffer,
 	pr_info("write to buffer %d\n", copied);
 	pr_info("used buffer %d\n", data_size);
 	mutex_unlock(&write_lock);
+	kfree(tmp_buf);
 	return ret ? ret : copied;
 }
 
