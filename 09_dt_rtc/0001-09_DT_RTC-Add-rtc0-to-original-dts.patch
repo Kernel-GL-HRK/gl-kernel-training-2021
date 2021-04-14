@@ -1,0 +1,31 @@
+From 55c85fa4e87ca717033392d80fb665bb11f6f595 Mon Sep 17 00:00:00 2001
+From: Maryna Malakhova <maryna.malakhova@globallogic.com>
+Date: Wed, 7 Apr 2021 13:29:55 +0300
+Subject: [PATCH] 09_DT_RTC: Add rtc0 to original dts
+
+Add rtc0 to original am335x-boneblack.dts
+
+Signed-off-by: Maryna Malakhova <maryna.malakhova@globallogic.com>
+---
+ arch/arm/boot/dts/am335x-boneblack.dts | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack.dts b/arch/arm/boot/dts/am335x-boneblack.dts
+index d154d3133c16..1a8adbf6ac91 100644
+--- a/arch/arm/boot/dts/am335x-boneblack.dts
++++ b/arch/arm/boot/dts/am335x-boneblack.dts
+@@ -26,3 +26,11 @@
+		opp-supported-hw = <0x06 0x0100>;
+	};
+ };
++
++&i2c2 {
++	rtc0: ds3231@0 {
++		compatible = "maxim,ds3231";
++		reg = <0x68>;
++	};
++};
++
+--
+2.25.1
+
