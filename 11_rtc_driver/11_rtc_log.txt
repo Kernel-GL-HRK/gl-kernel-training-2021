@@ -1,0 +1,45 @@
+Please press Enter to activate this console.
+/ #
+/ # dmesg | grep rtc
+[    2.213827] hctosys: unable to open rtc device (rtc0)
+/ #
+/ # hwclock
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+/ #
+/ # find . | grep ds32
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/compatible
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/reg
+./sys/firmware/devicetree/base/ocp/i2c@4819c000/ds3231@68/name
+/ #
+/ # insmod /mnt/11_rtc_driver.ko
+[   73.495450] 11_rtc_driver: loading out-of-tree module taints kernel.
+[   73.506135] ds3231x 2-0068: rtc core: registered ds3231x as rtc0
+/ #
+/ # hwclock
+hwclock: RTC_RD_TIME: Invalid argument
+/ #
+/ # hwclock -w -f /dev/rtc0
+/ #
+/ # hwclock -r -f /dev/rtc0
+Thu Jan  1 00:02:22 1970  0.000000 seconds
+/ #
+/ #
+/ # date
+Thu Jan  1 00:08:02 UTC 1970
+/ # hwclock --show
+Thu Jan  1 00:08:34 1970  0.000000 seconds
+/ # date -s "2021-04-14 11:24:00"
+Wed Apr 14 11:24:00 UTC 2021
+/ # hwclock -w -f /dev/rtc0
+/ # hwclock -r -f /dev/rtc0
+Wed Apr 14 11:24:34 2021  0.000000 seconds
+/ # date -s "2014-04-14 11:24:00"
+Mon Apr 14 11:24:00 UTC 2014
+/ # date
+Mon Apr 14 11:24:02 UTC 2014
+/ # hwclock -s -f /dev/rtc0
+/ # date
+Wed Apr 14 11:25:11 UTC 2021
+/ #
+
