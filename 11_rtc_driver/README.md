@@ -1,6 +1,6 @@
 # DS3231 rtc driver
 
-See DS3231 module overview and references in the description of 09\_dt\_rtc.
+See DS3231 module overview and references in the description of [09\_dt\_rtc](https://github.com/Kernel-GL-HRK/gl-kernel-training-2021/tree/main/09_dt_rtc).
 
 Prerequisites for the task:
 * Homework done 09\_dt\_rtc
